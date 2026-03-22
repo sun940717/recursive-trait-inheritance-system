@@ -1,1 +1,87 @@
-
+{
+  "body_id": "sample_body_v1",
+  "version": "v1.0.0",
+  "display_name": "Basic Limb-Sensor Structure",
+  "description": "A simple bodygraph generated from sample_genome_v1.",
+  "nodes": [
+    {
+      "node_id": "n_root",
+      "node_type": "root",
+      "semantic_tags": ["core", "support"],
+      "tag_probs": {
+        "support": 0.9
+      },
+      "morphology": {
+        "elongation": 0.2,
+        "branch_count": 2,
+        "is_leaf": false,
+        "depth": 0
+      }
+    },
+    {
+      "node_id": "n_limb_1",
+      "node_type": "limb",
+      "semantic_tags": ["manipulator", "grasping", "end_effector"],
+      "tag_probs": {
+        "grasping": 0.8,
+        "manipulator": 0.7
+      },
+      "morphology": {
+        "elongation": 0.7,
+        "branch_count": 0,
+        "is_leaf": true,
+        "depth": 1
+      }
+    },
+    {
+      "node_id": "n_limb_2",
+      "node_type": "limb",
+      "semantic_tags": ["manipulator", "grasping", "end_effector"],
+      "tag_probs": {
+        "grasping": 0.75,
+        "manipulator": 0.65
+      },
+      "morphology": {
+        "elongation": 0.6,
+        "branch_count": 0,
+        "is_leaf": true,
+        "depth": 1
+      }
+    },
+    {
+      "node_id": "n_sensor_1",
+      "node_type": "sensor",
+      "semantic_tags": ["sensor"],
+      "tag_probs": {
+        "sensor": 0.9
+      },
+      "morphology": {
+        "elongation": 0.3,
+        "branch_count": 0,
+        "is_leaf": true,
+        "depth": 1
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_root",
+      "to": "n_limb_1",
+      "type": "attachment"
+    },
+    {
+      "from": "n_root",
+      "to": "n_limb_2",
+      "type": "attachment"
+    },
+    {
+      "from": "n_root",
+      "to": "n_sensor_1",
+      "type": "attachment"
+    }
+  ],
+  "metadata": {
+    "source_genome": "sample_genome_v1",
+    "note": "Simplified example output of development engine"
+  }
+}
