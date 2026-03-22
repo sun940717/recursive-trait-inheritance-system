@@ -1,1 +1,221 @@
-
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schema/bodygraph.schema.json",
+  "title": "BodyGraph",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "body_id",
+    "version",
+    "nodes",
+    "edges"
+  ],
+  "properties": {
+    "body_id": {
+      "type": "string",
+      "description": "Unique identifier for the body graph."
+    },
+    "version": {
+      "type": "string",
+      "description": "BodyGraph schema or content version."
+    },
+    "display_name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/node"
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/edge"
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "node_id",
+        "semantic_tags"
+      ],
+      "properties": {
+        "node_id": {
+          "type": "string"
+        },
+        "node_type": {
+          "type": "string",
+          "default": "generic"
+        },
+        "semantic_tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Discrete semantic tags"
+        },
+        "tag_probs": {
+          "type": "object",
+          "description": "Semantic tag probabilities",
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        "morphology": {
+          "$ref": "#/$defs/morphology"
+        },
+        "geometry": {
+          "$ref": "#/$defs/geometry"
+        },
+        "anchors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/anchor"
+          }
+        },
+        "attributes": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+    "edge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "from",
+        "to",
+        "type"
+      ],
+      "properties": {
+        "from": {
+          "type": "string"
+        },
+        "to": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "attachment",
+            "joint",
+            "surface_growth",
+            "structural"
+          ]
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+    "morphology": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "elongation": {
+          "type": "number",
+          "minimum": 0
+        },
+        "branch_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "surface_area": {
+          "type": "number",
+          "minimum": 0
+        },
+        "curvature": {
+          "type": "number"
+        },
+        "is_leaf": {
+          "type": "boolean"
+        },
+        "depth": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "geometry": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "sphere",
+            "capsule",
+            "box",
+            "blob",
+            "implicit"
+          ],
+          "default": "blob"
+        },
+        "parameters": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "transform": {
+          "$ref": "#/$defs/transform"
+        }
+      }
+    },
+    "anchor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "anchor_id"
+      ],
+      "properties": {
+        "anchor_id": {
+          "type": "string"
+        },
+        "position": {
+          "$ref": "#/$defs/vector3"
+        },
+        "normal": {
+          "$ref": "#/$defs/vector3"
+        }
+      }
+    },
+    "transform": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "position": {
+          "$ref": "#/$defs/vector3"
+        },
+        "rotation": {
+          "$ref": "#/$defs/vector3"
+        },
+        "scale": {
+          "$ref": "#/$defs/vector3"
+        }
+      }
+    },
+    "vector3": {
+      "type": "object",
+      "required": ["x", "y", "z"],
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "z": { "type": "number" }
+      }
+    }
+  }
+}
