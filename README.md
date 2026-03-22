@@ -1,129 +1,218 @@
-_Repository: recursive-trait-inheritance-system_
-Conceptual definition of the Recursive Trait Inheritance System (RTIS), a trait-based artificial life framework where traits recursively attach, propagate, and inherit without predefined anatomical constraints. This repository documents the original system concept and authorship claim. No implementation included.
 # Recursive Trait Inheritance System (RTIS)
-
-**Author:** Chen-He Hung  
-**Created:** 2026-01  
-**Status:** Conceptual System Definition (No Implementation)
-
----
 
 ## Overview
 
-Recursive Trait Inheritance System (RTIS) is a conceptual artificial life and evolutionary system framework.
+RTIS (Recursive Trait Inheritance System) is a generative system for constructing and evolving organisms under **unbounded morphology**.
 
-It defines a form of digital organism where **traits are the fundamental unit of inheritance**, not predefined body parts, templates, or hierarchical structures.
+Unlike traditional character systems, RTIS does not rely on fixed anatomy (e.g. head, arms, legs).
 
-This repository serves as a **formal conceptual claim and timestamped definition** of the RTIS framework.
+Instead, it is built on:
 
-No implementation is provided.
-
----
-
-## Core Concept
-
-RTIS is based on the following principles:
-
-- Traits are atomic, inheritable entities.
-- Any trait can attach to any other trait.
-- Traits themselves may act as hosts for further traits.
-- There is no fixed body hierarchy, anatomical correctness, or predefined structure.
-- Organism form is a temporary manifestation of a recursive trait network.
-
-In this system:
-
-- A head may grow from a hand.
-- A hand may grow from a head.
-- A head growing from a hand may itself grow another hand.
-- Trait recursion depth is theoretically unbounded.
+- Trait-driven composition
+- Recursive structural attachment
+- Semantic-based correspondence
+- Genetic-style inheritance and evolution
 
 ---
 
-## Trait-Based Structure
+## Core Idea
 
-RTIS rejects slot-based or part-based character construction.
+In RTIS:
 
-Instead, each organism is represented as a **Trait Graph**:
+- Everything is a **Trait**
+- Organisms are **graphs of traits**
+- Structure is **not predefined**
+- Traits can attach to any other traits
 
-- **Nodes:** Traits (e.g. head, hand, eye, color pattern, material, emission)
-- **Edges:** Attachment or inheritance relationships
+Example:
 
-There is no mandatory root node.
-Any trait may serve as an attachment point.
+- A head can grow from a hand  
+- A hand can grow from a head  
+- Eyes can grow on other eyes  
 
----
-
-## Inheritance and Evolution
-
-Organisms reproduce through processes such as:
-
-- Mating (trait overlap reinforcement)
-- Fusion (trait diffusion)
-- Selective preference (aesthetic or intentional selection)
-
-Trait inheritance probability is influenced by:
-
-- Trait frequency in parent organisms
-- Historical co-occurrence between traits
-- Player-driven selection bias
-- Environmental or contextual pressure
-
-There is no concept of a final or correct form.
-
-Only locally stable evolutionary states exist.
+This enables **infinite structural variation**.
 
 ---
 
-## Visual and Material Traits
+## System Architecture
 
-Color, material, texture, pattern, and visual properties are treated as traits.
 
-- No color limitation
-- No material limitation
-- No aesthetic constraints
-- Visual traits may attach to any other trait
-- Visual traits may stack, mutate, and recursively propagate
+Genome
+↓
+Development Engine
+↓
+BodyGraph
+↓
+Trait System
+↓
+Part Correspondence Engine (PCE)
+↓
+Evolution Loop
 
----
-
-## Philosophical Position
-
-RTIS does not define life by anatomical correctness.
-
-Form is not a structure — it is a relationship.
-
-Evolution is not progression toward completion,
-but continuous directional drift.
 
 ---
 
-## Intended Applications
+## Key Concepts
 
-RTIS is not limited to games.
-
-Potential applications include:
-
-- Artificial life simulations
-- Experimental or generative games
-- Interactive digital art systems
-- Worldbuilding frameworks
-- Speculative design research
-- Conceptual IP development
+### 1. Unbounded Morphology
+- No fixed skeleton
+- No predefined hierarchy
+- No limit on structure complexity
 
 ---
 
-## Authorship and Claim
+### 2. Trait as Fundamental Unit
+Traits define:
+- structure
+- behavior
+- appearance
+- material
 
-This repository documents the original conceptual definition of the Recursive Trait Inheritance System (RTIS).
+---
 
-The author claims authorship of the system concept, terminology, and structural definition as documented here.
+### 3. Recursive Attachment
+Traits can attach to any other traits.
 
-No code implementation is included.
+---
+
+### 4. Semantic Matching (Not Naming)
+Instead of:
+- hand → hand
+
+RTIS uses:
+- semantic tags
+- morphology
+- topology
+
+---
+
+### 5. Genetic System
+Genome defines:
+- growth rules
+- structure generation
+- mutation behavior
+
+---
+
+## Repository Structure
+
+
+spec/
+system-overview.md
+terminology.md
+genome-system.md
+development-engine.md
+reproduction-cycle.md
+part-correspondence-engine.md
+
+schema/
+trait-descriptor.schema.json
+genome.schema.json
+bodygraph.schema.json
+
+examples/
+traits/
+hand_grasping_v1.json
+eye_sensor_cluster_v1.json
+genomes/
+sample_genome_v1.json
+bodygraphs/
+sample_bodygraph_v1.json
+
+
+---
+
+## Specification Layers
+
+### Spec (System Design)
+Defines:
+- architecture
+- system behavior
+- conceptual models
+
+---
+
+### Schema (Data Structure)
+Defines:
+- TraitDescriptor
+- Genome
+- BodyGraph
+
+---
+
+### Examples (Concrete Instances)
+Demonstrates:
+- real trait definitions
+- sample genomes
+- generated structures
+
+---
+
+## Example Flow
+
+
+sample_genome_v1.json
+↓
+Development Engine
+↓
+sample_bodygraph_v1.json
+↓
+Trait Mapping (PCE)
+↓
+Evolution
+
+
+---
+
+## Current Status
+
+This repository contains:
+
+- Complete system specifications
+- Data schemas
+- Example instances
+
+No runtime implementation yet.
+
+---
+
+## Future Work
+
+- Minimal executable prototype (Python / Unity)
+- Visualization of BodyGraph
+- Evolution simulation
+- AI-assisted semantic tagging
+- Trait generation models
+
+---
+
+## Positioning
+
+RTIS is not just:
+
+- a character generator
+- a procedural modeling tool
+
+It is a:
+
+> **Generative Life System**
+
+Applicable to:
+- games
+- generative art
+- simulation
+- artificial life research
+
+---
+
+## Author
+
+Created by:
+
+sun940717
 
 ---
 
 ## License
 
-This work is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
-
-You are free to reference, discuss, or build upon this concept, provided proper attribution is given.
+MIT License
