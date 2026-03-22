@@ -1,44 +1,163 @@
-# System Overview — Generative Morphology & Evolution System
+# System Overview — Recursive Trait Inheritance System (RTIS)
 
-## 0. 系統定位
+## 0. System Definition
 
-本系統是一個：
+RTIS is a generative morphology and evolution system based on:
 
-> 無限制形體（Unbounded Morphology）  
-> × 遺傳系統（Genetic System）  
-> × 語義對應（Semantic Correspondence）  
-> 的生成生命架構
+- Unbounded morphology (no fixed body structure)
+- Trait-driven composition (trait as the fundamental unit)
+- Recursive attachment (traits can attach to any other trait)
+- Semantic-based correspondence (not name-based mapping)
+- Genetic-style inheritance and evolution
 
-目標：
-- 生成可演化的形體
-- 支援無限拓樸結構
-- 保持可重現、可主張（ownership-grade）
+This system is NOT a predefined character generator.
 
----
-
-## 1. 系統分層
-
-### Layer 0 — Genome（基因層）
-定義生成規則，而非形體本身
-
-### Layer 1 — Development Engine（發育層）
-將 Genome 轉換為 BodyGraph
-
-### Layer 2 — BodyGraph（形體層）
-所有形體的統一表示（節點 + 邊）
-
-### Layer 3 — Trait System（特徵層）
-定義可遺傳、可變異的特徵
-
-### Layer 4 — Part Correspondence Engine（對應層）
-在不同形體之間建立語義對應
-
-### Layer 5 — Evolution Loop（演化層）
-負責繁殖、突變、生成下一代
+It is a **generative life system** capable of producing evolving structures.
 
 ---
 
-## 2. 核心流程
+## 1. Core Philosophy
+
+### 1.1 No Fixed Anatomy
+
+- No predefined skeleton (no "head", "arm", "leg" hierarchy)
+- Any structure can emerge
+- Any part can attach to any other part
+
+Example:
+- A head can grow from a hand
+- A hand can grow from a head
+
+---
+
+### 1.2 Trait as the Fundamental Unit
+
+- Everything is a trait
+- Organisms are constructed from traits
+- Traits define behavior, structure, and appearance
+
+---
+
+### 1.3 Recursive Composition
+
+Traits can:
+- attach to other traits
+- generate new traits
+- modify existing traits
+
+This allows infinite structural complexity.
+
+---
+
+### 1.4 Semantic over Naming
+
+System does NOT rely on:
+- "hand"
+- "leg"
+- "eye"
+
+Instead uses:
+- semantic tags
+- functional roles
+
+Example:
+- grasping
+- sensor
+- locomotion
+- support
+
+---
+
+### 1.5 Evolution-Oriented Design
+
+System supports:
+- inheritance
+- mutation
+- recombination
+- structural variation
+
+---
+
+## 2. System Layers
+
+### Layer 0 — Genome (Rule Layer)
+
+Defines:
+- generation rules
+- gene modules
+- regulatory logic
+
+Genome does NOT describe shapes directly.
+
+---
+
+### Layer 1 — Development Engine (Growth Layer)
+
+Transforms:
+
+Genome → BodyGraph
+
+
+Processes:
+- growth
+- branching
+- specialization
+
+---
+
+### Layer 2 — BodyGraph (Structure Layer)
+
+Unified representation of an organism:
+
+- nodes = PartNodes
+- edges = relationships (attachment / connection)
+
+Each node contains:
+- geometry
+- semantic tags
+- morphology features
+- anchors
+
+---
+
+### Layer 3 — Trait System (Feature Layer)
+
+Traits define:
+- structural modification
+- behavior
+- visual/material properties
+
+Traits are:
+- inheritable
+- mutable
+- composable
+
+---
+
+### Layer 4 — Part Correspondence Engine (PCE)
+
+Resolves:
+
+> Where a trait should attach in a different organism
+
+Handles:
+- multi-to-multi mapping
+- semantic matching
+- morphology similarity
+- trait slots
+
+---
+
+### Layer 5 — Evolution Loop
+
+Handles:
+- reproduction
+- mutation
+- next generation creation
+
+---
+
+## 3. Core Pipeline
 
 
 Genome
@@ -58,30 +177,64 @@ Next Generation
 
 ---
 
-## 3. 設計原則
+## 4. Design Principles
 
-### 3.1 無限制形體
-- 不限制節點數量
-- 不限制拓樸結構
-- 不依賴固定骨架
+### 4.1 Unbounded Morphology
 
-### 3.2 語義優先
-- 不用「手/腳」名稱
-- 使用 semantic tags + role
-
-### 3.3 可重現性
-- 所有生成基於 seed
-- 所有結果可 hash
-
-### 3.4 AI 作為補完層
-AI 僅用於：
-- 語義標註
-- fallback 生成
-- trait 轉譯
+- No limit on node count
+- No limit on topology
+- No fixed structure
 
 ---
 
-## 4. 模組依賴關係
+### 4.2 Deterministic Generation
+
+- All generation is seed-based
+- Same input → same output
+
+---
+
+### 4.3 Semantic Matching
+
+- No name-based mapping
+- Only role-based matching
+
+---
+
+### 4.4 AI as Auxiliary Layer
+
+AI is used ONLY for:
+
+- semantic tagging
+- fallback generation
+- trait translation
+
+AI does NOT define the system core.
+
+---
+
+### 4.5 Ownership-Grade Structure
+
+All outputs can be:
+- hashed
+- reproduced
+- versioned
+
+---
+
+## 5. System Goals
+
+- Create evolving artificial organisms
+- Support procedural generation at infinite scale
+- Enable generative IP systems
+- Serve as a research platform for:
+  - artificial life
+  - morphology generation
+  - evolutionary systems
+
+---
+
+## 6. Module Dependencies
 
 
 Genome → Development → BodyGraph
@@ -95,8 +248,15 @@ Evolution
 
 ---
 
-## 5. 系統目標
+## 7. Current Status
 
-- 可演化生命系統
-- 可用於遊戲 / 藝術 / 研究
-- 可作為生成型 IP 資產
+This repository currently contains:
+
+- Conceptual specifications
+- System architecture definitions
+- No runtime implementation
+
+Future work:
+- schema definitions
+- example data
+- prototype implementation
