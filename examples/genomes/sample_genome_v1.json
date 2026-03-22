@@ -1,1 +1,130 @@
-
+{
+  "genome_id": "sample_genome_v1",
+  "version": "v1.0.0",
+  "display_name": "Basic Limb-Sensor Genome",
+  "description": "A minimal genome that generates a branched structure with grasping and sensor traits.",
+  "gene_modules": [
+    {
+      "gene_id": "g_root_expand",
+      "operation": "create_node",
+      "target_selector": {
+        "root_only": true
+      },
+      "parameters": {
+        "node_type": "core",
+        "assign_tags": ["support"]
+      },
+      "priority": 0
+    },
+    {
+      "gene_id": "g_branch_limb",
+      "operation": "branch_structure",
+      "target_selector": {
+        "by_tags": ["support"],
+        "leaf_only": true
+      },
+      "parameters": {
+        "branch_count": 2
+      },
+      "priority": 1
+    },
+    {
+      "gene_id": "g_extend_limb",
+      "operation": "create_node",
+      "target_selector": {
+        "leaf_only": true
+      },
+      "parameters": {
+        "node_type": "limb",
+        "assign_tags": ["manipulator", "grasping"]
+      },
+      "priority": 2
+    },
+    {
+      "gene_id": "g_add_sensor",
+      "operation": "create_node",
+      "target_selector": {
+        "leaf_only": true
+      },
+      "parameters": {
+        "node_type": "sensor",
+        "assign_tags": ["sensor"]
+      },
+      "priority": 3
+    },
+    {
+      "gene_id": "g_specialize_end",
+      "operation": "assign_tag",
+      "target_selector": {
+        "leaf_only": true
+      },
+      "parameters": {
+        "tags": ["end_effector"]
+      },
+      "priority": 4
+    }
+  ],
+  "regulatory_rules": [
+    {
+      "rule_id": "r_limit_depth",
+      "target_gene_id": "g_branch_limb",
+      "conditions": [
+        {
+          "type": "depth_less_than",
+          "value": 3
+        }
+      ],
+      "effect": {
+        "mode": "enable"
+      }
+    },
+    {
+      "rule_id": "r_sensor_probability",
+      "target_gene_id": "g_add_sensor",
+      "conditions": [
+        {
+          "type": "is_leaf",
+          "value": true
+        }
+      ],
+      "effect": {
+        "mode": "scale_probability",
+        "value": 0.7
+      }
+    }
+  ],
+  "mutation_rules": [
+    {
+      "mutation_type": "parameter_mutation",
+      "probability": 0.1,
+      "scope": "gene_module"
+    },
+    {
+      "mutation_type": "gene_duplication",
+      "probability": 0.05,
+      "scope": "gene_module"
+    },
+    {
+      "mutation_type": "regulatory_mutation",
+      "probability": 0.05,
+      "scope": "regulatory_rule"
+    }
+  ],
+  "initial_state": {
+    "root_node_type": "root",
+    "initial_tags": ["core"],
+    "initial_geometry": {
+      "primitive": "blob",
+      "scale": 1.0
+    }
+  },
+  "engine_hints": {
+    "max_iterations": 8,
+    "complexity_threshold": 64,
+    "allow_recursive_growth": true
+  },
+  "metadata": {
+    "author": "RTIS",
+    "note": "First minimal functional genome example"
+  }
+}
