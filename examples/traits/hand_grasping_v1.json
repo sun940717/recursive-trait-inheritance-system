@@ -1,1 +1,63 @@
-
+{
+  "trait_id": "hand_grasping_v1",
+  "version": "v1.0.0",
+  "display_name": "Hand-like Grasping",
+  "description": "A grasping trait intended for hand-like or equivalent end-effector structures.",
+  "slot_role": "grasping_end_effector",
+  "required_tags": [
+    {
+      "tag": "grasping",
+      "min_prob": 0.6
+    },
+    {
+      "tag": "end_effector",
+      "min_prob": 0.5
+    }
+  ],
+  "preferred_tags": [
+    {
+      "tag": "manipulator",
+      "min_prob": 0.5
+    }
+  ],
+  "mapping_policy": {
+    "mode": "distribution_transfer",
+    "normalize_weights": true,
+    "decay_with_count": true,
+    "max_targets": 16
+  },
+  "compatibility_rules": [
+    {
+      "type": "requires_anchor",
+      "value": true
+    }
+  ],
+  "geometry_constraints": {
+    "min_surface_area": 0.1,
+    "min_elongation": 0.2,
+    "min_branch_count": 0,
+    "requires_articulation": false
+  },
+  "inheritance": {
+    "mode": "resource_conserved",
+    "base_probability": 0.55,
+    "mutation_rate": 0.06,
+    "intensity_range": [0.25, 1.0]
+  },
+  "fallback_policy": {
+    "mode": "hybrid",
+    "allow_ai_synthesis": true,
+    "allow_create_part": true,
+    "allow_translation": true,
+    "max_created_parts": 2
+  },
+  "engine_hints": {
+    "semantic_threshold": 0.55,
+    "quality_threshold": 0.5,
+    "weights": {
+      "w_semantic": 0.5,
+      "w_morph": 0.35,
+      "w_topo": 0.15
+    }
+  }
+}
