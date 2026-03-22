@@ -1,1 +1,325 @@
-
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schema/genome.schema.json",
+  "title": "Genome",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "genome_id",
+    "version",
+    "gene_modules",
+    "regulatory_rules",
+    "mutation_rules"
+  ],
+  "properties": {
+    "genome_id": {
+      "type": "string",
+      "description": "Unique genome identifier."
+    },
+    "version": {
+      "type": "string",
+      "description": "Genome schema or content version."
+    },
+    "display_name": {
+      "type": "string",
+      "description": "Optional human-readable genome name."
+    },
+    "description": {
+      "type": "string",
+      "description": "Optional description of this genome."
+    },
+    "gene_modules": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Ordered list of gene modules executed by the development engine.",
+      "items": {
+        "$ref": "#/$defs/gene_module"
+      }
+    },
+    "regulatory_rules": {
+      "type": "array",
+      "description": "Rules controlling when and where gene modules activate.",
+      "items": {
+        "$ref": "#/$defs/regulatory_rule"
+      }
+    },
+    "mutation_rules": {
+      "type": "array",
+      "description": "Rules controlling how this genome may mutate during reproduction.",
+      "items": {
+        "$ref": "#/$defs/mutation_rule"
+      }
+    },
+    "initial_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Optional starting conditions for development.",
+      "properties": {
+        "root_node_type": {
+          "type": "string",
+          "default": "root"
+        },
+        "initial_tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "initial_geometry": {
+          "$ref": "#/$defs/geometry_seed"
+        }
+      }
+    },
+    "engine_hints": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Optional hints for development execution.",
+      "properties": {
+        "max_iterations": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 16
+        },
+        "complexity_threshold": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 128
+        },
+        "allow_recursive_growth": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Optional metadata for authorship, provenance, or notes.",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "gene_module": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "gene_id",
+        "operation"
+      ],
+      "properties": {
+        "gene_id": {
+          "type": "string",
+          "description": "Unique identifier for the gene module."
+        },
+        "operation": {
+          "type": "string",
+          "enum": [
+            "create_node",
+            "connect_node",
+            "branch_structure",
+            "split_node",
+            "merge_nodes",
+            "deform_geometry",
+            "scale_node",
+            "rotate_node",
+            "assign_tag",
+            "remove_tag",
+            "duplicate_subgraph",
+            "thicken_structure",
+            "specialize_node"
+          ],
+          "description": "Primary transformation performed by this gene."
+        },
+        "target_selector": {
+          "$ref": "#/$defs/selector",
+          "description": "How target nodes are selected."
+        },
+        "parameters": {
+          "type": "object",
+          "description": "Operation-specific parameters.",
+          "additionalProperties": true
+        },
+        "priority": {
+          "type": "integer",
+          "default": 0,
+          "description": "Execution priority within an iteration."
+        },
+        "enabled": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    },
+    "regulatory_rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rule_id",
+        "target_gene_id",
+        "conditions",
+        "effect"
+      ],
+      "properties": {
+        "rule_id": {
+          "type": "string"
+        },
+        "target_gene_id": {
+          "type": "string",
+          "description": "Gene module affected by this rule."
+        },
+        "conditions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/condition"
+          }
+        },
+        "effect": {
+          "$ref": "#/$defs/regulatory_effect"
+        }
+      }
+    },
+    "mutation_rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mutation_type",
+        "probability"
+      ],
+      "properties": {
+        "mutation_type": {
+          "type": "string",
+          "enum": [
+            "parameter_mutation",
+            "gene_duplication",
+            "gene_deletion",
+            "regulatory_mutation",
+            "gene_insertion"
+          ]
+        },
+        "probability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "scope": {
+          "type": "string",
+          "enum": [
+            "genome",
+            "gene_module",
+            "regulatory_rule"
+          ],
+          "default": "gene_module"
+        },
+        "parameters": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+    "selector": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "by_tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "by_node_type": {
+          "type": "string"
+        },
+        "by_depth_max": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "leaf_only": {
+          "type": "boolean",
+          "default": false
+        },
+        "root_only": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "condition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "has_tag",
+            "lacks_tag",
+            "depth_less_than",
+            "depth_greater_than",
+            "is_leaf",
+            "is_root",
+            "iteration_less_than",
+            "iteration_greater_than"
+          ]
+        },
+        "value": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "regulatory_effect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode"
+      ],
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "enable",
+            "disable",
+            "scale_probability",
+            "override_parameter"
+          ]
+        },
+        "value": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "geometry_seed": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "primitive": {
+          "type": "string",
+          "enum": [
+            "sphere",
+            "capsule",
+            "blob",
+            "box",
+            "implicit"
+          ],
+          "default": "blob"
+        },
+        "scale": {
+          "type": "number",
+          "minimum": 0,
+          "default": 1.0
+        }
+      }
+    }
+  }
+}
