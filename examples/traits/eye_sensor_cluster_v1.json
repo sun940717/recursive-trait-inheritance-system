@@ -1,1 +1,67 @@
-
+{
+  "trait_id": "eye_sensor_cluster_v1",
+  "version": "v1.0.0",
+  "display_name": "Eye-like Sensor Cluster",
+  "description": "A sensory trait representing clusters of visual or sensor-like nodes that can attach to various regions of a structure.",
+  "slot_role": "sensor_cluster",
+  "required_tags": [
+    {
+      "tag": "sensor",
+      "min_prob": 0.6
+    }
+  ],
+  "preferred_tags": [
+    {
+      "tag": "eye_like",
+      "min_prob": 0.5
+    },
+    {
+      "tag": "surface",
+      "min_prob": 0.4
+    }
+  ],
+  "mapping_policy": {
+    "mode": "one_to_many",
+    "normalize_weights": true,
+    "decay_with_count": true,
+    "max_targets": 32
+  },
+  "compatibility_rules": [
+    {
+      "type": "requires_anchor",
+      "value": true
+    },
+    {
+      "type": "disallow_internal_node",
+      "value": true
+    }
+  ],
+  "geometry_constraints": {
+    "min_surface_area": 0.05,
+    "min_elongation": 0.0,
+    "min_branch_count": 0,
+    "requires_articulation": false
+  },
+  "inheritance": {
+    "mode": "blend",
+    "base_probability": 0.6,
+    "mutation_rate": 0.08,
+    "intensity_range": [0.3, 1.0]
+  },
+  "fallback_policy": {
+    "mode": "create_attachment_part",
+    "allow_ai_synthesis": true,
+    "allow_create_part": true,
+    "allow_translation": true,
+    "max_created_parts": 4
+  },
+  "engine_hints": {
+    "semantic_threshold": 0.5,
+    "quality_threshold": 0.45,
+    "weights": {
+      "w_semantic": 0.55,
+      "w_morph": 0.25,
+      "w_topo": 0.2
+    }
+  }
+}
