@@ -2,9 +2,7 @@
 
 **Author:** HongChenHe（洪晨和）  
 **Version:** 2026-03-30  
-**Target:** IEEE Conference on Games (CoG) 2026  
 **GitHub (Public):** [recursive-trait-inheritance-system](https://github.com/sun940717/recursive-trait-inheritance-system)  
-**GitHub (Private Lab):** [ai-research-lab](https://github.com/sun940717/ai-research-lab)
 
 ---
 
