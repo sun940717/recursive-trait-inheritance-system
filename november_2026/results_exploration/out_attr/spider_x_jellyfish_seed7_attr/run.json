@@ -1,0 +1,355 @@
+{
+ "parents": [
+  "spider",
+  "jellyfish"
+ ],
+ "seed": 7,
+ "voxel": 0.02,
+ "rules": [
+  "tags: RTIS ontology.py (cell / organ / part layers)",
+  "matching: PCE layered similarity; >= 0.40 always, 0.25-0.40 chance (score - 0.25) / 0.15, < 0.25 never",
+  "each gene copied whole from one parent (alpha 0.5)",
+  "relative genes (size gene; lengths and radii as fractions; lean and bends relative to the parent)",
+  "linkage: 1 switch point per crossed part",
+  "grafting: a part whose parent is missing attaches where that parent would have been",
+  "site rule: two unmatched limbs in one place compete; only one stays",
+  "geometry: skeleton + implicit surface + Fourier cross-section detail"
+ ],
+ "environment": {
+  "python": "3.10.12",
+  "numpy": "2.2.6",
+  "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39",
+  "pce.py": "/home/claude/rtis_real/pce.py",
+  "ontology.py": "/home/claude/rtis_real/ontology.py"
+ },
+ "unknown_tags": [],
+ "attribute_layer": {
+  "sets": [],
+  "parts": {
+   "leg_1": {
+    "from": "own",
+    "target": {
+     "length": 0.4696529335703694,
+     "thickness": 0.016139817194038723,
+     "taper": 0.399999999982032,
+     "bend": 1.7625402126766259
+    },
+    "result": {
+     "class": "long",
+     "length": 0.469652933569073,
+     "total": 0.6949387458845652,
+     "thickness": 0.016139817193038728,
+     "taper": 0.39999999998203206,
+     "bend": 1.7625402126812577
+    }
+   },
+   "leg_2": {
+    "from": "own",
+    "target": {
+     "length": 0.4327716912567343,
+     "thickness": 0.016139817194038723,
+     "taper": 0.399999999982032,
+     "bend": 1.8116387684417106
+    },
+    "result": {
+     "class": "long",
+     "length": 0.43277169125544557,
+     "total": 0.6664794030967505,
+     "thickness": 0.016139817193038728,
+     "taper": 0.39999999998203206,
+     "bend": 1.8116387684463002
+    }
+   },
+   "leg_3": {
+    "from": "own",
+    "target": {
+     "length": 0.4278535995075192,
+     "thickness": 0.016139817194038723,
+     "taper": 0.399999999982032,
+     "bend": 1.8116387684416093
+    },
+    "result": {
+     "class": "long",
+     "length": 0.42785359950628077,
+     "total": 0.6405065625330537,
+     "thickness": 0.016139817193038728,
+     "taper": 0.39999999998203206,
+     "bend": 1.8116387684461985
+    }
+   },
+   "leg_4": {
+    "from": "own",
+    "target": {
+     "length": 0.46218101724512667,
+     "thickness": 0.016139817194038723,
+     "taper": 0.399999999982032,
+     "bend": 1.7525658667710438
+    },
+    "result": {
+     "class": "long",
+     "length": 0.46218101724393557,
+     "total": 0.6432518570489105,
+     "thickness": 0.016139817193038728,
+     "taper": 0.39999999998203206,
+     "bend": 1.7525658667756878
+    }
+   },
+   "tentacle": {
+    "from": "own",
+    "target": {
+     "length": 0.5347566510114603,
+     "thickness": 0.012976093226998048,
+     "taper": 0.23999999998908764,
+     "bend": 2.3448064557114314
+    },
+    "result": {
+     "class": "long",
+     "length": 0.5347566510104713,
+     "total": 0.7516205638001507,
+     "thickness": 0.01297609322599805,
+     "taper": 0.23999999998908764,
+     "bend": 2.344806455716271
+    }
+   },
+   "oral_arm": {
+    "from": "own",
+    "target": {
+     "length": 0.19861169812999893,
+     "thickness": 0.022543212809615253,
+     "taper": 0.2499999999928956,
+     "bend": 0.5456550545697332
+    },
+    "result": {
+     "class": "long",
+     "length": 0.1986116981290044,
+     "total": 0.3838934876968858,
+     "thickness": 0.022543212808615255,
+     "taper": 0.2499999999928956,
+     "bend": 0.5456550545752981
+    }
+   }
+  },
+  "skipped": []
+ },
+ "matching": {
+  "pairs": [
+   {
+    "a": "cephalothorax",
+    "b": "bell",
+    "score": 1.0,
+    "how": "root"
+   }
+  ],
+  "borderline_decisions": [],
+  "unmatched_a": [
+   "abdomen",
+   "fang",
+   "leg_1",
+   "leg_2",
+   "leg_3",
+   "leg_4"
+  ],
+  "unmatched_b": [
+   "oral_arm",
+   "tentacle"
+  ]
+ },
+ "inheritance": {
+  "parts": [
+   "bell",
+   "abdomen",
+   "leg_1",
+   "leg_2",
+   "leg_3",
+   "leg_4",
+   "tentacle",
+   "oral_arm"
+  ],
+  "origin": {
+   "bell": [
+    "A.cephalothorax",
+    "B.bell"
+   ],
+   "abdomen": [
+    "A.abdomen"
+   ],
+   "leg_1": [
+    "A.leg_1"
+   ],
+   "leg_2": [
+    "A.leg_2"
+   ],
+   "leg_3": [
+    "A.leg_3"
+   ],
+   "leg_4": [
+    "A.leg_4"
+   ],
+   "tentacle": [
+    "B.tentacle"
+   ],
+   "oral_arm": [
+    "B.oral_arm"
+   ]
+  },
+  "ancestry_a_per_part": {
+   "bell": 0.1875,
+   "abdomen": 1.0,
+   "leg_1": 1.0,
+   "leg_2": 1.0,
+   "leg_3": 1.0,
+   "leg_4": 1.0,
+   "tentacle": 0.0,
+   "oral_arm": 0.0
+  },
+  "ancestry_a_overall": 0.6532894736842105,
+  "grafted": 0,
+  "not_inherited": 1,
+  "lost_to_site_rule": 0,
+  "orphans_dropped": 0,
+  "new_humps": [
+   0
+  ],
+  "new_bend_deg": [
+   0.0
+  ]
+ },
+ "body": {
+  "closed": true,
+  "outer_shells": 1,
+  "bubbles": 0,
+  "triangles": 58680,
+  "volume": 0.8669400890977421,
+  "swallowed_limbs": [],
+  "seconds": 3.2181171659999563,
+  "failed_checks": [],
+  "ok": true
+ },
+ "handoff": {
+  "counts": {
+   "parts": 8,
+   "nodes": 114,
+   "bones": 92,
+   "edges": 197,
+   "vertices": 29342,
+   "faces": 58680
+  },
+  "groups": {
+   "root": [
+    "bell"
+   ],
+   "attached": [
+    "abdomen",
+    "leg_1",
+    "leg_2",
+    "leg_3",
+    "leg_4",
+    "tentacle",
+    "oral_arm"
+   ],
+   "tag:torso": [
+    "bell"
+   ],
+   "tag:structural": [
+    "bell",
+    "abdomen"
+   ],
+   "tag:central": [
+    "bell"
+   ],
+   "arrangement:single": [
+    "bell",
+    "abdomen"
+   ],
+   "tag:secretion_organ": [
+    "abdomen",
+    "oral_arm"
+   ],
+   "tag:limb": [
+    "leg_1",
+    "leg_2",
+    "leg_3",
+    "leg_4"
+   ],
+   "tag:locomotion": [
+    "leg_1",
+    "leg_2",
+    "leg_3",
+    "leg_4"
+   ],
+   "tag:motor_organ": [
+    "leg_1",
+    "leg_2",
+    "leg_3",
+    "leg_4",
+    "tentacle"
+   ],
+   "arrangement:mirror": [
+    "leg_1",
+    "leg_2",
+    "leg_3",
+    "leg_4"
+   ],
+   "tag:appendage": [
+    "tentacle",
+    "oral_arm"
+   ],
+   "tag:grasping": [
+    "tentacle",
+    "oral_arm"
+   ],
+   "arrangement:radial": [
+    "tentacle",
+    "oral_arm"
+   ]
+  },
+  "access": {
+   "motion_system": "read_only"
+  },
+  "files": [
+   "child.genome.json",
+   "child.morph.json",
+   "child.obj",
+   "child.skin.npz",
+   "child.state.json"
+  ]
+ },
+ "motion_test": {
+  "weights_sum_error": 4.440892098500626e-16,
+  "rest_pose_error": 6.661338147750939e-16,
+  "parts_with_vertices": 8,
+  "bones_with_vertices": 75,
+  "bones_without_vertices": [
+   "leg_1.L.b0",
+   "leg_1.R.b0",
+   "leg_2.L.b0",
+   "leg_2.R.b0",
+   "leg_3.L.b0",
+   "leg_3.R.b0",
+   "leg_4.R.b0",
+   "tentacle.1.b0",
+   "tentacle.2.b0",
+   "tentacle.3.b0",
+   "tentacle.5.b0",
+   "tentacle.6.b0",
+   "tentacle.7.b0",
+   "oral_arm.0.b0",
+   "oral_arm.1.b0",
+   "oral_arm.2.b0",
+   "oral_arm.3.b0"
+  ],
+  "vertex_part_agrees_with_face_part": 0.9938479890933879,
+  "one_part_moved": {
+   "bone": "abdomen.b0",
+   "moved_vertices": 5057,
+   "share_in_that_part": 0.9468064069606487
+  },
+  "demo_pose_volume_change": -0.007191206763305202,
+  "demo_pose_flipped_faces": 0.015848670756646217,
+  "bones_in_tag_limb": 32,
+  "failed_checks": [],
+  "ok": true
+ },
+ "seconds": 25.80785690100015,
+ "ok": true
+}

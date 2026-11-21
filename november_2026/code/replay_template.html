@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RTIS 生成重播</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE everyday learning: a lab time-lapse of one creature being made, calm and exact
+   IDEA a specimen time-lapse under a dark lens, with the protocol sheet beside it
+   PICTURE the live 3D stage (dark dish) replaying each step; a 2D lens for the Fourier circles
+   COLOUR parent A orange #e07b39, parent B blue #3b7dd8 (the ancestry colours of every figure), ink dish #10151b
+   TYPE Space Grotesk 600 titles + Inter / Noto Sans TC text
+   LAYOUT laptop: stage left 64%, protocol right, step strip under the stage; phone: title, stage, controls, protocol */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0b0d10);--ink:light-dark(#14171c,#e8ebef);--mute:light-dark(#5b6370,#9aa3ae);--line:light-dark(#e3e6ea,#262b33);--panel:light-dark(#f5f6f8,#13171c);--a:#e07b39;--b:#3b7dd8;--dish:#10151b;--ok:#1f9d6b;--bad:#d64545}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;overflow-x:clip}
+h1,h2{font-family:"Space Grotesk","Noto Sans TC",Inter,sans-serif;font-weight:600;letter-spacing:-.02em;line-height:1.05;margin:0}
+h1{font-size:clamp(22px,2.6vw,32px)}
+h2{font-size:clamp(22px,2.2vw,30px);text-wrap:balance}
+.app{display:grid;grid-template-columns:minmax(0,64fr) minmax(0,36fr);grid-template-rows:auto minmax(0,1fr) auto;height:100%;max-width:1680px;margin:0 auto}
+header{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;padding:14px max(2vw,16px) 10px}
+header .meta{color:var(--mute);font-size:14px}
+.key{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.dot{width:11px;height:11px;border-radius:50%;display:inline-block}
+.stage{position:relative;margin:0 0 0 max(2vw,16px);border-radius:14px;overflow:hidden;background:var(--dish);min-height:360px}
+.stage canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+#lens{pointer-events:none;opacity:0;transition:opacity .4s}
+#lens.on{opacity:1}
+.stage.lensed .cap{display:none}
+.cap{position:absolute;left:14px;bottom:12px;right:14px;color:#cfd6de;font-size:13px;display:flex;justify-content:space-between;gap:12px;pointer-events:none}
+.cap b{color:#fff;font-weight:600}
+.side{grid-row:2/4;grid-column:2;overflow-y:auto;padding:4px max(2vw,16px) 24px 22px}
+.side .zh{color:var(--mute);margin-top:-2px}
+.side p{margin:0 0 10px}
+.lines{margin:12px 0 16px}
+.lines p{margin:0}
+.lines .pair{margin-bottom:12px}
+.sec{border-top:1px solid var(--line);padding-top:12px;margin-top:14px}
+.sec h3{font-size:15px;margin:0 0 8px;font-weight:600}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:5px 8px 5px 0;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:500;color:var(--mute)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.bar{height:8px;border-radius:4px;background:var(--line);overflow:hidden;width:90px;display:inline-block;vertical-align:middle;margin-right:6px}
+.bar i{display:block;height:100%;background:var(--ink)}
+.strip{display:flex;flex-wrap:wrap;gap:2px;margin:4px 0 2px}
+.cell{width:13px;height:18px;border-radius:2px;background:var(--line);transition:background .25s}
+.cell.A{background:var(--a)}
+.cell.B{background:var(--b)}
+.cell.gap{width:6px;background:none}
+.prow{margin-bottom:10px}
+.prow .nm{font-weight:600;font-size:14px}
+.prow .src{color:var(--mute);font-size:13px}
+.drop{color:var(--mute);font-size:14px;margin:2px 0}
+.drop s{color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:inherit;font-size:14px;min-height:36px;padding:4px 12px;border-radius:18px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip:focus-visible,.btn:focus-visible,.step:focus-visible,input:focus-visible{outline:3px solid var(--b);outline-offset:2px}
+.ok{color:var(--ok);font-weight:600}
+.bad{color:var(--bad);font-weight:600}
+.ctl{grid-column:1;display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:10px 0 4px max(2vw,16px)}
+.btn{font:inherit;font-size:15px;min-width:44px;min-height:44px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer;padding:0 14px}
+.btn.play{background:var(--ink);color:var(--bg);border-color:var(--ink);min-width:92px}
+#scrub{flex:1 1 160px;accent-color:var(--a);height:44px}
+select{font:inherit;font-size:16px;min-height:44px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:0 8px}
+.steps{grid-column:1;display:flex;flex-wrap:wrap;gap:6px;padding:4px 0 16px max(2vw,16px)}
+.step{font:inherit;font-size:13px;line-height:1.25;text-align:left;min-height:44px;padding:5px 10px;border-radius:10px;border:1px solid var(--line);background:none;color:var(--mute);cursor:pointer;flex:1 1 120px;max-width:200px}
+.step b{display:block;color:var(--ink);font-weight:600;font-size:13px}
+.step.on{border-color:var(--ink);background:var(--panel)}
+.step.done{color:var(--mute)}
+.step .pg{display:block;height:3px;margin-top:4px;border-radius:2px;background:var(--line);overflow:hidden}
+.step .pg i{display:block;height:100%;width:0;background:var(--a)}
+.slider{display:flex;align-items:center;gap:10px;margin:6px 0}
+.slider input{flex:1;accent-color:var(--a);height:44px}
+.foot{color:var(--mute);font-size:13px;margin-top:18px}
+.err{position:absolute;inset:0;display:none;align-items:center;justify-content:center;color:#cfd6de;padding:24px;text-align:center}
+@media(max-width:900px){
+.app{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto auto auto;height:auto}
+.stage{margin:0 16px;height:56svh;min-height:300px}
+.ctl,.steps{grid-column:1;padding-left:16px;padding-right:16px}
+.side{grid-column:1;grid-row:auto;overflow:visible;padding:8px 16px 32px;order:4}
+header{order:1}
+.stage{order:2}
+.ctl{order:3}
+.steps{order:5}
+.step{flex:1 1 30%;max-width:none}
+}
+@media(prefers-reduced-motion:reduce){.cell,#lens{transition:none}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>RTIS 生成重播 · Generation replay</h1>
+    <span class="meta" id="runmeta"></span>
+    <span class="key"><span class="dot" style="background:var(--a)"></span><span id="keyA">A</span></span>
+    <span class="key"><span class="dot" style="background:var(--b)"></span><span id="keyB">B</span></span>
+  </header>
+  <div class="stage" id="stage">
+    <canvas id="gl" aria-label="3D replay of the generation process"></canvas>
+    <canvas id="lens" aria-hidden="true"></canvas>
+    <div class="cap"><span id="capL"></span><span id="capR">Drag to turn · 拖曳旋轉</span></div>
+    <div class="err" id="err">3D could not start in this browser. The step texts and tables on the right still show the whole run.<br>這個瀏覽器無法啟動 3D，右邊的文字與表格仍然完整呈現這次執行。</div>
+  </div>
+  <aside class="side" id="side" aria-live="polite"></aside>
+  <div class="ctl">
+    <button class="btn" id="prev" aria-label="Previous step">◀</button>
+    <button class="btn play" id="play">Play 播放</button>
+    <button class="btn" id="next" aria-label="Next step">▶</button>
+    <input type="range" id="scrub" min="0" max="1000" value="0" aria-label="Position within this step">
+    <select id="speed" aria-label="Speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select>
+  </div>
+  <nav class="steps" id="steps" aria-label="Steps"></nav>
+</div>
+<script type="application/json" id="data">/*DATA*/</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+{
+const D = JSON.parse(document.getElementById('data').textContent);
+const $ = id => document.getElementById(id);
+const CA = '#e07b39', CB = '#3b7dd8';
+const PAL = ['#5fb3b3','#c594c5','#f2c14e','#7fb069','#ee6c4d','#98c1d9','#e5989b','#b8b08d','#8d99ae'];
+const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const A = D.parents[0], B = D.parents[1], C = D.child, P = D.package;
+const pct = x => Math.round(x * 100) + '%';
+const esc = s => String(s).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const why = w => w === 'not inherited' ? 'left out by chance · 機率沒遺傳到'
+  : w.startsWith('lost the site to') ? `lost its place to ${w.slice(17)} (site rule) · 位置規則：輸給 ${w.slice(17)}`
+  : w === 'parent missing' ? 'parent missing · 父部位不在' : w;
+$('runmeta').textContent = `${D.run.a} × ${D.run.b}, seed ${D.run.seed} · one recorded run, replayed · 一次真實執行的重播`;
+$('keyA').textContent = `A ${A.name}`; $('keyB').textContent = `B ${B.name}`;
+
+// ---------- data decoding ----------
+const bytes = s => Uint8Array.from(atob(s), c => c.charCodeAt(0)).buffer;
+const f32 = s => new Float32Array(bytes(s)), u32 = s => new Uint32Array(bytes(s)), u8 = s => new Uint8Array(bytes(s));
+const mix = (c1, c2, t) => { const a = new THREE.Color(c1), b = new THREE.Color(c2); return b.lerp(a, t); };
+
+// ---------- step texts (numbers come from the recorded run) ----------
+const errs = D.prologue.mean_error;
+const pairsTbl = D.matching.pairs.map(p => `<tr><td>${esc(p.a)}</td><td>${esc(p.b)}</td><td class="n">${p.score.toFixed(3)}</td><td>${p.how === 'root' ? 'root 根' : p.how === 'clear' ? '≥ 0.40' : 'chance 機率'}</td></tr>`).join('');
+const decTbl = D.matching.decisions.map(d => `<tr><td>${esc(d.a)} ~ ${esc(d.b)}</td><td class="n">${d.score.toFixed(3)}</td><td class="n"><span class="bar"><i style="width:${pct(d.chance)}"></i></span>${pct(d.chance)}</td><td class="${d.matched ? 'ok' : 'bad'}">${d.matched ? 'matched 配上' : 'not matched 沒配上'}</td></tr>`).join('');
+const geneOrder = g => g.single ? null : [['size', g === C.parts[0].genes ? (C.scale_src === 'A') : null], ['head', g.head], ...g.lengths.map((x, i) => ['L' + (i + 1), x]), ['gap'], ...g.bends.map((x, i) => ['bend' + (i + 1), x]), ['gap'], ...g.radii.map((x, i) => ['r' + i, x]), ['gap'], ['blend', g.blend], ['attach', g.attach], ['detail', g.detail]].filter(c => c[0] === 'gap' || c[1] !== null);
+let geneCells = 0;
+const strips = C.parts.map(p => {
+  const g = p.genes, order = geneOrder(g);
+  const cells = order ? order.map(([k, v]) => k === 'gap' ? '<span class="cell gap"></span>' : `<span class="cell" data-i="${geneCells++}" data-s="${v ? 'A' : 'B'}" title="${k}: ${v ? 'A' : 'B'}"></span>`).join('')
+    : Array.from({length: p.bones * 2 + 3}, () => `<span class="cell" data-i="${geneCells++}" data-s="${g.template}"></span>`).join('');
+  const src = p.origin.map(esc).join(' + ');
+  return `<div class="prow"><span class="nm">${esc(p.name)}</span> <span class="src">${src}${order ? ` · ${pct(p.ancestry_a)} from A` : ` · whole part from ${g.template} 整個部位來自 ${g.template}`}</span><div class="strip">${cells}</div></div>`;
+}).join('');
+const drops = C.dropped.map(d => `<p class="drop"><s>${d.parts.map(esc).join(' + ')}</s> · ${esc(why(d.why))}</p>`).join('');
+const fparts = C.parts.filter(p => p.fourier.terms.length > 1);
+const srcOutline = p => p.origin.map(o => { const [lab, nm] = o.split('.'); const par = lab === 'A' ? A : B; return {lab, nm, f: par.parts.find(q => q.name === nm).fourier}; });
+const bodyWH = C.parts[0].fourier.width_to_height;
+const bones = P.counts.bones, b = C.body, m = C.motion;
+const groupChips = ['tag:limb', 'tag:head', 'tag:torso', 'tag:weapon_part', 'arrangement:mirror', 'attached', 'root'].filter(k => P.groups[k]);
+
+const STEPS = [
+ {id: 'idea', en: 'Where it started: drawing with circles', zh: '起點：用圓畫圖', dur: 13,
+  lines: [['The first idea (11-09): draw a closed 3D curve with rotating circles, then fill in the faces.', '最初的想法（11-09）：用旋轉的圓在三維空間畫出閉合曲線，再把面補上。'],
+          ['In 3D each term traces a tilted ellipse. More terms bring the curve closer to the target: a path through the cube\'s 8 corners.', '在三維裡每一項畫的是傾斜的橢圓。項數越多，曲線越貼近目標：走過立方體 8 個頂點的路徑。'],
+          ['Drawing the curve worked; filling in the faces did not. Fourier stayed on as the outline of each part\'s cross-section.', '畫線可行，補面不行。傅立葉留了下來，變成每個部位的截面輪廓。']],
+  extra: () => `<div class="sec"><h3>Number of circles 圓的數量</h3><div class="slider"><input type="range" id="nterms" min="1" max="40" value="12" aria-label="Number of terms"><b id="ntv">12</b></div>
+    <div class="tbl"><table><tr><th>Terms 項數</th>${Object.keys(errs).map(k => `<th class="n">${k}</th>`).join('')}</tr><tr><td>Mean error 平均誤差</td>${Object.values(errs).map(v => `<td class="n">${v.toFixed(3)}</td>`).join('')}</tr></table></div></div>`},
+ {id: 'parents', en: 'Two parents', zh: '兩個親代', dur: 7,
+  lines: [[`A: ${A.name}, ${A.parts.length} parts, ${A.genes} genes. B: ${B.name}, ${B.parts.length} parts, ${B.genes} genes.`, `A：${A.name}，${A.parts.length} 個部位、${A.genes} 個基因。B：${B.name}，${B.parts.length} 個部位、${B.genes} 個基因。`],
+          ['Each part is a chain of bones; the skin you see is grown around them. Tags come from RTIS ontology.py.', '每個部位是一條骨頭鏈，看到的皮是圍著骨頭長出來的。標籤來自 RTIS 的 ontology.py。']],
+  extra: () => [A, B].map(par => `<div class="sec"><h3><span class="dot" style="background:${par.label === 'A' ? CA : CB}"></span> ${par.label}: ${esc(par.name)}</h3><div class="tbl"><table>${par.parts.map(q => `<tr><td>${esc(q.name)}</td><td>${q.arrangement}</td><td class="n">${q.bones} bones</td><td>${q.tags.map(esc).join(', ')}</td></tr>`).join('')}</table></div></div>`).join('')},
+ {id: 'match', en: 'Matching parts with PCE', zh: '用 PCE 配對部位', dur: 9,
+  lines: [['PCE scores each pair of parts by shared tags, counting part-layer tags (torso, limb, head…) twice.', 'PCE 依共同標籤替每一對部位打分數，部位層標籤（torso、limb、head…）算兩倍。'],
+          ['0.40 or more: always matched. 0.25 to 0.40: matched by chance, more likely the higher the score. Below 0.25: never.', '0.40 以上一定配；0.25 到 0.40 依機率，分數越高越可能配上；0.25 以下不配。']],
+  extra: () => `<div class="sec"><h3>Matched 配上的部位</h3><div class="tbl"><table><tr><th>A</th><th>B</th><th class="n">PCE</th><th>rule 規則</th></tr>${pairsTbl}</table></div></div>
+    <div class="sec"><h3>Borderline, decided by chance this time 邊界配對，這次擲出的結果</h3><div class="tbl"><table>${decTbl || '<tr><td>none 沒有</td></tr>'}</table></div></div>
+    <div class="sec"><p class="drop">Unmatched in A 沒配上：${D.matching.unmatched_a.map(esc).join(', ') || '—'}</p><p class="drop">Unmatched in B 沒配上：${D.matching.unmatched_b.map(esc).join(', ') || '—'}</p></div>`},
+ {id: 'genes', en: 'Inheritance, gene by gene', zh: '逐個基因遺傳', dur: 11,
+  lines: [['Each gene is copied whole from one parent, never averaged. Along a chain, genes travel in runs with one switch point (linkage).', '每個基因整個從一方複製，不做平均。沿著一條鏈，基因成段遺傳，中間只有一個交換點（連鎖）。'],
+          [`Body size gene: from ${C.scale_src}. Overall ${pct(C.ancestry_overall)} of the genes come from A.`, `體型基因來自 ${C.scale_src}。整體 ${pct(C.ancestry_overall)} 的基因來自 A。`],
+          ['Unmatched parts are kept by chance. Two unmatched limbs in one place compete, and only one stays (site rule).', '沒配對的部位依機率保留。同一個位置有兩條沒配對的肢體時互相競爭，只留一個（位置規則）。']],
+  extra: () => `<div class="sec"><h3>Genes per part 每個部位的基因</h3><p class="drop">head · L = bone lengths 骨頭長度 · bend 彎折 · r = joint thickness 關節粗細 · blend · attach · detail</p>${strips}</div><div class="sec"><h3>Not in the child 沒進入子代</h3>${drops || '<p class="drop">none</p>'}</div>`},
+ {id: 'skeleton', en: 'The skeleton grows', zh: '骨架長出來', dur: 8,
+  lines: [[`The child's genes grow into ${C.parts.length} parts and ${bones} bones, each part after the one it hangs from.`, `子代的基因長成 ${C.parts.length} 個部位、${bones} 根骨頭，每個部位接在它的父部位之後長出來。`],
+          ['Bone colour = which parent the bone\'s length gene came from.', '骨頭顏色＝這根骨頭的長度基因來自哪一方。']]},
+ {id: 'fourier', en: 'Cross-sections from Fourier circles', zh: '用傅立葉圓畫截面', dur: 10,
+  lines: [['Each part carries its cross-section outline as a polar Fourier series with 7 rows. Drawn as rotating circles, it needs at most 13.', '每個部位帶一組截面輪廓，是 7 列的極座標傅立葉級數。用旋轉的圓畫出來，最多只要 13 個圓。'],
+          [`The outline is one gene, inherited whole. This child's body outline came from ${C.parts[0].detail_src}: ${bodyWH.toFixed(2)} times as wide as tall.`, `輪廓是一個基因，整包遺傳。這個子代的身體輪廓來自 ${C.parts[0].detail_src}：寬是高的 ${bodyWH.toFixed(2)} 倍。`]],
+  extra: () => `<div class="sec"><h3>Part 部位</h3><div class="chips">${fparts.map((p, i) => `<button class="chip fpart" data-k="${i}" aria-pressed="${i === 0}">${esc(p.name)}</button>`).join('')}</div><p class="drop" id="fsrc"></p></div>`},
+ {id: 'skin', en: 'Skin grows over the bones', zh: '皮膚長在骨頭上', dur: 8,
+  lines: [['The skin is one implicit surface around every bone at once, so it is always a single closed mesh.', '皮膚是同時包住所有骨頭的一個隱式曲面，所以永遠是一個封閉網格。'],
+          ['Here each bone\'s thickness grows from 20% to 100%. Colour = share of the part\'s genes from A or B.', '這裡每根骨頭的粗細從 20% 長到 100%。顏色＝該部位的基因來自 A 或 B 的比例。']]},
+ {id: 'detail', en: 'Round skin, then Fourier detail', zh: '圓的皮，再加上傅立葉細節', dur: 7,
+  lines: [['Without the outline gene every cross-section is a circle. With it, the skin is pushed out or pulled in around each bone.', '沒有輪廓基因時，每個截面都是圓的；有了它，皮膚會在每根骨頭周圍往外推或往內縮。'],
+          [`Here the body goes from round (1.00) to ${bodyWH.toFixed(2)} times as wide as tall.`, `這裡身體從圓的（1.00）變成寬是高的 ${bodyWH.toFixed(2)} 倍。`]]},
+ {id: 'checks', en: 'Checks', zh: '檢查', dur: 6,
+  lines: [['Every child is checked before it is handed on.', '每個子代交出去之前都要檢查。']],
+  extra: () => `<div class="sec"><div class="tbl"><table>
+    <tr><td>Closed mesh 封閉網格</td><td class="n ${b.closed ? 'ok' : 'bad'}">${b.closed ? 'yes 是' : 'no 否'}</td></tr>
+    <tr><td>Outer shells 外殼數</td><td class="n">${b.outer_shells}</td></tr>
+    <tr><td>Sealed bubbles 內部氣泡</td><td class="n">${b.bubbles}</td></tr>
+    <tr><td>Limbs swallowed by another limb 被吞掉的肢體</td><td class="n">${b.swallowed_limbs.length}</td></tr>
+    <tr><td>Triangles 三角形</td><td class="n">${b.triangles.toLocaleString()}</td></tr>
+    <tr><td>Genes from A 來自 A 的基因</td><td class="n">${pct(C.ancestry_overall)}</td></tr>
+    <tr><td>Result 結果</td><td class="n ${b.ok ? 'ok' : 'bad'}">${b.ok ? 'PASS 通過' : 'FAIL'}</td></tr></table></div></div>`},
+ {id: 'package', en: 'Handoff to the motion system', zh: '交給動作系統', dur: 8,
+  lines: [[`The morphology package v${P.version}: ${P.counts.parts} parts, ${P.counts.nodes} nodes, ${P.counts.bones} bones, ${P.counts.edges} edges, ${P.counts.vertices.toLocaleString()} vertices.`, `形體包 v${P.version}：${P.counts.parts} 個部位、${P.counts.nodes} 個節點、${P.counts.bones} 根骨頭、${P.counts.edges} 條邊、${P.counts.vertices.toLocaleString()} 個頂點。`],
+          [`Read-only: the motion system may pose the body but not change its structure. Colour = part. Pick a group to see what it addresses.`, '唯讀：動作系統可以擺姿勢，不能改結構。顏色＝部位。選一個群組，看它指到哪些骨頭。']],
+  extra: () => `<div class="sec"><h3>Groups 群組</h3><div class="chips">${groupChips.map((k, i) => `<button class="chip grp" data-k="${k}" aria-pressed="${i === 0}">${k}</button>`).join('')}</div><p class="drop" id="gcount"></p></div>`},
+ {id: 'motion', en: 'It moves', zh: '動起來', dur: 10,
+  lines: [['Two test actions written only against the package: every attached part swings at its base, and a small bend travels down each chain.', '只靠形體包寫的兩個測試動作：每個附屬部位在根部擺動，一個小彎折沿著每條鏈傳下去。'],
+          [`This is a test, not ATMS. Turning only the head, ${(m.one_part_moved.share_in_that_part * 100).toFixed(1)}% of the vertices that move are head vertices; the pose changes the volume by ${(m.demo_pose_volume_change * 100).toFixed(1)}%.`, `這是測試，不是 ATMS。只轉頭時，動到的頂點有 ${(m.one_part_moved.share_in_that_part * 100).toFixed(1)}% 在頭上；這個姿勢讓體積變化 ${(m.demo_pose_volume_change * 100).toFixed(1)}%。`]]},
+];
+
+// ---------- panel and steps ----------
+const side = $('side'), stepsNav = $('steps');
+stepsNav.innerHTML = STEPS.map((s, i) => `<button class="step" data-i="${i}"><b>${s.zh}</b>${s.en}<span class="pg"><i></i></span></button>`).join('');
+const foot = `<p class="foot">Recorded with Python ${D.run.python} and RTIS's ${D.run.pce}; the page replays that run and does not recompute it. 用 Python ${D.run.python} 與 RTIS 的 ${D.run.pce} 記錄，頁面只是重播，不重新計算。</p>`;
+let cur = 0, prog = 0, playing = false, speed = 1, nTerms = 12, fSel = 0, gSel = groupChips[0];
+function renderPanel() {
+  const s = STEPS[cur];
+  side.innerHTML = `<h2>${s.en}</h2><p class="zh">${s.zh}</p><div class="lines">${s.lines.map(([e, z]) => `<div class="pair"><p>${e}</p><p class="zh">${z}</p></div>`).join('')}</div>${s.extra ? s.extra() : ''}${foot}`;
+  [...stepsNav.children].forEach((el, i) => { el.classList.toggle('on', i === cur); el.classList.toggle('done', i < cur); el.setAttribute('aria-current', i === cur ? 'step' : 'false'); });
+  const nt = $('nterms'); if (nt) { nt.value = nTerms; nt.oninput = () => { nTerms = +nt.value; $('ntv').textContent = nTerms; buildPrologueCurve(); }; }
+  side.querySelectorAll('.fpart').forEach(el => el.onclick = () => { fSel = +el.dataset.k; side.querySelectorAll('.fpart').forEach(x => x.setAttribute('aria-pressed', x === el)); prog = 0; });
+  side.querySelectorAll('.grp').forEach(el => el.onclick = () => { gSel = el.dataset.k; side.querySelectorAll('.grp').forEach(x => x.setAttribute('aria-pressed', x === el)); showGroup(); });
+  if (s.id === 'package') showGroup();
+}
+function go(i, keepPlaying) {
+  cur = Math.max(0, Math.min(STEPS.length - 1, i)); prog = 0; renderPanel(); enterStep();
+  if (!keepPlaying) setPlaying(false);
+}
+function setPlaying(v) { playing = v; $('play').textContent = v ? 'Pause 暫停' : 'Play 播放'; }
+stepsNav.onclick = e => { const el = e.target.closest('.step'); if (el) go(+el.dataset.i); };
+$('prev').onclick = () => go(cur - 1); $('next').onclick = () => go(cur + 1);
+$('play').onclick = () => { if (!playing && cur === STEPS.length - 1 && prog >= 1) go(0, true); setPlaying(!playing); };
+$('speed').onchange = e => speed = +e.target.value;
+$('scrub').oninput = e => { prog = e.target.value / 1000; setPlaying(false); };
+addEventListener('keydown', e => { const t = e.target.closest ? e.target : document.body; if (t.closest('input,select')) return; if (e.key === ' ' && !t.closest('button')) { e.preventDefault(); $('play').click(); } if (e.key === 'ArrowRight') go(cur + 1, playing); if (e.key === 'ArrowLeft') go(cur - 1, playing); });
+
+// ---------- 3D ----------
+let R, scene, cam, ctl, ok3d = true;
+try {
+  R = new THREE.WebGLRenderer({canvas: $('gl'), antialias: true});
+  R.setPixelRatio(Math.min(devicePixelRatio, 2)); R.setClearColor(0x10151b);
+  scene = new THREE.Scene();
+  cam = new THREE.PerspectiveCamera(35, 1, 0.02, 100); cam.up.set(0, 0, 1);
+  ctl = new THREE.OrbitControls(cam, $('gl')); ctl.enableDamping = true; ctl.dampingFactor = 0.12;
+  scene.add(new THREE.HemisphereLight(0xdfe8f2, 0x2a2420, 0.75));
+  const sun = new THREE.DirectionalLight(0xffffff, 0.85); sun.position.set(3, -4, 6); scene.add(sun);
+  const fill = new THREE.DirectionalLight(0x9fb4ff, 0.25); fill.position.set(-4, 3, 2); scene.add(fill);
+} catch (e) { ok3d = false; $('err').style.display = 'flex'; }
+
+const A_OFF = new THREE.Vector3(-2.35, 2.6, 0), B_OFF = new THREE.Vector3(2.15, 2.6, 0);
+function meshFrom(pk, colourOf, opts = {}) {
+  const g = new THREE.BufferGeometry(), v = f32(pk.v), f = u32(pk.f), c = u8(pk.c);
+  g.setAttribute('position', new THREE.BufferAttribute(v, 3)); g.setIndex(new THREE.BufferAttribute(f, 1));
+  const col = new Float32Array(pk.nv * 3); for (let i = 0; i < pk.nv; i++) { const k = colourOf(c[i]); col[3 * i] = k.r; col[3 * i + 1] = k.g; col[3 * i + 2] = k.b; }
+  g.setAttribute('color', new THREE.BufferAttribute(col, 3)); g.computeVertexNormals();
+  const mat = new THREE.MeshStandardMaterial({vertexColors: true, roughness: .62, metalness: 0, transparent: true, opacity: opts.opacity ?? 1, depthWrite: (opts.opacity ?? 1) >= 1});
+  const m = new THREE.Mesh(g, mat); m.userData.raw = {v, c}; return m;
+}
+const partCol = i => new THREE.Color(PAL[i % PAL.length]);
+const ancCol = a => mix(CA, CB, a / 255);
+function sticks(pieces, colourOfBone, scaleR = 0.3) {
+  const grp = new THREE.Group(), cyl = new THREE.CylinderGeometry(1, 1, 1, 10); cyl.translate(0, 0.5, 0);
+  const ball = new THREE.SphereGeometry(1, 12, 8), up = new THREE.Vector3(0, 1, 0), list = [];
+  pieces.forEach((pc, pi) => {
+    for (let i = 0; i < pc.joints.length - 1; i++) {
+      const a = new THREE.Vector3(...pc.joints[i]), b = new THREE.Vector3(...pc.joints[i + 1]), d = b.clone().sub(a), L = d.length();
+      const r = Math.max(0.012, scaleR * 0.5 * (pc.radii[i] + pc.radii[i + 1]));
+      const m = new THREE.Mesh(cyl, new THREE.MeshStandardMaterial({color: colourOfBone(pc, i), roughness: .5, transparent: true}));
+      m.position.copy(a); m.quaternion.setFromUnitVectors(up, d.clone().normalize()); m.scale.set(r, L, r);
+      const j = new THREE.Mesh(ball, new THREE.MeshStandardMaterial({color: 0xf1f3f5, roughness: .4, transparent: true})); j.position.copy(a); j.scale.setScalar(r * 1.35);
+      grp.add(m, j); list.push({m, j, L, r, part: pc.part, pi: pc.pi, i});
+    }
+  });
+  grp.userData.list = list; return grp;
+}
+const S = {};
+function build() {
+  // prologue
+  S.pro = new THREE.Group(); S.pro.scale.setScalar(1.7); scene.add(S.pro);
+  const tg = D.prologue.target.map(p => new THREE.Vector3(...p)); tg.push(tg[0].clone());
+  S.pro.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(tg), new THREE.LineBasicMaterial({color: 0x56606c})));
+  S.ring = []; for (let k = 0; k < 40; k++) { const l = new THREE.Line(new THREE.BufferGeometry().setFromPoints(Array.from({length: 49}, () => new THREE.Vector3())), new THREE.LineBasicMaterial({color: 0x7d8fa3, transparent: true, opacity: .55})); S.pro.add(l); S.ring.push(l); }
+  S.arm = new THREE.Line(new THREE.BufferGeometry().setFromPoints(Array.from({length: 41}, () => new THREE.Vector3())), new THREE.LineBasicMaterial({color: 0xffffff})); S.pro.add(S.arm);
+  S.trace = new THREE.Line(new THREE.BufferGeometry(), new THREE.LineBasicMaterial({color: new THREE.Color(CA)})); S.pro.add(S.trace);
+  S.pen = new THREE.Mesh(new THREE.SphereGeometry(0.025, 12, 8), new THREE.MeshBasicMaterial({color: new THREE.Color(CA)})); S.pro.add(S.pen);
+  buildPrologueCurve();
+  // parents
+  S.pA = new THREE.Group(); S.pB = new THREE.Group();
+  [[A, S.pA, A_OFF, CA], [B, S.pB, B_OFF, CB]].forEach(([par, g, off, col]) => {
+    g.add(meshFrom(par.mesh, () => new THREE.Color(col), {opacity: .5}));
+    g.add(sticks(par.pieces, () => new THREE.Color(col).lerp(new THREE.Color('#ffffff'), .25), .28));
+    g.position.copy(off); scene.add(g);
+  });
+  // matching lines
+  S.match = new THREE.Group(); scene.add(S.match);
+  const anchor = (par, off, name) => { const pc = par.pieces.find(q => q.part === name); const v = new THREE.Vector3(); pc.joints.forEach(j => v.add(new THREE.Vector3(...j))); return v.multiplyScalar(1 / pc.joints.length).add(off); };
+  S.lines = [];
+  D.matching.pairs.forEach(p => { const g = new THREE.BufferGeometry().setFromPoints([anchor(A, A_OFF, p.a), anchor(B, B_OFF, p.b)]); g.setAttribute('color', new THREE.BufferAttribute(new Float32Array([...new THREE.Color(CA).toArray(), ...new THREE.Color(CB).toArray()]), 3)); const l = new THREE.Line(g, new THREE.LineBasicMaterial({vertexColors: true, transparent: true})); S.match.add(l); S.lines.push(l); });
+  D.matching.decisions.forEach(d => { const g = new THREE.BufferGeometry().setFromPoints([anchor(A, A_OFF, d.a), anchor(B, B_OFF, d.b)]); const l = new THREE.Line(g, new THREE.LineDashedMaterial({color: d.matched ? 0xffffff : 0x8a939e, dashSize: .06, gapSize: .05, transparent: true})); l.computeLineDistances(); S.match.add(l); S.lines.push(l); });
+  // child skeleton
+  const partInfo = C.parts;
+  S.skel = sticks(C.pieces, (pc, i) => new THREE.Color(partInfo[pc.pi].bone_src[i] === 'A' ? CA : CB), .3); scene.add(S.skel);
+  // skin growth frames, round and detail meshes
+  S.grow = C.growth.map(fr => { const m = meshFrom(fr.mesh, ancCol, {opacity: 1}); m.visible = false; scene.add(m); return m; });
+  S.round = meshFrom(C.round, partCol); S.detail = meshFrom(C.detail, partCol); scene.add(S.round, S.detail);
+  S.final = meshFrom(C.growth[C.growth.length - 1].mesh, ancCol); scene.add(S.final);
+  // package
+  S.pkg = meshFrom(P.mesh, partCol, {opacity: .5}); scene.add(S.pkg);
+  S.anim = meshFrom(P.mesh, partCol); scene.add(S.anim);
+  const bi = u8(P.mesh.bi), bw = f32(P.mesh.bw); S.skin = {bi, bw, rest: f32(P.mesh.v)};
+  const nodePts = Object.values(P.nodes).map(p => new THREE.Vector3(...p));
+  S.nodes = new THREE.Points(new THREE.BufferGeometry().setFromPoints(nodePts), new THREE.PointsMaterial({color: 0xffffff, size: 0.045})); scene.add(S.nodes);
+  S.boneLines = P.bones.map(bn => { const l = new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(...P.nodes[bn.from]), new THREE.Vector3(...P.nodes[bn.to])]), new THREE.LineBasicMaterial({color: 0x6b7480})); scene.add(l); return l; });
+  const box = new THREE.Box3().setFromObject(S.pA).union(new THREE.Box3().setFromObject(S.pB)).union(new THREE.Box3().setFromObject(S.final));
+  const grid = new THREE.GridHelper(12, 24, 0x2a3138, 0x1d232a); grid.rotation.x = Math.PI / 2; grid.position.z = box.min.z - 0.01; scene.add(grid); S.grid = grid;
+}
+function buildPrologueCurve() {
+  if (!ok3d) return;
+  const pr = D.prologue, N = nTerms, pts = [];
+  for (let s = 0; s <= 400; s++) { const t = 2 * Math.PI * s / 400; const p = new THREE.Vector3(...pr.a0); for (let k = 0; k < N; k++) { p.addScaledVector(new THREE.Vector3(...pr.a[k]), Math.cos((k + 1) * t)); p.addScaledVector(new THREE.Vector3(...pr.b[k]), Math.sin((k + 1) * t)); } pts.push(p); }
+  S.trace.geometry.dispose(); S.trace.geometry = new THREE.BufferGeometry().setFromPoints(pts);
+  S.order = [...Array(N).keys()].sort((i, j) => { const s = k => pr.a[k].concat(pr.b[k]).reduce((x, y) => x + y * y, 0); return s(j) - s(i); });
+}
+function prologueAt(p) {
+  const pr = D.prologue, t = 2 * Math.PI * p, N = nTerms; let c = new THREE.Vector3(...pr.a0); const arm = [c.clone()];
+  S.ring.forEach((l, idx) => { l.visible = idx < N; });
+  S.order.forEach((k, idx) => {
+    const a = new THREE.Vector3(...pr.a[k]), b = new THREE.Vector3(...pr.b[k]), pos = S.ring[idx].geometry.attributes.position;
+    for (let s = 0; s < 49; s++) { const u = 2 * Math.PI * s / 48; pos.setXYZ(s, c.x + a.x * Math.cos(u) + b.x * Math.sin(u), c.y + a.y * Math.cos(u) + b.y * Math.sin(u), c.z + a.z * Math.cos(u) + b.z * Math.sin(u)); }
+    pos.needsUpdate = true; c = c.clone().addScaledVector(a, Math.cos((k + 1) * t)).addScaledVector(b, Math.sin((k + 1) * t)); arm.push(c.clone());
+  });
+  const ap = S.arm.geometry.attributes.position; for (let s = 0; s < 41; s++) { const q = arm[Math.min(s, arm.length - 1)]; ap.setXYZ(s, q.x, q.y, q.z); } ap.needsUpdate = true;
+  S.trace.geometry.setDrawRange(0, Math.max(2, Math.round(401 * p))); S.pen.position.copy(c);
+}
+// ---------- posing (port of part_interface.pose and demo_tokens) ----------
+function demoTurns(phase) {
+  const idx = {}; P.bones.forEach((b, i) => idx[b.id] = i);
+  const N = id => new THREE.Vector3(...P.nodes[id]), dir = P.bones.map(b => N(b.to).sub(N(b.from)));
+  const att = new Set(P.groups.attached), out = {};
+  P.bones.forEach((b, i) => {
+    if (!att.has(b.part)) return;
+    const ref = dir[idx[b.parent]]; let axis = dir[i].clone().cross(ref);
+    if (axis.length() < 0.2 * dir[i].length() * ref.length()) axis = new THREE.Vector3(0, 0, 1);
+    const off = (b.copy === 'R' ? Math.PI : 0) + (/^\d+$/.test(b.copy) ? 0.7 * +b.copy : 0);
+    const amp = (b.index === 0 ? 22 : 9) * Math.PI / 180;
+    out[i] = [axis.normalize(), amp * Math.sin(phase + off - 0.9 * b.index)];
+  });
+  return out;
+}
+function pose(phase) {
+  const turns = demoTurns(phase), idx = {}; P.bones.forEach((b, i) => idx[b.id] = i);
+  const mats = P.bones.map(() => new THREE.Matrix4());
+  P.bones.forEach((b, i) => {
+    const local = new THREE.Matrix4();
+    if (turns[i]) { const piv = new THREE.Vector3(...P.nodes[b.from]); local.makeTranslation(piv.x, piv.y, piv.z).multiply(new THREE.Matrix4().makeRotationAxis(turns[i][0], turns[i][1])).multiply(new THREE.Matrix4().makeTranslation(-piv.x, -piv.y, -piv.z)); }
+    mats[i] = (b.parent ? mats[idx[b.parent]].clone() : new THREE.Matrix4()).multiply(local);
+  });
+  const {bi, bw, rest} = S.skin, pos = S.anim.geometry.attributes.position, nv = rest.length / 3, out = pos.array;
+  for (let v = 0; v < nv; v++) {
+    const x = rest[3 * v], y = rest[3 * v + 1], z = rest[3 * v + 2]; let X = 0, Y = 0, Z = 0;
+    for (let k = 0; k < 4; k++) { const w = bw[4 * v + k]; if (!w) continue; const e = mats[bi[4 * v + k]].elements; X += w * (e[0] * x + e[4] * y + e[8] * z + e[12]); Y += w * (e[1] * x + e[5] * y + e[9] * z + e[13]); Z += w * (e[2] * x + e[6] * y + e[10] * z + e[14]); }
+    out[3 * v] = X; out[3 * v + 1] = Y; out[3 * v + 2] = Z;
+  }
+  pos.needsUpdate = true; S.anim.geometry.computeVertexNormals();
+}
+function showGroup() {
+  if (!ok3d) return; const names = new Set(P.groups[gSel] || []); let n = 0;
+  S.boneLines.forEach((l, i) => { const on = names.has(P.bones[i].part); n += on; l.material.color.set(on ? 0xffffff : 0x4a525c); l.material.linewidth = on ? 2 : 1; });
+  const el = $('gcount'); if (el) el.textContent = `${gSel}: ${[...names].join(', ')} → ${n} bones 根骨頭`;
+}
+// ---------- the 2D lens for the Fourier step ----------
+const lens = $('lens'), lx = lens.getContext('2d');
+function drawLens(p) {
+  const W = lens.clientWidth, H = lens.clientHeight, dpr = Math.min(devicePixelRatio, 2);
+  if (lens.width !== W * dpr) { lens.width = W * dpr; lens.height = H * dpr; }
+  lx.setTransform(dpr, 0, 0, dpr, 0, 0); lx.clearRect(0, 0, W, H); lx.fillStyle = 'rgba(16,21,27,.86)'; lx.fillRect(0, 0, W, H);
+  const part = fparts[fSel] || C.parts[0], terms = part.fourier.terms, small = W < 560;
+  const big = Math.min(small ? W * .6 : W * .5, small ? H * .56 : H * .72), cx = small ? W * .5 : W * .36, cy = small ? H * .38 : H * .5;
+  const ext = Math.max(...part.fourier.outline.map(q => Math.hypot(q[0], q[1]))), sc = big / 2 / (ext * 1.15);
+  const t = 2 * Math.PI * p; let x = cx, y = cy;
+  lx.lineWidth = 1;
+  terms.forEach(([fq, amp, ph]) => { lx.strokeStyle = 'rgba(160,178,198,.5)'; lx.beginPath(); lx.arc(x, y, amp * sc, 0, 2 * Math.PI); lx.stroke(); const nx = x + amp * sc * Math.cos(fq * t + ph), ny = y - amp * sc * Math.sin(fq * t + ph); lx.strokeStyle = '#fff'; lx.beginPath(); lx.moveTo(x, y); lx.lineTo(nx, ny); lx.stroke(); x = nx; y = ny; });
+  const col = part.detail_src === 'A' ? CA : CB; lx.strokeStyle = col; lx.lineWidth = 3; lx.beginPath();
+  const steps = Math.round(360 * p);
+  for (let s = 0; s <= steps; s++) { const u = 2 * Math.PI * s / 360; let X = 0, Y = 0; terms.forEach(([fq, amp, ph]) => { X += amp * Math.cos(fq * u + ph); Y += amp * Math.sin(fq * u + ph); }); s ? lx.lineTo(cx + X * sc, cy - Y * sc) : lx.moveTo(cx + X * sc, cy - Y * sc); }
+  lx.stroke(); lx.fillStyle = col; lx.beginPath(); lx.arc(x, y, 5, 0, 2 * Math.PI); lx.fill();
+  lx.fillStyle = '#e8ebef'; lx.font = '600 15px Inter, "Noto Sans TC", sans-serif';
+  lx.fillText(`${part.name}: ${terms.length} circles · ${terms.length} 個圓`, 14, 24);
+  const srcs = srcOutline(part), bw = small ? W / srcs.length : W * .26, by = small ? H * .78 : 0;
+  srcs.forEach((o, i) => {
+    const ox = small ? bw * (i + .5) : W * .82, oy = small ? H * .76 : H * (.28 + i * .4), r = small ? Math.min(bw * .26, H * .07) : Math.min(W * .09, H * .14);
+    const pts = o.f.outline, e = Math.max(...pts.map(q => Math.hypot(q[0], q[1]))), c2 = o.lab === 'A' ? CA : CB, taken = o.lab === part.detail_src;
+    lx.globalAlpha = taken ? 1 : .45; lx.strokeStyle = c2; lx.lineWidth = taken ? 3 : 2; lx.beginPath();
+    pts.forEach((q, k) => { const X = ox + q[0] / e * r, Y = oy - q[1] / e * r; k ? lx.lineTo(X, Y) : lx.moveTo(X, Y); }); lx.closePath(); lx.stroke();
+    lx.fillStyle = '#e8ebef'; lx.font = '500 13px Inter, "Noto Sans TC", sans-serif'; lx.textAlign = 'center';
+    lx.fillText(`${o.lab}.${o.nm}`, ox, oy + r + 18); if (taken) lx.fillText('inherited · 遺傳', ox, oy + r + 36); lx.textAlign = 'left'; lx.globalAlpha = 1;
+  });
+  const fs = $('fsrc'); if (fs) fs.textContent = `${part.name}: outline gene from ${part.detail_src} · 輪廓基因來自 ${part.detail_src}; width ÷ height ${part.fourier.width_to_height.toFixed(2)}`;
+}
+// ---------- per-step scene ----------
+function show(list) { const on = new Set(list); ['pro', 'pA', 'pB', 'match', 'skel', 'round', 'detail', 'final', 'pkg', 'anim', 'nodes'].forEach(k => S[k].visible = on.has(k)); S.grow.forEach(m => m.visible = false); S.boneLines.forEach(l => l.visible = on.has('bones')); S.grid.visible = !on.has('pro'); }
+const VIEW = {idea: [[0, 0, 0], [3.2, -4.6, 2.6]], parents: [[-0.1, 2.6, -0.1], [0.4, -6.4, 3.4]], match: [[-0.1, 2.6, -0.1], [0.4, -6.4, 3.4]], genes: [[-0.1, 1.4, 0], [0.6, -6.8, 3.6]], near: [[0, 0, -0.15], [2.0, -3.4, 1.4]]};
+let camFrom = null, camTo = null, camT = 1;
+function aim(k) { const [t, p] = VIEW[k] || VIEW.near; const T = new THREE.Vector3(...t), f = Math.max(1, 1.35 / (cam.aspect || 1.35)); camFrom = [ctl.target.clone(), cam.position.clone()]; camTo = [T, new THREE.Vector3(...p).sub(T).multiplyScalar(f).add(T)]; camT = 0; }
+function enterStep() {
+  const id = STEPS[cur].id; lens.classList.toggle('on', id === 'fourier'); $('stage').classList.toggle('lensed', id === 'fourier'); if (!ok3d) return;
+  const map = {idea: ['pro'], parents: ['pA', 'pB'], match: ['pA', 'pB', 'match'], genes: ['pA', 'pB', 'skel'], skeleton: ['skel'], fourier: ['skel'], skin: ['skel'], detail: ['round', 'detail'], checks: ['final'], package: ['pkg', 'nodes', 'bones'], motion: ['anim']};
+  show(map[id]); aim(VIEW[id] ? id : 'near');
+  [S.pA, S.pB].forEach(g => g.traverse(o => { if (o.material) o.material.opacity = id === 'genes' ? .18 : (o.geometry && o.geometry.type === 'BufferGeometry' && !o.isLine ? .5 : 1); }));
+  S.skel.userData.list.forEach(b => { b.m.material.opacity = 1; b.j.material.opacity = 1; });
+  $('capL').innerHTML = `<b>${STEPS[cur].en}</b> · ${STEPS[cur].zh}`;
+}
+function update(p) {
+  const id = STEPS[cur].id;
+  if (id === 'genes') { const n = Math.floor(p * geneCells * 1.05); side.querySelectorAll('.cell[data-i]').forEach(el => el.className = 'cell' + (+el.dataset.i < n ? ' ' + el.dataset.s : '')); }
+  if (id === 'fourier') drawLens(p);
+  if (!ok3d) return;
+  if (id === 'idea') prologueAt(p);
+  if (id === 'match') { const n = S.lines.length; S.lines.forEach((l, i) => { const a = Math.max(0, Math.min(1, p * (n + 1) - i)); l.material.opacity = a; l.visible = a > 0; }); }
+  const list = S.skel.userData.list;
+  if (id === 'skeleton' || id === 'genes') { const order = [...list].sort((a, b) => a.pi - b.pi || a.i - b.i); const keys = [...new Set(order.map(b => b.pi + ':' + b.i))]; const s = p * keys.length * 1.02; list.forEach(b => { const f = Math.max(0, Math.min(1, s - keys.indexOf(b.pi + ':' + b.i))); b.m.scale.y = Math.max(1e-4, b.L * f); b.m.visible = f > 0; b.j.visible = f > 0; }); }
+  else list.forEach(b => { b.m.scale.y = b.L; b.m.visible = b.j.visible = true; });
+  if (id === 'fourier') list.forEach(b => { const on = C.parts[b.pi] === (fparts[fSel] || C.parts[0]); b.m.material.opacity = on ? 1 : .25; b.j.material.opacity = on ? 1 : .25; });
+  if (id === 'skin') { const k = Math.min(S.grow.length - 1, Math.floor(p * S.grow.length)); S.grow.forEach((m, i) => m.visible = i === k); list.forEach(b => { b.m.material.opacity = .9 - .6 * p; }); }
+  if (id === 'detail') { const w = .5 - .5 * Math.cos(2 * Math.PI * p); S.round.material.opacity = 1 - w; S.detail.material.opacity = w; S.round.material.depthWrite = w < .5; S.detail.material.depthWrite = w >= .5; }
+  if (id === 'motion') pose(REDUCED ? 1.2 : 2 * Math.PI * 2 * p);
+}
+function resize() { const el = $('gl'), W = el.clientWidth, H = el.clientHeight; if (!W || !H || !ok3d) return; R.setSize(W, H, false); cam.aspect = W / H; cam.updateProjectionMatrix(); }
+new ResizeObserver(() => { resize(); if (STEPS[cur].id === 'fourier') drawLens(prog); }).observe($('stage'));
+let last = performance.now();
+function frame(now) {
+  const dt = Math.min(.1, (now - last) / 1000); last = now;
+  if (playing) { prog += dt * speed / STEPS[cur].dur; if (prog >= 1) { if (cur < STEPS.length - 1) { go(cur + 1, true); } else { prog = 1; setPlaying(false); } } }
+  $('scrub').value = Math.round(prog * 1000);
+  [...stepsNav.children].forEach((el, i) => el.querySelector('i').style.width = i < cur ? '100%' : i === cur ? pct(prog) : '0');
+  update(Math.min(1, prog));
+  if (ok3d) {
+    if (camT < 1) { camT = Math.min(1, camT + dt / .7); const e = camT * camT * (3 - 2 * camT); ctl.target.lerpVectors(camFrom[0], camTo[0], e); cam.position.lerpVectors(camFrom[1], camTo[1], e); }
+    ctl.update(); R.render(scene, cam);
+  }
+  requestAnimationFrame(frame);
+}
+function fit(objs, dir, pad = 1.08) {
+  const box = new THREE.Box3(); objs.forEach(o => { const v = o.visible; o.visible = true; box.union(new THREE.Box3().setFromObject(o)); o.visible = v; });
+  const c = box.getCenter(new THREE.Vector3()), r = box.getSize(new THREE.Vector3()).length() / 2, d = new THREE.Vector3(...dir).normalize();
+  const dist = r / Math.sin(THREE.MathUtils.degToRad(cam.fov / 2)) * pad; return [c.toArray(), c.clone().addScaledVector(d, dist).toArray()];
+}
+if (ok3d) {
+  build(); cam.aspect = 1.35;
+  const side = [0.25, -1, 0.45], three4 = [0.6, -1, 0.5];
+  VIEW.idea = fit([S.pro], [0.55, -0.8, 0.45], .95); VIEW.parents = VIEW.match = fit([S.pA, S.pB], side, .9);
+  VIEW.genes = fit([S.pA, S.pB, S.final], side, .9); VIEW.near = fit([S.final], three4, .95);
+  cam.position.set(...VIEW.idea[1]); ctl.target.set(...VIEW.idea[0]);
+}
+renderPanel(); enterStep(); resize(); requestAnimationFrame(frame);
+window.__replay = {go, STEPS, get cur() { return cur; }, set prog(v) { prog = v; }};
+}
+</script>
+</body>
+</html>

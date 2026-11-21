@@ -1,0 +1,112 @@
+{
+ "preview_voxel": 0.03,
+ "children_per_cell": 3,
+ "seed": 7,
+ "founder_bulges": {
+  "quadruped": 1,
+  "biped": 1,
+  "spider": 1,
+  "serpent": 1,
+  "jellyfish": 1,
+  "crab": 1
+ },
+ "variants": {
+  "independent": {
+   "children": 45,
+   "valid": 45,
+   "with_bubble": 0,
+   "new_bulges_body": 1.0222222222222221,
+   "bodies_with_new_bulges": 24,
+   "new_bulges_per_part": 0.5766666666666667,
+   "humps_body": 2.022222222222222,
+   "worst_humps_body": 7,
+   "new_kinks_deg": 0.8516159860753346,
+   "minority_share": 0.37546479665925336
+  },
+  "ratio": {
+   "children": 45,
+   "valid": 45,
+   "with_bubble": 0,
+   "new_bulges_body": 0.6,
+   "bodies_with_new_bulges": 16,
+   "new_bulges_per_part": 0.29888888888888887,
+   "humps_body": 1.6,
+   "worst_humps_body": 4,
+   "new_kinks_deg": 0.8516159860753346,
+   "minority_share": 0.37546479665925336
+  },
+  "linkage 1": {
+   "children": 45,
+   "valid": 45,
+   "with_bubble": 0,
+   "new_bulges_body": 0.08888888888888889,
+   "bodies_with_new_bulges": 4,
+   "new_bulges_per_part": 0.0862962962962963,
+   "humps_body": 1.0888888888888888,
+   "worst_humps_body": 2,
+   "new_kinks_deg": 0.4699889930482581,
+   "minority_share": 0.35569189268545043
+  },
+  "linkage 2": {
+   "children": 45,
+   "valid": 45,
+   "with_bubble": 0,
+   "new_bulges_body": 0.24444444444444444,
+   "bodies_with_new_bulges": 11,
+   "new_bulges_per_part": 0.22407407407407404,
+   "humps_body": 1.2444444444444445,
+   "worst_humps_body": 2,
+   "new_kinks_deg": 0.9773767822783584,
+   "minority_share": 0.36324404692744366
+  },
+  "pack": {
+   "children": 45,
+   "valid": 45,
+   "with_bubble": 0,
+   "new_bulges_body": 0.0,
+   "bodies_with_new_bulges": 0,
+   "new_bulges_per_part": 0.0,
+   "humps_body": 1.0,
+   "worst_humps_body": 1,
+   "new_kinks_deg": 1.4174796240110852,
+   "minority_share": 0.361152943486702
+  }
+ },
+ "variation": {
+  "independent": {
+   "gen1": 1.0239550529002521,
+   "gen5": 0.9920511617353552,
+   "gen10": 0.9292041937794678,
+   "gen10_min": 0.7577906554392441,
+   "gen10_max": 1.2257237943989605
+  },
+  "ratio": {
+   "gen1": 1.1011626274036368,
+   "gen5": 1.083326742081843,
+   "gen10": 0.9680233996020661,
+   "gen10_min": 0.7108051002529016,
+   "gen10_max": 1.2793863808334682
+  },
+  "linkage 1": {
+   "gen1": 1.0440461926564035,
+   "gen5": 1.048668242965826,
+   "gen10": 1.085209865477769,
+   "gen10_min": 0.6955335825927167,
+   "gen10_max": 1.7156800262489045
+  },
+  "linkage 2": {
+   "gen1": 0.8805286894088997,
+   "gen5": 0.7939818312754213,
+   "gen10": 0.7035902089733757,
+   "gen10_min": 0.5418202756188426,
+   "gen10_max": 0.8120284634074588
+  },
+  "pack": {
+   "gen1": 1.0448072666342514,
+   "gen5": 0.9141102801064861,
+   "gen10": 0.9636221432826321,
+   "gen10_min": 0.545194437364035,
+   "gen10_max": 1.4453674183115768
+  }
+ }
+}

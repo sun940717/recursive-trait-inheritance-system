@@ -1,0 +1,672 @@
+{
+ "F1-1": {
+  "parents": [
+   "A",
+   "B"
+  ],
+  "matches": [
+   {
+    "child_tube": "body",
+    "score": 1.0,
+    "template": "B",
+    "A": "body",
+    "B": "body",
+    "loci": {
+     "spine": "ABABB",
+     "radius": "ABABBBAAAA",
+     "sect0": "BBABBB",
+     "sect1": "ABBBBA"
+    }
+   },
+   {
+    "child_tube": "neck_head",
+    "score": 1.248,
+    "template": "A",
+    "A": "neck_head",
+    "B": "neck_head",
+    "loci": {
+     "spine": "BBBAB",
+     "radius": "ABBAABABBB",
+     "sect0": "BABBBB",
+     "sect1": "BBBBBA"
+    }
+   },
+   {
+    "child_tube": "tail",
+    "score": 1.248,
+    "template": "A",
+    "A": "tail",
+    "B": "tail",
+    "loci": {
+     "spine": "BBABB",
+     "radius": "BABBAAABAA",
+     "sect0": "BBAABA",
+     "sect1": "BBBAAB"
+    }
+   },
+   {
+    "child_tube": "leg_front",
+    "score": 0.742,
+    "template": "A",
+    "A": "leg_front",
+    "B": "arm_front",
+    "loci": {
+     "spine": "BBBAA",
+     "radius": "AABBBAAAAA",
+     "sect0": "BBBABB",
+     "sect1": "BAABAB"
+    }
+   },
+   {
+    "child_tube": "leg_rear",
+    "score": 1.245,
+    "template": "A",
+    "A": "leg_rear",
+    "B": "leg_rear",
+    "loci": {
+     "spine": "BBBAB",
+     "radius": "BBABBBBABA",
+     "sect0": "ABAABB",
+     "sect1": "BBABAA"
+    }
+   }
+  ],
+  "unmatched_inherited": [
+   "B:horn"
+  ],
+  "dropped": [],
+  "mutations": [
+   "micro: leg_front high-band",
+   "micro: horn high-band"
+  ]
+ },
+ "F1-2": {
+  "parents": [
+   "A",
+   "B"
+  ],
+  "matches": [
+   {
+    "child_tube": "body",
+    "score": 1.0,
+    "template": "A",
+    "A": "body",
+    "B": "body",
+    "loci": {
+     "spine": "BBBAA",
+     "radius": "AAAAABAABB",
+     "sect0": "BBBBAB",
+     "sect1": "AABBBB"
+    }
+   },
+   {
+    "child_tube": "neck_head",
+    "score": 1.248,
+    "template": "B",
+    "A": "neck_head",
+    "B": "neck_head",
+    "loci": {
+     "spine": "AAAAB",
+     "radius": "ABBBABBAAB",
+     "sect0": "ABAABB",
+     "sect1": "BABABA"
+    }
+   },
+   {
+    "child_tube": "tail",
+    "score": 1.248,
+    "template": "B",
+    "A": "tail",
+    "B": "tail",
+    "loci": {
+     "spine": "AABAA",
+     "radius": "AAABAAAAAA",
+     "sect0": "BBAABB",
+     "sect1": "AAABBA"
+    }
+   },
+   {
+    "child_tube": "arm_front",
+    "score": 0.742,
+    "template": "B",
+    "A": "leg_front",
+    "B": "arm_front",
+    "loci": {
+     "spine": "BBAAB",
+     "radius": "BABABBBABB",
+     "sect0": "ABABAA",
+     "sect1": "BBBBAB"
+    }
+   },
+   {
+    "child_tube": "leg_rear",
+    "score": 1.245,
+    "template": "A",
+    "A": "leg_rear",
+    "B": "leg_rear",
+    "loci": {
+     "spine": "BAABB",
+     "radius": "BBBBBBABAB",
+     "sect0": "BAABBB",
+     "sect1": "BBBBAB"
+    }
+   }
+  ],
+  "unmatched_inherited": [],
+  "dropped": [
+   "B:horn"
+  ],
+  "mutations": [
+   "micro: tail low-band",
+   "micro: body high-band"
+  ]
+ },
+ "F1-3": {
+  "parents": [
+   "A",
+   "B"
+  ],
+  "matches": [
+   {
+    "child_tube": "body",
+    "score": 1.0,
+    "template": "B",
+    "A": "body",
+    "B": "body",
+    "loci": {
+     "spine": "ABBAA",
+     "radius": "BBBBBBBBAA",
+     "sect0": "AABBAA",
+     "sect1": "AABBBB"
+    }
+   },
+   {
+    "child_tube": "neck_head",
+    "score": 1.248,
+    "template": "B",
+    "A": "neck_head",
+    "B": "neck_head",
+    "loci": {
+     "spine": "AAAAA",
+     "radius": "BABBABBBBB",
+     "sect0": "ABBAAA",
+     "sect1": "BABBBB"
+    }
+   },
+   {
+    "child_tube": "tail",
+    "score": 1.248,
+    "template": "B",
+    "A": "tail",
+    "B": "tail",
+    "loci": {
+     "spine": "AAABA",
+     "radius": "AABBBABAAB",
+     "sect0": "BAABAA",
+     "sect1": "BBABAB"
+    }
+   },
+   {
+    "child_tube": "arm_front",
+    "score": 0.742,
+    "template": "B",
+    "A": "leg_front",
+    "B": "arm_front",
+    "loci": {
+     "spine": "AABAA",
+     "radius": "ABAABABBBA",
+     "sect0": "AAAAAB",
+     "sect1": "ABBABB"
+    }
+   },
+   {
+    "child_tube": "leg_rear",
+    "score": 1.245,
+    "template": "B",
+    "A": "leg_rear",
+    "B": "leg_rear",
+    "loci": {
+     "spine": "BBBAA",
+     "radius": "ABBABAAAAA",
+     "sect0": "ABBAAB",
+     "sect1": "BAAAAB"
+    }
+   }
+  ],
+  "unmatched_inherited": [
+   "B:horn"
+  ],
+  "dropped": [],
+  "mutations": [
+   "micro: body high-band",
+   "micro: tail low-band",
+   "micro: horn high-band"
+  ]
+ },
+ "F1-4": {
+  "parents": [
+   "A",
+   "B"
+  ],
+  "matches": [
+   {
+    "child_tube": "body",
+    "score": 1.0,
+    "template": "A",
+    "A": "body",
+    "B": "body",
+    "loci": {
+     "spine": "BABAB",
+     "radius": "BABAAABABA",
+     "sect0": "BABAAB",
+     "sect1": "AAAAAA"
+    }
+   },
+   {
+    "child_tube": "neck_head",
+    "score": 1.248,
+    "template": "B",
+    "A": "neck_head",
+    "B": "neck_head",
+    "loci": {
+     "spine": "BBAAA",
+     "radius": "BBBAAABBBB",
+     "sect0": "BAABBA",
+     "sect1": "BBAABB"
+    }
+   },
+   {
+    "child_tube": "tail",
+    "score": 1.248,
+    "template": "A",
+    "A": "tail",
+    "B": "tail",
+    "loci": {
+     "spine": "AABBB",
+     "radius": "ABBABABBAB",
+     "sect0": "AABAAA",
+     "sect1": "AAAABB"
+    }
+   },
+   {
+    "child_tube": "leg_front",
+    "score": 0.742,
+    "template": "A",
+    "A": "leg_front",
+    "B": "arm_front",
+    "loci": {
+     "spine": "AAABA",
+     "radius": "BBABAABBAB",
+     "sect0": "BBBABA",
+     "sect1": "ABABBB"
+    }
+   },
+   {
+    "child_tube": "leg_rear",
+    "score": 1.245,
+    "template": "A",
+    "A": "leg_rear",
+    "B": "leg_rear",
+    "loci": {
+     "spine": "BBBBB",
+     "radius": "ABABABABBB",
+     "sect0": "BBABBB",
+     "sect1": "BABBAA"
+    }
+   }
+  ],
+  "unmatched_inherited": [
+   "B:horn"
+  ],
+  "dropped": [],
+  "mutations": [
+   "micro: neck_head high-band"
+  ]
+ },
+ "F2-1": {
+  "parents": [
+   "F1-1",
+   "F1-2"
+  ],
+  "matches": [
+   {
+    "child_tube": "body",
+    "score": 1.0,
+    "template": "A",
+    "A": "body",
+    "B": "body",
+    "loci": {
+     "spine": "BBAAB",
+     "radius": "AABBBBABAB",
+     "sect0": "ABBABB",
+     "sect1": "AABBBB"
+    }
+   },
+   {
+    "child_tube": "neck_head",
+    "score": 1.248,
+    "template": "A",
+    "A": "neck_head",
+    "B": "neck_head",
+    "loci": {
+     "spine": "BBBAB",
+     "radius": "AAABBBAAAB",
+     "sect0": "BBBBAB",
+     "sect1": "BBBBBB"
+    }
+   },
+   {
+    "child_tube": "tail",
+    "score": 1.245,
+    "template": "B",
+    "A": "tail",
+    "B": "tail",
+    "loci": {
+     "spine": "ABABA",
+     "radius": "ABABAABABA",
+     "sect0": "BBBAAB",
+     "sect1": "BABAAA"
+    }
+   },
+   {
+    "child_tube": "arm_front",
+    "score": 0.75,
+    "template": "B",
+    "A": "leg_front",
+    "B": "arm_front",
+    "loci": {
+     "spine": "BBABB",
+     "radius": "AABBBBBABA",
+     "sect0": "BBBAAB",
+     "sect1": "BAAAAB"
+    }
+   },
+   {
+    "child_tube": "leg_rear",
+    "score": 1.25,
+    "template": "B",
+    "A": "leg_rear",
+    "B": "leg_rear",
+    "loci": {
+     "spine": "BABBB",
+     "radius": "BABBABBABA",
+     "sect0": "BBABBA",
+     "sect1": "BBAAAB"
+    }
+   }
+  ],
+  "unmatched_inherited": [
+   "A:horn"
+  ],
+  "dropped": [],
+  "mutations": [
+   "micro: horn high-band",
+   "micro: arm_front high-band"
+  ]
+ },
+ "F2-2": {
+  "parents": [
+   "F1-1",
+   "F1-2"
+  ],
+  "matches": [
+   {
+    "child_tube": "body",
+    "score": 1.0,
+    "template": "A",
+    "A": "body",
+    "B": "body",
+    "loci": {
+     "spine": "AABBA",
+     "radius": "ABAABAABBA",
+     "sect0": "BABAAA",
+     "sect1": "BABABB"
+    }
+   },
+   {
+    "child_tube": "neck_head",
+    "score": 1.248,
+    "template": "A",
+    "A": "neck_head",
+    "B": "neck_head",
+    "loci": {
+     "spine": "BAABB",
+     "radius": "BABAABBAAB",
+     "sect0": "BBBBBA",
+     "sect1": "ABABBA"
+    }
+   },
+   {
+    "child_tube": "tail",
+    "score": 1.245,
+    "template": "A",
+    "A": "tail",
+    "B": "tail",
+    "loci": {
+     "spine": "BABBB",
+     "radius": "BBABBBAAAA",
+     "sect0": "BBBBBA",
+     "sect1": "ABABBA"
+    }
+   },
+   {
+    "child_tube": "arm_front",
+    "score": 0.75,
+    "template": "B",
+    "A": "leg_front",
+    "B": "arm_front",
+    "loci": {
+     "spine": "AABBA",
+     "radius": "AAAABBBBBB",
+     "sect0": "AAABAB",
+     "sect1": "BAABAA"
+    }
+   },
+   {
+    "child_tube": "leg_rear",
+    "score": 1.25,
+    "template": "B",
+    "A": "leg_rear",
+    "B": "leg_rear",
+    "loci": {
+     "spine": "BABAB",
+     "radius": "BAAAABBBAB",
+     "sect0": "BBBBBB",
+     "sect1": "ABBAAB"
+    }
+   }
+  ],
+  "unmatched_inherited": [
+   "A:horn"
+  ],
+  "dropped": [],
+  "mutations": [
+   "micro: tail high-band",
+   "micro: horn low-band",
+   "micro: tail low-band"
+  ]
+ },
+ "F2-3": {
+  "parents": [
+   "F1-3",
+   "F1-4"
+  ],
+  "matches": [
+   {
+    "child_tube": "body",
+    "score": 1.0,
+    "template": "A",
+    "A": "body",
+    "B": "body",
+    "loci": {
+     "spine": "BBABA",
+     "radius": "BBBBABAABB",
+     "sect0": "BBABAA",
+     "sect1": "BABBAB"
+    }
+   },
+   {
+    "child_tube": "neck_head",
+    "score": 1.248,
+    "template": "B",
+    "A": "neck_head",
+    "B": "neck_head",
+    "loci": {
+     "spine": "BABBB",
+     "radius": "BBBAABABAB",
+     "sect0": "BBAAAA",
+     "sect1": "AAABBB"
+    }
+   },
+   {
+    "child_tube": "tail",
+    "score": 1.25,
+    "template": "B",
+    "A": "tail",
+    "B": "tail",
+    "loci": {
+     "spine": "BABBB",
+     "radius": "BBBBAABBAB",
+     "sect0": "BAAAAB",
+     "sect1": "BBAAAA"
+    }
+   },
+   {
+    "child_tube": "arm_front",
+    "score": 0.742,
+    "template": "A",
+    "A": "arm_front",
+    "B": "leg_front",
+    "loci": {
+     "spine": "ABABB",
+     "radius": "ABBBBBAAAB",
+     "sect0": "AAAAAA",
+     "sect1": "BBBBBA"
+    }
+   },
+   {
+    "child_tube": "leg_rear",
+    "score": 1.25,
+    "template": "A",
+    "A": "leg_rear",
+    "B": "leg_rear",
+    "loci": {
+     "spine": "ABBBA",
+     "radius": "ABAAABABAA",
+     "sect0": "ABAABB",
+     "sect1": "ABBABA"
+    }
+   },
+   {
+    "child_tube": "horn",
+    "score": 1.25,
+    "template": "B",
+    "A": "horn",
+    "B": "horn",
+    "loci": {
+     "spine": "ABAAB",
+     "radius": "ABBBAABAAA",
+     "sect0": "BBBBAB",
+     "sect1": "BAABBB"
+    }
+   }
+  ],
+  "unmatched_inherited": [],
+  "dropped": [],
+  "mutations": [
+   "micro: horn low-band",
+   "micro: body high-band"
+  ]
+ },
+ "F2-4": {
+  "parents": [
+   "F1-3",
+   "F1-4"
+  ],
+  "matches": [
+   {
+    "child_tube": "body",
+    "score": 1.0,
+    "template": "B",
+    "A": "body",
+    "B": "body",
+    "loci": {
+     "spine": "BAAAB",
+     "radius": "BBAABBBAAB",
+     "sect0": "ABBBAA",
+     "sect1": "AAAAAB"
+    }
+   },
+   {
+    "child_tube": "neck_head",
+    "score": 1.248,
+    "template": "B",
+    "A": "neck_head",
+    "B": "neck_head",
+    "loci": {
+     "spine": "BAABA",
+     "radius": "ABBAAABAAB",
+     "sect0": "BBABAA",
+     "sect1": "BABAAB"
+    }
+   },
+   {
+    "child_tube": "tail",
+    "score": 1.25,
+    "template": "B",
+    "A": "tail",
+    "B": "tail",
+    "loci": {
+     "spine": "BBBBA",
+     "radius": "BBAABAABAA",
+     "sect0": "ABABAB",
+     "sect1": "AAAABB"
+    }
+   },
+   {
+    "child_tube": "leg_front",
+    "score": 0.742,
+    "template": "B",
+    "A": "arm_front",
+    "B": "leg_front",
+    "loci": {
+     "spine": "AAAAA",
+     "radius": "BBBABAAABB",
+     "sect0": "BBBBAA",
+     "sect1": "AAAAAA"
+    }
+   },
+   {
+    "child_tube": "leg_rear",
+    "score": 1.25,
+    "template": "A",
+    "A": "leg_rear",
+    "B": "leg_rear",
+    "loci": {
+     "spine": "ABBBB",
+     "radius": "ABBBBBABBB",
+     "sect0": "BABABA",
+     "sect1": "AAAABA"
+    }
+   },
+   {
+    "child_tube": "horn",
+    "score": 1.25,
+    "template": "A",
+    "A": "horn",
+    "B": "horn",
+    "loci": {
+     "spine": "ABAAA",
+     "radius": "BAAAABBBAA",
+     "sect0": "ABBABB",
+     "sect1": "BBAABA"
+    }
+   }
+  ],
+  "unmatched_inherited": [],
+  "dropped": [],
+  "mutations": [
+   "micro: body high-band"
+  ]
+ }
+}

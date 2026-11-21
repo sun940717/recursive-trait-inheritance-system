@@ -1,10 +1,97 @@
 # Recursive Trait Inheritance System (RTIS)
 
 **Author:** HongChenHe（洪晨和）  
-**Version:** 2026-03-30  
-**GitHub (Public):** [recursive-trait-inheritance-system](https://github.com/sun940717/recursive-trait-inheritance-system)  
+**Updated:** 2026-11-22  
+**Current version:** the November 2026 skeleton prototype (`november_2026/`)
+
+RTIS breeds 3D creatures with **different body plans**. The current version stores each creature as a
+**skeleton genome** (a list of parts, each a chain of bones with semantic tags) and grows every child into
+**one closed mesh**, with every gene traceable to the parent it came from.
+
+> **Claim (November version).** Two creatures with different body plans can mate; the child is one closed 3D
+> body that carries parts and genes from both parents, and every gene can be traced to its source.
+
+The sections after "Earlier design" describe the March 2026 v1 trait-graph system, kept as design history.
 
 ---
+
+## Repository map
+
+| Path | What |
+|---|---|
+| `november_2026/code/` | the current generator (frozen 2026-11-16): `skeleton_sdf_demo.py` (genome, distance field, meshing), `form_fusion_lab.py` (six forms, inheritance rules), `soft_match_lab.py` (probabilistic PCE matching), `rtis_run_once.py` (full pipeline once), `part_interface.py` (morphology package for animation), replay tools, and the labs used while designing the rules |
+| `november_2026/experiments/` | the formal experiments of plan v1: `metrics_v1.py`, `run_v1.py`, `precheck_v1.py`, `analyze_v1.py`, `x4_timing_v1.py`, `gallery_v1.py`, `make_replays_v1.py`, `x3_generations_v1.py`; `code_freeze_v1.json` (SHA-256 of every frozen file) |
+| `november_2026/experiments/data/` | `X1.csv` (7,650 children), `X2.csv` (9,180), manifests, per-child detail (`*_detail.jsonl`) |
+| `november_2026/experiments/results/` | analysis (`analysis_v1.md/.json`), build time (`x4_timing_v1`), X3 feasibility trial (`x3_trial/`, 1 population, not a result) |
+| `november_2026/experiments/gallery/gallery_v1.png` | all 30 seed-7 children (15 pairs × both directions), not selected |
+| `november_2026/experiments/replays/*.html` | six step-by-step replay pages; open in a browser |
+| `november_2026/results_exploration/` | raw outputs of the November design experiments (before plan v1; small test sets, see the data table for their reliability) |
+| `november_2026/docs/` | Chinese documents: system description, design plans, experiment plans v0/v1, results, data table, experiment log, paper outline, future directions |
+| `docs_project/` | Chinese project-wide documents: history and records of every version, open items, status overview, description of v1 and RTISV2 |
+| `rtis/` | `pce.py`, `ontology.py`, `trait.py` (May 2026 versions) used by the November generator |
+| `prototype/`, `spec/`, `schema/`, `examples/` | the March 2026 v1 prototype and specification (design history) |
+
+## How the November version makes a child
+
+1. two parent genomes with three-layer ontology tags (cell / organ / part);
+2. **PCE matching**: weighted Jaccard of tags (0.5 / 1 / 2); ≥ 0.40 always matches, 0.25–0.40 matches with probability (s − 0.25) / 0.15, below 0.25 never;
+3. every gene of a matched part comes whole from one parent, with **linkage** (one switch point per chain);
+4. **relative genes**; 5. **grafting** of unmatched parts; 6. **site rule**;
+7. round-cone signed distance per bone → smooth union → Fourier cross-section detail → marching cubes → one closed mesh;
+8. morphology package (mesh, parts, bones, skin weights, lineage) for a motion system.
+
+No machine learning, no LLM, no physics simulation in the generator.
+
+## Results (experiment plan v1, frozen 2026-11-16)
+
+Six hand-written forms (quadruped, biped, spider, serpent, jellyfish, crab), 15 pairs, both directions, 51 seeds.
+"Passing" = one closed manifold shell, no buried part, no hidden part (geometry only).
+
+| | Result |
+|---|---|
+| **PCE vs random matching with the same number of pairs** | pass 78.4% vs 70.9%, **+7.5 percentage points** (95% CI +5.6 to +9.4, sign-flip p < 0.0001) |
+| Parts kept | 79.6% vs 80.1% (−0.5 pp, within the pre-set 5 pp rule) |
+| Closed single shell | 99.9% |
+| Both parents contribute | 97.1% of children get ≥ 10% of their genes from each parent |
+| Ablations | relative genes off (linkage also off): bend +157.9°; linkage off: humps +0.86; site rule off: pass 65.2%; strict matching: no difference detected; attribute layer on: pass 91.6% |
+| Jellyfish pairs | 51.2% (PCE matches no non-root part, K = 0); 82.4% with the attribute layer |
+| Build time (Windows) | median 0.93 s per child at grid 0.03 |
+| Gallery (seed 7, all 30) | 23 / 30 pass the full pipeline including the motion test |
+
+The analysis was recomputed with independently written code; all numbers agreed.
+Details: `november_2026/docs/RTIS_實驗結果_v1.md` and `RTIS_數據總表.md`.
+
+**Limits.** Six hand-written forms only; the X1/X2 pass rate does not include the motion test; K = 0 for
+38.7% of children; the site rule is partly circular with the buried-part check; the attribute layer is off
+by default; no human evaluation, no external baseline. X3 (multi-generation) has only a feasibility trial.
+
+## Run it
+
+Python 3.10.12 with numpy 2.2.6, scipy 1.15.3, scikit-image 0.25.2, matplotlib 3.10.9 (the data environment).
+
+```
+cd november_2026/experiments
+python precheck_v1.py              # pre-checks
+python run_v1.py --exp both        # X1, X2 (about 17k children; --workers N)
+python analyze_v1.py
+cd ../code
+PYTHONPATH=../../rtis python rtis_run_once.py --a biped --b spider --seed 7      # Windows: $env:PYTHONPATH="..\..\rtis"
+```
+
+## Version history (short)
+
+| When | Version | What happened |
+|---|---|---|
+| 2026-03 | v1 | trait graphs, PCE, LLM-guided mutation (below) |
+| 2026-05 | RTISV2 | controlled experiment on trait graphs (n = 30) |
+| 2026-06 | mesh hybrids | direct mixing of external meshes; parts were lost, dropped |
+| 2026-11 | Fourier tubes → skeleton + implicit surface | current version; formal experiments v1 |
+
+Full history: `docs_project/RTIS_專案歷程與紀錄.md`.
+
+---
+
+# Earlier design: v1 (March 2026)
 
 ## Overview
 

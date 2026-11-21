@@ -1,0 +1,331 @@
+{
+ "voxel": 0.015,
+ "preview_voxel": 0.03,
+ "children_per_cell": 3,
+ "seed": 7,
+ "forms": {
+  "quadruped": {
+   "parts": 5,
+   "genes": 77,
+   "bone_chains": 7,
+   "closed": true,
+   "components": 1,
+   "triangles": 62688,
+   "vertices": 31346,
+   "volume": 0.4151058668407977,
+   "build_seconds": 4.7,
+   "body_size": 3.806,
+   "thin_joints_export": 0,
+   "thin_joints_preview": 1
+  },
+  "biped": {
+   "parts": 6,
+   "genes": 85,
+   "bone_chains": 9,
+   "closed": true,
+   "components": 1,
+   "triangles": 53540,
+   "vertices": 26772,
+   "volume": 0.2987027728105423,
+   "build_seconds": 5.62,
+   "body_size": 3.767,
+   "thin_joints_export": 1,
+   "thin_joints_preview": 4
+  },
+  "spider": {
+   "parts": 7,
+   "genes": 81,
+   "bone_chains": 12,
+   "closed": true,
+   "components": 1,
+   "triangles": 32644,
+   "vertices": 16324,
+   "volume": 0.14348858611681256,
+   "build_seconds": 1.21,
+   "body_size": 1.797,
+   "thin_joints_export": 1,
+   "thin_joints_preview": 10
+  },
+  "serpent": {
+   "parts": 4,
+   "genes": 59,
+   "bone_chains": 5,
+   "closed": true,
+   "components": 1,
+   "triangles": 30456,
+   "vertices": 15230,
+   "volume": 0.13967890412608355,
+   "build_seconds": 0.93,
+   "body_size": 3.431,
+   "thin_joints_export": 2,
+   "thin_joints_preview": 5
+  },
+  "jellyfish": {
+   "parts": 3,
+   "genes": 35,
+   "bone_chains": 13,
+   "closed": true,
+   "components": 1,
+   "triangles": 69080,
+   "vertices": 34542,
+   "volume": 0.6737900361630507,
+   "build_seconds": 2.97,
+   "body_size": 2.273,
+   "thin_joints_export": 1,
+   "thin_joints_preview": 4
+  },
+  "crab": {
+   "parts": 7,
+   "genes": 79,
+   "bone_chains": 13,
+   "closed": true,
+   "components": 1,
+   "triangles": 42932,
+   "vertices": 21468,
+   "volume": 0.17303019367614692,
+   "build_seconds": 2.41,
+   "body_size": 2.115,
+   "thin_joints_export": 0,
+   "thin_joints_preview": 5
+  }
+ },
+ "coverage": {
+  "quadruped x biped": {
+   "tags_only": 0.8888888888888888,
+   "wide": 0.8888888888888888,
+   "extra_pairs": []
+  },
+  "quadruped x spider": {
+   "tags_only": 0.6,
+   "wide": 1.0,
+   "extra_pairs": [
+    "neck_head~fang (shape and position)",
+    "leg_front~leg_2 (repeat)",
+    "leg_rear~leg_3 (repeat)"
+   ]
+  },
+  "quadruped x serpent": {
+   "tags_only": 0.2857142857142857,
+   "wide": 0.7142857142857143,
+   "extra_pairs": [
+    "leg_rear~tail_tip (tags, any arrangement)",
+    "leg_front~tail_tip (repeat)"
+   ]
+  },
+  "quadruped x jellyfish": {
+   "tags_only": 0.0,
+   "wide": 0.8333333333333334,
+   "extra_pairs": [
+    "leg_front~tentacle (tags, any arrangement)",
+    "neck_head~oral_arm (shape and position)",
+    "leg_rear~tentacle (repeat)"
+   ]
+  },
+  "quadruped x crab": {
+   "tags_only": 0.4,
+   "wide": 0.8,
+   "extra_pairs": [
+    "neck_head~eye_stalk (tags, any arrangement)",
+    "leg_front~leg_2 (repeat)",
+    "leg_rear~leg_3 (repeat)"
+   ]
+  },
+  "biped x spider": {
+   "tags_only": 0.7272727272727273,
+   "wide": 0.9090909090909091,
+   "extra_pairs": [
+    "leg_rear~leg_2 (repeat)",
+    "leg_rear~leg_3 (repeat)"
+   ]
+  },
+  "biped x serpent": {
+   "tags_only": 0.5,
+   "wide": 0.875,
+   "extra_pairs": [
+    "leg_rear~tail_tip (tags, any arrangement)",
+    "arm_front~fang (repeat)"
+   ]
+  },
+  "biped x jellyfish": {
+   "tags_only": 0.0,
+   "wide": 0.7142857142857143,
+   "extra_pairs": [
+    "arm_front~tentacle (tags, any arrangement)",
+    "neck_head~oral_arm (shape and position)",
+    "leg_rear~tentacle (repeat)"
+   ]
+  },
+  "biped x crab": {
+   "tags_only": 0.5454545454545454,
+   "wide": 0.9090909090909091,
+   "extra_pairs": [
+    "neck_head~eye_stalk (tags, any arrangement)",
+    "leg_rear~leg_2 (repeat)",
+    "leg_rear~leg_3 (repeat)"
+   ]
+  },
+  "spider x serpent": {
+   "tags_only": 0.2222222222222222,
+   "wide": 0.7777777777777778,
+   "extra_pairs": [
+    "leg_3~tail_tip (tags, any arrangement)",
+    "leg_1~tail_tip (repeat)",
+    "leg_2~tail_tip (repeat)",
+    "leg_4~tail_tip (repeat)"
+   ]
+  },
+  "spider x jellyfish": {
+   "tags_only": 0.0,
+   "wide": 1.0,
+   "extra_pairs": [
+    "fang~oral_arm (tags, any arrangement)",
+    "leg_2~tentacle (tags, any arrangement)",
+    "abdomen~oral_arm (repeat)",
+    "leg_1~tentacle (repeat)",
+    "leg_3~tentacle (repeat)",
+    "leg_4~tentacle (repeat)"
+   ]
+  },
+  "spider x crab": {
+   "tags_only": 0.8333333333333334,
+   "wide": 0.8333333333333334,
+   "extra_pairs": []
+  },
+  "serpent x jellyfish": {
+   "tags_only": 0.0,
+   "wide": 0.8,
+   "extra_pairs": [
+    "fang~tentacle (tags, any arrangement)",
+    "tail_tip~tentacle (repeat)",
+    "fang~oral_arm (repeat)"
+   ]
+  },
+  "serpent x crab": {
+   "tags_only": 0.2222222222222222,
+   "wide": 1.0,
+   "extra_pairs": [
+    "head~eye_stalk (tags, any arrangement)",
+    "tail_tip~leg_3 (tags, any arrangement)",
+    "tail_tip~leg_1 (repeat)",
+    "tail_tip~leg_2 (repeat)",
+    "tail_tip~leg_4 (repeat)"
+   ]
+  },
+  "jellyfish x crab": {
+   "tags_only": 0.0,
+   "wide": 0.875,
+   "extra_pairs": [
+    "tentacle~claw (tags, any arrangement)",
+    "oral_arm~claw (repeat)",
+    "tentacle~leg_1 (repeat)",
+    "tentacle~leg_2 (repeat)",
+    "tentacle~leg_3 (repeat)",
+    "tentacle~leg_4 (repeat)"
+   ]
+  }
+ },
+ "rules": {
+  "current": {
+   "children": 45,
+   "valid": 45,
+   "with_bubble": 0,
+   "parts": 6.377777777777778,
+   "orphans_per_child": 0.022222222222222223,
+   "grafted_per_child": 0.0,
+   "minority_share": 0.3756830308666858,
+   "root_extra_bend_deg": 127.35114705310878,
+   "extra_bend_deg": 127.65343213630034,
+   "invalid": []
+  },
+  "relative": {
+   "children": 45,
+   "valid": 45,
+   "with_bubble": 0,
+   "parts": 6.4222222222222225,
+   "orphans_per_child": 0.022222222222222223,
+   "grafted_per_child": 0.0,
+   "minority_share": 0.37671678985306545,
+   "root_extra_bend_deg": 0.1044376922618018,
+   "extra_bend_deg": 0.8516159860753346,
+   "invalid": []
+  },
+  "wide": {
+   "children": 45,
+   "valid": 45,
+   "with_bubble": 2,
+   "parts": 6.666666666666667,
+   "orphans_per_child": 0.0,
+   "grafted_per_child": 0.0,
+   "minority_share": 0.4357086702112859,
+   "root_extra_bend_deg": 0.14653709610644355,
+   "extra_bend_deg": 1.5452889464555057,
+   "invalid": []
+  },
+  "graft": {
+   "children": 45,
+   "valid": 45,
+   "with_bubble": 2,
+   "parts": 6.666666666666667,
+   "orphans_per_child": 0.0,
+   "grafted_per_child": 0.0,
+   "minority_share": 0.4357086702112859,
+   "root_extra_bend_deg": 0.14653709610644355,
+   "extra_bend_deg": 1.5452889464555057,
+   "invalid": []
+  }
+ },
+ "graft_stress": {
+  "serpent x jellyfish / drop orphans": {
+   "lost": 10,
+   "grafted": 0,
+   "valid": 10
+  },
+  "serpent x jellyfish / graft orphans": {
+   "lost": 0,
+   "grafted": 10,
+   "valid": 10
+  },
+  "biped x jellyfish / drop orphans": {
+   "lost": 10,
+   "grafted": 0,
+   "valid": 10
+  },
+  "biped x jellyfish / graft orphans": {
+   "lost": 0,
+   "grafted": 10,
+   "valid": 10
+  }
+ },
+ "field_blend": {
+  "spider x jellyfish": {
+   "volume_a": 0.14555699999999996,
+   "volume_b": 0.6759179999999999,
+   "closed": true,
+   "components": 2,
+   "triangles": 7544,
+   "vertices": 3776,
+   "volume": 0.23917049109788321,
+   "empty": false
+  },
+  "serpent x crab": {
+   "volume_a": 0.14123699999999997,
+   "volume_b": 0.22596299999999997,
+   "closed": true,
+   "components": 1,
+   "triangles": 2844,
+   "vertices": 1424,
+   "volume": 0.06350117098543868,
+   "empty": false
+  },
+  "quadruped x jellyfish": {
+   "volume_a": 0.40251599999999993,
+   "volume_b": 0.6774839999999999,
+   "closed": true,
+   "components": 1,
+   "triangles": 8456,
+   "vertices": 4230,
+   "volume": 0.32790641711352697,
+   "empty": false
+  }
+ }
+}

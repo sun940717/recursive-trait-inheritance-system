@@ -1,0 +1,518 @@
+{
+ "parents": [
+  "biped",
+  "crab"
+ ],
+ "seed": 7,
+ "voxel": 0.02,
+ "rules": [
+  "tags: RTIS ontology.py (cell / organ / part layers)",
+  "matching: PCE layered similarity; >= 0.40 always, 0.25-0.40 chance (score - 0.25) / 0.15, < 0.25 never",
+  "each gene copied whole from one parent (alpha 0.5)",
+  "relative genes (size gene; lengths and radii as fractions; lean and bends relative to the parent)",
+  "linkage: 1 switch point per crossed part",
+  "grafting: a part whose parent is missing attaches where that parent would have been",
+  "site rule: two unmatched limbs in one place compete; only one stays",
+  "geometry: skeleton + implicit surface + Fourier cross-section detail"
+ ],
+ "environment": {
+  "python": "3.10.12",
+  "numpy": "2.2.6",
+  "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39",
+  "pce.py": "/home/claude/rtis_real/pce.py",
+  "ontology.py": "/home/claude/rtis_real/ontology.py"
+ },
+ "unknown_tags": [],
+ "attribute_layer": {
+  "sets": [
+   {
+    "a": [
+     "leg_rear"
+    ],
+    "b": [
+     "leg_1",
+     "leg_2",
+     "leg_3",
+     "leg_4"
+    ],
+    "count_from": "B",
+    "attributes_from": {
+     "length": "B",
+     "thickness": "A",
+     "taper": "B",
+     "bend": "A"
+    },
+    "limbs": [
+     [
+      "leg_rear",
+      "leg_1"
+     ],
+     [
+      "leg_rear",
+      "leg_2"
+     ],
+     [
+      "leg_rear",
+      "leg_3"
+     ],
+     [
+      "leg_rear",
+      "leg_4"
+     ]
+    ],
+    "count": 4
+   }
+  ],
+  "parts": {
+   "neck_head": {
+    "from": "own",
+    "target": {
+     "length": 0.1973604125577988,
+     "thickness": 0.02632694953129255,
+     "taper": 0.6434181793286223,
+     "bend": 1.3860077889995572
+    },
+    "result": {
+     "class": "long",
+     "length": 0.19736041255656278,
+     "total": 0.2892845098151511,
+     "thickness": 0.02632694953029255,
+     "taper": 0.6434181793286224,
+     "bend": 1.3860077890110851
+    }
+   },
+   "leg_1": {
+    "from": {
+     "length": "B",
+     "thickness": "A",
+     "taper": "B",
+     "bend": "A"
+    },
+    "target": {
+     "length": 0.29973165597610324,
+     "thickness": 0.027180796146894958,
+     "taper": 0.29999999998731064,
+     "bend": 2.2834511886474607
+    },
+    "set": 0,
+    "result": {
+     "class": "long",
+     "length": 0.29973165597504337,
+     "total": 0.4210203954134584,
+     "thickness": 0.027180796145866645,
+     "taper": 0.2999999999875202,
+     "bend": 2.283451188650532
+    }
+   },
+   "leg_2": {
+    "from": {
+     "length": "B",
+     "thickness": "A",
+     "taper": "B",
+     "bend": "A"
+    },
+    "target": {
+     "length": 0.28103322121267515,
+     "thickness": 0.027180796146894958,
+     "taper": 0.29999999998731064,
+     "bend": 2.2834511886474607
+    },
+    "set": 0,
+    "result": {
+     "class": "long",
+     "length": 0.2810332212117298,
+     "total": 0.40742885494228864,
+     "thickness": 0.027180796144848255,
+     "taper": 0.29999999999380017,
+     "bend": 2.2834511886913864
+    }
+   },
+   "leg_3": {
+    "from": {
+     "length": "B",
+     "thickness": "A",
+     "taper": "B",
+     "bend": "A"
+    },
+    "target": {
+     "length": 0.2867908274321237,
+     "thickness": 0.027180796146894958,
+     "taper": 0.29999999998731064,
+     "bend": 2.2834511886474607
+    },
+    "set": 0,
+    "result": {
+     "class": "long",
+     "length": 0.2867908274309605,
+     "total": 0.4119097375884835,
+     "thickness": 0.027180796145992763,
+     "taper": 0.2999999999864854,
+     "bend": 2.2834511886538635
+    }
+   },
+   "leg_4": {
+    "from": {
+     "length": "B",
+     "thickness": "A",
+     "taper": "B",
+     "bend": "A"
+    },
+    "target": {
+     "length": 0.3120388140004287,
+     "thickness": 0.027180796146894958,
+     "taper": 0.29999999998731064,
+     "bend": 2.2834511886474607
+    },
+    "set": 0,
+    "result": {
+     "class": "long",
+     "length": 0.3120388139992266,
+     "total": 0.42566721199942603,
+     "thickness": 0.027180796145992763,
+     "taper": 0.2999999999864854,
+     "bend": 2.2834511886538635
+    }
+   },
+   "arm_front": {
+    "from": {
+     "length": "A",
+     "thickness": "B",
+     "taper": "B",
+     "bend": "A"
+    },
+    "target": {
+     "length": 0.07298705124581419,
+     "thickness": 0.034044203375210635,
+     "taper": 0.571428571411307,
+     "bend": 1.7781216648128153
+    },
+    "set": null,
+    "result": {
+     "class": "long",
+     "length": 0.07298705124419827,
+     "total": 0.18661544924439766,
+     "thickness": 0.03404420337210794,
+     "taper": 0.5714285714325631,
+     "bend": 1.7781216648169424
+    }
+   },
+   "horn": {
+    "from": "own",
+    "target": {
+     "length": 0.055731722388519415,
+     "thickness": 0.0071016793753755905,
+     "taper": 0.11825976491920148,
+     "bend": 0.8108261931554813
+    },
+    "result": {
+     "class": "long",
+     "length": 0.05573172238751942,
+     "total": 0.09269495993555779,
+     "thickness": 0.00710167937437559,
+     "taper": 0.11825976491920148,
+     "bend": 0.8108261931583067
+    }
+   },
+   "eye_stalk": {
+    "from": "own",
+    "target": {
+     "length": 0.07275404694620219,
+     "thickness": 0.01497314500298616,
+     "taper": 1.333333333239338,
+     "bend": 0.5495837470486576
+    },
+    "result": {
+     "class": "long",
+     "length": 0.07275404694484984,
+     "total": 0.1902126156641571,
+     "thickness": 0.01497314500198616,
+     "taper": 1.3333333332393378,
+     "bend": 0.5495837470494372
+    }
+   }
+  },
+  "skipped": []
+ },
+ "matching": {
+  "pairs": [
+   {
+    "a": "body",
+    "b": "carapace",
+    "score": 1.0,
+    "how": "root"
+   },
+   {
+    "a": "arm_front",
+    "b": "claw",
+    "score": 0.8,
+    "how": "clear"
+   },
+   {
+    "a": "leg_rear",
+    "b": "leg_1",
+    "score": 1.0,
+    "how": "set",
+    "set": 0,
+    "template": "B",
+    "placement": "B"
+   },
+   {
+    "a": "leg_rear",
+    "b": "leg_2",
+    "score": 1.0,
+    "how": "set",
+    "set": 0,
+    "template": "B",
+    "placement": "B"
+   },
+   {
+    "a": "leg_rear",
+    "b": "leg_3",
+    "score": 1.0,
+    "how": "set",
+    "set": 0,
+    "template": "B",
+    "placement": "B"
+   },
+   {
+    "a": "leg_rear",
+    "b": "leg_4",
+    "score": 1.0,
+    "how": "set",
+    "set": 0,
+    "template": "B",
+    "placement": "B"
+   }
+  ],
+  "borderline_decisions": [],
+  "unmatched_a": [
+   "horn",
+   "neck_head",
+   "tail"
+  ],
+  "unmatched_b": [
+   "eye_stalk"
+  ]
+ },
+ "inheritance": {
+  "parts": [
+   "carapace",
+   "neck_head",
+   "leg_1",
+   "leg_2",
+   "leg_3",
+   "leg_4",
+   "arm_front",
+   "horn",
+   "eye_stalk"
+  ],
+  "origin": {
+   "carapace": [
+    "A.body",
+    "B.carapace"
+   ],
+   "neck_head": [
+    "A.neck_head"
+   ],
+   "leg_1": [
+    "A.leg_rear",
+    "B.leg_1"
+   ],
+   "leg_2": [
+    "B.leg_2"
+   ],
+   "leg_3": [
+    "B.leg_3"
+   ],
+   "leg_4": [
+    "B.leg_4"
+   ],
+   "arm_front": [
+    "A.arm_front",
+    "B.claw"
+   ],
+   "horn": [
+    "A.horn"
+   ],
+   "eye_stalk": [
+    "B.eye_stalk"
+   ]
+  },
+  "ancestry_a_per_part": {
+   "carapace": 0.1935483870967742,
+   "neck_head": 1.0,
+   "leg_1": 0.47368421052631576,
+   "leg_2": 0.3684210526315789,
+   "leg_3": 0.8947368421052632,
+   "leg_4": 0.8421052631578947,
+   "arm_front": 0.875,
+   "horn": 1.0,
+   "eye_stalk": 0.0
+  },
+  "ancestry_a_overall": 0.6171056139415454,
+  "grafted": 0,
+  "not_inherited": 1,
+  "lost_to_site_rule": 0,
+  "orphans_dropped": 0,
+  "new_humps": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "new_bend_deg": [
+   0.0,
+   7.678977453906555e-10,
+   2.4047068336585653e-08,
+   2.6249153961543925e-09,
+   2.4254802610812476e-09,
+   0.0
+  ]
+ },
+ "body": {
+  "closed": true,
+  "outer_shells": 1,
+  "bubbles": 0,
+  "triangles": 22784,
+  "volume": 0.21443856433548322,
+  "swallowed_limbs": [],
+  "seconds": 1.4094469099999287,
+  "failed_checks": [],
+  "ok": true
+ },
+ "handoff": {
+  "counts": {
+   "parts": 9,
+   "nodes": 88,
+   "bones": 72,
+   "edges": 123,
+   "vertices": 11394,
+   "faces": 22784
+  },
+  "groups": {
+   "root": [
+    "carapace"
+   ],
+   "attached": [
+    "neck_head",
+    "leg_1",
+    "leg_2",
+    "leg_3",
+    "leg_4",
+    "arm_front",
+    "horn",
+    "eye_stalk"
+   ],
+   "tag:torso": [
+    "carapace"
+   ],
+   "tag:shell": [
+    "carapace"
+   ],
+   "tag:defense_organ": [
+    "carapace",
+    "horn"
+   ],
+   "tag:central": [
+    "carapace"
+   ],
+   "arrangement:single": [
+    "carapace",
+    "neck_head"
+   ],
+   "tag:head": [
+    "neck_head"
+   ],
+   "tag:sensor": [
+    "neck_head",
+    "eye_stalk"
+   ],
+   "tag:limb": [
+    "leg_1",
+    "leg_2",
+    "leg_3",
+    "leg_4",
+    "arm_front"
+   ],
+   "tag:locomotion": [
+    "leg_1",
+    "leg_2",
+    "leg_3",
+    "leg_4"
+   ],
+   "tag:motor_organ": [
+    "leg_1",
+    "leg_2",
+    "leg_3",
+    "leg_4"
+   ],
+   "arrangement:mirror": [
+    "leg_1",
+    "leg_2",
+    "leg_3",
+    "leg_4",
+    "arm_front",
+    "horn",
+    "eye_stalk"
+   ],
+   "tag:grasping": [
+    "arm_front"
+   ],
+   "tag:end_effector": [
+    "arm_front"
+   ],
+   "tag:weapon_part": [
+    "horn"
+   ],
+   "tag:cutting": [
+    "horn"
+   ],
+   "tag:sensory_cluster": [
+    "eye_stalk"
+   ]
+  },
+  "access": {
+   "motion_system": "read_only"
+  },
+  "files": [
+   "child.genome.json",
+   "child.morph.json",
+   "child.obj",
+   "child.skin.npz",
+   "child.state.json"
+  ]
+ },
+ "motion_test": {
+  "weights_sum_error": 3.3306690738754696e-16,
+  "rest_pose_error": 3.3306690738754696e-16,
+  "parts_with_vertices": 9,
+  "bones_with_vertices": 62,
+  "bones_without_vertices": [
+   "carapace.b8",
+   "neck_head.b0",
+   "leg_1.L.b0",
+   "leg_1.R.b0",
+   "leg_3.L.b0",
+   "leg_3.R.b0",
+   "leg_4.L.b0",
+   "leg_4.R.b0",
+   "arm_front.L.b0",
+   "arm_front.R.b0"
+  ],
+  "vertex_part_agrees_with_face_part": 0.995654845505618,
+  "one_part_moved": {
+   "bone": "neck_head.b0",
+   "moved_vertices": 697,
+   "share_in_that_part": 0.9870875179340028
+  },
+  "demo_pose_volume_change": -0.007527363556233069,
+  "demo_pose_flipped_faces": 0.012816011235955056,
+  "bones_in_tag_limb": 48,
+  "failed_checks": [],
+  "ok": true
+ },
+ "seconds": 12.584631370000011,
+ "ok": true
+}

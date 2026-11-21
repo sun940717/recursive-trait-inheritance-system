@@ -1,0 +1,245 @@
+{
+ "biped x spider": {
+  "fate": {
+   "A.body": {
+    "merged": 1000
+   },
+   "A.neck_head": {
+    "alone": 898,
+    "left out": 102
+   },
+   "A.tail": {
+    "left out": 597,
+    "alone": 403
+   },
+   "A.leg_rear": {
+    "merged": 1000
+   },
+   "A.arm_front": {
+    "alone": 893,
+    "left out": 107
+   },
+   "A.horn": {
+    "merged": 911,
+    "left out": 89
+   },
+   "B.cephalothorax": {
+    "merged": 1000
+   },
+   "B.abdomen": {
+    "left out": 565,
+    "alone": 435
+   },
+   "B.fang": {
+    "merged": 911,
+    "left out": 89
+   },
+   "B.leg_1": {
+    "left out": 536,
+    "merged": 464
+   },
+   "B.leg_2": {
+    "left out": 536,
+    "alone": 464
+   },
+   "B.leg_3": {
+    "left out": 536,
+    "alone": 464
+   },
+   "B.leg_4": {
+    "merged": 536,
+    "alone": 464
+   }
+  },
+  "merged_pairs": {
+   "A.body ~ B.cephalothorax": 1000,
+   "A.leg_rear ~ B.leg_4": 536,
+   "A.horn ~ B.fang": 911,
+   "A.leg_rear ~ B.leg_1": 464
+  },
+  "chains": {
+   "1 switch": 3397,
+   "all A": 458,
+   "all B": 448
+  },
+  "legs": {
+   "2": 536,
+   "8": 464
+  },
+  "parts": {
+   "5": 181,
+   "8": 132,
+   "6": 314,
+   "4": 38,
+   "9": 301,
+   "7": 31,
+   "3": 3
+  },
+  "never": [
+   "A.body alone",
+   "A.body left out",
+   "A.neck_head merged",
+   "A.tail merged",
+   "A.leg_rear alone",
+   "A.leg_rear left out",
+   "A.arm_front merged",
+   "A.horn alone",
+   "B.cephalothorax alone",
+   "B.cephalothorax left out",
+   "B.abdomen merged",
+   "B.fang alone",
+   "B.leg_1 alone",
+   "B.leg_2 merged",
+   "B.leg_3 merged",
+   "B.leg_4 left out"
+  ]
+ },
+ "quadruped x crab": {
+  "fate": {
+   "A.body": {
+    "merged": 1000
+   },
+   "A.neck_head": {
+    "alone": 906,
+    "left out": 94
+   },
+   "A.tail": {
+    "alone": 708,
+    "left out": 292
+   },
+   "A.leg_front": {
+    "merged": 1000
+   },
+   "A.leg_rear": {
+    "merged": 1000
+   },
+   "B.carapace": {
+    "merged": 1000
+   },
+   "B.claw": {
+    "left out": 561,
+    "alone": 439
+   },
+   "B.leg_1": {
+    "merged": 1000
+   },
+   "B.leg_2": {
+    "left out": 536,
+    "alone": 464
+   },
+   "B.leg_3": {
+    "left out": 536,
+    "merged": 464
+   },
+   "B.leg_4": {
+    "merged": 536,
+    "alone": 464
+   },
+   "B.eye_stalk": {
+    "alone": 689,
+    "left out": 311
+   }
+  },
+  "merged_pairs": {
+   "A.body ~ B.carapace": 1000,
+   "A.leg_front ~ B.leg_1": 1000,
+   "A.leg_rear ~ B.leg_4": 536,
+   "A.leg_rear ~ B.leg_3": 464
+  },
+  "chains": {
+   "1 switch": 3237,
+   "all A": 359,
+   "all B": 332
+  },
+  "legs": {
+   "4": 536,
+   "8": 464
+  },
+  "parts": {
+   "6": 257,
+   "8": 217,
+   "7": 229,
+   "5": 177,
+   "4": 34,
+   "9": 85,
+   "3": 1
+  },
+  "never": [
+   "A.body alone",
+   "A.body left out",
+   "A.neck_head merged",
+   "A.tail merged",
+   "A.leg_front alone",
+   "A.leg_front left out",
+   "A.leg_rear alone",
+   "A.leg_rear left out",
+   "B.carapace alone",
+   "B.carapace left out",
+   "B.claw merged",
+   "B.leg_1 alone",
+   "B.leg_1 left out",
+   "B.leg_2 merged",
+   "B.leg_3 alone",
+   "B.leg_4 left out",
+   "B.eye_stalk merged"
+  ]
+ },
+ "serpent x jellyfish": {
+  "fate": {
+   "A.torso": {
+    "merged": 1000
+   },
+   "A.head": {
+    "alone": 906,
+    "left out": 94
+   },
+   "A.fang": {
+    "alone": 700,
+    "left out": 300
+   },
+   "A.tail_tip": {
+    "alone": 708,
+    "left out": 292
+   },
+   "B.bell": {
+    "merged": 1000
+   },
+   "B.tentacle": {
+    "left out": 555,
+    "alone": 445
+   },
+   "B.oral_arm": {
+    "left out": 940,
+    "alone": 60
+   }
+  },
+  "merged_pairs": {
+   "A.torso ~ B.bell": 1000
+  },
+  "chains": {
+   "1 switch": 928,
+   "all B": 39,
+   "all A": 33
+  },
+  "legs": {
+   "0": 1000
+  },
+  "parts": {
+   "4": 438,
+   "3": 289,
+   "2": 55,
+   "5": 218
+  },
+  "never": [
+   "A.torso alone",
+   "A.torso left out",
+   "A.head merged",
+   "A.fang merged",
+   "A.tail_tip merged",
+   "B.bell alone",
+   "B.bell left out",
+   "B.tentacle merged",
+   "B.oral_arm merged"
+  ]
+ }
+}

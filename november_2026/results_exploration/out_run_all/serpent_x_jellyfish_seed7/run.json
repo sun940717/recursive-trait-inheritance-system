@@ -1,0 +1,199 @@
+{
+ "parents": [
+  "serpent",
+  "jellyfish"
+ ],
+ "seed": 7,
+ "voxel": 0.02,
+ "rules": [
+  "tags: RTIS ontology.py (cell / organ / part layers)",
+  "matching: PCE layered similarity; >= 0.40 always, 0.25-0.40 chance (score - 0.25) / 0.15, < 0.25 never",
+  "each gene copied whole from one parent (alpha 0.5)",
+  "relative genes (size gene; lengths and radii as fractions; lean and bends relative to the parent)",
+  "linkage: 1 switch point per crossed part",
+  "grafting: a part whose parent is missing attaches where that parent would have been",
+  "site rule: two unmatched limbs in one place compete; only one stays",
+  "geometry: skeleton + implicit surface + Fourier cross-section detail"
+ ],
+ "environment": {
+  "python": "3.10.12",
+  "numpy": "2.2.6",
+  "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39",
+  "pce.py": "/home/claude/rtis_real/pce.py",
+  "ontology.py": "/home/claude/rtis_real/ontology.py"
+ },
+ "unknown_tags": [],
+ "matching": {
+  "pairs": [
+   {
+    "a": "torso",
+    "b": "bell",
+    "score": 1.0,
+    "how": "root"
+   }
+  ],
+  "borderline_decisions": [],
+  "unmatched_a": [
+   "fang",
+   "head",
+   "tail_tip"
+  ],
+  "unmatched_b": [
+   "oral_arm",
+   "tentacle"
+  ]
+ },
+ "inheritance": {
+  "parts": [
+   "bell",
+   "head",
+   "tail_tip",
+   "tentacle"
+  ],
+  "origin": {
+   "bell": [
+    "A.torso",
+    "B.bell"
+   ],
+   "head": [
+    "A.head"
+   ],
+   "tail_tip": [
+    "A.tail_tip"
+   ],
+   "tentacle": [
+    "B.tentacle"
+   ]
+  },
+  "ancestry_a_per_part": {
+   "bell": 0.1956521739130435,
+   "head": 1.0,
+   "tail_tip": 1.0,
+   "tentacle": 0.0
+  },
+  "ancestry_a_overall": 0.40100334448160535,
+  "grafted": 0,
+  "not_inherited": 1,
+  "lost_to_site_rule": 1,
+  "orphans_dropped": 0,
+  "new_humps": [
+   0
+  ],
+  "new_bend_deg": [
+   0.0
+  ]
+ },
+ "body": {
+  "closed": true,
+  "outer_shells": 1,
+  "bubbles": 0,
+  "triangles": 36564,
+  "volume": 0.6481874400892377,
+  "swallowed_limbs": [],
+  "seconds": 2.218005516000005,
+  "ok": true
+ },
+ "handoff": {
+  "counts": {
+   "parts": 4,
+   "nodes": 71,
+   "bones": 60,
+   "edges": 118,
+   "vertices": 18284,
+   "faces": 36564
+  },
+  "groups": {
+   "root": [
+    "bell"
+   ],
+   "attached": [
+    "head",
+    "tail_tip",
+    "tentacle"
+   ],
+   "tag:torso": [
+    "bell"
+   ],
+   "tag:structural": [
+    "bell"
+   ],
+   "tag:central": [
+    "bell"
+   ],
+   "arrangement:single": [
+    "bell",
+    "head",
+    "tail_tip"
+   ],
+   "tag:head": [
+    "head"
+   ],
+   "tag:sensor": [
+    "head"
+   ],
+   "tag:tail": [
+    "tail_tip"
+   ],
+   "tag:motor_organ": [
+    "tail_tip",
+    "tentacle"
+   ],
+   "tag:appendage": [
+    "tentacle"
+   ],
+   "tag:grasping": [
+    "tentacle"
+   ],
+   "arrangement:radial": [
+    "tentacle"
+   ]
+  },
+  "access": {
+   "motion_system": "read_only"
+  },
+  "files": [
+   "child.genome.json",
+   "child.morph.json",
+   "child.obj",
+   "child.skin.npz",
+   "child.state.json"
+  ]
+ },
+ "motion_test": {
+  "weights_sum_error": 3.3306690738754696e-16,
+  "rest_pose_error": 4.440892098500626e-16,
+  "parts_with_vertices": 4,
+  "bones_with_vertices": 43,
+  "bones_without_vertices": [
+   "bell.b0",
+   "bell.b1",
+   "bell.b2",
+   "bell.b3",
+   "bell.b12",
+   "bell.b13",
+   "head.b0",
+   "tail_tip.b0",
+   "tail_tip.b1",
+   "tentacle.0.b0",
+   "tentacle.1.b0",
+   "tentacle.2.b0",
+   "tentacle.3.b0",
+   "tentacle.4.b0",
+   "tentacle.5.b0",
+   "tentacle.6.b0",
+   "tentacle.7.b0"
+  ],
+  "vertex_part_agrees_with_face_part": 0.997456514604529,
+  "one_part_moved": {
+   "bone": "head.b0",
+   "moved_vertices": 120,
+   "share_in_that_part": 0.9583333333333334
+  },
+  "demo_pose_volume_change": -7.839840361645312e-05,
+  "demo_pose_flipped_faces": 0.0070287714692046825,
+  "bones_in_tag_limb": 0,
+  "ok": true
+ },
+ "seconds": 14.860716288000049,
+ "ok": true
+}

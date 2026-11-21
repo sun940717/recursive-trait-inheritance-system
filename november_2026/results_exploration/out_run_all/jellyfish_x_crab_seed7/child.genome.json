@@ -1,0 +1,297 @@
+[
+ {
+  "name": "carapace",
+  "parent": null,
+  "attach": 0.0,
+  "tags": [
+   "torso",
+   "shell",
+   "defense_organ",
+   "central"
+  ],
+  "arrangement": "single",
+  "is_core": true,
+  "blend": 0.027908244298889807,
+  "offsets": [
+   [
+    0.15,
+    0.0,
+    0.01
+   ],
+   [
+    0.15,
+    0.0,
+    0.01
+   ],
+   [
+    0.15,
+    0.0,
+    -0.01
+   ],
+   [
+    0.13,
+    0.0,
+    -0.01
+   ]
+  ],
+  "radii": [
+   0.18,
+   0.27,
+   0.3,
+   0.27,
+   0.37211
+  ],
+  "ancestry_a": 0.1875
+ },
+ {
+  "name": "tentacle",
+  "parent": "carapace",
+  "attach": 0.9,
+  "tags": [
+   "appendage",
+   "grasping",
+   "motor_organ"
+  ],
+  "arrangement": "radial",
+  "is_core": true,
+  "blend": 0.013954122149444904,
+  "offsets": [
+   [
+    0.074916,
+    0.0,
+    0.367446
+   ],
+   [
+    0.283255,
+    0.0,
+    0.043523
+   ],
+   [
+    0.32107,
+    0.0,
+    -0.071349
+   ],
+   [
+    0.330345,
+    0.0,
+    0.049231
+   ],
+   [
+    0.274693,
+    0.0,
+    -0.067781
+   ]
+  ],
+  "radii": [
+   0.046514,
+   0.037211,
+   0.027908,
+   0.023257,
+   0.018605,
+   0.011163
+  ],
+  "ancestry_a": 1.0
+ },
+ {
+  "name": "leg_1",
+  "parent": "carapace",
+  "attach": 0.72,
+  "tags": [
+   "limb",
+   "locomotion",
+   "motor_organ"
+  ],
+  "arrangement": "mirror",
+  "is_core": true,
+  "blend": 0.015,
+  "offsets": [
+   [
+    0.04,
+    0.3,
+    0.06
+   ],
+   [
+    0.04,
+    0.22,
+    0.04
+   ],
+   [
+    0.02,
+    0.18,
+    -0.2
+   ],
+   [
+    0.01,
+    0.08,
+    -0.18
+   ]
+  ],
+  "radii": [
+   0.05,
+   0.045,
+   0.04,
+   0.03,
+   0.015
+  ],
+  "ancestry_a": 0.0
+ },
+ {
+  "name": "leg_2",
+  "parent": "carapace",
+  "attach": 0.54,
+  "tags": [
+   "limb",
+   "locomotion",
+   "motor_organ"
+  ],
+  "arrangement": "mirror",
+  "is_core": true,
+  "blend": 0.015,
+  "offsets": [
+   [
+    0.012,
+    0.3,
+    0.06
+   ],
+   [
+    0.012,
+    0.22,
+    0.04
+   ],
+   [
+    0.006,
+    0.18,
+    -0.2
+   ],
+   [
+    0.003,
+    0.08,
+    -0.18
+   ]
+  ],
+  "radii": [
+   0.05,
+   0.045,
+   0.04,
+   0.03,
+   0.015
+  ],
+  "ancestry_a": 0.0
+ },
+ {
+  "name": "leg_3",
+  "parent": "carapace",
+  "attach": 0.36,
+  "tags": [
+   "limb",
+   "locomotion",
+   "motor_organ"
+  ],
+  "arrangement": "mirror",
+  "is_core": true,
+  "blend": 0.015,
+  "offsets": [
+   [
+    -0.02,
+    0.3,
+    0.06
+   ],
+   [
+    -0.02,
+    0.22,
+    0.04
+   ],
+   [
+    -0.01,
+    0.18,
+    -0.2
+   ],
+   [
+    -0.005,
+    0.08,
+    -0.18
+   ]
+  ],
+  "radii": [
+   0.05,
+   0.045,
+   0.04,
+   0.03,
+   0.015
+  ],
+  "ancestry_a": 0.0
+ },
+ {
+  "name": "leg_4",
+  "parent": "carapace",
+  "attach": 0.18,
+  "tags": [
+   "limb",
+   "locomotion",
+   "motor_organ"
+  ],
+  "arrangement": "mirror",
+  "is_core": true,
+  "blend": 0.015,
+  "offsets": [
+   [
+    -0.056,
+    0.3,
+    0.06
+   ],
+   [
+    -0.056,
+    0.22,
+    0.04
+   ],
+   [
+    -0.028,
+    0.18,
+    -0.2
+   ],
+   [
+    -0.014,
+    0.08,
+    -0.18
+   ]
+  ],
+  "radii": [
+   0.05,
+   0.045,
+   0.04,
+   0.03,
+   0.015
+  ],
+  "ancestry_a": 0.0
+ },
+ {
+  "name": "eye_stalk",
+  "parent": "carapace",
+  "attach": 0.97,
+  "tags": [
+   "sensory_cluster",
+   "sensor"
+  ],
+  "arrangement": "mirror",
+  "is_core": false,
+  "blend": 0.012,
+  "offsets": [
+   [
+    0.04,
+    0.1,
+    0.14
+   ],
+   [
+    0.01,
+    0.01,
+    0.12
+   ]
+  ],
+  "radii": [
+   0.03,
+   0.025,
+   0.04
+  ],
+  "ancestry_a": 0.0
+ }
+]

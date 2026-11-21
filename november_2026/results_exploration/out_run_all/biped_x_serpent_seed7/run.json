@@ -1,0 +1,218 @@
+{
+ "parents": [
+  "biped",
+  "serpent"
+ ],
+ "seed": 7,
+ "voxel": 0.02,
+ "rules": [
+  "tags: RTIS ontology.py (cell / organ / part layers)",
+  "matching: PCE layered similarity; >= 0.40 always, 0.25-0.40 chance (score - 0.25) / 0.15, < 0.25 never",
+  "each gene copied whole from one parent (alpha 0.5)",
+  "relative genes (size gene; lengths and radii as fractions; lean and bends relative to the parent)",
+  "linkage: 1 switch point per crossed part",
+  "grafting: a part whose parent is missing attaches where that parent would have been",
+  "site rule: two unmatched limbs in one place compete; only one stays",
+  "geometry: skeleton + implicit surface + Fourier cross-section detail"
+ ],
+ "environment": {
+  "python": "3.10.12",
+  "numpy": "2.2.6",
+  "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39",
+  "pce.py": "/home/claude/rtis_real/pce.py",
+  "ontology.py": "/home/claude/rtis_real/ontology.py"
+ },
+ "unknown_tags": [],
+ "matching": {
+  "pairs": [
+   {
+    "a": "body",
+    "b": "torso",
+    "score": 1.0,
+    "how": "root"
+   },
+   {
+    "a": "neck_head",
+    "b": "head",
+    "score": 1.0,
+    "how": "clear"
+   },
+   {
+    "a": "horn",
+    "b": "fang",
+    "score": 0.6,
+    "how": "clear"
+   },
+   {
+    "a": "tail",
+    "b": "tail_tip",
+    "score": 0.5,
+    "how": "clear"
+   }
+  ],
+  "borderline_decisions": [],
+  "unmatched_a": [
+   "arm_front",
+   "leg_rear"
+  ],
+  "unmatched_b": []
+ },
+ "inheritance": {
+  "parts": [
+   "torso",
+   "head",
+   "tail",
+   "arm_front",
+   "fang"
+  ],
+  "origin": {
+   "torso": [
+    "A.body",
+    "B.torso"
+   ],
+   "head": [
+    "A.neck_head",
+    "B.head"
+   ],
+   "tail": [
+    "A.tail",
+    "B.tail_tip"
+   ],
+   "arm_front": [
+    "A.arm_front"
+   ],
+   "fang": [
+    "A.horn",
+    "B.fang"
+   ]
+  },
+  "ancestry_a_per_part": {
+   "torso": 0.1956521739130435,
+   "head": 0.6842105263157895,
+   "tail": 0.3684210526315789,
+   "arm_front": 1.0,
+   "fang": 0.6153846153846154
+  },
+  "ancestry_a_overall": 0.4809371067952304,
+  "grafted": 0,
+  "not_inherited": 1,
+  "lost_to_site_rule": 0,
+  "orphans_dropped": 0,
+  "new_humps": [
+   1,
+   0,
+   1,
+   0
+  ],
+  "new_bend_deg": [
+   0.1572123728357866,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "body": {
+  "closed": true,
+  "outer_shells": 1,
+  "bubbles": 0,
+  "triangles": 17772,
+  "volume": 0.140924284666229,
+  "swallowed_limbs": [],
+  "seconds": 1.5765407800000162,
+  "ok": true
+ },
+ "handoff": {
+  "counts": {
+   "parts": 5,
+   "nodes": 45,
+   "bones": 38,
+   "edges": 53,
+   "vertices": 8888,
+   "faces": 17772
+  },
+  "groups": {
+   "root": [
+    "torso"
+   ],
+   "attached": [
+    "head",
+    "tail",
+    "arm_front",
+    "fang"
+   ],
+   "tag:torso": [
+    "torso"
+   ],
+   "tag:structural": [
+    "torso",
+    "tail"
+   ],
+   "tag:central": [
+    "torso"
+   ],
+   "arrangement:single": [
+    "torso",
+    "head",
+    "tail"
+   ],
+   "tag:head": [
+    "head"
+   ],
+   "tag:sensor": [
+    "head"
+   ],
+   "tag:tail": [
+    "tail"
+   ],
+   "tag:limb": [
+    "arm_front"
+   ],
+   "tag:grasping": [
+    "arm_front",
+    "fang"
+   ],
+   "tag:end_effector": [
+    "arm_front"
+   ],
+   "arrangement:mirror": [
+    "arm_front",
+    "fang"
+   ],
+   "tag:weapon_part": [
+    "fang"
+   ],
+   "tag:cutting": [
+    "fang"
+   ]
+  },
+  "access": {
+   "motion_system": "read_only"
+  },
+  "files": [
+   "child.genome.json",
+   "child.morph.json",
+   "child.obj",
+   "child.skin.npz",
+   "child.state.json"
+  ]
+ },
+ "motion_test": {
+  "weights_sum_error": 4.440892098500626e-16,
+  "rest_pose_error": 4.440892098500626e-16,
+  "parts_with_vertices": 5,
+  "bones_with_vertices": 38,
+  "bones_without_vertices": [],
+  "vertex_part_agrees_with_face_part": 0.9892527571460725,
+  "one_part_moved": {
+   "bone": "head.b0",
+   "moved_vertices": 1670,
+   "share_in_that_part": 0.9988023952095808
+  },
+  "demo_pose_volume_change": -0.0015160766368812473,
+  "demo_pose_flipped_faces": 0.0016317803286067971,
+  "bones_in_tag_limb": 8,
+  "ok": true
+ },
+ "seconds": 10.300749697000015,
+ "ok": true
+}

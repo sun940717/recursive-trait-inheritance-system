@@ -1,0 +1,70 @@
+Part 1 - body forms / 形體
+form        parts  genes  pieces  closed  triangles  build s   size  thin joints
+quadruped       5     77       1    True      62688     4.70   3.81     0 /  1
+biped           6     85       1    True      53540     5.62   3.77     1 /  4
+spider          7     81       1    True      32644     1.21   1.80     1 / 10
+serpent         4     59       1    True      30456     0.93   3.43     2 /  5
+jellyfish       3     35       1    True      69080     2.97   2.27     1 /  4
+crab            7     79       1    True      42932     2.41   2.12     0 /  5
+  thin joints: at the export grid / at the preview grid (these get thickened)
+
+Part 2 - share of parts that have a partner / 有配對對象的部位比例
+pair                     tags only    wide   how the extra pairs were found
+quadruped x biped              89%     89%   -
+quadruped x spider             60%    100%   neck_head~fang (shape and position); leg_front~leg_2 (repeat); leg_rear~leg_3 (repeat)
+quadruped x serpent            29%     71%   leg_rear~tail_tip (tags, any arrangement); leg_front~tail_tip (repeat)
+quadruped x jellyfish           0%     83%   leg_front~tentacle (tags, any arrangement); neck_head~oral_arm (shape and position); leg_rear~tentacle (repeat)
+quadruped x crab               40%     80%   neck_head~eye_stalk (tags, any arrangement); leg_front~leg_2 (repeat); leg_rear~leg_3 (repeat)
+biped x spider                 73%     91%   leg_rear~leg_2 (repeat); leg_rear~leg_3 (repeat)
+biped x serpent                50%     88%   leg_rear~tail_tip (tags, any arrangement); arm_front~fang (repeat)
+biped x jellyfish               0%     71%   arm_front~tentacle (tags, any arrangement); neck_head~oral_arm (shape and position); leg_rear~tentacle (repeat)
+biped x crab                   55%     91%   neck_head~eye_stalk (tags, any arrangement); leg_rear~leg_2 (repeat); leg_rear~leg_3 (repeat)
+spider x serpent               22%     78%   leg_3~tail_tip (tags, any arrangement); leg_1~tail_tip (repeat); leg_2~tail_tip (repeat); leg_4~tail_tip (repeat)
+spider x jellyfish              0%    100%   fang~oral_arm (tags, any arrangement); leg_2~tentacle (tags, any arrangement); abdomen~oral_arm (repeat); leg_1~tentacle (repeat); leg_3~tentacle (repeat); leg_4~tentacle (repeat)
+spider x crab                  83%     83%   -
+serpent x jellyfish             0%     80%   fang~tentacle (tags, any arrangement); tail_tip~tentacle (repeat); fang~oral_arm (repeat)
+serpent x crab                 22%    100%   head~eye_stalk (tags, any arrangement); tail_tip~leg_3 (tags, any arrangement); tail_tip~leg_1 (repeat); tail_tip~leg_2 (repeat); tail_tip~leg_4 (repeat)
+jellyfish x crab                0%     88%   tentacle~claw (tags, any arrangement); oral_arm~claw (repeat); tentacle~leg_1 (repeat); tentacle~leg_2 (repeat); tentacle~leg_3 (repeat); tentacle~leg_4 (repeat)
+mean of 15 pairs               35%     86%
+  breeding quadruped x biped ...
+  breeding quadruped x spider ...
+  breeding quadruped x serpent ...
+  breeding quadruped x jellyfish ...
+  breeding quadruped x crab ...
+  breeding biped x spider ...
+  breeding biped x serpent ...
+  breeding biped x jellyfish ...
+  breeding biped x crab ...
+  breeding spider x serpent ...
+  breeding spider x jellyfish ...
+  breeding spider x crab ...
+  breeding serpent x jellyfish ...
+  breeding serpent x crab ...
+  breeding jellyfish x crab ...
+
+Part 2 - 15 pairs x 3 children per rule (124 s) / 每種規則 45 個子代
+rule        one closed body  bubble  parts  lost parts  grafted  smaller parent  new kinks body  new kinks all
+current           45 / 45         0    6.4        0.02     0.00            38%          127 deg        128 deg
+relative          45 / 45         0    6.4        0.02     0.00            38%            0 deg          1 deg
+wide              45 / 45         2    6.7        0.00     0.00            44%            0 deg          2 deg
+graft             45 / 45         2    6.7        0.00     0.00            44%            0 deg          2 deg
+  bubble         = children with a small sealed pocket of empty space inside the body
+  smaller parent = gene share of whichever parent gave less (50% = an even fusion)
+  new kinks      = bend in a crossed part beyond the more bent of its two parents
+
+Graft stress test (parent part forced missing, 10 children each) / 嫁接壓力測試
+pair                  rule             lost parts  grafted  one closed body
+serpent x jellyfish   drop orphans             10        0          10 / 10
+serpent x jellyfish   graft orphans             0       10          10 / 10
+biped x jellyfish     drop orphans             10        0          10 / 10
+biped x jellyfish     graft orphans             0       10          10 / 10
+
+Baseline - field blend at 50% (no correspondence, no genome) / 基準：場混合
+  spider x jellyfish: pieces 2, closed True, volume 0.239 (parents 0.146 and 0.676)
+  serpent x crab: pieces 1, closed True, volume 0.064 (parents 0.141 and 0.226)
+  quadruped x jellyfish: pieces 1, closed True, volume 0.328 (parents 0.403 and 0.677)
+Done -> /home/claude/out_fusion
+
+real	3m52.029s
+user	3m49.340s
+sys	0m0.798s

@@ -1,0 +1,196 @@
+{
+ "quadruped": {
+  "counts": {
+   "parts": 5,
+   "nodes": 46,
+   "bones": 39,
+   "edges": 57,
+   "vertices": 17608,
+   "faces": 35212
+  },
+  "checks": {
+   "weights_sum_error": 4.440892098500626e-16,
+   "rest_pose_error": 4.440892098500626e-16,
+   "parts_with_vertices": 5,
+   "bones_with_vertices": 39,
+   "bones_without_vertices": [],
+   "vertex_part_agrees_with_face_part": 0.9990628194933545,
+   "one_part_moved": {
+    "bone": "neck_head.b0",
+    "moved_vertices": 2238,
+    "share_in_that_part": 0.9781054512957998
+   },
+   "demo_pose_volume_change": -0.0032933322969175283,
+   "demo_pose_flipped_faces": 0.0029251391571055324
+  }
+ },
+ "biped": {
+  "counts": {
+   "parts": 6,
+   "nodes": 52,
+   "bones": 43,
+   "edges": 66,
+   "vertices": 15046,
+   "faces": 30088
+  },
+  "checks": {
+   "weights_sum_error": 3.3306690738754696e-16,
+   "rest_pose_error": 6.661338147750939e-16,
+   "parts_with_vertices": 6,
+   "bones_with_vertices": 43,
+   "bones_without_vertices": [],
+   "vertex_part_agrees_with_face_part": 0.9946490295134273,
+   "one_part_moved": {
+    "bone": "neck_head.b0",
+    "moved_vertices": 2222,
+    "share_in_that_part": 0.9986498649864987
+   },
+   "demo_pose_volume_change": -0.004799769002951426,
+   "demo_pose_flipped_faces": 0.006248338207923425
+  }
+ },
+ "spider": {
+  "counts": {
+   "parts": 7,
+   "nodes": 58,
+   "bones": 46,
+   "edges": 81,
+   "vertices": 9118,
+   "faces": 18232
+  },
+  "checks": {
+   "weights_sum_error": 3.3306690738754696e-16,
+   "rest_pose_error": 2.220446049250313e-16,
+   "parts_with_vertices": 7,
+   "bones_with_vertices": 46,
+   "bones_without_vertices": [],
+   "vertex_part_agrees_with_face_part": 0.9934181658622203,
+   "one_part_moved": {
+    "bone": "abdomen.b0",
+    "moved_vertices": 3726,
+    "share_in_that_part": 0.9812130971551262
+   },
+   "demo_pose_volume_change": -0.01015251939009476,
+   "demo_pose_flipped_faces": 0.008117595436594998
+  }
+ },
+ "serpent": {
+  "counts": {
+   "parts": 4,
+   "nodes": 29,
+   "bones": 24,
+   "edges": 31,
+   "vertices": 8604,
+   "faces": 17204
+  },
+  "checks": {
+   "weights_sum_error": 3.3306690738754696e-16,
+   "rest_pose_error": 4.440892098500626e-16,
+   "parts_with_vertices": 4,
+   "bones_with_vertices": 24,
+   "bones_without_vertices": [],
+   "vertex_part_agrees_with_face_part": 0.992850499883748,
+   "one_part_moved": {
+    "bone": "head.b0",
+    "moved_vertices": 1048,
+    "share_in_that_part": 0.9980916030534351
+   },
+   "demo_pose_volume_change": -0.001852684441432384,
+   "demo_pose_flipped_faces": 0.00029063008602650547
+  }
+ },
+ "jellyfish": {
+  "counts": {
+   "parts": 3,
+   "nodes": 69,
+   "bones": 56,
+   "edges": 132,
+   "vertices": 19638,
+   "faces": 39272
+  },
+  "checks": {
+   "weights_sum_error": 3.3306690738754696e-16,
+   "rest_pose_error": 2.220446049250313e-16,
+   "parts_with_vertices": 3,
+   "bones_with_vertices": 44,
+   "bones_without_vertices": [
+    "tentacle.0.b0",
+    "tentacle.1.b0",
+    "tentacle.2.b0",
+    "tentacle.3.b0",
+    "tentacle.4.b0",
+    "tentacle.5.b0",
+    "tentacle.6.b0",
+    "tentacle.7.b0",
+    "oral_arm.0.b0",
+    "oral_arm.1.b0",
+    "oral_arm.2.b0",
+    "oral_arm.3.b0"
+   ],
+   "vertex_part_agrees_with_face_part": 0.9980647789773884,
+   "one_part_moved": {
+    "bone": "tentacle.0.b0",
+    "moved_vertices": 632,
+    "share_in_that_part": 0.9683544303797469
+   },
+   "demo_pose_volume_change": -0.0010444101037403453,
+   "demo_pose_flipped_faces": 0.00695151762069668
+  }
+ },
+ "crab": {
+  "counts": {
+   "parts": 7,
+   "nodes": 61,
+   "bones": 48,
+   "edges": 88,
+   "vertices": 12030,
+   "faces": 24056
+  },
+  "checks": {
+   "weights_sum_error": 3.3306690738754696e-16,
+   "rest_pose_error": 2.220446049250313e-16,
+   "parts_with_vertices": 7,
+   "bones_with_vertices": 48,
+   "bones_without_vertices": [],
+   "vertex_part_agrees_with_face_part": 0.9778433654805454,
+   "one_part_moved": {
+    "bone": "claw.L.b0",
+    "moved_vertices": 1507,
+    "share_in_that_part": 0.9920371599203716
+   },
+   "demo_pose_volume_change": -0.005090618340178876,
+   "demo_pose_flipped_faces": 0.01974559361489857
+  }
+ },
+ "child_biped_x_spider": {
+  "counts": {
+   "parts": 8,
+   "nodes": 72,
+   "bones": 59,
+   "edges": 96,
+   "vertices": 8636,
+   "faces": 17268
+  },
+  "checks": {
+   "weights_sum_error": 4.440892098500626e-16,
+   "rest_pose_error": 2.220446049250313e-16,
+   "parts_with_vertices": 8,
+   "bones_with_vertices": 54,
+   "bones_without_vertices": [
+    "abdomen.b0",
+    "leg_1.L.b0",
+    "leg_1.R.b0",
+    "fang.L.b0",
+    "fang.R.b0"
+   ],
+   "vertex_part_agrees_with_face_part": 0.9970465601111883,
+   "one_part_moved": {
+    "bone": "neck_head.b0",
+    "moved_vertices": 419,
+    "share_in_that_part": 0.9928400954653938
+   },
+   "demo_pose_volume_change": -0.003952843346215706,
+   "demo_pose_flipped_faces": 0.007180912670836229
+  }
+ }
+}

@@ -1,0 +1,2331 @@
+{
+ "format": "rtis-morphology-package",
+ "version": "0.2",
+ "name": "child",
+ "about": {
+  "what": "Morphology package: the body of one creature as a topological entity (nodes, edges, parameters).",
+  "frame": "x forward, y to the creature's left, z up; lengths in the generator's units (see 'size')",
+  "nodes": "one per joint of each placed copy of a part; id = <part>[.<copy>].j<index>; index 0 is where the part starts",
+  "bones": "one per stretch between neighbouring nodes; id = <part>[.<copy>].b<index>; 'parent' is the bone it moves with",
+  "edges": "bone: two nodes of one chain. attach: first node of a part to a bone of its parent part, at 't' along that bone (0 = start, 1 = end). mirror: the same node on the left and right copy. radial: the same node on neighbouring copies around the parent.",
+  "parts": "one per gene of the genome; 'copies' lists the placed copies ('' = single, L/R = mirrored, 0..N-1 = radial)",
+  "groups": "named sets of part names, for addressing several parts at once",
+  "skin": "per mesh vertex: up to 4 bones (indices into 'bones') and their weights (sum 1). A default binding; a motion system may ignore it and bind the mesh its own way.",
+  "access": "read_only: a motion system may move nodes (pose) but not add, remove or rewire them. The body is grown from the genome; a change to its structure has to go back to RTIS as a gene change, and RTIS grows a new body and a new package.",
+  "lineage": "how this body came to be. Inheritance is done by RTIS on genes; a motion system receives the result here and does not redo it. ancestry_a per part = share of the part's genes from parent A."
+ },
+ "genome_digest": "866ffe320501",
+ "voxel": 0.02,
+ "access": {
+  "motion_system": "read_only"
+ },
+ "lineage": {
+  "generation": 1,
+  "parents": [
+   "serpent",
+   "jellyfish"
+  ],
+  "seed": 7,
+  "rules": [
+   "tags: RTIS ontology.py (cell / organ / part layers)",
+   "matching: PCE layered similarity; >= 0.40 always, 0.25-0.40 chance (score - 0.25) / 0.15, < 0.25 never",
+   "each gene copied whole from one parent (alpha 0.5)",
+   "relative genes (size gene; lengths and radii as fractions; lean and bends relative to the parent)",
+   "linkage: 1 switch point per crossed part",
+   "grafting: a part whose parent is missing attaches where that parent would have been",
+   "site rule: two unmatched limbs in one place compete; only one stays",
+   "geometry: skeleton + implicit surface + Fourier cross-section detail"
+  ],
+  "matched_pairs": [
+   [
+    "torso",
+    "bell"
+   ]
+  ],
+  "ancestry_a": {
+   "bell": 0.1956521739130435,
+   "head": 1.0,
+   "tail_tip": 1.0,
+   "tentacle": 0.0
+  }
+ },
+ "size": {
+  "bounds_min": [
+   -0.51424,
+   -0.51416,
+   -0.89703
+  ],
+  "bounds_max": [
+   0.52245,
+   0.51416,
+   1.45389
+  ],
+  "diagonal": 2.76749
+ },
+ "files": {
+  "skin": "child.skin.npz",
+  "mesh_for_viewing": "child.obj"
+ },
+ "counts": {
+  "parts": 4,
+  "nodes": 71,
+  "bones": 60,
+  "edges": 118,
+  "vertices": 18398,
+  "faces": 36792
+ },
+ "parts": [
+  {
+   "name": "bell",
+   "tags": [
+    "torso",
+    "structural",
+    "central"
+   ],
+   "arrangement": "single",
+   "copies": [
+    ""
+   ],
+   "parent": null,
+   "attach": 0.0,
+   "is_core": true,
+   "bones_per_copy": 14,
+   "ancestry_a": 0.1956521739130435,
+   "vertices": 13074
+  },
+  {
+   "name": "head",
+   "tags": [
+    "head",
+    "sensor"
+   ],
+   "arrangement": "single",
+   "copies": [
+    ""
+   ],
+   "parent": "bell",
+   "attach": 1.0,
+   "is_core": true,
+   "bones_per_copy": 3,
+   "ancestry_a": 1.0,
+   "vertices": 105
+  },
+  {
+   "name": "tail_tip",
+   "tags": [
+    "tail",
+    "motor_organ"
+   ],
+   "arrangement": "single",
+   "copies": [
+    ""
+   ],
+   "parent": "bell",
+   "attach": 0.0,
+   "is_core": false,
+   "bones_per_copy": 3,
+   "ancestry_a": 1.0,
+   "vertices": 117
+  },
+  {
+   "name": "tentacle",
+   "tags": [
+    "appendage",
+    "grasping",
+    "motor_organ"
+   ],
+   "arrangement": "radial",
+   "copies": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "parent": "bell",
+   "attach": 0.9,
+   "is_core": true,
+   "bones_per_copy": 5,
+   "ancestry_a": 0.0,
+   "vertices": 5102
+  }
+ ],
+ "groups": {
+  "root": [
+   "bell"
+  ],
+  "attached": [
+   "head",
+   "tail_tip",
+   "tentacle"
+  ],
+  "tag:torso": [
+   "bell"
+  ],
+  "tag:structural": [
+   "bell"
+  ],
+  "tag:central": [
+   "bell"
+  ],
+  "arrangement:single": [
+   "bell",
+   "head",
+   "tail_tip"
+  ],
+  "tag:head": [
+   "head"
+  ],
+  "tag:sensor": [
+   "head"
+  ],
+  "tag:tail": [
+   "tail_tip"
+  ],
+  "tag:motor_organ": [
+   "tail_tip",
+   "tentacle"
+  ],
+  "tag:appendage": [
+   "tentacle"
+  ],
+  "tag:grasping": [
+   "tentacle"
+  ],
+  "arrangement:radial": [
+   "tentacle"
+  ]
+ },
+ "nodes": [
+  {
+   "id": "bell.j0",
+   "part": "bell",
+   "copy": "",
+   "index": 0,
+   "position": [
+    0.0,
+    0.0,
+    0.95
+   ],
+   "radius": 0.1,
+   "tip": false
+  },
+  {
+   "id": "bell.j1",
+   "part": "bell",
+   "copy": "",
+   "index": 1,
+   "position": [
+    0.0,
+    0.0,
+    0.921429
+   ],
+   "radius": 0.168571,
+   "tip": false
+  },
+  {
+   "id": "bell.j2",
+   "part": "bell",
+   "copy": "",
+   "index": 2,
+   "position": [
+    0.0,
+    0.0,
+    0.892857
+   ],
+   "radius": 0.237143,
+   "tip": false
+  },
+  {
+   "id": "bell.j3",
+   "part": "bell",
+   "copy": "",
+   "index": 3,
+   "position": [
+    0.0,
+    0.0,
+    0.864286
+   ],
+   "radius": 0.305714,
+   "tip": false
+  },
+  {
+   "id": "bell.j4",
+   "part": "bell",
+   "copy": "",
+   "index": 4,
+   "position": [
+    0.0,
+    0.0,
+    0.831429
+   ],
+   "radius": 0.36,
+   "tip": false
+  },
+  {
+   "id": "bell.j5",
+   "part": "bell",
+   "copy": "",
+   "index": 5,
+   "position": [
+    0.0,
+    0.0,
+    0.794286
+   ],
+   "radius": 0.4,
+   "tip": false
+  },
+  {
+   "id": "bell.j6",
+   "part": "bell",
+   "copy": "",
+   "index": 6,
+   "position": [
+    0.0,
+    0.0,
+    0.757143
+   ],
+   "radius": 0.44,
+   "tip": false
+  },
+  {
+   "id": "bell.j7",
+   "part": "bell",
+   "copy": "",
+   "index": 7,
+   "position": [
+    0.0,
+    0.0,
+    0.72
+   ],
+   "radius": 0.48,
+   "tip": false
+  },
+  {
+   "id": "bell.j8",
+   "part": "bell",
+   "copy": "",
+   "index": 8,
+   "position": [
+    0.0,
+    0.0,
+    0.68
+   ],
+   "radius": 0.491429,
+   "tip": false
+  },
+  {
+   "id": "bell.j9",
+   "part": "bell",
+   "copy": "",
+   "index": 9,
+   "position": [
+    0.0,
+    0.0,
+    0.64
+   ],
+   "radius": 0.502857,
+   "tip": false
+  },
+  {
+   "id": "bell.j10",
+   "part": "bell",
+   "copy": "",
+   "index": 10,
+   "position": [
+    0.0,
+    0.0,
+    0.6
+   ],
+   "radius": 0.514286,
+   "tip": false
+  },
+  {
+   "id": "bell.j11",
+   "part": "bell",
+   "copy": "",
+   "index": 11,
+   "position": [
+    0.0,
+    0.0,
+    0.565714
+   ],
+   "radius": 0.502857,
+   "tip": false
+  },
+  {
+   "id": "bell.j12",
+   "part": "bell",
+   "copy": "",
+   "index": 12,
+   "position": [
+    0.0,
+    0.0,
+    0.537143
+   ],
+   "radius": 0.078885,
+   "tip": false
+  },
+  {
+   "id": "bell.j13",
+   "part": "bell",
+   "copy": "",
+   "index": 13,
+   "position": [
+    0.001716,
+    0.0,
+    0.388479
+   ],
+   "radius": 0.072574,
+   "tip": false
+  },
+  {
+   "id": "bell.j14",
+   "part": "bell",
+   "copy": "",
+   "index": 14,
+   "position": [
+    0.006545,
+    0.0,
+    0.237757
+   ],
+   "radius": 0.066264,
+   "tip": true
+  },
+  {
+   "id": "head.j0",
+   "part": "head",
+   "copy": "",
+   "index": 0,
+   "position": [
+    0.006545,
+    0.0,
+    0.237757
+   ],
+   "radius": 0.066264,
+   "tip": false
+  },
+  {
+   "id": "head.j1",
+   "part": "head",
+   "copy": "",
+   "index": 1,
+   "position": [
+    -0.026257,
+    0.0,
+    0.164119
+   ],
+   "radius": 0.092769,
+   "tip": false
+  },
+  {
+   "id": "head.j2",
+   "part": "head",
+   "copy": "",
+   "index": 2,
+   "position": [
+    -0.088477,
+    0.0,
+    0.094046
+   ],
+   "radius": 0.079516,
+   "tip": false
+  },
+  {
+   "id": "head.j3",
+   "part": "head",
+   "copy": "",
+   "index": 3,
+   "position": [
+    -0.141607,
+    0.0,
+    0.049736
+   ],
+   "radius": 0.033132,
+   "tip": true
+  },
+  {
+   "id": "tail_tip.j0",
+   "part": "tail_tip",
+   "copy": "",
+   "index": 0,
+   "position": [
+    0.0,
+    0.0,
+    0.95
+   ],
+   "radius": 0.026505,
+   "tip": false
+  },
+  {
+   "id": "tail_tip.j1",
+   "part": "tail_tip",
+   "copy": "",
+   "index": 1,
+   "position": [
+    0.023807,
+    0.0,
+    1.12902
+   ],
+   "radius": 0.019879,
+   "tip": false
+  },
+  {
+   "id": "tail_tip.j2",
+   "part": "tail_tip",
+   "copy": "",
+   "index": 2,
+   "position": [
+    0.071166,
+    0.0,
+    1.303295
+   ],
+   "radius": 0.013253,
+   "tip": false
+  },
+  {
+   "id": "tail_tip.j3",
+   "part": "tail_tip",
+   "copy": "",
+   "index": 3,
+   "position": [
+    0.134962,
+    0.0,
+    1.437497
+   ],
+   "radius": 0.005301,
+   "tip": true
+  },
+  {
+   "id": "tentacle.0.j0",
+   "part": "tentacle",
+   "copy": "0",
+   "index": 0,
+   "position": [
+    0.00103,
+    0.0,
+    0.447945
+   ],
+   "radius": 0.05,
+   "tip": false
+  },
+  {
+   "id": "tentacle.0.j1",
+   "part": "tentacle",
+   "copy": "0",
+   "index": 1,
+   "position": [
+    0.393691,
+    0.0,
+    0.403459
+   ],
+   "radius": 0.04,
+   "tip": false
+  },
+  {
+   "id": "tentacle.0.j2",
+   "part": "tentacle",
+   "copy": "0",
+   "index": 2,
+   "position": [
+    0.465702,
+    0.0,
+    0.110179
+   ],
+   "radius": 0.03,
+   "tip": false
+  },
+  {
+   "id": "tentacle.0.j3",
+   "part": "tentacle",
+   "copy": "0",
+   "index": 3,
+   "position": [
+    0.42065,
+    0.0,
+    -0.23347
+   ],
+   "radius": 0.025,
+   "tip": false
+  },
+  {
+   "id": "tentacle.0.j4",
+   "part": "tentacle",
+   "copy": "0",
+   "index": 4,
+   "position": [
+    0.503029,
+    0.0,
+    -0.575649
+   ],
+   "radius": 0.02,
+   "tip": false
+  },
+  {
+   "id": "tentacle.0.j5",
+   "part": "tentacle",
+   "copy": "0",
+   "index": 5,
+   "position": [
+    0.457412,
+    0.0,
+    -0.870286
+   ],
+   "radius": 0.012,
+   "tip": true
+  },
+  {
+   "id": "tentacle.1.j0",
+   "part": "tentacle",
+   "copy": "1",
+   "index": 0,
+   "position": [
+    0.00103,
+    0.0,
+    0.447945
+   ],
+   "radius": 0.05,
+   "tip": false
+  },
+  {
+   "id": "tentacle.1.j1",
+   "part": "tentacle",
+   "copy": "1",
+   "index": 1,
+   "position": [
+    0.278849,
+    -0.277272,
+    0.402133
+   ],
+   "radius": 0.04,
+   "tip": false
+  },
+  {
+   "id": "tentacle.1.j2",
+   "part": "tentacle",
+   "copy": "1",
+   "index": 2,
+   "position": [
+    0.330762,
+    -0.325794,
+    0.108621
+   ],
+   "radius": 0.03,
+   "tip": false
+  },
+  {
+   "id": "tentacle.1.j3",
+   "part": "tentacle",
+   "copy": "1",
+   "index": 3,
+   "position": [
+    0.300066,
+    -0.291135,
+    -0.234862
+   ],
+   "radius": 0.025,
+   "tip": false
+  },
+  {
+   "id": "tentacle.1.j4",
+   "part": "tentacle",
+   "copy": "1",
+   "index": 4,
+   "position": [
+    0.359477,
+    -0.34659,
+    -0.577306
+   ],
+   "radius": 0.02,
+   "tip": false
+  },
+  {
+   "id": "tentacle.1.j5",
+   "part": "tentacle",
+   "copy": "1",
+   "index": 5,
+   "position": [
+    0.328214,
+    -0.311931,
+    -0.871777
+   ],
+   "radius": 0.012,
+   "tip": true
+  },
+  {
+   "id": "tentacle.2.j0",
+   "part": "tentacle",
+   "copy": "2",
+   "index": 0,
+   "position": [
+    0.00103,
+    0.0,
+    0.447945
+   ],
+   "radius": 0.05,
+   "tip": false
+  },
+  {
+   "id": "tentacle.2.j1",
+   "part": "tentacle",
+   "copy": "2",
+   "index": 1,
+   "position": [
+    0.001595,
+    -0.392122,
+    0.398933
+   ],
+   "radius": 0.04,
+   "tip": false
+  },
+  {
+   "id": "tentacle.2.j2",
+   "part": "tentacle",
+   "copy": "2",
+   "index": 2,
+   "position": [
+    0.00499,
+    -0.460743,
+    0.104861
+   ],
+   "radius": 0.03,
+   "tip": false
+  },
+  {
+   "id": "tentacle.2.j3",
+   "part": "tentacle",
+   "copy": "2",
+   "index": 3,
+   "position": [
+    0.00895,
+    -0.411728,
+    -0.238222
+   ],
+   "radius": 0.025,
+   "tip": false
+  },
+  {
+   "id": "tentacle.2.j4",
+   "part": "tentacle",
+   "copy": "2",
+   "index": 4,
+   "position": [
+    0.01291,
+    -0.490152,
+    -0.581306
+   ],
+   "radius": 0.02,
+   "tip": false
+  },
+  {
+   "id": "tentacle.2.j5",
+   "part": "tentacle",
+   "copy": "2",
+   "index": 5,
+   "position": [
+    0.016304,
+    -0.441137,
+    -0.875378
+   ],
+   "radius": 0.012,
+   "tip": true
+  },
+  {
+   "id": "tentacle.3.j0",
+   "part": "tentacle",
+   "copy": "3",
+   "index": 0,
+   "position": [
+    0.00103,
+    0.0,
+    0.447945
+   ],
+   "radius": 0.05,
+   "tip": false
+  },
+  {
+   "id": "tentacle.3.j1",
+   "part": "tentacle",
+   "copy": "3",
+   "index": 1,
+   "position": [
+    -0.275658,
+    -0.277272,
+    0.395733
+   ],
+   "radius": 0.04,
+   "tip": false
+  },
+  {
+   "id": "tentacle.3.j2",
+   "part": "tentacle",
+   "copy": "3",
+   "index": 2,
+   "position": [
+    -0.320783,
+    -0.325794,
+    0.101101
+   ],
+   "radius": 0.03,
+   "tip": false
+  },
+  {
+   "id": "tentacle.3.j3",
+   "part": "tentacle",
+   "copy": "3",
+   "index": 3,
+   "position": [
+    -0.282166,
+    -0.291135,
+    -0.241583
+   ],
+   "radius": 0.025,
+   "tip": false
+  },
+  {
+   "id": "tentacle.3.j4",
+   "part": "tentacle",
+   "copy": "3",
+   "index": 4,
+   "position": [
+    -0.333657,
+    -0.34659,
+    -0.585306
+   ],
+   "radius": 0.02,
+   "tip": false
+  },
+  {
+   "id": "tentacle.3.j5",
+   "part": "tentacle",
+   "copy": "3",
+   "index": 5,
+   "position": [
+    -0.295606,
+    -0.311931,
+    -0.878978
+   ],
+   "radius": 0.012,
+   "tip": true
+  },
+  {
+   "id": "tentacle.4.j0",
+   "part": "tentacle",
+   "copy": "4",
+   "index": 0,
+   "position": [
+    0.00103,
+    0.0,
+    0.447945
+   ],
+   "radius": 0.05,
+   "tip": false
+  },
+  {
+   "id": "tentacle.4.j1",
+   "part": "tentacle",
+   "copy": "4",
+   "index": 1,
+   "position": [
+    -0.3905,
+    -0.0,
+    0.394407
+   ],
+   "radius": 0.04,
+   "tip": false
+  },
+  {
+   "id": "tentacle.4.j2",
+   "part": "tentacle",
+   "copy": "4",
+   "index": 2,
+   "position": [
+    -0.455723,
+    -0.0,
+    0.099543
+   ],
+   "radius": 0.03,
+   "tip": false
+  },
+  {
+   "id": "tentacle.4.j3",
+   "part": "tentacle",
+   "copy": "4",
+   "index": 3,
+   "position": [
+    -0.402751,
+    -0.0,
+    -0.242975
+   ],
+   "radius": 0.025,
+   "tip": false
+  },
+  {
+   "id": "tentacle.4.j4",
+   "part": "tentacle",
+   "copy": "4",
+   "index": 4,
+   "position": [
+    -0.47721,
+    -0.0,
+    -0.586963
+   ],
+   "radius": 0.02,
+   "tip": false
+  },
+  {
+   "id": "tentacle.4.j5",
+   "part": "tentacle",
+   "copy": "4",
+   "index": 5,
+   "position": [
+    -0.424803,
+    -0.0,
+    -0.880469
+   ],
+   "radius": 0.012,
+   "tip": true
+  },
+  {
+   "id": "tentacle.5.j0",
+   "part": "tentacle",
+   "copy": "5",
+   "index": 0,
+   "position": [
+    0.00103,
+    0.0,
+    0.447945
+   ],
+   "radius": 0.05,
+   "tip": false
+  },
+  {
+   "id": "tentacle.5.j1",
+   "part": "tentacle",
+   "copy": "5",
+   "index": 1,
+   "position": [
+    -0.275658,
+    0.277272,
+    0.395733
+   ],
+   "radius": 0.04,
+   "tip": false
+  },
+  {
+   "id": "tentacle.5.j2",
+   "part": "tentacle",
+   "copy": "5",
+   "index": 2,
+   "position": [
+    -0.320783,
+    0.325794,
+    0.101101
+   ],
+   "radius": 0.03,
+   "tip": false
+  },
+  {
+   "id": "tentacle.5.j3",
+   "part": "tentacle",
+   "copy": "5",
+   "index": 3,
+   "position": [
+    -0.282166,
+    0.291135,
+    -0.241583
+   ],
+   "radius": 0.025,
+   "tip": false
+  },
+  {
+   "id": "tentacle.5.j4",
+   "part": "tentacle",
+   "copy": "5",
+   "index": 4,
+   "position": [
+    -0.333657,
+    0.34659,
+    -0.585306
+   ],
+   "radius": 0.02,
+   "tip": false
+  },
+  {
+   "id": "tentacle.5.j5",
+   "part": "tentacle",
+   "copy": "5",
+   "index": 5,
+   "position": [
+    -0.295606,
+    0.311931,
+    -0.878978
+   ],
+   "radius": 0.012,
+   "tip": true
+  },
+  {
+   "id": "tentacle.6.j0",
+   "part": "tentacle",
+   "copy": "6",
+   "index": 0,
+   "position": [
+    0.00103,
+    0.0,
+    0.447945
+   ],
+   "radius": 0.05,
+   "tip": false
+  },
+  {
+   "id": "tentacle.6.j1",
+   "part": "tentacle",
+   "copy": "6",
+   "index": 1,
+   "position": [
+    0.001595,
+    0.392122,
+    0.398933
+   ],
+   "radius": 0.04,
+   "tip": false
+  },
+  {
+   "id": "tentacle.6.j2",
+   "part": "tentacle",
+   "copy": "6",
+   "index": 2,
+   "position": [
+    0.00499,
+    0.460743,
+    0.104861
+   ],
+   "radius": 0.03,
+   "tip": false
+  },
+  {
+   "id": "tentacle.6.j3",
+   "part": "tentacle",
+   "copy": "6",
+   "index": 3,
+   "position": [
+    0.00895,
+    0.411728,
+    -0.238222
+   ],
+   "radius": 0.025,
+   "tip": false
+  },
+  {
+   "id": "tentacle.6.j4",
+   "part": "tentacle",
+   "copy": "6",
+   "index": 4,
+   "position": [
+    0.01291,
+    0.490152,
+    -0.581306
+   ],
+   "radius": 0.02,
+   "tip": false
+  },
+  {
+   "id": "tentacle.6.j5",
+   "part": "tentacle",
+   "copy": "6",
+   "index": 5,
+   "position": [
+    0.016304,
+    0.441137,
+    -0.875378
+   ],
+   "radius": 0.012,
+   "tip": true
+  },
+  {
+   "id": "tentacle.7.j0",
+   "part": "tentacle",
+   "copy": "7",
+   "index": 0,
+   "position": [
+    0.00103,
+    0.0,
+    0.447945
+   ],
+   "radius": 0.05,
+   "tip": false
+  },
+  {
+   "id": "tentacle.7.j1",
+   "part": "tentacle",
+   "copy": "7",
+   "index": 1,
+   "position": [
+    0.278849,
+    0.277272,
+    0.402133
+   ],
+   "radius": 0.04,
+   "tip": false
+  },
+  {
+   "id": "tentacle.7.j2",
+   "part": "tentacle",
+   "copy": "7",
+   "index": 2,
+   "position": [
+    0.330762,
+    0.325794,
+    0.108621
+   ],
+   "radius": 0.03,
+   "tip": false
+  },
+  {
+   "id": "tentacle.7.j3",
+   "part": "tentacle",
+   "copy": "7",
+   "index": 3,
+   "position": [
+    0.300066,
+    0.291135,
+    -0.234862
+   ],
+   "radius": 0.025,
+   "tip": false
+  },
+  {
+   "id": "tentacle.7.j4",
+   "part": "tentacle",
+   "copy": "7",
+   "index": 4,
+   "position": [
+    0.359477,
+    0.34659,
+    -0.577306
+   ],
+   "radius": 0.02,
+   "tip": false
+  },
+  {
+   "id": "tentacle.7.j5",
+   "part": "tentacle",
+   "copy": "7",
+   "index": 5,
+   "position": [
+    0.328214,
+    0.311931,
+    -0.871777
+   ],
+   "radius": 0.012,
+   "tip": true
+  }
+ ],
+ "bones": [
+  {
+   "id": "bell.b0",
+   "part": "bell",
+   "copy": "",
+   "index": 0,
+   "from": "bell.j0",
+   "to": "bell.j1",
+   "length": 0.028571,
+   "parent": null
+  },
+  {
+   "id": "bell.b1",
+   "part": "bell",
+   "copy": "",
+   "index": 1,
+   "from": "bell.j1",
+   "to": "bell.j2",
+   "length": 0.028571,
+   "parent": "bell.b0"
+  },
+  {
+   "id": "bell.b2",
+   "part": "bell",
+   "copy": "",
+   "index": 2,
+   "from": "bell.j2",
+   "to": "bell.j3",
+   "length": 0.028571,
+   "parent": "bell.b1"
+  },
+  {
+   "id": "bell.b3",
+   "part": "bell",
+   "copy": "",
+   "index": 3,
+   "from": "bell.j3",
+   "to": "bell.j4",
+   "length": 0.032857,
+   "parent": "bell.b2"
+  },
+  {
+   "id": "bell.b4",
+   "part": "bell",
+   "copy": "",
+   "index": 4,
+   "from": "bell.j4",
+   "to": "bell.j5",
+   "length": 0.037143,
+   "parent": "bell.b3"
+  },
+  {
+   "id": "bell.b5",
+   "part": "bell",
+   "copy": "",
+   "index": 5,
+   "from": "bell.j5",
+   "to": "bell.j6",
+   "length": 0.037143,
+   "parent": "bell.b4"
+  },
+  {
+   "id": "bell.b6",
+   "part": "bell",
+   "copy": "",
+   "index": 6,
+   "from": "bell.j6",
+   "to": "bell.j7",
+   "length": 0.037143,
+   "parent": "bell.b5"
+  },
+  {
+   "id": "bell.b7",
+   "part": "bell",
+   "copy": "",
+   "index": 7,
+   "from": "bell.j7",
+   "to": "bell.j8",
+   "length": 0.04,
+   "parent": "bell.b6"
+  },
+  {
+   "id": "bell.b8",
+   "part": "bell",
+   "copy": "",
+   "index": 8,
+   "from": "bell.j8",
+   "to": "bell.j9",
+   "length": 0.04,
+   "parent": "bell.b7"
+  },
+  {
+   "id": "bell.b9",
+   "part": "bell",
+   "copy": "",
+   "index": 9,
+   "from": "bell.j9",
+   "to": "bell.j10",
+   "length": 0.04,
+   "parent": "bell.b8"
+  },
+  {
+   "id": "bell.b10",
+   "part": "bell",
+   "copy": "",
+   "index": 10,
+   "from": "bell.j10",
+   "to": "bell.j11",
+   "length": 0.034286,
+   "parent": "bell.b9"
+  },
+  {
+   "id": "bell.b11",
+   "part": "bell",
+   "copy": "",
+   "index": 11,
+   "from": "bell.j11",
+   "to": "bell.j12",
+   "length": 0.028571,
+   "parent": "bell.b10"
+  },
+  {
+   "id": "bell.b12",
+   "part": "bell",
+   "copy": "",
+   "index": 12,
+   "from": "bell.j12",
+   "to": "bell.j13",
+   "length": 0.148673,
+   "parent": "bell.b11"
+  },
+  {
+   "id": "bell.b13",
+   "part": "bell",
+   "copy": "",
+   "index": 13,
+   "from": "bell.j13",
+   "to": "bell.j14",
+   "length": 0.150799,
+   "parent": "bell.b12"
+  },
+  {
+   "id": "head.b0",
+   "part": "head",
+   "copy": "",
+   "index": 0,
+   "from": "head.j0",
+   "to": "head.j1",
+   "length": 0.080613,
+   "parent": "bell.b13"
+  },
+  {
+   "id": "head.b1",
+   "part": "head",
+   "copy": "",
+   "index": 1,
+   "from": "head.j1",
+   "to": "head.j2",
+   "length": 0.093711,
+   "parent": "head.b0"
+  },
+  {
+   "id": "head.b2",
+   "part": "head",
+   "copy": "",
+   "index": 2,
+   "from": "head.j2",
+   "to": "head.j3",
+   "length": 0.069181,
+   "parent": "head.b1"
+  },
+  {
+   "id": "tail_tip.b0",
+   "part": "tail_tip",
+   "copy": "",
+   "index": 0,
+   "from": "tail_tip.j0",
+   "to": "tail_tip.j1",
+   "length": 0.180596,
+   "parent": "bell.b0"
+  },
+  {
+   "id": "tail_tip.b1",
+   "part": "tail_tip",
+   "copy": "",
+   "index": 1,
+   "from": "tail_tip.j1",
+   "to": "tail_tip.j2",
+   "length": 0.180596,
+   "parent": "tail_tip.b0"
+  },
+  {
+   "id": "tail_tip.b2",
+   "part": "tail_tip",
+   "copy": "",
+   "index": 2,
+   "from": "tail_tip.j2",
+   "to": "tail_tip.j3",
+   "length": 0.148593,
+   "parent": "tail_tip.b1"
+  },
+  {
+   "id": "tentacle.0.b0",
+   "part": "tentacle",
+   "copy": "0",
+   "index": 0,
+   "from": "tentacle.0.j0",
+   "to": "tentacle.0.j1",
+   "length": 0.395173,
+   "parent": "bell.b12"
+  },
+  {
+   "id": "tentacle.0.b1",
+   "part": "tentacle",
+   "copy": "0",
+   "index": 1,
+   "from": "tentacle.0.j1",
+   "to": "tentacle.0.j2",
+   "length": 0.301991,
+   "parent": "tentacle.0.b0"
+  },
+  {
+   "id": "tentacle.0.b2",
+   "part": "tentacle",
+   "copy": "0",
+   "index": 2,
+   "from": "tentacle.0.j2",
+   "to": "tentacle.0.j3",
+   "length": 0.34659,
+   "parent": "tentacle.0.b1"
+  },
+  {
+   "id": "tentacle.0.b3",
+   "part": "tentacle",
+   "copy": "0",
+   "index": 3,
+   "from": "tentacle.0.j3",
+   "to": "tentacle.0.j4",
+   "length": 0.351955,
+   "parent": "tentacle.0.b2"
+  },
+  {
+   "id": "tentacle.0.b4",
+   "part": "tentacle",
+   "copy": "0",
+   "index": 4,
+   "from": "tentacle.0.j4",
+   "to": "tentacle.0.j5",
+   "length": 0.298148,
+   "parent": "tentacle.0.b3"
+  },
+  {
+   "id": "tentacle.1.b0",
+   "part": "tentacle",
+   "copy": "1",
+   "index": 0,
+   "from": "tentacle.1.j0",
+   "to": "tentacle.1.j1",
+   "length": 0.395173,
+   "parent": "bell.b12"
+  },
+  {
+   "id": "tentacle.1.b1",
+   "part": "tentacle",
+   "copy": "1",
+   "index": 1,
+   "from": "tentacle.1.j1",
+   "to": "tentacle.1.j2",
+   "length": 0.301991,
+   "parent": "tentacle.1.b0"
+  },
+  {
+   "id": "tentacle.1.b2",
+   "part": "tentacle",
+   "copy": "1",
+   "index": 2,
+   "from": "tentacle.1.j2",
+   "to": "tentacle.1.j3",
+   "length": 0.34659,
+   "parent": "tentacle.1.b1"
+  },
+  {
+   "id": "tentacle.1.b3",
+   "part": "tentacle",
+   "copy": "1",
+   "index": 3,
+   "from": "tentacle.1.j3",
+   "to": "tentacle.1.j4",
+   "length": 0.351955,
+   "parent": "tentacle.1.b2"
+  },
+  {
+   "id": "tentacle.1.b4",
+   "part": "tentacle",
+   "copy": "1",
+   "index": 4,
+   "from": "tentacle.1.j4",
+   "to": "tentacle.1.j5",
+   "length": 0.298148,
+   "parent": "tentacle.1.b3"
+  },
+  {
+   "id": "tentacle.2.b0",
+   "part": "tentacle",
+   "copy": "2",
+   "index": 0,
+   "from": "tentacle.2.j0",
+   "to": "tentacle.2.j1",
+   "length": 0.395173,
+   "parent": "bell.b12"
+  },
+  {
+   "id": "tentacle.2.b1",
+   "part": "tentacle",
+   "copy": "2",
+   "index": 1,
+   "from": "tentacle.2.j1",
+   "to": "tentacle.2.j2",
+   "length": 0.301991,
+   "parent": "tentacle.2.b0"
+  },
+  {
+   "id": "tentacle.2.b2",
+   "part": "tentacle",
+   "copy": "2",
+   "index": 2,
+   "from": "tentacle.2.j2",
+   "to": "tentacle.2.j3",
+   "length": 0.34659,
+   "parent": "tentacle.2.b1"
+  },
+  {
+   "id": "tentacle.2.b3",
+   "part": "tentacle",
+   "copy": "2",
+   "index": 3,
+   "from": "tentacle.2.j3",
+   "to": "tentacle.2.j4",
+   "length": 0.351955,
+   "parent": "tentacle.2.b2"
+  },
+  {
+   "id": "tentacle.2.b4",
+   "part": "tentacle",
+   "copy": "2",
+   "index": 4,
+   "from": "tentacle.2.j4",
+   "to": "tentacle.2.j5",
+   "length": 0.298148,
+   "parent": "tentacle.2.b3"
+  },
+  {
+   "id": "tentacle.3.b0",
+   "part": "tentacle",
+   "copy": "3",
+   "index": 0,
+   "from": "tentacle.3.j0",
+   "to": "tentacle.3.j1",
+   "length": 0.395173,
+   "parent": "bell.b12"
+  },
+  {
+   "id": "tentacle.3.b1",
+   "part": "tentacle",
+   "copy": "3",
+   "index": 1,
+   "from": "tentacle.3.j1",
+   "to": "tentacle.3.j2",
+   "length": 0.301991,
+   "parent": "tentacle.3.b0"
+  },
+  {
+   "id": "tentacle.3.b2",
+   "part": "tentacle",
+   "copy": "3",
+   "index": 2,
+   "from": "tentacle.3.j2",
+   "to": "tentacle.3.j3",
+   "length": 0.34659,
+   "parent": "tentacle.3.b1"
+  },
+  {
+   "id": "tentacle.3.b3",
+   "part": "tentacle",
+   "copy": "3",
+   "index": 3,
+   "from": "tentacle.3.j3",
+   "to": "tentacle.3.j4",
+   "length": 0.351955,
+   "parent": "tentacle.3.b2"
+  },
+  {
+   "id": "tentacle.3.b4",
+   "part": "tentacle",
+   "copy": "3",
+   "index": 4,
+   "from": "tentacle.3.j4",
+   "to": "tentacle.3.j5",
+   "length": 0.298148,
+   "parent": "tentacle.3.b3"
+  },
+  {
+   "id": "tentacle.4.b0",
+   "part": "tentacle",
+   "copy": "4",
+   "index": 0,
+   "from": "tentacle.4.j0",
+   "to": "tentacle.4.j1",
+   "length": 0.395173,
+   "parent": "bell.b12"
+  },
+  {
+   "id": "tentacle.4.b1",
+   "part": "tentacle",
+   "copy": "4",
+   "index": 1,
+   "from": "tentacle.4.j1",
+   "to": "tentacle.4.j2",
+   "length": 0.301991,
+   "parent": "tentacle.4.b0"
+  },
+  {
+   "id": "tentacle.4.b2",
+   "part": "tentacle",
+   "copy": "4",
+   "index": 2,
+   "from": "tentacle.4.j2",
+   "to": "tentacle.4.j3",
+   "length": 0.34659,
+   "parent": "tentacle.4.b1"
+  },
+  {
+   "id": "tentacle.4.b3",
+   "part": "tentacle",
+   "copy": "4",
+   "index": 3,
+   "from": "tentacle.4.j3",
+   "to": "tentacle.4.j4",
+   "length": 0.351955,
+   "parent": "tentacle.4.b2"
+  },
+  {
+   "id": "tentacle.4.b4",
+   "part": "tentacle",
+   "copy": "4",
+   "index": 4,
+   "from": "tentacle.4.j4",
+   "to": "tentacle.4.j5",
+   "length": 0.298148,
+   "parent": "tentacle.4.b3"
+  },
+  {
+   "id": "tentacle.5.b0",
+   "part": "tentacle",
+   "copy": "5",
+   "index": 0,
+   "from": "tentacle.5.j0",
+   "to": "tentacle.5.j1",
+   "length": 0.395173,
+   "parent": "bell.b12"
+  },
+  {
+   "id": "tentacle.5.b1",
+   "part": "tentacle",
+   "copy": "5",
+   "index": 1,
+   "from": "tentacle.5.j1",
+   "to": "tentacle.5.j2",
+   "length": 0.301991,
+   "parent": "tentacle.5.b0"
+  },
+  {
+   "id": "tentacle.5.b2",
+   "part": "tentacle",
+   "copy": "5",
+   "index": 2,
+   "from": "tentacle.5.j2",
+   "to": "tentacle.5.j3",
+   "length": 0.34659,
+   "parent": "tentacle.5.b1"
+  },
+  {
+   "id": "tentacle.5.b3",
+   "part": "tentacle",
+   "copy": "5",
+   "index": 3,
+   "from": "tentacle.5.j3",
+   "to": "tentacle.5.j4",
+   "length": 0.351955,
+   "parent": "tentacle.5.b2"
+  },
+  {
+   "id": "tentacle.5.b4",
+   "part": "tentacle",
+   "copy": "5",
+   "index": 4,
+   "from": "tentacle.5.j4",
+   "to": "tentacle.5.j5",
+   "length": 0.298148,
+   "parent": "tentacle.5.b3"
+  },
+  {
+   "id": "tentacle.6.b0",
+   "part": "tentacle",
+   "copy": "6",
+   "index": 0,
+   "from": "tentacle.6.j0",
+   "to": "tentacle.6.j1",
+   "length": 0.395173,
+   "parent": "bell.b12"
+  },
+  {
+   "id": "tentacle.6.b1",
+   "part": "tentacle",
+   "copy": "6",
+   "index": 1,
+   "from": "tentacle.6.j1",
+   "to": "tentacle.6.j2",
+   "length": 0.301991,
+   "parent": "tentacle.6.b0"
+  },
+  {
+   "id": "tentacle.6.b2",
+   "part": "tentacle",
+   "copy": "6",
+   "index": 2,
+   "from": "tentacle.6.j2",
+   "to": "tentacle.6.j3",
+   "length": 0.34659,
+   "parent": "tentacle.6.b1"
+  },
+  {
+   "id": "tentacle.6.b3",
+   "part": "tentacle",
+   "copy": "6",
+   "index": 3,
+   "from": "tentacle.6.j3",
+   "to": "tentacle.6.j4",
+   "length": 0.351955,
+   "parent": "tentacle.6.b2"
+  },
+  {
+   "id": "tentacle.6.b4",
+   "part": "tentacle",
+   "copy": "6",
+   "index": 4,
+   "from": "tentacle.6.j4",
+   "to": "tentacle.6.j5",
+   "length": 0.298148,
+   "parent": "tentacle.6.b3"
+  },
+  {
+   "id": "tentacle.7.b0",
+   "part": "tentacle",
+   "copy": "7",
+   "index": 0,
+   "from": "tentacle.7.j0",
+   "to": "tentacle.7.j1",
+   "length": 0.395173,
+   "parent": "bell.b12"
+  },
+  {
+   "id": "tentacle.7.b1",
+   "part": "tentacle",
+   "copy": "7",
+   "index": 1,
+   "from": "tentacle.7.j1",
+   "to": "tentacle.7.j2",
+   "length": 0.301991,
+   "parent": "tentacle.7.b0"
+  },
+  {
+   "id": "tentacle.7.b2",
+   "part": "tentacle",
+   "copy": "7",
+   "index": 2,
+   "from": "tentacle.7.j2",
+   "to": "tentacle.7.j3",
+   "length": 0.34659,
+   "parent": "tentacle.7.b1"
+  },
+  {
+   "id": "tentacle.7.b3",
+   "part": "tentacle",
+   "copy": "7",
+   "index": 3,
+   "from": "tentacle.7.j3",
+   "to": "tentacle.7.j4",
+   "length": 0.351955,
+   "parent": "tentacle.7.b2"
+  },
+  {
+   "id": "tentacle.7.b4",
+   "part": "tentacle",
+   "copy": "7",
+   "index": 4,
+   "from": "tentacle.7.j4",
+   "to": "tentacle.7.j5",
+   "length": 0.298148,
+   "parent": "tentacle.7.b3"
+  }
+ ],
+ "edges": [
+  {
+   "type": "bone",
+   "a": "bell.j0",
+   "b": "bell.j1"
+  },
+  {
+   "type": "bone",
+   "a": "bell.j1",
+   "b": "bell.j2"
+  },
+  {
+   "type": "bone",
+   "a": "bell.j2",
+   "b": "bell.j3"
+  },
+  {
+   "type": "bone",
+   "a": "bell.j3",
+   "b": "bell.j4"
+  },
+  {
+   "type": "bone",
+   "a": "bell.j4",
+   "b": "bell.j5"
+  },
+  {
+   "type": "bone",
+   "a": "bell.j5",
+   "b": "bell.j6"
+  },
+  {
+   "type": "bone",
+   "a": "bell.j6",
+   "b": "bell.j7"
+  },
+  {
+   "type": "bone",
+   "a": "bell.j7",
+   "b": "bell.j8"
+  },
+  {
+   "type": "bone",
+   "a": "bell.j8",
+   "b": "bell.j9"
+  },
+  {
+   "type": "bone",
+   "a": "bell.j9",
+   "b": "bell.j10"
+  },
+  {
+   "type": "bone",
+   "a": "bell.j10",
+   "b": "bell.j11"
+  },
+  {
+   "type": "bone",
+   "a": "bell.j11",
+   "b": "bell.j12"
+  },
+  {
+   "type": "bone",
+   "a": "bell.j12",
+   "b": "bell.j13"
+  },
+  {
+   "type": "bone",
+   "a": "bell.j13",
+   "b": "bell.j14"
+  },
+  {
+   "type": "attach",
+   "node": "head.j0",
+   "bone": "bell.b13",
+   "t": 1.0
+  },
+  {
+   "type": "bone",
+   "a": "head.j0",
+   "b": "head.j1"
+  },
+  {
+   "type": "bone",
+   "a": "head.j1",
+   "b": "head.j2"
+  },
+  {
+   "type": "bone",
+   "a": "head.j2",
+   "b": "head.j3"
+  },
+  {
+   "type": "attach",
+   "node": "tail_tip.j0",
+   "bone": "bell.b0",
+   "t": 0.0
+  },
+  {
+   "type": "bone",
+   "a": "tail_tip.j0",
+   "b": "tail_tip.j1"
+  },
+  {
+   "type": "bone",
+   "a": "tail_tip.j1",
+   "b": "tail_tip.j2"
+  },
+  {
+   "type": "bone",
+   "a": "tail_tip.j2",
+   "b": "tail_tip.j3"
+  },
+  {
+   "type": "attach",
+   "node": "tentacle.0.j0",
+   "bone": "bell.b12",
+   "t": 0.6
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.0.j0",
+   "b": "tentacle.0.j1"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.0.j1",
+   "b": "tentacle.0.j2"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.0.j2",
+   "b": "tentacle.0.j3"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.0.j3",
+   "b": "tentacle.0.j4"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.0.j4",
+   "b": "tentacle.0.j5"
+  },
+  {
+   "type": "attach",
+   "node": "tentacle.1.j0",
+   "bone": "bell.b12",
+   "t": 0.6
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.1.j0",
+   "b": "tentacle.1.j1"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.1.j1",
+   "b": "tentacle.1.j2"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.1.j2",
+   "b": "tentacle.1.j3"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.1.j3",
+   "b": "tentacle.1.j4"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.1.j4",
+   "b": "tentacle.1.j5"
+  },
+  {
+   "type": "attach",
+   "node": "tentacle.2.j0",
+   "bone": "bell.b12",
+   "t": 0.6
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.2.j0",
+   "b": "tentacle.2.j1"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.2.j1",
+   "b": "tentacle.2.j2"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.2.j2",
+   "b": "tentacle.2.j3"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.2.j3",
+   "b": "tentacle.2.j4"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.2.j4",
+   "b": "tentacle.2.j5"
+  },
+  {
+   "type": "attach",
+   "node": "tentacle.3.j0",
+   "bone": "bell.b12",
+   "t": 0.6
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.3.j0",
+   "b": "tentacle.3.j1"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.3.j1",
+   "b": "tentacle.3.j2"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.3.j2",
+   "b": "tentacle.3.j3"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.3.j3",
+   "b": "tentacle.3.j4"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.3.j4",
+   "b": "tentacle.3.j5"
+  },
+  {
+   "type": "attach",
+   "node": "tentacle.4.j0",
+   "bone": "bell.b12",
+   "t": 0.6
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.4.j0",
+   "b": "tentacle.4.j1"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.4.j1",
+   "b": "tentacle.4.j2"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.4.j2",
+   "b": "tentacle.4.j3"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.4.j3",
+   "b": "tentacle.4.j4"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.4.j4",
+   "b": "tentacle.4.j5"
+  },
+  {
+   "type": "attach",
+   "node": "tentacle.5.j0",
+   "bone": "bell.b12",
+   "t": 0.6
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.5.j0",
+   "b": "tentacle.5.j1"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.5.j1",
+   "b": "tentacle.5.j2"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.5.j2",
+   "b": "tentacle.5.j3"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.5.j3",
+   "b": "tentacle.5.j4"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.5.j4",
+   "b": "tentacle.5.j5"
+  },
+  {
+   "type": "attach",
+   "node": "tentacle.6.j0",
+   "bone": "bell.b12",
+   "t": 0.6
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.6.j0",
+   "b": "tentacle.6.j1"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.6.j1",
+   "b": "tentacle.6.j2"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.6.j2",
+   "b": "tentacle.6.j3"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.6.j3",
+   "b": "tentacle.6.j4"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.6.j4",
+   "b": "tentacle.6.j5"
+  },
+  {
+   "type": "attach",
+   "node": "tentacle.7.j0",
+   "bone": "bell.b12",
+   "t": 0.6
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.7.j0",
+   "b": "tentacle.7.j1"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.7.j1",
+   "b": "tentacle.7.j2"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.7.j2",
+   "b": "tentacle.7.j3"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.7.j3",
+   "b": "tentacle.7.j4"
+  },
+  {
+   "type": "bone",
+   "a": "tentacle.7.j4",
+   "b": "tentacle.7.j5"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.0.j0",
+   "b": "tentacle.1.j0"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.0.j1",
+   "b": "tentacle.1.j1"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.0.j2",
+   "b": "tentacle.1.j2"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.0.j3",
+   "b": "tentacle.1.j3"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.0.j4",
+   "b": "tentacle.1.j4"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.0.j5",
+   "b": "tentacle.1.j5"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.1.j0",
+   "b": "tentacle.2.j0"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.1.j1",
+   "b": "tentacle.2.j1"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.1.j2",
+   "b": "tentacle.2.j2"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.1.j3",
+   "b": "tentacle.2.j3"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.1.j4",
+   "b": "tentacle.2.j4"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.1.j5",
+   "b": "tentacle.2.j5"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.2.j0",
+   "b": "tentacle.3.j0"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.2.j1",
+   "b": "tentacle.3.j1"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.2.j2",
+   "b": "tentacle.3.j2"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.2.j3",
+   "b": "tentacle.3.j3"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.2.j4",
+   "b": "tentacle.3.j4"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.2.j5",
+   "b": "tentacle.3.j5"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.3.j0",
+   "b": "tentacle.4.j0"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.3.j1",
+   "b": "tentacle.4.j1"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.3.j2",
+   "b": "tentacle.4.j2"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.3.j3",
+   "b": "tentacle.4.j3"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.3.j4",
+   "b": "tentacle.4.j4"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.3.j5",
+   "b": "tentacle.4.j5"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.4.j0",
+   "b": "tentacle.5.j0"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.4.j1",
+   "b": "tentacle.5.j1"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.4.j2",
+   "b": "tentacle.5.j2"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.4.j3",
+   "b": "tentacle.5.j3"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.4.j4",
+   "b": "tentacle.5.j4"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.4.j5",
+   "b": "tentacle.5.j5"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.5.j0",
+   "b": "tentacle.6.j0"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.5.j1",
+   "b": "tentacle.6.j1"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.5.j2",
+   "b": "tentacle.6.j2"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.5.j3",
+   "b": "tentacle.6.j3"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.5.j4",
+   "b": "tentacle.6.j4"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.5.j5",
+   "b": "tentacle.6.j5"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.6.j0",
+   "b": "tentacle.7.j0"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.6.j1",
+   "b": "tentacle.7.j1"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.6.j2",
+   "b": "tentacle.7.j2"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.6.j3",
+   "b": "tentacle.7.j3"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.6.j4",
+   "b": "tentacle.7.j4"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.6.j5",
+   "b": "tentacle.7.j5"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.7.j0",
+   "b": "tentacle.0.j0"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.7.j1",
+   "b": "tentacle.0.j1"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.7.j2",
+   "b": "tentacle.0.j2"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.7.j3",
+   "b": "tentacle.0.j3"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.7.j4",
+   "b": "tentacle.0.j4"
+  },
+  {
+   "type": "radial",
+   "a": "tentacle.7.j5",
+   "b": "tentacle.0.j5"
+  }
+ ]
+}

@@ -1,0 +1,134 @@
+{
+ "1_founders": {
+  "pass": true,
+  "forms": {
+   "quadruped": {
+    "g1": true,
+    "n_buried": 0,
+    "n_hidden_010": 0,
+    "largest_share_inside": 0.0,
+    "smallest_area_ratio": 0.5797052793203767,
+    "pass": true
+   },
+   "biped": {
+    "g1": true,
+    "n_buried": 0,
+    "n_hidden_010": 0,
+    "largest_share_inside": 0.0,
+    "smallest_area_ratio": 0.4085374702146902,
+    "pass": true
+   },
+   "spider": {
+    "g1": true,
+    "n_buried": 0,
+    "n_hidden_010": 0,
+    "largest_share_inside": 0.0,
+    "smallest_area_ratio": 0.43192573149891383,
+    "pass": true
+   },
+   "serpent": {
+    "g1": true,
+    "n_buried": 0,
+    "n_hidden_010": 0,
+    "largest_share_inside": 0.0,
+    "smallest_area_ratio": 0.4246124039044252,
+    "pass": true
+   },
+   "jellyfish": {
+    "g1": true,
+    "n_buried": 0,
+    "n_hidden_010": 0,
+    "largest_share_inside": 0.0,
+    "smallest_area_ratio": 0.3462894635741547,
+    "pass": true
+   },
+   "crab": {
+    "g1": true,
+    "n_buried": 0,
+    "n_hidden_010": 0,
+    "largest_share_inside": 0.046875,
+    "smallest_area_ratio": 0.5021021179629547,
+    "pass": true
+   }
+  }
+ },
+ "2_g3_convergence": {
+  "pass": true,
+  "children": 990,
+  "instances": 10237,
+  "decisions_flipped": 0
+ },
+ "3_bone_cut": {
+  "pass": true,
+  "two_bones": 0.13572854291417166,
+  "ten_bones": 0.13572854291417166,
+  "dense_reference": 0.13466865331346686,
+  "old_M3_gave": {
+   "two_bones": 0.6923,
+   "ten_bones": 0.1475
+  }
+ },
+ "4_vertex_pinch": {
+  "pass": true,
+  "pinched": {
+   "g1_closed": true,
+   "g1_manifold": false,
+   "outer_shells": 2,
+   "bubbles": 0,
+   "g1": false
+  },
+  "one_tetrahedron": {
+   "g1_closed": true,
+   "g1_manifold": true,
+   "outer_shells": 1,
+   "bubbles": 0,
+   "g1": true
+  }
+ },
+ "5_left_right": {
+  "pass": true,
+  "ratios_left_right": [
+   0.0,
+   1.0
+  ],
+  "n_hidden_005": 1,
+  "n_hidden_010": 1,
+  "n_hidden_020": 1
+ },
+ "6_every_run_has_a_row": {
+  "pass": true,
+  "X1": {
+   "rows": 450,
+   "expected": 450,
+   "missing": 0,
+   "extra": 0,
+   "duplicates": 0,
+   "errors": 0,
+   "error_messages": [],
+   "G5_parts_not_adding_up": 0,
+   "pass": true
+  },
+  "X2": {
+   "rows": 540,
+   "expected": 540,
+   "missing": 0,
+   "extra": 0,
+   "duplicates": 0,
+   "errors": 0,
+   "error_messages": [],
+   "G5_parts_not_adding_up": 0,
+   "pass": true
+  }
+ },
+ "7_time": {
+  "pass": true,
+  "children_in_full_run": 16830,
+  "seconds_per_child_median": 1.196,
+  "seconds_per_child_mean": 1.7459949494949496,
+  "workers_assumed": 6,
+  "hours_estimate": 1.360421064814815,
+  "python": "3.10.12"
+ },
+ "all_pass": true,
+ "metrics_version": "metrics_v1.0"
+}

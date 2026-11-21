@@ -1,0 +1,37 @@
+{
+  "trial": true,
+  "status": "complete",
+  "seeds": [
+    1
+  ],
+  "generations": 3,
+  "size": 30,
+  "workers": 6,
+  "code_hash": "bb54458008ff10be",
+  "file_sha256": {
+    "skeleton_sdf_demo.py": "24c8c282bcdc4cf6a0a3b5218c0ef9acb52640227296fb246c654d2aaf3001b4",
+    "form_fusion_lab.py": "87aaeffac492f3a0894ed92e3fd17238ed9bf4117577d7e489c0ba7be5facd93",
+    "soft_match_lab.py": "23c969b95247ac6dba770a8e66c49ba03ffe61d501a3991858b54d42a297454d",
+    "fourier3d_demo.py": "597bfc01ff6286df79a76bb202924012083a05e759dc982df53b81260ff6b100",
+    "fourier_genetics.py": "fcb577071b633038146fcdede9e8a827f7bb12b25826d9eeacc4ccf44498f5e2",
+    "attribute_layer.py": "4ee2a363866b3f2cb2cf7eb628de07d526eb17cab59d6461f7d0d7518d5bc3a1",
+    "pce_match_test.py": "98176e7f210f00a5b342eb5e63bf9dfbd514be9ce202b96dd31df333eebb4ac6",
+    "rtis/pce.py": "97910845f568bf3e6f77edf2a88eaf3f1dafce64da0658b4debb983a418f6574",
+    "rtis/ontology.py": "7438080f39d763f9244b082b3bd6dc7c53d245aa57c21bf4ba9903d607883235",
+    "rtis/trait.py": "e6a19538b1889ed17ffdc229d6355358a43254674d8ed8fec95a510573d17d15",
+    "metrics_v1.py": "9884729b8a0ed8d0d5763a2c0b1994678fdac858dbb1e4392ee918cec337c7e8",
+    "run_v1.py": "0318e4415cf7412742471d6d0160d4a5789f8707d5d7aaab348d57749254e2f9"
+  },
+  "script_sha256": "e45e0476aa4f9535a249bf112e0ba627a5373dba71dccf0c45e9873a436e5542",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "numpy": "2.4.3",
+  "scipy": "1.17.1",
+  "scikit_image": "0.26.0",
+  "voxel": 0.03,
+  "child_timeout_seconds": 600,
+  "individual_numbers": "1-30",
+  "rng": "SeedSequence([20261116,900+population_seed,generation,individual,purpose]); 0 parents/direction, 1 matching, 2 inheritance",
+  "reason": null,
+  "wall_seconds": 269.31668289995287
+}

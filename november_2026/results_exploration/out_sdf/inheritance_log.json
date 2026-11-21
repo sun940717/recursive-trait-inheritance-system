@@ -1,0 +1,243 @@
+{
+ "F1-1": {
+  "matches": [
+   {
+    "child_part": "body",
+    "score": 1.0,
+    "A": "body",
+    "B": "body",
+    "template": "B",
+    "bones": "BBBAABABB",
+    "thickness": "AAAAABBBBB",
+    "detail": "A"
+   },
+   {
+    "child_part": "neck_head",
+    "score": 1.248,
+    "A": "neck_head",
+    "B": "neck_head",
+    "template": "A",
+    "bones": "AABAB",
+    "thickness": "BBAAAA",
+    "detail": "A"
+   },
+   {
+    "child_part": "tail",
+    "score": 1.248,
+    "A": "tail",
+    "B": "tail",
+    "template": "A",
+    "bones": "AABBB",
+    "thickness": "BBABBB",
+    "detail": "A"
+   },
+   {
+    "child_part": "arm_front",
+    "score": 0.742,
+    "A": "leg_front",
+    "B": "arm_front",
+    "template": "B",
+    "bones": "AABAB",
+    "thickness": "BBBBAA",
+    "detail": "A"
+   },
+   {
+    "child_part": "leg_rear",
+    "score": 1.245,
+    "A": "leg_rear",
+    "B": "leg_rear",
+    "template": "A",
+    "bones": "ABABB",
+    "thickness": "ABBBBA",
+    "detail": "B"
+   }
+  ],
+  "unmatched_inherited": [],
+  "dropped": [
+   "B:horn"
+  ],
+  "mutations": [
+   "tail: bone 2",
+   "tail: thickness at joint 2"
+  ]
+ },
+ "F1-2": {
+  "matches": [
+   {
+    "child_part": "body",
+    "score": 1.0,
+    "A": "body",
+    "B": "body",
+    "template": "A",
+    "bones": "BAAAABBAB",
+    "thickness": "BABBABBBAB",
+    "detail": "B"
+   },
+   {
+    "child_part": "neck_head",
+    "score": 1.248,
+    "A": "neck_head",
+    "B": "neck_head",
+    "template": "A",
+    "bones": "ABABB",
+    "thickness": "BBAAAA",
+    "detail": "B"
+   },
+   {
+    "child_part": "tail",
+    "score": 1.248,
+    "A": "tail",
+    "B": "tail",
+    "template": "B",
+    "bones": "BABBB",
+    "thickness": "BBBABA",
+    "detail": "A"
+   },
+   {
+    "child_part": "leg_front",
+    "score": 0.742,
+    "A": "leg_front",
+    "B": "arm_front",
+    "template": "A",
+    "bones": "BABBB",
+    "thickness": "BBAAAA",
+    "detail": "B"
+   },
+   {
+    "child_part": "leg_rear",
+    "score": 1.245,
+    "A": "leg_rear",
+    "B": "leg_rear",
+    "template": "B",
+    "bones": "BABBA",
+    "thickness": "BABBAA",
+    "detail": "B"
+   }
+  ],
+  "unmatched_inherited": [
+   "B:horn"
+  ],
+  "dropped": [],
+  "mutations": [
+   "leg_rear: detail harmonic 5",
+   "neck_head: bone 0",
+   "horn: bone 1"
+  ]
+ },
+ "F1-3": {
+  "matches": [
+   {
+    "child_part": "body",
+    "score": 1.0,
+    "A": "body",
+    "B": "body",
+    "template": "B",
+    "bones": "ABBBBBABA",
+    "thickness": "BBBAAAABBA",
+    "detail": "A"
+   },
+   {
+    "child_part": "neck_head",
+    "score": 1.248,
+    "A": "neck_head",
+    "B": "neck_head",
+    "template": "A",
+    "bones": "BABBB",
+    "thickness": "ABBBBA",
+    "detail": "B"
+   },
+   {
+    "child_part": "tail",
+    "score": 1.248,
+    "A": "tail",
+    "B": "tail",
+    "template": "A",
+    "bones": "BABBA",
+    "thickness": "AABAAA",
+    "detail": "A"
+   },
+   {
+    "child_part": "leg_front",
+    "score": 0.742,
+    "A": "leg_front",
+    "B": "arm_front",
+    "template": "A",
+    "bones": "BAAAA",
+    "thickness": "ABBAAB",
+    "detail": "A"
+   },
+   {
+    "child_part": "leg_rear",
+    "score": 1.245,
+    "A": "leg_rear",
+    "B": "leg_rear",
+    "template": "B",
+    "bones": "BAABB",
+    "thickness": "AABABA",
+    "detail": "B"
+   }
+  ],
+  "unmatched_inherited": [
+   "B:horn"
+  ],
+  "dropped": [],
+  "mutations": [
+   "neck_head: thickness at joint 3"
+  ]
+ },
+ "F1-4": {
+  "matches": [
+   {
+    "child_part": "body",
+    "score": 1.0,
+    "A": "body",
+    "B": "body",
+    "template": "A",
+    "bones": "ABBBAABBB",
+    "thickness": "BBBBABABBB",
+    "detail": "A"
+   },
+   {
+    "child_part": "neck_head",
+    "score": 1.248,
+    "A": "neck_head",
+    "B": "neck_head",
+    "template": "B",
+    "bones": "BBABB",
+    "thickness": "ABBAAB",
+    "detail": "B"
+   },
+   {
+    "child_part": "leg_front",
+    "score": 0.742,
+    "A": "leg_front",
+    "B": "arm_front",
+    "template": "A",
+    "bones": "AABAA",
+    "thickness": "BABABA",
+    "detail": "A"
+   },
+   {
+    "child_part": "leg_rear",
+    "score": 1.245,
+    "A": "leg_rear",
+    "B": "leg_rear",
+    "template": "A",
+    "bones": "AABAA",
+    "thickness": "BBBAAA",
+    "detail": "B"
+   }
+  ],
+  "unmatched_inherited": [
+   "B:horn"
+  ],
+  "dropped": [
+   "tail~tail"
+  ],
+  "mutations": [
+   "leg_rear: bone 2",
+   "horn: thickness at joint 2",
+   "horn: thickness at joint 1"
+  ]
+ }
+}

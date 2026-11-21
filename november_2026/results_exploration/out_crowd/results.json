@@ -1,0 +1,9099 @@
+{
+ "preview_voxel": 0.03,
+ "children_per_cell": 12,
+ "seed": 7,
+ "high": 0.4,
+ "borderline": {
+  "baseline": {
+   "quadruped.leg_front ~ biped.arm_front": {
+    "score": 0.3333333333333333,
+    "chance": 0.5555555555555554
+   },
+   "quadruped.leg_rear ~ biped.arm_front": {
+    "score": 0.3333333333333333,
+    "chance": 0.5555555555555554
+   },
+   "quadruped.tail ~ spider.abdomen": {
+    "score": 0.25,
+    "chance": 0.0
+   },
+   "quadruped.leg_front ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   },
+   "quadruped.leg_rear ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   },
+   "biped.tail ~ spider.abdomen": {
+    "score": 0.25,
+    "chance": 0.0
+   },
+   "biped.arm_front ~ spider.leg": {
+    "score": 0.3333333333333333,
+    "chance": 0.5555555555555554
+   },
+   "biped.leg_rear ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   },
+   "biped.arm_front ~ crab.leg": {
+    "score": 0.3333333333333333,
+    "chance": 0.5555555555555554
+   },
+   "spider.fang ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   },
+   "spider.leg ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   },
+   "serpent.fang ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   }
+  },
+  "rear tag": {
+   "quadruped.leg_front ~ biped.arm_front": {
+    "score": 0.3333333333333333,
+    "chance": 0.5555555555555554
+   },
+   "quadruped.leg_rear ~ biped.arm_front": {
+    "score": 0.3333333333333333,
+    "chance": 0.5555555555555554
+   },
+   "quadruped.leg_front ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   },
+   "quadruped.leg_rear ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   },
+   "biped.arm_front ~ spider.leg": {
+    "score": 0.3333333333333333,
+    "chance": 0.5555555555555554
+   },
+   "biped.leg_rear ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   },
+   "biped.arm_front ~ crab.leg": {
+    "score": 0.3333333333333333,
+    "chance": 0.5555555555555554
+   },
+   "spider.fang ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   },
+   "spider.leg ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   },
+   "serpent.fang ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   }
+  },
+  "rear tag, half": {
+   "quadruped.leg_front ~ biped.arm_front": {
+    "score": 0.3333333333333333,
+    "chance": 0.5555555555555554
+   },
+   "quadruped.leg_rear ~ biped.arm_front": {
+    "score": 0.3333333333333333,
+    "chance": 0.5555555555555554
+   },
+   "quadruped.tail ~ spider.abdomen": {
+    "score": 0.3333333333333333,
+    "chance": 0.5555555555555554
+   },
+   "quadruped.leg_front ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   },
+   "quadruped.leg_rear ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   },
+   "biped.tail ~ spider.abdomen": {
+    "score": 0.3333333333333333,
+    "chance": 0.5555555555555554
+   },
+   "biped.arm_front ~ spider.leg": {
+    "score": 0.3333333333333333,
+    "chance": 0.5555555555555554
+   },
+   "biped.leg_rear ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   },
+   "biped.arm_front ~ crab.leg": {
+    "score": 0.3333333333333333,
+    "chance": 0.5555555555555554
+   },
+   "spider.fang ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   },
+   "spider.leg ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   },
+   "serpent.fang ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   }
+  },
+  "lower bottom": {
+   "quadruped.leg_front ~ biped.arm_front": {
+    "score": 0.3333333333333333,
+    "chance": 0.7333333333333333
+   },
+   "quadruped.leg_rear ~ biped.arm_front": {
+    "score": 0.3333333333333333,
+    "chance": 0.7333333333333333
+   },
+   "quadruped.tail ~ spider.abdomen": {
+    "score": 0.25,
+    "chance": 0.4
+   },
+   "quadruped.leg_front ~ serpent.tail_tip": {
+    "score": 0.16666666666666666,
+    "chance": 0.06666666666666665
+   },
+   "quadruped.leg_rear ~ serpent.tail_tip": {
+    "score": 0.16666666666666666,
+    "chance": 0.06666666666666665
+   },
+   "quadruped.neck_head ~ crab.eye_stalk": {
+    "score": 0.2,
+    "chance": 0.20000000000000007
+   },
+   "quadruped.leg_front ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.5428571428571428
+   },
+   "quadruped.leg_rear ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.5428571428571428
+   },
+   "biped.tail ~ spider.abdomen": {
+    "score": 0.25,
+    "chance": 0.4
+   },
+   "biped.arm_front ~ spider.leg": {
+    "score": 0.3333333333333333,
+    "chance": 0.7333333333333333
+   },
+   "biped.leg_rear ~ serpent.tail_tip": {
+    "score": 0.16666666666666666,
+    "chance": 0.06666666666666665
+   },
+   "biped.neck_head ~ crab.eye_stalk": {
+    "score": 0.2,
+    "chance": 0.20000000000000007
+   },
+   "biped.leg_rear ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.5428571428571428
+   },
+   "biped.arm_front ~ crab.leg": {
+    "score": 0.3333333333333333,
+    "chance": 0.7333333333333333
+   },
+   "spider.leg ~ serpent.tail_tip": {
+    "score": 0.16666666666666666,
+    "chance": 0.06666666666666665
+   },
+   "spider.abdomen ~ jellyfish.oral_arm": {
+    "score": 0.2,
+    "chance": 0.20000000000000007
+   },
+   "spider.fang ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.5428571428571428
+   },
+   "spider.leg ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.5428571428571428
+   },
+   "serpent.tail_tip ~ jellyfish.tentacle": {
+    "score": 0.16666666666666666,
+    "chance": 0.06666666666666665
+   },
+   "serpent.head ~ crab.eye_stalk": {
+    "score": 0.2,
+    "chance": 0.20000000000000007
+   },
+   "serpent.fang ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.5428571428571428
+   },
+   "serpent.tail_tip ~ crab.leg": {
+    "score": 0.16666666666666666,
+    "chance": 0.06666666666666665
+   }
+  },
+  "site rule": {
+   "quadruped.leg_front ~ biped.arm_front": {
+    "score": 0.3333333333333333,
+    "chance": 0.5555555555555554
+   },
+   "quadruped.leg_rear ~ biped.arm_front": {
+    "score": 0.3333333333333333,
+    "chance": 0.5555555555555554
+   },
+   "quadruped.tail ~ spider.abdomen": {
+    "score": 0.25,
+    "chance": 0.0
+   },
+   "quadruped.leg_front ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   },
+   "quadruped.leg_rear ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   },
+   "biped.tail ~ spider.abdomen": {
+    "score": 0.25,
+    "chance": 0.0
+   },
+   "biped.arm_front ~ spider.leg": {
+    "score": 0.3333333333333333,
+    "chance": 0.5555555555555554
+   },
+   "biped.leg_rear ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   },
+   "biped.arm_front ~ crab.leg": {
+    "score": 0.3333333333333333,
+    "chance": 0.5555555555555554
+   },
+   "spider.fang ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   },
+   "spider.leg ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   },
+   "serpent.fang ~ crab.claw": {
+    "score": 0.2857142857142857,
+    "chance": 0.23809523809523794
+   }
+  }
+ },
+ "form_pairs": [
+  "quadruped x biped",
+  "quadruped x spider",
+  "quadruped x serpent",
+  "quadruped x crab",
+  "biped x spider",
+  "biped x serpent",
+  "biped x crab",
+  "spider x serpent",
+  "spider x jellyfish",
+  "spider x crab",
+  "serpent x jellyfish",
+  "serpent x crab"
+ ],
+ "variants": {
+  "baseline": {
+   "children": 144,
+   "valid": 144,
+   "with_bubble": 0,
+   "parts": 6.409722222222222,
+   "minority_share": 0.36789406074517533,
+   "new_humps": 0.14375,
+   "with_swallowed": 22,
+   "tail_in_abdomen": 4,
+   "site_lost": 0,
+   "swallowed_kinds": {
+    "abdomen + tail": 4,
+    "arm_front + fang": 1,
+    "abdomen + tail_tip": 9,
+    "fang + head": 3,
+    "head + oral_arm": 8,
+    "fang + oral_arm": 3
+   },
+   "borderline_matched": {
+    "quadruped.leg_front ~ biped.arm_front": 8,
+    "biped.arm_front ~ spider.leg": 5,
+    "spider.fang ~ crab.claw": 4,
+    "serpent.fang ~ crab.claw": 3
+   }
+  },
+  "rear tag": {
+   "children": 144,
+   "valid": 144,
+   "with_bubble": 0,
+   "parts": 6.381944444444445,
+   "minority_share": 0.37598743738740176,
+   "new_humps": 0.1333333333333333,
+   "with_swallowed": 17,
+   "tail_in_abdomen": 0,
+   "site_lost": 0,
+   "swallowed_kinds": {
+    "abdomen + tail_tip": 9,
+    "fang + head": 3,
+    "head + oral_arm": 8,
+    "fang + oral_arm": 3
+   },
+   "borderline_matched": {
+    "quadruped.leg_front ~ biped.arm_front": 8,
+    "biped.arm_front ~ spider.leg": 6,
+    "spider.fang ~ crab.claw": 4,
+    "serpent.fang ~ crab.claw": 3
+   }
+  },
+  "rear tag, half": {
+   "children": 144,
+   "valid": 144,
+   "with_bubble": 0,
+   "parts": 6.333333333333333,
+   "minority_share": 0.37046154586502283,
+   "new_humps": 0.15844907407407405,
+   "with_swallowed": 17,
+   "tail_in_abdomen": 0,
+   "site_lost": 0,
+   "swallowed_kinds": {
+    "abdomen + tail_tip": 9,
+    "fang + head": 3,
+    "head + oral_arm": 8,
+    "fang + oral_arm": 3
+   },
+   "borderline_matched": {
+    "quadruped.leg_front ~ biped.arm_front": 8,
+    "quadruped.tail ~ spider.abdomen": 6,
+    "biped.tail ~ spider.abdomen": 8,
+    "biped.arm_front ~ spider.leg": 5,
+    "spider.fang ~ crab.claw": 4,
+    "serpent.fang ~ crab.claw": 3
+   }
+  },
+  "lower bottom": {
+   "children": 144,
+   "valid": 144,
+   "with_bubble": 0,
+   "parts": 6.354166666666667,
+   "minority_share": 0.3815008352546021,
+   "new_humps": 0.12511574074074072,
+   "with_swallowed": 19,
+   "tail_in_abdomen": 2,
+   "site_lost": 0,
+   "swallowed_kinds": {
+    "abdomen + tail": 2,
+    "abdomen + tail_tip": 7,
+    "fang + head": 2,
+    "head + oral_arm": 9
+   },
+   "borderline_matched": {
+    "quadruped.leg_front ~ biped.arm_front": 8,
+    "quadruped.tail ~ spider.abdomen": 6,
+    "quadruped.neck_head ~ crab.eye_stalk": 3,
+    "biped.tail ~ spider.abdomen": 4,
+    "biped.arm_front ~ spider.leg": 8,
+    "biped.neck_head ~ crab.eye_stalk": 3,
+    "spider.abdomen ~ jellyfish.oral_arm": 1,
+    "spider.fang ~ crab.claw": 6,
+    "serpent.fang ~ crab.claw": 6,
+    "serpent.head ~ crab.eye_stalk": 3,
+    "serpent.tail_tip ~ crab.leg": 1
+   }
+  },
+  "site rule": {
+   "children": 144,
+   "valid": 144,
+   "with_bubble": 0,
+   "parts": 6.243055555555555,
+   "minority_share": 0.3540160364551341,
+   "new_humps": 0.14375,
+   "with_swallowed": 1,
+   "tail_in_abdomen": 0,
+   "site_lost": 24,
+   "swallowed_kinds": {
+    "arm_front + fang": 1
+   },
+   "borderline_matched": {
+    "quadruped.leg_front ~ biped.arm_front": 8,
+    "biped.arm_front ~ spider.leg": 5,
+    "spider.fang ~ crab.claw": 4,
+    "serpent.fang ~ crab.claw": 3
+   }
+  }
+ },
+ "children": {
+  "baseline": [
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.35514739929001393,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.38139843490818254,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4595359366157329,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4810413129598189,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.2563667232597623,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.414593212731495,
+    "new_humps": 0.2,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4159592529711375,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.29499732539479495,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.416232461019066,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.44046991784243705,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.37011884550084895,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4478465351365064,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.43560994469565795,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.41319819588070855,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4027541973212601,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.2646456513748622,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.46407670028962344,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.49506954090994837,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.2755253033441847,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4521482433197204,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3343279998628046,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.2204043833924988,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4923949381268269,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3454150054367524,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.4245478198175606,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.427749006383235,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4510177044441769,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4443935926773456,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.48582440081898115,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3590750331205588,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4948813681801758,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.21731239643336242,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.43534811541597623,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.33887652424688885,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4647115500421535,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.34049495719976264,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.30201636748631266,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.36409939805525543,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.49170536134350634,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4334140897731825,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.3768194680249009,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3738621719475525,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4495125409133075,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4445066774018518,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4719552654943069,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.3456341466836913,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4593774759479343,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4671555843382984,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4353233679035371,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4142895328811582,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4635489015794618,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.39814898270385,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.43797933892714336,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.1451708932234249,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.2185274086216653,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3292590568026831,
+    "new_humps": 0.25,
+    "swallowed": [
+     [
+      "arm_front",
+      "fang"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4389004245081253,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.41304216606323874,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.23587318609318175,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4918973268023118,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.39716726437522665,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.37808206486997287,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.44107690454793913,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.4440596547352094,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4178860282196426,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.25406572230611746,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.29116167464957066,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.48727132649130456,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4050741622583125,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4476346322265468,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.26282529947470334,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4217826735470961,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3876437435457616,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 10,
+    "minority": 0.476665218936313,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.459056125587461,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.47713058494043215,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4216557948351353,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 10,
+    "minority": 0.46464905700109244,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.41004496352543895,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.45932759939551104,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4647120282094815,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4296830786644029,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.4410230985433222,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.39778989068596793,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.46077137860145445,
+    "new_humps": 1.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ],
+     [
+      "fang",
+      "head"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.3971955447823019,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ],
+     [
+      "fang",
+      "head"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.20973816625990538,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.35298088429320973,
+    "new_humps": 0.5,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ],
+     [
+      "fang",
+      "head"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.08214648077862541,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.21752689143993498,
+    "new_humps": 0.5,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.2486565705911089,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.20973816625990538,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.29446339282757705,
+    "new_humps": 1.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.306121414817067,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.2658200602668963,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.4222200724177009,
+    "new_humps": 0.5,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.25476190476190474,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.23421052631578942,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.31720430107526887,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.22108208955223885,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.2310126582278481,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.17009493670886078,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.23750000000000004,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.2875,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.21565934065934067,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.30981182795698925,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.07971014492753625,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.15268987341772156,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3561746987951807,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.46287128712871284,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.48655063291139244,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.40031645569620256,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4381868131868132,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4518072289156626,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.31068840579710144,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.40779702970297027,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4344879518072289,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.49257425742574257,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3109567901234568,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.45406626506024095,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.2523629489603024,
+    "new_humps": 1.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.41839949590422176,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "fang",
+      "oral_arm"
+     ],
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.21518054532056008,
+    "new_humps": 1.0,
+    "swallowed": [
+     [
+      "fang",
+      "oral_arm"
+     ],
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.20812544547398437,
+    "new_humps": 1.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 3,
+    "minority": 0.2750665483584739,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 3,
+    "minority": 0.22250639386189258,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.205685618729097,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.499738082765846,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4867674858223061,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3297537977998952,
+    "new_humps": 1.0,
+    "swallowed": [
+     [
+      "fang",
+      "oral_arm"
+     ],
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.4568901989683125,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.1923360353721444,
+    "new_humps": 1.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4333709768492377,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "serpent.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.46325780771586034,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4720823798627002,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3378732320586695,
+    "new_humps": 1.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.3834782608695652,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4926129168425496,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.18314472900536033,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.3639007960808328,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "serpent.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.41578725200506544,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4237754540451294,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.4530710835058661,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "serpent.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.05348516218081435,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   }
+  ],
+  "rear tag": [
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.35514739929001393,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.38139843490818254,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4595359366157329,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4810413129598189,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.2563667232597623,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.414593212731495,
+    "new_humps": 0.2,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4159592529711375,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.29499732539479495,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.416232461019066,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.44046991784243705,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.37011884550084895,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4478465351365064,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4122202933938689,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4841625079316081,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.494706319986265,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.45809538509029174,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4566451001085976,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4731182795698925,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3375692407950472,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.44370701925880196,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.34790799358094754,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.38897811223787454,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3893859331184067,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4306275715443797,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.4245478198175606,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.427749006383235,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4510177044441769,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4443935926773456,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.48582440081898115,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3590750331205588,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4948813681801758,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.21731239643336242,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.43534811541597623,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.33887652424688885,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4647115500421535,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.34049495719976264,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.30201636748631266,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.36409939805525543,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.49170536134350634,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4334140897731825,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.3768194680249009,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3738621719475525,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4495125409133075,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4445066774018518,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4719552654943069,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.3456341466836913,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4593774759479343,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4671555843382984,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4870511317048345,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4255313540527166,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.417180425161802,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.3610073571024335,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.49343468479081876,
+    "new_humps": 0.4,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.437456641581188,
+    "new_humps": 0.2,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.43612811671551804,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4538745784326529,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.38058024568061516,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.35582819258041465,
+    "new_humps": 0.2,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4083037016192985,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.40947674050696825,
+    "new_humps": 0.2,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.39716726437522665,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.37808206486997287,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.44107690454793913,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.4440596547352094,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4178860282196426,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.25406572230611746,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.29116167464957066,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.48727132649130456,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4050741622583125,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4476346322265468,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.26282529947470334,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4217826735470961,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3876437435457616,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 10,
+    "minority": 0.476665218936313,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.459056125587461,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.47713058494043215,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4216557948351353,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 10,
+    "minority": 0.46464905700109244,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.41004496352543895,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.45932759939551104,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4647120282094815,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4296830786644029,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.4410230985433222,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.39778989068596793,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.46077137860145445,
+    "new_humps": 1.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ],
+     [
+      "fang",
+      "head"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.3971955447823019,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ],
+     [
+      "fang",
+      "head"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.20973816625990538,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.35298088429320973,
+    "new_humps": 0.5,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ],
+     [
+      "fang",
+      "head"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.08214648077862541,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.21752689143993498,
+    "new_humps": 0.5,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.2486565705911089,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.20973816625990538,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.29446339282757705,
+    "new_humps": 1.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.306121414817067,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.2658200602668963,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.4222200724177009,
+    "new_humps": 0.5,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.25476190476190474,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.23421052631578942,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.31720430107526887,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.22108208955223885,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.2310126582278481,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.17009493670886078,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.23750000000000004,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.2875,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.21565934065934067,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.30981182795698925,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.07971014492753625,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.15268987341772156,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3561746987951807,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.46287128712871284,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.48655063291139244,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.40031645569620256,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4381868131868132,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4518072289156626,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.31068840579710144,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.40779702970297027,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4344879518072289,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.49257425742574257,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3109567901234568,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.45406626506024095,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.2523629489603024,
+    "new_humps": 1.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.41839949590422176,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "fang",
+      "oral_arm"
+     ],
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.21518054532056008,
+    "new_humps": 1.0,
+    "swallowed": [
+     [
+      "fang",
+      "oral_arm"
+     ],
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.20812544547398437,
+    "new_humps": 1.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 3,
+    "minority": 0.2750665483584739,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 3,
+    "minority": 0.22250639386189258,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.205685618729097,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.499738082765846,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4867674858223061,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3297537977998952,
+    "new_humps": 1.0,
+    "swallowed": [
+     [
+      "fang",
+      "oral_arm"
+     ],
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.4568901989683125,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.1923360353721444,
+    "new_humps": 1.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4333709768492377,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "serpent.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.46325780771586034,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4720823798627002,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3378732320586695,
+    "new_humps": 1.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.3834782608695652,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4926129168425496,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.18314472900536033,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.3639007960808328,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "serpent.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.41578725200506544,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4237754540451294,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.4530710835058661,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "serpent.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.05348516218081435,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   }
+  ],
+  "rear tag, half": [
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.35514739929001393,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.38139843490818254,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4595359366157329,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4810413129598189,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.2563667232597623,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.414593212731495,
+    "new_humps": 0.2,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4159592529711375,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.29499732539479495,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.416232461019066,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.44046991784243705,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.37011884550084895,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4478465351365064,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4265363073980837,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3480132393544957,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.3820033955857385,
+    "new_humps": 0.6666666666666666,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4824211670895252,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3022870268650754,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.46973984325427454,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.452369345593303,
+    "new_humps": 0.75,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.3920971230550968,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4414261460101868,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4607844853237184,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4040918523091698,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.2448886869604725,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.4245478198175606,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.427749006383235,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4510177044441769,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4443935926773456,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.48582440081898115,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3590750331205588,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4948813681801758,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.21731239643336242,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.43534811541597623,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.33887652424688885,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4647115500421535,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.34049495719976264,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.30201636748631266,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.36409939805525543,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.49170536134350634,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4334140897731825,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.3768194680249009,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3738621719475525,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4495125409133075,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4445066774018518,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4719552654943069,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.3456341466836913,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4593774759479343,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4671555843382984,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4353233679035371,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.38414549586726787,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4536705177797016,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4176608870007452,
+    "new_humps": 0.6,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg",
+     "biped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4719278730753469,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4117141717179099,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3634145159270743,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.17657660426061506,
+    "new_humps": 0.75,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.35228858354584386,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.30808141327455907,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.39630975766396626,
+    "new_humps": 0.4,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg",
+     "biped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.40947674050696825,
+    "new_humps": 0.2,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg",
+     "biped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.39716726437522665,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.37808206486997287,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.44107690454793913,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.4440596547352094,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4178860282196426,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.25406572230611746,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.29116167464957066,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.48727132649130456,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4050741622583125,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4476346322265468,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.26282529947470334,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4217826735470961,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3876437435457616,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 10,
+    "minority": 0.476665218936313,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.459056125587461,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.47713058494043215,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4216557948351353,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 10,
+    "minority": 0.46464905700109244,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.41004496352543895,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.45932759939551104,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4647120282094815,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4296830786644029,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.4410230985433222,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.39778989068596793,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.46077137860145445,
+    "new_humps": 1.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ],
+     [
+      "fang",
+      "head"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.3971955447823019,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ],
+     [
+      "fang",
+      "head"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.20973816625990538,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.35298088429320973,
+    "new_humps": 0.5,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ],
+     [
+      "fang",
+      "head"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.08214648077862541,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.21752689143993498,
+    "new_humps": 0.5,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.2486565705911089,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.20973816625990538,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.29446339282757705,
+    "new_humps": 1.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.306121414817067,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.2658200602668963,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.4222200724177009,
+    "new_humps": 0.5,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.25476190476190474,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.23421052631578942,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.31720430107526887,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.22108208955223885,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.2310126582278481,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.17009493670886078,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.23750000000000004,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.2875,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.21565934065934067,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.30981182795698925,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.07971014492753625,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.15268987341772156,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3561746987951807,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.46287128712871284,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.48655063291139244,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.40031645569620256,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4381868131868132,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4518072289156626,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.31068840579710144,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.40779702970297027,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4344879518072289,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.49257425742574257,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3109567901234568,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.45406626506024095,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.2523629489603024,
+    "new_humps": 1.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.41839949590422176,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "fang",
+      "oral_arm"
+     ],
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.21518054532056008,
+    "new_humps": 1.0,
+    "swallowed": [
+     [
+      "fang",
+      "oral_arm"
+     ],
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.20812544547398437,
+    "new_humps": 1.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 3,
+    "minority": 0.2750665483584739,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 3,
+    "minority": 0.22250639386189258,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.205685618729097,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.499738082765846,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4867674858223061,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3297537977998952,
+    "new_humps": 1.0,
+    "swallowed": [
+     [
+      "fang",
+      "oral_arm"
+     ],
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.4568901989683125,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.1923360353721444,
+    "new_humps": 1.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4333709768492377,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "serpent.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.46325780771586034,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4720823798627002,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3378732320586695,
+    "new_humps": 1.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.3834782608695652,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4926129168425496,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.18314472900536033,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.3639007960808328,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "serpent.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.41578725200506544,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4237754540451294,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.4530710835058661,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "serpent.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.05348516218081435,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   }
+  ],
+  "lower bottom": [
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.35514739929001393,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.38139843490818254,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4595359366157329,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4810413129598189,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.2563667232597623,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.414593212731495,
+    "new_humps": 0.2,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4159592529711375,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.29499732539479495,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.416232461019066,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.44046991784243705,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.37011884550084895,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4478465351365064,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.43560994469565795,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4844623337975239,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.46416512466377974,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.36824936571221445,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3022870268650754,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.46973984325427454,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.452369345593303,
+    "new_humps": 0.75,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.3920971230550968,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4414261460101868,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4607844853237184,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4040918523091698,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.2448886869604725,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.4245478198175606,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.427749006383235,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4510177044441769,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4443935926773456,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.48582440081898115,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3590750331205588,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4948813681801758,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.21731239643336242,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.43534811541597623,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.33887652424688885,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4647115500421535,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.34049495719976264,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.49737700539859986,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.neck_head ~ crab.eye_stalk"
+    ]
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.3148431629046174,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4934091299288453,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.neck_head ~ crab.eye_stalk"
+    ]
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.3571703452178834,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4553137101543274,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.39360830919804257,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.46668300281798614,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4903165707588984,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.4378621841193226,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.48571173264230183,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3866058461349643,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.34724066634167655,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.neck_head ~ crab.eye_stalk"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4353233679035371,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.38414549586726787,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4536705177797016,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4806076998687132,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4932262716003442,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.3979645913586336,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.44539841486882625,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.40526384526027104,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.47906908172428975,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.30808141327455907,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.39630975766396626,
+    "new_humps": 0.4,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg",
+     "biped.tail ~ spider.abdomen"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4436687588803694,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.39716726437522665,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.37808206486997287,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.44107690454793913,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.4440596547352094,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4178860282196426,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.25406572230611746,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.29116167464957066,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.48727132649130456,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4050741622583125,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4476346322265468,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.26282529947470334,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4217826735470961,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.47205790367259404,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.4738841572072009,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3898305858298191,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4737629741130346,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.neck_head ~ crab.eye_stalk"
+    ]
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.44866914946054,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4254137204052314,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4234792749223989,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.neck_head ~ crab.eye_stalk"
+    ]
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4945670628183362,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.2704034754818736,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4727075675408377,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3555827424348347,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.32476266768693657,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.neck_head ~ crab.eye_stalk"
+    ]
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3036311514572384,
+    "new_humps": 1.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.3609738884968242,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.29443262051957697,
+    "new_humps": 0.5,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.408686447178669,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.1502949907932809,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.360601404079665,
+    "new_humps": 1.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.44611668524712,
+    "new_humps": 1.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.20996594151759673,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ],
+     [
+      "fang",
+      "head"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.24389378737204825,
+    "new_humps": 0.5,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.28081821560082443,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "abdomen",
+      "tail_tip"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.17594684985989328,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "fang",
+      "head"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3994966386270734,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.1907894736842105,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.3393817204301075,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.19705882352941173,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3885542168674698,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.24144736842105263,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.23971518987341767,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.20447530864197527,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.abdomen ~ jellyfish.oral_arm"
+    ]
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.28095238095238095,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.17879746835443033,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.17788461538461542,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.2310126582278481,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.1763157894736842,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3561746987951807,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.46287128712871284,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.48655063291139244,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.40031645569620256,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4381868131868132,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4518072289156626,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.31068840579710144,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4269578313253012,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.47966867469879515,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4409340659340659,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.48489010989010994,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.44630281690140844,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.11422254974207813,
+    "new_humps": 1.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.47275362318840586,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.40282870612886335,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.20560058953574056,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.27441197434069853,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.47148966500356376,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.20352867044738499,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.44044073853484217,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.49072463768115937,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.40282870612886335,
+    "new_humps": 0.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.1923360353721444,
+    "new_humps": 1.0,
+    "swallowed": [
+     [
+      "head",
+      "oral_arm"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.4340456890198968,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4686399108138238,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "serpent.fang ~ crab.claw",
+     "serpent.head ~ crab.eye_stalk"
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.483035351483137,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "serpent.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4405160057333971,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.31866804692891637,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "serpent.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.471485036702428,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "serpent.fang ~ crab.claw",
+     "serpent.tail_tip ~ crab.leg"
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.3440146809712027,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "serpent.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4615871675812579,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.26860556208382297,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "serpent.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.34440101543296936,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "serpent.head ~ crab.eye_stalk"
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4326788218793829,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.2885395763656633,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "serpent.head ~ crab.eye_stalk"
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.38195418419822347,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   }
+  ],
+  "site rule": [
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.35514739929001393,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.38139843490818254,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4595359366157329,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4810413129598189,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.2563667232597623,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.414593212731495,
+    "new_humps": 0.2,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4159592529711375,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.29499732539479495,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.416232461019066,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.44046991784243705,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.37011884550084895,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4478465351365064,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "quadruped.leg_front ~ biped.arm_front"
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.34478855648576384,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 1,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.41319819588070855,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3043843004094677,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 1,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.2646456513748622,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.46407670028962344,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.49506954090994837,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.2755253033441847,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3730768557576182,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 1,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3343279998628046,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.2204043833924988,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4923949381268269,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3454150054367524,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.4245478198175606,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.427749006383235,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4510177044441769,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4443935926773456,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.48582440081898115,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3590750331205588,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4948813681801758,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.21731239643336242,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.43534811541597623,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.33887652424688885,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4647115500421535,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.34049495719976264,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.30201636748631266,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.36409939805525543,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.49170536134350634,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4334140897731825,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.3768194680249009,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3738621719475525,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4495125409133075,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4445066774018518,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4719552654943069,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.3456341466836913,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4593774759479343,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "quadruped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4671555843382984,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4353233679035371,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4142895328811582,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4635489015794618,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.39814898270385,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.43797933892714336,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.1451708932234249,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.2185274086216653,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3292590568026831,
+    "new_humps": 0.25,
+    "swallowed": [
+     [
+      "arm_front",
+      "fang"
+     ]
+    ],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4389004245081253,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.33478112153833717,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 1,
+    "matched": []
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.23587318609318175,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "biped.arm_front ~ spider.leg"
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4918973268023118,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.39716726437522665,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.37808206486997287,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.44107690454793913,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.4440596547352094,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4178860282196426,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.25406572230611746,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.29116167464957066,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.48727132649130456,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4050741622583125,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4476346322265468,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.26282529947470334,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4217826735470961,
+    "new_humps": 0.25,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3876437435457616,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 10,
+    "minority": 0.476665218936313,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.459056125587461,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.47713058494043215,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4216557948351353,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 10,
+    "minority": 0.46464905700109244,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.41004496352543895,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.45932759939551104,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4647120282094815,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4296830786644029,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.4410230985433222,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "biped x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.39778989068596793,
+    "new_humps": 0.3333333333333333,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4000977039570103,
+    "new_humps": 1.0,
+    "swallowed": [],
+    "site_lost": 2,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.33952125061064975,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 2,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.13149442034504455,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 1,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.23351245725451875,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 2,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.08214648077862541,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.14005430643398786,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 1,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.1535498073747935,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 1,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.13149442034504455,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 1,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.29446339282757705,
+    "new_humps": 1.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.306121414817067,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.18514094601051134,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 1,
+    "matched": []
+   },
+   {
+    "pair": "spider x serpent",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.3701678266895658,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 1,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.25476190476190474,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.23421052631578942,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.31720430107526887,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.22108208955223885,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.2310126582278481,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.17009493670886078,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.23750000000000004,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.2875,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.21565934065934067,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.30981182795698925,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.07971014492753625,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.15268987341772156,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3561746987951807,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.46287128712871284,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.48655063291139244,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.40031645569620256,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4381868131868132,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4518072289156626,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.31068840579710144,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.40779702970297027,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4344879518072289,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.49257425742574257,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3109567901234568,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.45406626506024095,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "spider.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.12564480471628592,
+    "new_humps": 1.0,
+    "swallowed": [],
+    "site_lost": 1,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.3198231392778187,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 1,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 3,
+    "minority": 0.05501330967169482,
+    "new_humps": 1.0,
+    "swallowed": [],
+    "site_lost": 1,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 3,
+    "minority": 0.052855924978687185,
+    "new_humps": 1.0,
+    "swallowed": [],
+    "site_lost": 1,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 3,
+    "minority": 0.2750665483584739,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 3,
+    "minority": 0.22250639386189258,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.205685618729097,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4318046456223943,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 1,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.39977892409727334,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 1,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.2379392495533056,
+    "new_humps": 1.0,
+    "swallowed": [],
+    "site_lost": 1,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.4568901989683125,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 3,
+    "minority": 0.027506654835847244,
+    "new_humps": 1.0,
+    "swallowed": [],
+    "site_lost": 1,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4333709768492377,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "serpent.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.46325780771586034,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4720823798627002,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3378732320586695,
+    "new_humps": 1.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.3834782608695652,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4926129168425496,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.18314472900536033,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.3639007960808328,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "serpent.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.41578725200506544,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4237754540451294,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.4530710835058661,
+    "new_humps": 0.5,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": [
+     "serpent.fang ~ crab.claw"
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.05348516218081435,
+    "new_humps": 0.0,
+    "swallowed": [],
+    "site_lost": 0,
+    "matched": []
+   }
+  ]
+ }
+}

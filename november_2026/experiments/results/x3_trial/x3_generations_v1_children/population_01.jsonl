@@ -1,0 +1,180 @@
+{"population": 1, "generation": 1, "individual": 1, "status": "started"}
+{"population": 1, "generation": 1, "individual": 1, "parent_a_index": 17, "parent_b_index": 27, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 4, "g5": 0.45454545454545453, "sources_kept": 5, "sources_total": 11, "k_matched": 0, "seconds": 1.349048500007484}
+{"population": 1, "generation": 1, "individual": 2, "status": "started"}
+{"population": 1, "generation": 1, "individual": 2, "parent_a_index": 14, "parent_b_index": 20, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 6, "g5": 0.7, "sources_kept": 7, "sources_total": 10, "k_matched": 0, "seconds": 1.983369700028561}
+{"population": 1, "generation": 1, "individual": 3, "status": "started"}
+{"population": 1, "generation": 1, "individual": 3, "parent_a_index": 13, "parent_b_index": 10, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 6, "g5": 0.8571428571428571, "sources_kept": 12, "sources_total": 14, "k_matched": 6, "seconds": 0.6571819999953732}
+{"population": 1, "generation": 1, "individual": 4, "status": "started"}
+{"population": 1, "generation": 1, "individual": 4, "parent_a_index": 21, "parent_b_index": 18, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 4, "g5": 0.7142857142857143, "sources_kept": 5, "sources_total": 7, "k_matched": 0, "seconds": 1.503843099984806}
+{"population": 1, "generation": 1, "individual": 5, "status": "started"}
+{"population": 1, "generation": 1, "individual": 5, "parent_a_index": 12, "parent_b_index": 0, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 7, "g5": 0.8333333333333334, "sources_kept": 10, "sources_total": 12, "k_matched": 2, "seconds": 0.5852437999565154}
+{"population": 1, "generation": 1, "individual": 6, "status": "started"}
+{"population": 1, "generation": 1, "individual": 6, "parent_a_index": 8, "parent_b_index": 26, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 7, "g5": 0.7692307692307693, "sources_kept": 10, "sources_total": 13, "k_matched": 2, "seconds": 5.535322699986864}
+{"population": 1, "generation": 1, "individual": 7, "status": "started"}
+{"population": 1, "generation": 1, "individual": 7, "parent_a_index": 9, "parent_b_index": 22, "direction": 0, "status": "ok", "pass_geo": 0, "parts": 6, "g5": 0.7777777777777778, "sources_kept": 7, "sources_total": 9, "k_matched": 0, "seconds": 1.095152500027325}
+{"population": 1, "generation": 1, "individual": 8, "status": "started"}
+{"population": 1, "generation": 1, "individual": 8, "parent_a_index": 22, "parent_b_index": 17, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 3, "g5": 0.5714285714285714, "sources_kept": 4, "sources_total": 7, "k_matched": 0, "seconds": 3.516385100025218}
+{"population": 1, "generation": 1, "individual": 9, "status": "started"}
+{"population": 1, "generation": 1, "individual": 9, "parent_a_index": 15, "parent_b_index": 18, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 4, "g5": 1.0, "sources_kept": 8, "sources_total": 8, "k_matched": 3, "seconds": 0.30049049999797717}
+{"population": 1, "generation": 1, "individual": 10, "status": "started"}
+{"population": 1, "generation": 1, "individual": 10, "parent_a_index": 21, "parent_b_index": 20, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 3, "g5": 1.0, "sources_kept": 6, "sources_total": 6, "k_matched": 2, "seconds": 1.114199000003282}
+{"population": 1, "generation": 1, "individual": 11, "status": "started"}
+{"population": 1, "generation": 1, "individual": 11, "parent_a_index": 7, "parent_b_index": 10, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 6, "g5": 0.7692307692307693, "sources_kept": 10, "sources_total": 13, "k_matched": 3, "seconds": 2.3382020000135526}
+{"population": 1, "generation": 1, "individual": 12, "status": "started"}
+{"population": 1, "generation": 1, "individual": 12, "parent_a_index": 2, "parent_b_index": 21, "direction": 0, "status": "ok", "pass_geo": 0, "parts": 6, "g5": 0.875, "sources_kept": 7, "sources_total": 8, "k_matched": 0, "seconds": 1.7490629000240006}
+{"population": 1, "generation": 1, "individual": 13, "status": "started"}
+{"population": 1, "generation": 1, "individual": 13, "parent_a_index": 25, "parent_b_index": 12, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 7, "g5": 0.9285714285714286, "sources_kept": 13, "sources_total": 14, "k_matched": 5, "seconds": 0.5336802999954671}
+{"population": 1, "generation": 1, "individual": 14, "status": "started"}
+{"population": 1, "generation": 1, "individual": 14, "parent_a_index": 29, "parent_b_index": 19, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 8, "g5": 0.8181818181818182, "sources_kept": 9, "sources_total": 11, "k_matched": 0, "seconds": 0.4731835999991745}
+{"population": 1, "generation": 1, "individual": 15, "status": "started"}
+{"population": 1, "generation": 1, "individual": 15, "parent_a_index": 12, "parent_b_index": 23, "direction": 1, "status": "ok", "pass_geo": 0, "parts": 7, "g5": 0.8, "sources_kept": 8, "sources_total": 10, "k_matched": 0, "seconds": 0.6604265999631025}
+{"population": 1, "generation": 1, "individual": 16, "status": "started"}
+{"population": 1, "generation": 1, "individual": 16, "parent_a_index": 22, "parent_b_index": 28, "direction": 1, "status": "ok", "pass_geo": 0, "parts": 6, "g5": 0.7, "sources_kept": 7, "sources_total": 10, "k_matched": 0, "seconds": 2.1692844000062905}
+{"population": 1, "generation": 1, "individual": 17, "status": "started"}
+{"population": 1, "generation": 1, "individual": 17, "parent_a_index": 21, "parent_b_index": 3, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 6, "g5": 0.875, "sources_kept": 7, "sources_total": 8, "k_matched": 0, "seconds": 5.57388829998672}
+{"population": 1, "generation": 1, "individual": 18, "status": "started"}
+{"population": 1, "generation": 1, "individual": 18, "parent_a_index": 14, "parent_b_index": 2, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 6, "g5": 0.75, "sources_kept": 9, "sources_total": 12, "k_matched": 2, "seconds": 0.28535580000607297}
+{"population": 1, "generation": 1, "individual": 19, "status": "started"}
+{"population": 1, "generation": 1, "individual": 19, "parent_a_index": 2, "parent_b_index": 21, "direction": 0, "status": "ok", "pass_geo": 0, "parts": 5, "g5": 0.75, "sources_kept": 6, "sources_total": 8, "k_matched": 0, "seconds": 7.9931692000245675}
+{"population": 1, "generation": 1, "individual": 20, "status": "started"}
+{"population": 1, "generation": 1, "individual": 20, "parent_a_index": 25, "parent_b_index": 2, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 7, "g5": 0.8333333333333334, "sources_kept": 10, "sources_total": 12, "k_matched": 2, "seconds": 4.744755699997768}
+{"population": 1, "generation": 1, "individual": 21, "status": "started"}
+{"population": 1, "generation": 1, "individual": 21, "parent_a_index": 7, "parent_b_index": 21, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 6, "g5": 0.7777777777777778, "sources_kept": 7, "sources_total": 9, "k_matched": 0, "seconds": 3.173980599967763}
+{"population": 1, "generation": 1, "individual": 22, "status": "started"}
+{"population": 1, "generation": 1, "individual": 22, "parent_a_index": 13, "parent_b_index": 10, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 6, "g5": 0.8571428571428571, "sources_kept": 12, "sources_total": 14, "k_matched": 6, "seconds": 0.5168824999709614}
+{"population": 1, "generation": 1, "individual": 23, "status": "started"}
+{"population": 1, "generation": 1, "individual": 23, "parent_a_index": 25, "parent_b_index": 16, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 9, "g5": 1.0, "sources_kept": 11, "sources_total": 11, "k_matched": 1, "seconds": 1.738214600016363}
+{"population": 1, "generation": 1, "individual": 24, "status": "started"}
+{"population": 1, "generation": 1, "individual": 24, "parent_a_index": 5, "parent_b_index": 18, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 6, "g5": 1.0, "sources_kept": 10, "sources_total": 10, "k_matched": 3, "seconds": 1.7572144999867305}
+{"population": 1, "generation": 1, "individual": 25, "status": "started"}
+{"population": 1, "generation": 1, "individual": 25, "parent_a_index": 15, "parent_b_index": 28, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 4, "g5": 0.45454545454545453, "sources_kept": 5, "sources_total": 11, "k_matched": 0, "seconds": 0.89944770000875}
+{"population": 1, "generation": 1, "individual": 26, "status": "started"}
+{"population": 1, "generation": 1, "individual": 26, "parent_a_index": 14, "parent_b_index": 6, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 8, "g5": 0.8461538461538461, "sources_kept": 11, "sources_total": 13, "k_matched": 2, "seconds": 0.6731417999835685}
+{"population": 1, "generation": 1, "individual": 27, "status": "started"}
+{"population": 1, "generation": 1, "individual": 27, "parent_a_index": 25, "parent_b_index": 15, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 8, "g5": 0.8181818181818182, "sources_kept": 9, "sources_total": 11, "k_matched": 0, "seconds": 5.8990466999821365}
+{"population": 1, "generation": 1, "individual": 28, "status": "started"}
+{"population": 1, "generation": 1, "individual": 28, "parent_a_index": 20, "parent_b_index": 26, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 5, "g5": 0.6, "sources_kept": 6, "sources_total": 10, "k_matched": 0, "seconds": 0.9397785000037402}
+{"population": 1, "generation": 1, "individual": 29, "status": "started"}
+{"population": 1, "generation": 1, "individual": 29, "parent_a_index": 16, "parent_b_index": 28, "direction": 0, "status": "ok", "pass_geo": 0, "parts": 5, "g5": 0.5454545454545454, "sources_kept": 6, "sources_total": 11, "k_matched": 0, "seconds": 0.29953920003026724}
+{"population": 1, "generation": 1, "individual": 30, "status": "started"}
+{"population": 1, "generation": 1, "individual": 30, "parent_a_index": 16, "parent_b_index": 5, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 5, "g5": 0.9, "sources_kept": 9, "sources_total": 10, "k_matched": 3, "seconds": 2.047019099991303}
+{"population": 1, "generation": 2, "individual": 1, "status": "started"}
+{"population": 1, "generation": 2, "individual": 1, "parent_a_index": 25, "parent_b_index": 26, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 8, "g5": 0.875, "sources_kept": 14, "sources_total": 16, "k_matched": 5, "seconds": 0.5713286999962293}
+{"population": 1, "generation": 2, "individual": 2, "status": "started"}
+{"population": 1, "generation": 2, "individual": 2, "parent_a_index": 23, "parent_b_index": 9, "direction": 1, "status": "ok", "pass_geo": 0, "parts": 6, "g5": 0.7777777777777778, "sources_kept": 7, "sources_total": 9, "k_matched": 0, "seconds": 4.398478600021917}
+{"population": 1, "generation": 2, "individual": 3, "status": "started"}
+{"population": 1, "generation": 2, "individual": 3, "parent_a_index": 26, "parent_b_index": 5, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 9, "g5": 1.0, "sources_kept": 15, "sources_total": 15, "k_matched": 5, "seconds": 3.927304600016214}
+{"population": 1, "generation": 2, "individual": 4, "status": "started"}
+{"population": 1, "generation": 2, "individual": 4, "parent_a_index": 17, "parent_b_index": 12, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 8, "g5": 0.9230769230769231, "sources_kept": 12, "sources_total": 13, "k_matched": 3, "seconds": 0.4274062000331469}
+{"population": 1, "generation": 2, "individual": 5, "status": "started"}
+{"population": 1, "generation": 2, "individual": 5, "parent_a_index": 7, "parent_b_index": 22, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 5, "g5": 0.5, "sources_kept": 6, "sources_total": 12, "k_matched": 0, "seconds": 0.8095573000027798}
+{"population": 1, "generation": 2, "individual": 6, "status": "started"}
+{"population": 1, "generation": 2, "individual": 6, "parent_a_index": 23, "parent_b_index": 22, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 8, "g5": 0.8666666666666667, "sources_kept": 13, "sources_total": 15, "k_matched": 4, "seconds": 8.772591100016143}
+{"population": 1, "generation": 2, "individual": 7, "status": "started"}
+{"population": 1, "generation": 2, "individual": 7, "parent_a_index": 10, "parent_b_index": 19, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 7, "g5": 0.8461538461538461, "sources_kept": 11, "sources_total": 13, "k_matched": 3, "seconds": 2.179942899965681}
+{"population": 1, "generation": 2, "individual": 8, "status": "started"}
+{"population": 1, "generation": 2, "individual": 8, "parent_a_index": 3, "parent_b_index": 6, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 5, "g5": 0.8, "sources_kept": 8, "sources_total": 10, "k_matched": 2, "seconds": 1.6122884000069462}
+{"population": 1, "generation": 2, "individual": 9, "status": "started"}
+{"population": 1, "generation": 2, "individual": 9, "parent_a_index": 21, "parent_b_index": 25, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 8, "g5": 1.0, "sources_kept": 14, "sources_total": 14, "k_matched": 5, "seconds": 0.6888871999690309}
+{"population": 1, "generation": 2, "individual": 10, "status": "started"}
+{"population": 1, "generation": 2, "individual": 10, "parent_a_index": 18, "parent_b_index": 23, "direction": 1, "status": "ok", "pass_geo": 0, "parts": 6, "g5": 0.9090909090909091, "sources_kept": 10, "sources_total": 11, "k_matched": 3, "seconds": 9.241703499981668}
+{"population": 1, "generation": 2, "individual": 11, "status": "started"}
+{"population": 1, "generation": 2, "individual": 11, "parent_a_index": 20, "parent_b_index": 25, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 9, "g5": 0.9285714285714286, "sources_kept": 13, "sources_total": 14, "k_matched": 3, "seconds": 0.500257599982433}
+{"population": 1, "generation": 2, "individual": 12, "status": "started"}
+{"population": 1, "generation": 2, "individual": 12, "parent_a_index": 24, "parent_b_index": 7, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 5, "g5": 0.8571428571428571, "sources_kept": 6, "sources_total": 7, "k_matched": 0, "seconds": 6.670156800013501}
+{"population": 1, "generation": 2, "individual": 13, "status": "started"}
+{"population": 1, "generation": 2, "individual": 13, "parent_a_index": 17, "parent_b_index": 24, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 6, "g5": 0.9, "sources_kept": 9, "sources_total": 10, "k_matched": 2, "seconds": 0.6965112999896519}
+{"population": 1, "generation": 2, "individual": 14, "status": "started"}
+{"population": 1, "generation": 2, "individual": 14, "parent_a_index": 17, "parent_b_index": 19, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 7, "g5": 1.0, "sources_kept": 13, "sources_total": 13, "k_matched": 5, "seconds": 4.2096328000188805}
+{"population": 1, "generation": 2, "individual": 15, "status": "started"}
+{"population": 1, "generation": 2, "individual": 15, "parent_a_index": 26, "parent_b_index": 9, "direction": 1, "status": "ok", "pass_geo": 0, "parts": 8, "g5": 0.8181818181818182, "sources_kept": 9, "sources_total": 11, "k_matched": 0, "seconds": 2.185439300024882}
+{"population": 1, "generation": 2, "individual": 16, "status": "started"}
+{"population": 1, "generation": 2, "individual": 16, "parent_a_index": 7, "parent_b_index": 11, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 4, "g5": 0.6666666666666666, "sources_kept": 6, "sources_total": 9, "k_matched": 1, "seconds": 0.955361099971924}
+{"population": 1, "generation": 2, "individual": 17, "status": "started"}
+{"population": 1, "generation": 2, "individual": 17, "parent_a_index": 11, "parent_b_index": 1, "direction": 1, "status": "ok", "pass_geo": 0, "parts": 7, "g5": 0.9166666666666666, "sources_kept": 11, "sources_total": 12, "k_matched": 3, "seconds": 2.091269300028216}
+{"population": 1, "generation": 2, "individual": 18, "status": "started"}
+{"population": 1, "generation": 2, "individual": 18, "parent_a_index": 18, "parent_b_index": 19, "direction": 1, "status": "ok", "pass_geo": 0, "parts": 6, "g5": 0.75, "sources_kept": 9, "sources_total": 12, "k_matched": 2, "seconds": 6.966734699963126}
+{"population": 1, "generation": 2, "individual": 19, "status": "started"}
+{"population": 1, "generation": 2, "individual": 19, "parent_a_index": 29, "parent_b_index": 21, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 8, "g5": 0.8181818181818182, "sources_kept": 9, "sources_total": 11, "k_matched": 0, "seconds": 0.6742424000403844}
+{"population": 1, "generation": 2, "individual": 20, "status": "started"}
+{"population": 1, "generation": 2, "individual": 20, "parent_a_index": 11, "parent_b_index": 7, "direction": 1, "status": "ok", "pass_geo": 0, "parts": 6, "g5": 0.8888888888888888, "sources_kept": 8, "sources_total": 9, "k_matched": 1, "seconds": 19.280358300020453}
+{"population": 1, "generation": 2, "individual": 21, "status": "started"}
+{"population": 1, "generation": 2, "individual": 21, "parent_a_index": 17, "parent_b_index": 15, "direction": 1, "status": "ok", "pass_geo": 0, "parts": 8, "g5": 0.8333333333333334, "sources_kept": 10, "sources_total": 12, "k_matched": 1, "seconds": 2.6217957999906503}
+{"population": 1, "generation": 2, "individual": 22, "status": "started"}
+{"population": 1, "generation": 2, "individual": 22, "parent_a_index": 14, "parent_b_index": 24, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 5, "g5": 0.6363636363636364, "sources_kept": 7, "sources_total": 11, "k_matched": 1, "seconds": 0.4872804000042379}
+{"population": 1, "generation": 2, "individual": 23, "status": "started"}
+{"population": 1, "generation": 2, "individual": 23, "parent_a_index": 5, "parent_b_index": 26, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 8, "g5": 0.9333333333333333, "sources_kept": 14, "sources_total": 15, "k_matched": 5, "seconds": 5.7075181000400335}
+{"population": 1, "generation": 2, "individual": 24, "status": "started"}
+{"population": 1, "generation": 2, "individual": 24, "parent_a_index": 20, "parent_b_index": 24, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 6, "g5": 1.0, "sources_kept": 10, "sources_total": 10, "k_matched": 3, "seconds": 0.7336546999868006}
+{"population": 1, "generation": 2, "individual": 25, "status": "started"}
+{"population": 1, "generation": 2, "individual": 25, "parent_a_index": 21, "parent_b_index": 6, "direction": 0, "status": "ok", "pass_geo": 0, "parts": 7, "g5": 0.8333333333333334, "sources_kept": 10, "sources_total": 12, "k_matched": 2, "seconds": 0.7784530000062659}
+{"population": 1, "generation": 2, "individual": 26, "status": "started"}
+{"population": 1, "generation": 2, "individual": 26, "parent_a_index": 24, "parent_b_index": 20, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 5, "g5": 0.9, "sources_kept": 9, "sources_total": 10, "k_matched": 3, "seconds": 2.8820018999977037}
+{"population": 1, "generation": 2, "individual": 27, "status": "started"}
+{"population": 1, "generation": 2, "individual": 27, "parent_a_index": 12, "parent_b_index": 18, "direction": 1, "status": "ok", "pass_geo": 0, "parts": 7, "g5": 0.8333333333333334, "sources_kept": 10, "sources_total": 12, "k_matched": 2, "seconds": 9.066523400018923}
+{"population": 1, "generation": 2, "individual": 28, "status": "started"}
+{"population": 1, "generation": 2, "individual": 28, "parent_a_index": 25, "parent_b_index": 13, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 8, "g5": 0.8125, "sources_kept": 13, "sources_total": 16, "k_matched": 4, "seconds": 0.6942811000044458}
+{"population": 1, "generation": 2, "individual": 29, "status": "started"}
+{"population": 1, "generation": 2, "individual": 29, "parent_a_index": 4, "parent_b_index": 29, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 7, "g5": 0.8333333333333334, "sources_kept": 10, "sources_total": 12, "k_matched": 2, "seconds": 2.2757873999653384}
+{"population": 1, "generation": 2, "individual": 30, "status": "started"}
+{"population": 1, "generation": 2, "individual": 30, "parent_a_index": 13, "parent_b_index": 18, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 7, "g5": 0.7692307692307693, "sources_kept": 10, "sources_total": 13, "k_matched": 2, "seconds": 9.259476799983531}
+{"population": 1, "generation": 3, "individual": 1, "status": "started"}
+{"population": 1, "generation": 3, "individual": 1, "parent_a_index": 28, "parent_b_index": 20, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 9, "g5": 1.0, "sources_kept": 15, "sources_total": 15, "k_matched": 5, "seconds": 7.541516299999785}
+{"population": 1, "generation": 3, "individual": 2, "status": "started"}
+{"population": 1, "generation": 3, "individual": 2, "parent_a_index": 26, "parent_b_index": 4, "direction": 0, "status": "ok", "pass_geo": 0, "parts": 7, "g5": 0.8333333333333334, "sources_kept": 10, "sources_total": 12, "k_matched": 2, "seconds": 10.185917700000573}
+{"population": 1, "generation": 3, "individual": 3, "status": "started"}
+{"population": 1, "generation": 3, "individual": 3, "parent_a_index": 6, "parent_b_index": 21, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 8, "g5": 1.0, "sources_kept": 12, "sources_total": 12, "k_matched": 3, "seconds": 0.6037037000060081}
+{"population": 1, "generation": 3, "individual": 4, "status": "started"}
+{"population": 1, "generation": 3, "individual": 4, "parent_a_index": 14, "parent_b_index": 25, "direction": 0, "status": "ok", "pass_geo": 0, "parts": 9, "g5": 1.0, "sources_kept": 13, "sources_total": 13, "k_matched": 3, "seconds": 1.7953316000057384}
+{"population": 1, "generation": 3, "individual": 5, "status": "started"}
+{"population": 1, "generation": 3, "individual": 5, "parent_a_index": 21, "parent_b_index": 15, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 5, "g5": 0.8888888888888888, "sources_kept": 8, "sources_total": 9, "k_matched": 2, "seconds": 0.5313495000009425}
+{"population": 1, "generation": 3, "individual": 6, "status": "started"}
+{"population": 1, "generation": 3, "individual": 6, "parent_a_index": 14, "parent_b_index": 12, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 8, "g5": 1.0, "sources_kept": 14, "sources_total": 14, "k_matched": 5, "seconds": 5.483234600047581}
+{"population": 1, "generation": 3, "individual": 7, "status": "started"}
+{"population": 1, "generation": 3, "individual": 7, "parent_a_index": 12, "parent_b_index": 28, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 7, "g5": 0.9230769230769231, "sources_kept": 12, "sources_total": 13, "k_matched": 4, "seconds": 1.6617932000081055}
+{"population": 1, "generation": 3, "individual": 8, "status": "started"}
+{"population": 1, "generation": 3, "individual": 8, "parent_a_index": 5, "parent_b_index": 6, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 8, "g5": 0.9333333333333333, "sources_kept": 14, "sources_total": 15, "k_matched": 5, "seconds": 6.0211607000092044}
+{"population": 1, "generation": 3, "individual": 9, "status": "started"}
+{"population": 1, "generation": 3, "individual": 9, "parent_a_index": 7, "parent_b_index": 17, "direction": 0, "status": "ok", "pass_geo": 0, "parts": 7, "g5": 0.9090909090909091, "sources_kept": 10, "sources_total": 11, "k_matched": 2, "seconds": 3.36753280000994}
+{"population": 1, "generation": 3, "individual": 10, "status": "started"}
+{"population": 1, "generation": 3, "individual": 10, "parent_a_index": 21, "parent_b_index": 5, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 6, "g5": 0.7692307692307693, "sources_kept": 10, "sources_total": 13, "k_matched": 3, "seconds": 1.3819314000429586}
+{"population": 1, "generation": 3, "individual": 11, "status": "started"}
+{"population": 1, "generation": 3, "individual": 11, "parent_a_index": 29, "parent_b_index": 1, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 5, "g5": 0.7692307692307693, "sources_kept": 10, "sources_total": 13, "k_matched": 4, "seconds": 2.3562568000052124}
+{"population": 1, "generation": 3, "individual": 12, "status": "started"}
+{"population": 1, "generation": 3, "individual": 12, "parent_a_index": 29, "parent_b_index": 19, "direction": 1, "status": "ok", "pass_geo": 0, "parts": 9, "g5": 1.0, "sources_kept": 13, "sources_total": 13, "k_matched": 3, "seconds": 10.735434199974407}
+{"population": 1, "generation": 3, "individual": 13, "status": "started"}
+{"population": 1, "generation": 3, "individual": 13, "parent_a_index": 0, "parent_b_index": 15, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 9, "g5": 1.0, "sources_kept": 12, "sources_total": 12, "k_matched": 2, "seconds": 0.6470246999524534}
+{"population": 1, "generation": 3, "individual": 14, "status": "started"}
+{"population": 1, "generation": 3, "individual": 14, "parent_a_index": 22, "parent_b_index": 20, "direction": 0, "status": "ok", "pass_geo": 0, "parts": 10, "g5": 0.9375, "sources_kept": 15, "sources_total": 16, "k_matched": 4, "seconds": 3.3259015000076033}
+{"population": 1, "generation": 3, "individual": 15, "status": "started"}
+{"population": 1, "generation": 3, "individual": 15, "parent_a_index": 17, "parent_b_index": 21, "direction": 0, "status": "ok", "pass_geo": 0, "parts": 6, "g5": 0.9090909090909091, "sources_kept": 10, "sources_total": 11, "k_matched": 3, "seconds": 8.317487700027414}
+{"population": 1, "generation": 3, "individual": 16, "status": "started"}
+{"population": 1, "generation": 3, "individual": 16, "parent_a_index": 0, "parent_b_index": 1, "direction": 1, "status": "ok", "pass_geo": 0, "parts": 7, "g5": 0.7857142857142857, "sources_kept": 11, "sources_total": 14, "k_matched": 3, "seconds": 0.941834099998232}
+{"population": 1, "generation": 3, "individual": 17, "status": "started"}
+{"population": 1, "generation": 3, "individual": 17, "parent_a_index": 16, "parent_b_index": 20, "direction": 0, "status": "ok", "pass_geo": 0, "parts": 7, "g5": 0.8, "sources_kept": 12, "sources_total": 15, "k_matched": 4, "seconds": 2.60664169996744}
+{"population": 1, "generation": 3, "individual": 18, "status": "started"}
+{"population": 1, "generation": 3, "individual": 18, "parent_a_index": 20, "parent_b_index": 9, "direction": 0, "status": "ok", "pass_geo": 0, "parts": 7, "g5": 0.7142857142857143, "sources_kept": 10, "sources_total": 14, "k_matched": 3, "seconds": 1.6706483000307344}
+{"population": 1, "generation": 3, "individual": 19, "status": "started"}
+{"population": 1, "generation": 3, "individual": 19, "parent_a_index": 10, "parent_b_index": 12, "direction": 1, "status": "ok", "pass_geo": 0, "parts": 8, "g5": 0.9333333333333333, "sources_kept": 14, "sources_total": 15, "k_matched": 5, "seconds": 0.45552840002346784}
+{"population": 1, "generation": 3, "individual": 20, "status": "started"}
+{"population": 1, "generation": 3, "individual": 20, "parent_a_index": 1, "parent_b_index": 3, "direction": 1, "status": "ok", "pass_geo": 0, "parts": 8, "g5": 0.9285714285714286, "sources_kept": 13, "sources_total": 14, "k_matched": 4, "seconds": 1.4271537000313401}
+{"population": 1, "generation": 3, "individual": 21, "status": "started"}
+{"population": 1, "generation": 3, "individual": 21, "parent_a_index": 10, "parent_b_index": 11, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 7, "g5": 0.7857142857142857, "sources_kept": 11, "sources_total": 14, "k_matched": 3, "seconds": 0.3002583000343293}
+{"population": 1, "generation": 3, "individual": 22, "status": "started"}
+{"population": 1, "generation": 3, "individual": 22, "parent_a_index": 15, "parent_b_index": 13, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 5, "g5": 0.6363636363636364, "sources_kept": 7, "sources_total": 11, "k_matched": 1, "seconds": 4.0149927999591455}
+{"population": 1, "generation": 3, "individual": 23, "status": "started"}
+{"population": 1, "generation": 3, "individual": 23, "parent_a_index": 28, "parent_b_index": 27, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 7, "g5": 0.8, "sources_kept": 12, "sources_total": 15, "k_matched": 4, "seconds": 2.57075369998347}
+{"population": 1, "generation": 3, "individual": 24, "status": "started"}
+{"population": 1, "generation": 3, "individual": 24, "parent_a_index": 16, "parent_b_index": 8, "direction": 0, "status": "ok", "pass_geo": 0, "parts": 8, "g5": 0.8666666666666667, "sources_kept": 13, "sources_total": 15, "k_matched": 4, "seconds": 1.9909360999590717}
+{"population": 1, "generation": 3, "individual": 25, "status": "started"}
+{"population": 1, "generation": 3, "individual": 25, "parent_a_index": 11, "parent_b_index": 13, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 6, "g5": 0.75, "sources_kept": 9, "sources_total": 12, "k_matched": 2, "seconds": 7.203763899975456}
+{"population": 1, "generation": 3, "individual": 26, "status": "started"}
+{"population": 1, "generation": 3, "individual": 26, "parent_a_index": 8, "parent_b_index": 15, "direction": 1, "status": "ok", "pass_geo": 0, "parts": 8, "g5": 0.9166666666666666, "sources_kept": 11, "sources_total": 12, "k_matched": 2, "seconds": 0.5940396999940276}
+{"population": 1, "generation": 3, "individual": 27, "status": "started"}
+{"population": 1, "generation": 3, "individual": 27, "parent_a_index": 3, "parent_b_index": 8, "direction": 0, "status": "ok", "pass_geo": 0, "parts": 9, "g5": 0.9375, "sources_kept": 15, "sources_total": 16, "k_matched": 5, "seconds": 0.40223309997236356}
+{"population": 1, "generation": 3, "individual": 28, "status": "started"}
+{"population": 1, "generation": 3, "individual": 28, "parent_a_index": 25, "parent_b_index": 24, "direction": 0, "status": "ok", "pass_geo": 0, "parts": 5, "g5": 0.6666666666666666, "sources_kept": 8, "sources_total": 12, "k_matched": 2, "seconds": 3.042617600003723}
+{"population": 1, "generation": 3, "individual": 29, "status": "started"}
+{"population": 1, "generation": 3, "individual": 29, "parent_a_index": 0, "parent_b_index": 28, "direction": 1, "status": "ok", "pass_geo": 1, "parts": 8, "g5": 0.9333333333333333, "sources_kept": 14, "sources_total": 15, "k_matched": 5, "seconds": 0.4308316999813542}
+{"population": 1, "generation": 3, "individual": 30, "status": "started"}
+{"population": 1, "generation": 3, "individual": 30, "parent_a_index": 28, "parent_b_index": 8, "direction": 0, "status": "ok", "pass_geo": 1, "parts": 7, "g5": 0.8, "sources_kept": 12, "sources_total": 15, "k_matched": 4, "seconds": 0.487633700016886}

@@ -1,0 +1,29 @@
+{
+ "frozen": "2026-11-16",
+ "protocol": "RTIS_實驗計畫_v1.md (frozen 2026-11-16)",
+ "code_hash": "bb54458008ff10be",
+ "file_sha256": {
+  "skeleton_sdf_demo.py": "24c8c282bcdc4cf6a0a3b5218c0ef9acb52640227296fb246c654d2aaf3001b4",
+  "form_fusion_lab.py": "87aaeffac492f3a0894ed92e3fd17238ed9bf4117577d7e489c0ba7be5facd93",
+  "soft_match_lab.py": "23c969b95247ac6dba770a8e66c49ba03ffe61d501a3991858b54d42a297454d",
+  "fourier3d_demo.py": "597bfc01ff6286df79a76bb202924012083a05e759dc982df53b81260ff6b100",
+  "fourier_genetics.py": "fcb577071b633038146fcdede9e8a827f7bb12b25826d9eeacc4ccf44498f5e2",
+  "attribute_layer.py": "4ee2a363866b3f2cb2cf7eb628de07d526eb17cab59d6461f7d0d7518d5bc3a1",
+  "pce_match_test.py": "98176e7f210f00a5b342eb5e63bf9dfbd514be9ce202b96dd31df333eebb4ac6",
+  "rtis/pce.py": "97910845f568bf3e6f77edf2a88eaf3f1dafce64da0658b4debb983a418f6574",
+  "rtis/ontology.py": "7438080f39d763f9244b082b3bd6dc7c53d245aa57c21bf4ba9903d607883235",
+  "rtis/trait.py": "e6a19538b1889ed17ffdc229d6355358a43254674d8ed8fec95a510573d17d15",
+  "metrics_v1.py": "9884729b8a0ed8d0d5763a2c0b1994678fdac858dbb1e4392ee918cec337c7e8",
+  "run_v1.py": "0318e4415cf7412742471d6d0160d4a5789f8707d5d7aaab348d57749254e2f9",
+  "precheck_v1.py": "fdcca9d34437da5762de522ccca688550b87efddac216a9ec319c18ec2026d4e"
+ },
+ "verified_on": {
+  "python": "3.10.12",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3",
+  "scikit_image": "0.25.2"
+ },
+ "prechecks": "pilot/precheck_v1.json: all seven PASS",
+ "rule": "formal data must carry this code_hash; any change to these files = a new version (v1.1) with the reason written down"
+}

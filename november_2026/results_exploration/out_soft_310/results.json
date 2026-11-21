@@ -1,0 +1,5739 @@
+{
+ "low": 0.25,
+ "high": 0.4,
+ "preview_voxel": 0.03,
+ "children_per_cell": 16,
+ "seed": 7,
+ "match_rates": {
+  "quadruped.leg_front ~ biped.arm_front": {
+   "score": 0.3333333333333333,
+   "chance": 0.5555555555555554,
+   "matched": 0.5615
+  },
+  "quadruped.tail ~ spider.abdomen": {
+   "score": 0.25,
+   "chance": 0.0,
+   "matched": 0.0
+  },
+  "biped.arm_front ~ spider.leg": {
+   "score": 0.3333333333333333,
+   "chance": 0.5555555555555554,
+   "matched": 0.553
+  },
+  "biped.tail ~ spider.abdomen": {
+   "score": 0.25,
+   "chance": 0.0,
+   "matched": 0.0
+  },
+  "spider.fang ~ crab.claw": {
+   "score": 0.2857142857142857,
+   "chance": 0.23809523809523794,
+   "matched": 0.242
+  },
+  "serpent.fang ~ crab.claw": {
+   "score": 0.2857142857142857,
+   "chance": 0.23809523809523794,
+   "matched": 0.24
+  }
+ },
+ "founder_crowding": {
+  "quadruped": {
+   "swallowed": []
+  },
+  "biped": {
+   "swallowed": []
+  },
+  "spider": {
+   "swallowed": []
+  },
+  "serpent": {
+   "swallowed": []
+  },
+  "jellyfish": {
+   "swallowed": []
+  },
+  "crab": {
+   "swallowed": []
+  }
+ },
+ "modes": {
+  "strict": {
+   "children": 80,
+   "valid": 79,
+   "with_bubble": 0,
+   "parts": 6.6625,
+   "minority_share": 0.39981179457350713,
+   "new_humps": 0.09145833333333334,
+   "new_kinks_deg": 0.182731602929061,
+   "with_swallowed": 8,
+   "outcomes": {
+    "matched": 0,
+    "kept both": 27,
+    "kept one": 54,
+    "kept neither": 15
+   }
+  },
+  "soft": {
+   "children": 80,
+   "valid": 80,
+   "with_bubble": 0,
+   "parts": 6.8875,
+   "minority_share": 0.40443164375439195,
+   "new_humps": 0.09958333333333333,
+   "new_kinks_deg": 0.6274373312360135,
+   "with_swallowed": 11,
+   "outcomes": {
+    "matched": 21,
+    "kept both": 23,
+    "kept one": 43,
+    "kept neither": 9
+   }
+  },
+  "loose": {
+   "children": 80,
+   "valid": 80,
+   "with_bubble": 0,
+   "parts": 6.5625,
+   "minority_share": 0.4042257523465233,
+   "new_humps": 0.12625000000000003,
+   "new_kinks_deg": 0.8586624485117081,
+   "with_swallowed": 2,
+   "outcomes": {
+    "matched": 96,
+    "kept both": 0,
+    "kept one": 0,
+    "kept neither": 0
+   }
+  }
+ },
+ "soft_by_pair": {
+  "quadruped.leg_front ~ biped.arm_front": {
+   "decisions": 16,
+   "matched": 10,
+   "kept_both": 2,
+   "kept_both_swallowed": 1
+  },
+  "quadruped.tail ~ spider.abdomen": {
+   "decisions": 16,
+   "matched": 0,
+   "kept_both": 3,
+   "kept_both_swallowed": 3
+  },
+  "biped.arm_front ~ spider.leg": {
+   "decisions": 16,
+   "matched": 5,
+   "kept_both": 4,
+   "kept_both_swallowed": 0
+  },
+  "biped.tail ~ spider.abdomen": {
+   "decisions": 16,
+   "matched": 0,
+   "kept_both": 7,
+   "kept_both_swallowed": 7
+  },
+  "spider.fang ~ crab.claw": {
+   "decisions": 16,
+   "matched": 3,
+   "kept_both": 2,
+   "kept_both_swallowed": 0
+  },
+  "serpent.fang ~ crab.claw": {
+   "decisions": 16,
+   "matched": 3,
+   "kept_both": 5,
+   "kept_both_swallowed": 0
+  }
+ },
+ "swallowed_limbs": {
+  "strict": {
+   "quadruped x biped: arm_front + leg_front": 1,
+   "quadruped x spider: abdomen + tail": 5,
+   "biped x spider: abdomen + tail": 2
+  },
+  "soft": {
+   "quadruped x biped: arm_front + leg_front": 1,
+   "quadruped x spider: abdomen + tail": 3,
+   "biped x spider: abdomen + tail": 7
+  },
+  "loose": {
+   "biped x spider: horn + leg": 1,
+   "serpent x crab: claw + head": 1
+  }
+ },
+ "children": {
+  "strict": [
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.36780367340638986,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4011279589407334,
+    "new_humps": 0.0,
+    "new_kinks": 0.3239302106574353,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3783931463809691,
+    "new_humps": 0.0,
+    "new_kinks": 8.243716820288682e-11,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4739105829088851,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.385555100208809,
+    "new_humps": 0.0,
+    "new_kinks": 0.5634778251907226,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.43568877700368824,
+    "new_humps": 0.0,
+    "new_kinks": 7.170086746555171e-11,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.495138138601636,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4191750724058724,
+    "new_humps": 0.25,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4875921575923901,
+    "new_humps": 0.0,
+    "new_kinks": 2.936673126896494e-11,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.398981324278438,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4769254514585584,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.36085815712301283,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.36914132839429953,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 1,
+    "swallowed_own_pair": 1,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "kept both",
+      true
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.43386325050162056,
+    "new_humps": 0.0,
+    "new_kinks": 7.170086746555171e-11,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "kept both",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3046870528986475,
+    "new_humps": 0.0,
+    "new_kinks": 1.016279510991474,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "kept both",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.34593993325917693,
+    "new_humps": 0.0,
+    "new_kinks": 0.0433364829381464,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.44010564044519906,
+    "new_humps": 0.3333333333333333,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.493045909005162,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4762232521145934,
+    "new_humps": 0.3333333333333333,
+    "new_kinks": 6.0964566728216596e-12,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3749780457818629,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.26466053900044884,
+    "new_humps": 0.0,
+    "new_kinks": 1.6685248738212977e-09,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.43123938879456714,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.421312653910277,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 1,
+    "swallowed_own_pair": 1,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept both",
+      true
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.36658878111919857,
+    "new_humps": 0.0,
+    "new_kinks": 2.56183046167124,
+    "outer_shells": 1,
+    "swallowed": 1,
+    "swallowed_own_pair": 1,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept both",
+      true
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.49455707580145813,
+    "new_humps": 0.3333333333333333,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.3238830616089494,
+    "new_humps": 0.0,
+    "new_kinks": 0.15196011012155472,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.36856087086787176,
+    "new_humps": 0.0,
+    "new_kinks": 0.2587965772495302,
+    "outer_shells": 1,
+    "swallowed": 1,
+    "swallowed_own_pair": 1,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept both",
+      true
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4182871545341571,
+    "new_humps": 0.3333333333333333,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.404074702886248,
+    "new_humps": 0.0,
+    "new_kinks": 8.095047968488254,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.4820489461261336,
+    "new_humps": 0.0,
+    "new_kinks": 0.15196010897321344,
+    "outer_shells": 1,
+    "swallowed": 1,
+    "swallowed_own_pair": 1,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept both",
+      true
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4593218005781673,
+    "new_humps": 0.0,
+    "new_kinks": 0.15196011012154523,
+    "outer_shells": 1,
+    "swallowed": 1,
+    "swallowed_own_pair": 1,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept both",
+      true
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.2958062564642975,
+    "new_humps": 0.3333333333333333,
+    "new_kinks": 0.15196011012154523,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4281727201930937,
+    "new_humps": 0.3333333333333333,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both",
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept both",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.3643928383574183,
+    "new_humps": 0.3333333333333333,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both",
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept both",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.20618894245714592,
+    "new_humps": 0.6666666666666666,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one",
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept one",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3933561231620146,
+    "new_humps": 0.3333333333333333,
+    "new_kinks": 0.4447914645060382,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one",
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept one",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.25665404205302333,
+    "new_humps": 0.3333333333333333,
+    "new_kinks": 0.6849100686356676,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one",
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept one",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4734700744887501,
+    "new_humps": 0.0,
+    "new_kinks": 0.018287216908019488,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both",
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept both",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.45179232490214194,
+    "new_humps": 0.3333333333333333,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 1,
+    "swallowed_own_pair": 1,
+    "outcomes": [
+     "kept one",
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept one",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept both",
+      true
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4836912014381305,
+    "new_humps": 0.0,
+    "new_kinks": 2.2676687194689293e-09,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both",
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept both",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3610563206768552,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one",
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept one",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.24967312608551417,
+    "new_humps": 0.0,
+    "new_kinks": 2.0690151814051205e-09,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both",
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept both",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.28804314898166083,
+    "new_humps": 0.0,
+    "new_kinks": 3.9146167788809784e-11,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one",
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept one",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.47022676188970536,
+    "new_humps": 0.3333333333333333,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one",
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept one",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.3691858241943131,
+    "new_humps": 0.0,
+    "new_kinks": 5.870504082849948e-11,
+    "outer_shells": 1,
+    "swallowed": 1,
+    "swallowed_own_pair": 1,
+    "outcomes": [
+     "kept both",
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept both",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept both",
+      true
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4494997096915807,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one",
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept one",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4563126440502753,
+    "new_humps": 0.3333333333333333,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one",
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept one",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.2584940132942164,
+    "new_humps": 0.0,
+    "new_kinks": 1.3793529281732238e-09,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one",
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept one",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.47957920792079206,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept both",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4910714285714286,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.3655913978494624,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept both",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4891975308641975,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.428006329113924,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.339185393258427,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4382022471910112,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.42069892473118276,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept both",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4009831460674157,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.4938118811881188,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept both",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.46044303797468356,
+    "new_humps": 0.2,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.43827160493827155,
+    "new_humps": 0.0,
+    "new_kinks": 6.778577699151356e-12,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4549731182795699,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept both",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.48319892473118276,
+    "new_humps": 0.2,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept both",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.47091584158415845,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept both",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.42651098901098905,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.45049764274489257,
+    "new_humps": 1.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.2846932698034544,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.29317350670459164,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.2207161125319693,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": false,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.2989769820971867,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 2,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4047051816557475,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4997611084567607,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.47537977998952335,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept both",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4575447570332481,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.415792103948026,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.3687525396180415,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept both",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.29979296066252586,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept both",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.2247054043071922,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.40369331463300606,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3465473145780051,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4498855835240275,
+    "new_humps": 1.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept both",
+      false
+     ]
+    ]
+   }
+  ],
+  "soft": [
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3820814550280038,
+    "new_humps": 0.0,
+    "new_kinks": 1.0667520200513537e-10,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.45809183693382505,
+    "new_humps": 0.2,
+    "new_kinks": 7.160736004152568e-10,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.46929336689889356,
+    "new_humps": 0.0,
+    "new_kinks": 6.960817700019106e-10,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3972236093078997,
+    "new_humps": 0.0,
+    "new_kinks": 8.701270814981399e-10,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4233358702652069,
+    "new_humps": 0.0,
+    "new_kinks": 5.569315488792841,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.3120166006413884,
+    "new_humps": 0.0,
+    "new_kinks": 9.46076994523537e-10,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.3776817410094151,
+    "new_humps": 0.0,
+    "new_kinks": 3.1798599286094884,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3860581244382304,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "kept both",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.42830683747491893,
+    "new_humps": 0.0,
+    "new_kinks": 1.016279511850513,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3634991682529883,
+    "new_humps": 0.0,
+    "new_kinks": 6.206350988691156e-10,
+    "outer_shells": 1,
+    "swallowed": 1,
+    "swallowed_own_pair": 1,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "kept both",
+      true
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.4591522546113781,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.33536287883223076,
+    "new_humps": 0.0,
+    "new_kinks": 7.02226543580764e-10,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.46587826629978735,
+    "new_humps": 0.0,
+    "new_kinks": 5.229494482553697,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.40037042753511354,
+    "new_humps": 0.0,
+    "new_kinks": 5.19482529620318,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.3781447754283068,
+    "new_humps": 0.0,
+    "new_kinks": 2.348770067328587e-11,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.43063442811701114,
+    "new_humps": 0.2,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4841399250281565,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 1,
+    "swallowed_own_pair": 1,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept both",
+      true
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.45792991633399105,
+    "new_humps": 0.0,
+    "new_kinks": 8.095047968488268,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3779286926994906,
+    "new_humps": 0.0,
+    "new_kinks": 7.79906661800093e-06,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4292419854189553,
+    "new_humps": 0.0,
+    "new_kinks": 0.25873745284114474,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3662463516529635,
+    "new_humps": 0.3333333333333333,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.45718044020251153,
+    "new_humps": 0.0,
+    "new_kinks": 2.5450788143643877e-09,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4970097431897092,
+    "new_humps": 0.0,
+    "new_kinks": 2.7203839181311196e-09,
+    "outer_shells": 1,
+    "swallowed": 1,
+    "swallowed_own_pair": 1,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept both",
+      true
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.26825127334465193,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4632524110409045,
+    "new_humps": 0.3333333333333333,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.43942313195093574,
+    "new_humps": 0.0,
+    "new_kinks": 8.24700807860979,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3757196104833831,
+    "new_humps": 0.0,
+    "new_kinks": 8.095047970156761,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.42600797824616615,
+    "new_humps": 0.0,
+    "new_kinks": 0.15196011012155944,
+    "outer_shells": 1,
+    "swallowed": 1,
+    "swallowed_own_pair": 1,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept both",
+      true
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4475581743733147,
+    "new_humps": 0.0,
+    "new_kinks": 2.615599922355358,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.47731988818576254,
+    "new_humps": 0.3333333333333333,
+    "new_kinks": 3.9477754398831166e-11,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.46292516357948155,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.47207393275339987,
+    "new_humps": 0.3333333333333333,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4941845389176901,
+    "new_humps": 0.3333333333333333,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both",
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept both",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.44687058552886194,
+    "new_humps": 0.3333333333333333,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one",
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept one",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4043236962329992,
+    "new_humps": 0.0,
+    "new_kinks": 0.6848589167145072,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both",
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept both",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.35547787875761505,
+    "new_humps": 0.5,
+    "new_kinks": 5.870504082849948e-11,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one",
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept one",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.35568693291900544,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both",
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept both",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4190672802843953,
+    "new_humps": 0.3333333333333333,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 1,
+    "swallowed_own_pair": 1,
+    "outcomes": [
+     "kept one",
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept one",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept both",
+      true
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.3958924675268657,
+    "new_humps": 0.3333333333333333,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 1,
+    "swallowed_own_pair": 1,
+    "outcomes": [
+     "kept one",
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept one",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept both",
+      true
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.3315031118886107,
+    "new_humps": 0.0,
+    "new_kinks": 0.012191476559317257,
+    "outer_shells": 1,
+    "swallowed": 1,
+    "swallowed_own_pair": 1,
+    "outcomes": [
+     "kept both",
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept both",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept both",
+      true
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.48915299000188645,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 1,
+    "swallowed_own_pair": 1,
+    "outcomes": [
+     "kept one",
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept one",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept both",
+      true
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.4787667957910279,
+    "new_humps": 0.0,
+    "new_kinks": 0.33359359840888825,
+    "outer_shells": 1,
+    "swallowed": 1,
+    "swallowed_own_pair": 1,
+    "outcomes": [
+     "matched",
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "matched",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept both",
+      true
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4949246748457774,
+    "new_humps": 0.0,
+    "new_kinks": 0.5136441875358804,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched",
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "matched",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4554064736086003,
+    "new_humps": 0.5,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched",
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "matched",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.36209237095516134,
+    "new_humps": 0.3333333333333333,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 1,
+    "swallowed_own_pair": 1,
+    "outcomes": [
+     "kept one",
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept one",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept both",
+      true
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.33876575836028555,
+    "new_humps": 0.0,
+    "new_kinks": 0.663920693942489,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one",
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "kept one",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.24602311206375405,
+    "new_humps": 0.0,
+    "new_kinks": 7.329248319365433e-11,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched",
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "matched",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.37016363787470435,
+    "new_humps": 0.0,
+    "new_kinks": 0.3335935983795286,
+    "outer_shells": 1,
+    "swallowed": 1,
+    "swallowed_own_pair": 1,
+    "outcomes": [
+     "matched",
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "matched",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "kept both",
+      true
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.30246913580246915,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.33544303797468356,
+    "new_humps": 0.0,
+    "new_kinks": 7.340143307980422e-11,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4004629629629629,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4271978021978022,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.3948019801980198,
+    "new_humps": 0.2,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept both",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.42167721518987344,
+    "new_humps": 0.0,
+    "new_kinks": 6.772893357265275e-12,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4567307692307693,
+    "new_humps": 0.16666666666666666,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4593373493975904,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4612341772151899,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.31712962962962965,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4599719101123596,
+    "new_humps": 0.2,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.45138888888888884,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.3907967032967033,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.3862359550561798,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.44758064516129037,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "kept both",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.2756024096385542,
+    "new_humps": 0.0,
+    "new_kinks": 1.1612636778105903e-11,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.2971014492753623,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.49862700228832957,
+    "new_humps": 1.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.36998733642887294,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept both",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.47802197802197804,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.3317757009345794,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4240661359461115,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept neither"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept neither",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 9,
+    "minority": 0.48960302457466914,
+    "new_humps": 1.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept both",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.17579710144927538,
+    "new_humps": 0.0,
+    "new_kinks": 5.397495783654449e-10,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.42543244506778866,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 10,
+    "minority": 0.40619650804519003,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept both",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4092444069227522,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.2710997442455243,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.3307302659349936,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept both",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4692219679633868,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.30455888560574085,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept one"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept one",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.477364410578216,
+    "new_humps": 1.0,
+    "new_kinks": 6.941391461623425e-09,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "kept both"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "kept both",
+      false
+     ]
+    ]
+   }
+  ],
+  "loose": [
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4828171652713541,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.32798271338169466,
+    "new_humps": 0.2,
+    "new_kinks": 7.022094905551057e-10,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3566731065706535,
+    "new_humps": 0.0,
+    "new_kinks": 2.9013861535828824,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3296840544074313,
+    "new_humps": 0.0,
+    "new_kinks": 5.194825296186229,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.38459887204105925,
+    "new_humps": 0.0,
+    "new_kinks": 5.445274096419999,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.46118228121623706,
+    "new_humps": 0.0,
+    "new_kinks": 6.96101665198512e-10,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3326307983529458,
+    "new_humps": 0.0,
+    "new_kinks": 5.194825296203175,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3793493745487188,
+    "new_humps": 0.0,
+    "new_kinks": 2.5438879428793824,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.26897332318560585,
+    "new_humps": 0.0,
+    "new_kinks": 6.266823504574859e-10,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4940577249575552,
+    "new_humps": 0.0,
+    "new_kinks": 7.45075112718041e-11,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.46349745331069603,
+    "new_humps": 0.0,
+    "new_kinks": 0.8130236087931791,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.4556829546247413,
+    "new_humps": 0.0,
+    "new_kinks": 6.493531620253961,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4335811720625256,
+    "new_humps": 0.2,
+    "new_kinks": 5.736069397244137e-11,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.46773217805358774,
+    "new_humps": 0.0,
+    "new_kinks": 2.936055339933405,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 4,
+    "minority": 0.4742501414827391,
+    "new_humps": 0.0,
+    "new_kinks": 8.243716820288682e-11,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x biped",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.45469979935175175,
+    "new_humps": 0.2,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.leg_front ~ biped.arm_front",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.49033784170466027,
+    "new_humps": 0.5,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4351666066436864,
+    "new_humps": 0.0,
+    "new_kinks": 0.36586595753856166,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.3207285074857231,
+    "new_humps": 0.0,
+    "new_kinks": 6.323181852564987,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4109634486661593,
+    "new_humps": 0.5,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.48667820941686696,
+    "new_humps": 0.0,
+    "new_kinks": 6.0712859777490635,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.46403279340461007,
+    "new_humps": 0.5,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3751931477842849,
+    "new_humps": 0.0,
+    "new_kinks": 6.621192483180494e-11,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4762223251187598,
+    "new_humps": 0.5,
+    "new_kinks": 6.574083499799599e-10,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.37428615527087516,
+    "new_humps": 0.25,
+    "new_kinks": 6.574083499799599e-10,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3361044435337509,
+    "new_humps": 0.25,
+    "new_kinks": 0.11397008172991008,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4985508737630978,
+    "new_humps": 0.25,
+    "new_kinks": 3.7691027080064217,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4566548335648505,
+    "new_humps": 0.25,
+    "new_kinks": 0.11397008259116603,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4786177968640767,
+    "new_humps": 0.25,
+    "new_kinks": 2.3016421570775165,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3857805078117548,
+    "new_humps": 0.0,
+    "new_kinks": 2.3690888758899273,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.40300402269841995,
+    "new_humps": 0.25,
+    "new_kinks": 2.9608315799123375e-11,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "quadruped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.44373438125941894,
+    "new_humps": 0.0,
+    "new_kinks": 0.4476772087879235,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "quadruped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.430435558367838,
+    "new_humps": 0.0,
+    "new_kinks": 0.41080193963246786,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched",
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "matched",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.38835430943821614,
+    "new_humps": 0.4,
+    "new_kinks": 5.798343557472842,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched",
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "matched",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4191017181232993,
+    "new_humps": 0.2,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched",
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "matched",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3779036742503513,
+    "new_humps": 0.0,
+    "new_kinks": 5.86425130677526e-11,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched",
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "matched",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.39620372975876805,
+    "new_humps": 0.4,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched",
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "matched",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.35846015564381684,
+    "new_humps": 0.4,
+    "new_kinks": 0.4108019370511727,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched",
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "matched",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.387371773554015,
+    "new_humps": 0.0,
+    "new_kinks": 2.1257494486093263e-05,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched",
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "matched",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.40959390928304584,
+    "new_humps": 0.2,
+    "new_kinks": 5.798343557859008,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched",
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "matched",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.36626144933077875,
+    "new_humps": 0.4,
+    "new_kinks": 0.4108019379582316,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched",
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "matched",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4952294174591271,
+    "new_humps": 0.0,
+    "new_kinks": 0.8217172865040958,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched",
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "matched",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4605885425869447,
+    "new_humps": 0.2,
+    "new_kinks": 0.007314885935590354,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched",
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "matched",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.421398989402595,
+    "new_humps": 0.0,
+    "new_kinks": 0.4109460427447381,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched",
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "matched",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.44027027354526344,
+    "new_humps": 0.4,
+    "new_kinks": 0.39832171799704313,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched",
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "matched",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.412311454530423,
+    "new_humps": 0.2,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched",
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "matched",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.33554745227964783,
+    "new_humps": 0.0,
+    "new_kinks": 9.070788564713439e-10,
+    "outer_shells": 1,
+    "swallowed": 1,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched",
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "matched",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "biped x spider",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.47065545560002764,
+    "new_humps": 0.2,
+    "new_kinks": 0.21952998641674243,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched",
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "biped.arm_front ~ spider.leg",
+      "matched",
+      false
+     ],
+     [
+      "biped.tail ~ spider.abdomen",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3019578313253012,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3501506024096386,
+    "new_humps": 0.16666666666666666,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.39608433734939763,
+    "new_humps": 0.16666666666666666,
+    "new_kinks": 0.6074575101640841,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.43887362637362637,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3674698795180723,
+    "new_humps": 0.16666666666666666,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4581043956043956,
+    "new_humps": 0.0,
+    "new_kinks": 1.988122259414619e-10,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4549050632911392,
+    "new_humps": 0.16666666666666666,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.45260989010989006,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4635989010989011,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4677197802197802,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3411144578313253,
+    "new_humps": 0.16666666666666666,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4189560439560439,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.47115384615384615,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.3653846153846154,
+    "new_humps": 0.16666666666666666,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4661144578313253,
+    "new_humps": 0.0,
+    "new_kinks": 1.5110164971095705e-10,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "spider x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.3516483516483517,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "spider.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.29188405797101447,
+    "new_humps": 0.5,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.4644453474197481,
+    "new_humps": 0.5,
+    "new_kinks": 4.4585846126210527e-10,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4531168150864327,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.464392803598201,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 1,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.3162471395881007,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.2909322365844105,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4030892448512585,
+    "new_humps": 0.5,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.3360422592442097,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.4925340360122969,
+    "new_humps": 0.5,
+    "new_kinks": 1.5672583231207682e-09,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.4955474070193819,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 7,
+    "minority": 0.23050201703272077,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.3960519740129935,
+    "new_humps": 0.0,
+    "new_kinks": 5.397566837928025e-10,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.27519301097114995,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 5,
+    "minority": 0.22529644268774707,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 8,
+    "minority": 0.393437626980902,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   },
+   {
+    "pair": "serpent x crab",
+    "valid": true,
+    "bubbles": 0,
+    "parts": 6,
+    "minority": 0.2703648175912044,
+    "new_humps": 0.0,
+    "new_kinks": 0.0,
+    "outer_shells": 1,
+    "swallowed": 0,
+    "swallowed_own_pair": 0,
+    "outcomes": [
+     "matched"
+    ],
+    "by_kind": [
+     [
+      "serpent.fang ~ crab.claw",
+      "matched",
+      false
+     ]
+    ]
+   }
+  ]
+ }
+}

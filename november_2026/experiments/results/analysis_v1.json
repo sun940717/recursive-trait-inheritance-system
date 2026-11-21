@@ -1,0 +1,1662 @@
+{
+ "analysis_version": "analyze_v1.0",
+ "python": "3.10.12",
+ "numpy": "2.2.6",
+ "code_hash": [
+  "bb54458008ff10be"
+ ],
+ "rows": {
+  "X1": 7650,
+  "X2": 9180
+ },
+ "errors": 0,
+ "n_flips": 20000,
+ "n_boot": 10000,
+ "rng_seed": 20261116,
+ "confirmatory": {
+  "delta": 0.07516339869281047,
+  "p_sign_flip": 4.999750012499375e-05,
+  "ci95": [
+   0.05620915032679739,
+   0.09411764705882351
+  ],
+  "pairs_better": 9,
+  "pairs_worse": 1,
+  "pairs_same": 5,
+  "observations_different": 185,
+  "observations": 765,
+  "per_pair": {
+   "quadruped x biped": {
+    "condition": 0.9313725490196079,
+    "reference": 0.7843137254901961,
+    "difference": 0.14705882352941177
+   },
+   "quadruped x spider": {
+    "condition": 1.0,
+    "reference": 0.8921568627450981,
+    "difference": 0.10784313725490197
+   },
+   "quadruped x serpent": {
+    "condition": 0.9607843137254902,
+    "reference": 0.8529411764705882,
+    "difference": 0.10784313725490197
+   },
+   "quadruped x jellyfish": {
+    "condition": 0.6862745098039216,
+    "reference": 0.6862745098039216,
+    "difference": 0.0
+   },
+   "quadruped x crab": {
+    "condition": 1.0,
+    "reference": 0.9901960784313726,
+    "difference": 0.00980392156862745
+   },
+   "biped x spider": {
+    "condition": 0.8333333333333334,
+    "reference": 0.7058823529411765,
+    "difference": 0.12745098039215685
+   },
+   "biped x serpent": {
+    "condition": 1.0,
+    "reference": 0.7058823529411765,
+    "difference": 0.29411764705882354
+   },
+   "biped x jellyfish": {
+    "condition": 0.5490196078431373,
+    "reference": 0.5490196078431373,
+    "difference": 0.0
+   },
+   "biped x crab": {
+    "condition": 0.8529411764705882,
+    "reference": 0.696078431372549,
+    "difference": 0.1568627450980392
+   },
+   "spider x serpent": {
+    "condition": 0.7549019607843137,
+    "reference": 0.8235294117647058,
+    "difference": -0.06862745098039216
+   },
+   "spider x jellyfish": {
+    "condition": 0.3627450980392157,
+    "reference": 0.3627450980392157,
+    "difference": 0.0
+   },
+   "spider x crab": {
+    "condition": 0.9705882352941176,
+    "reference": 0.7745098039215687,
+    "difference": 0.19607843137254902
+   },
+   "serpent x jellyfish": {
+    "condition": 0.3627450980392157,
+    "reference": 0.3627450980392157,
+    "difference": 0.0
+   },
+   "serpent x crab": {
+    "condition": 0.9019607843137255,
+    "reference": 0.8529411764705882,
+    "difference": 0.049019607843137254
+   },
+   "jellyfish x crab": {
+    "condition": 0.5980392156862745,
+    "reference": 0.5980392156862745,
+    "difference": 0.0
+   }
+  }
+ },
+ "x1_kept": {
+  "delta": -0.004766732903987806,
+  "p_sign_flip": 0.009249537523123843,
+  "ci95": [
+   -0.008220046474948433,
+   -0.0013825672330574285
+  ],
+  "pairs_better": 2,
+  "pairs_worse": 7,
+  "pairs_same": 6,
+  "observations_different": 322,
+  "observations": 765,
+  "per_pair": {
+   "quadruped x biped": {
+    "condition": 0.9180035650623887,
+    "reference": 0.927807486631016,
+    "difference": -0.009803921568627449
+   },
+   "quadruped x spider": {
+    "condition": 0.7998366013071895,
+    "reference": 0.8137254901960785,
+    "difference": -0.013888888888888892
+   },
+   "quadruped x serpent": {
+    "condition": 0.8660130718954246,
+    "reference": 0.8714596949891066,
+    "difference": -0.005446623093681913
+   },
+   "quadruped x jellyfish": {
+    "condition": 0.7622549019607843,
+    "reference": 0.7622549019607843,
+    "difference": 0.0
+   },
+   "quadruped x crab": {
+    "condition": 0.8374183006535947,
+    "reference": 0.8374183006535948,
+    "difference": -6.530723674265627e-18
+   },
+   "biped x spider": {
+    "condition": 0.8009049773755657,
+    "reference": 0.8303167420814477,
+    "difference": -0.029411764705882353
+   },
+   "biped x serpent": {
+    "condition": 0.8970588235294118,
+    "reference": 0.9137254901960784,
+    "difference": -0.016666666666666673
+   },
+   "biped x jellyfish": {
+    "condition": 0.6492374727668846,
+    "reference": 0.6492374727668846,
+    "difference": 0.0
+   },
+   "biped x crab": {
+    "condition": 0.8318250377073906,
+    "reference": 0.8190045248868779,
+    "difference": 0.01282051282051282
+   },
+   "spider x serpent": {
+    "condition": 0.7245989304812834,
+    "reference": 0.7370766488413548,
+    "difference": -0.012477718360071293
+   },
+   "spider x jellyfish": {
+    "condition": 0.7529411764705882,
+    "reference": 0.7529411764705882,
+    "difference": 0.0
+   },
+   "spider x crab": {
+    "condition": 0.915966386554622,
+    "reference": 0.9054621848739496,
+    "difference": 0.010504201680672289
+   },
+   "serpent x jellyfish": {
+    "condition": 0.6904761904761904,
+    "reference": 0.6904761904761904,
+    "difference": 0.0
+   },
+   "serpent x crab": {
+    "condition": 0.7361853832442067,
+    "reference": 0.7433155080213903,
+    "difference": -0.0071301247771835986
+   },
+   "jellyfish x crab": {
+    "condition": 0.7558823529411762,
+    "reference": 0.7558823529411762,
+    "difference": 0.0
+   }
+  }
+ },
+ "k": {
+  "counts": {
+   "0": 592,
+   "1": 122,
+   "2": 454,
+   "3": 209,
+   "4": 122,
+   "5": 31
+  },
+  "share_k0": 0.3869281045751634,
+  "share_k0_or_1": 0.4666666666666667,
+  "rows": 1530
+ },
+ "interpretation": "PCE written as better (higher pass rate, parts kept not lower by more than 5 pp)",
+ "x2": [
+  {
+   "condition": "relative_off",
+   "measure": "bend",
+   "in_family": true,
+   "reference_mean": 1.6010574633361911,
+   "condition_mean": 159.45830795346748,
+   "delta": 157.85725049013126,
+   "p_sign_flip": 4.999750012499375e-05,
+   "ci95": [
+    153.8036007104709,
+    161.8985490802549
+   ],
+   "pairs_better": 15,
+   "pairs_worse": 0,
+   "pairs_same": 0,
+   "observations_different": 765,
+   "observations": 765,
+   "per_pair": {
+    "quadruped x biped": {
+     "condition": 68.32433396997912,
+     "reference": 6.192738496059396,
+     "difference": 62.131595473919724
+    },
+    "quadruped x spider": {
+     "condition": 78.69402572705494,
+     "reference": 3.759864461510213,
+     "difference": 74.93416126554472
+    },
+    "quadruped x serpent": {
+     "condition": 63.34463360706715,
+     "reference": 0.928134390880141,
+     "difference": 62.416499216187
+    },
+    "quadruped x jellyfish": {
+     "condition": 352.87304845233746,
+     "reference": 1.1894603054141793e-08,
+     "difference": 352.8730484404428
+    },
+    "quadruped x crab": {
+     "condition": 75.45722543373905,
+     "reference": 4.628081464305555,
+     "difference": 70.8291439694335
+    },
+    "biped x spider": {
+     "condition": 117.34842035334628,
+     "reference": 1.8833220256034993,
+     "difference": 115.4650983277428
+    },
+    "biped x serpent": {
+     "condition": 111.91853825879976,
+     "reference": 0.01328474630336023,
+     "difference": 111.90525351249644
+    },
+    "biped x jellyfish": {
+     "condition": 433.31923425415107,
+     "reference": 1.1689072402820035e-08,
+     "difference": 433.31923424246196
+    },
+    "biped x crab": {
+     "condition": 76.49722034049688,
+     "reference": 6.538958951824423,
+     "difference": 69.95826138867245
+    },
+    "spider x serpent": {
+     "condition": 71.83683170639853,
+     "reference": 9.225022314668047e-09,
+     "difference": 71.8368316971735
+    },
+    "spider x jellyfish": {
+     "condition": 118.992997499802,
+     "reference": 3.1055377877130335e-10,
+     "difference": 118.99299749949144
+    },
+    "spider x crab": {
+     "condition": 16.888521568507446,
+     "reference": 0.07146558948456214,
+     "difference": 16.817055979022882
+    },
+    "serpent x jellyfish": {
+     "condition": 606.0625612681065,
+     "reference": 4.252119423449139e-09,
+     "difference": 606.0625612638545
+    },
+    "serpent x crab": {
+     "condition": 68.98449173684088,
+     "reference": 5.4053028371330865e-09,
+     "difference": 68.98449173143558
+    },
+    "jellyfish x crab": {
+     "condition": 131.3325351253852,
+     "reference": 1.178129504910653e-05,
+     "difference": 131.33252334409016
+    }
+   },
+   "p_holm": 0.0002999850007499625
+  },
+  {
+   "condition": "linkage_off",
+   "measure": "humps",
+   "in_family": true,
+   "reference_mean": 0.2627450980392157,
+   "condition_mean": 1.1228758169934638,
+   "delta": 0.8601307189542482,
+   "p_sign_flip": 4.999750012499375e-05,
+   "ci95": [
+    0.8183006535947711,
+    0.903267973856209
+   ],
+   "pairs_better": 15,
+   "pairs_worse": 0,
+   "pairs_same": 0,
+   "observations_different": 473,
+   "observations": 765,
+   "per_pair": {
+    "quadruped x biped": {
+     "condition": 0.45098039215686275,
+     "reference": 0.20588235294117646,
+     "difference": 0.24509803921568626
+    },
+    "quadruped x spider": {
+     "condition": 1.1372549019607843,
+     "reference": 0.24509803921568626,
+     "difference": 0.8921568627450981
+    },
+    "quadruped x serpent": {
+     "condition": 3.6666666666666665,
+     "reference": 0.5686274509803921,
+     "difference": 3.0980392156862746
+    },
+    "quadruped x jellyfish": {
+     "condition": 0.14705882352941177,
+     "reference": 0.0392156862745098,
+     "difference": 0.10784313725490197
+    },
+    "quadruped x crab": {
+     "condition": 0.803921568627451,
+     "reference": 0.20588235294117646,
+     "difference": 0.5980392156862745
+    },
+    "biped x spider": {
+     "condition": 1.8823529411764706,
+     "reference": 0.7647058823529411,
+     "difference": 1.1176470588235294
+    },
+    "biped x serpent": {
+     "condition": 3.5588235294117645,
+     "reference": 0.6568627450980392,
+     "difference": 2.9019607843137254
+    },
+    "biped x jellyfish": {
+     "condition": 0.029411764705882353,
+     "reference": 0.0,
+     "difference": 0.029411764705882353
+    },
+    "biped x crab": {
+     "condition": 0.5294117647058824,
+     "reference": 0.29411764705882354,
+     "difference": 0.23529411764705882
+    },
+    "spider x serpent": {
+     "condition": 2.7450980392156863,
+     "reference": 0.5882352941176471,
+     "difference": 2.156862745098039
+    },
+    "spider x jellyfish": {
+     "condition": 0.049019607843137254,
+     "reference": 0.0,
+     "difference": 0.049019607843137254
+    },
+    "spider x crab": {
+     "condition": 0.29411764705882354,
+     "reference": 0.10784313725490197,
+     "difference": 0.18627450980392157
+    },
+    "serpent x jellyfish": {
+     "condition": 0.2549019607843137,
+     "reference": 0.09803921568627451,
+     "difference": 0.1568627450980392
+    },
+    "serpent x crab": {
+     "condition": 1.2352941176470589,
+     "reference": 0.16666666666666666,
+     "difference": 1.0686274509803921
+    },
+    "jellyfish x crab": {
+     "condition": 0.058823529411764705,
+     "reference": 0.0,
+     "difference": 0.058823529411764705
+    }
+   },
+   "p_holm": 0.0002999850007499625
+  },
+  {
+   "condition": "graft_off",
+   "measure": "kept",
+   "in_family": true,
+   "reference_mean": 0.7959068781617802,
+   "condition_mean": 0.7921922195451606,
+   "delta": -0.0037146586166194,
+   "p_sign_flip": 4.999750012499375e-05,
+   "ci95": [
+    -0.004728390708782866,
+    -0.0026920519567578387
+   ],
+   "pairs_better": 0,
+   "pairs_worse": 4,
+   "pairs_same": 11,
+   "observations_different": 68,
+   "observations": 765,
+   "per_pair": {
+    "quadruped x biped": {
+     "condition": 0.9180035650623887,
+     "reference": 0.9180035650623887,
+     "difference": 0.0
+    },
+    "quadruped x spider": {
+     "condition": 0.7998366013071895,
+     "reference": 0.7998366013071895,
+     "difference": 0.0
+    },
+    "quadruped x serpent": {
+     "condition": 0.8660130718954246,
+     "reference": 0.8660130718954246,
+     "difference": 0.0
+    },
+    "quadruped x jellyfish": {
+     "condition": 0.7622549019607843,
+     "reference": 0.7622549019607843,
+     "difference": 0.0
+    },
+    "quadruped x crab": {
+     "condition": 0.8374183006535947,
+     "reference": 0.8374183006535947,
+     "difference": 0.0
+    },
+    "biped x spider": {
+     "condition": 0.8009049773755657,
+     "reference": 0.8009049773755657,
+     "difference": 0.0
+    },
+    "biped x serpent": {
+     "condition": 0.8970588235294118,
+     "reference": 0.8970588235294118,
+     "difference": 0.0
+    },
+    "biped x jellyfish": {
+     "condition": 0.6339869281045752,
+     "reference": 0.6492374727668846,
+     "difference": -0.015250544662309368
+    },
+    "biped x crab": {
+     "condition": 0.8107088989441931,
+     "reference": 0.8318250377073906,
+     "difference": -0.02111613876319758
+    },
+    "spider x serpent": {
+     "condition": 0.7245989304812834,
+     "reference": 0.7245989304812834,
+     "difference": 0.0
+    },
+    "spider x jellyfish": {
+     "condition": 0.7529411764705882,
+     "reference": 0.7529411764705882,
+     "difference": 0.0
+    },
+    "spider x crab": {
+     "condition": 0.915966386554622,
+     "reference": 0.915966386554622,
+     "difference": 0.0
+    },
+    "serpent x jellyfish": {
+     "condition": 0.6862745098039215,
+     "reference": 0.6904761904761904,
+     "difference": -0.004201680672268901
+    },
+    "serpent x crab": {
+     "condition": 0.7210338680926915,
+     "reference": 0.7361853832442067,
+     "difference": -0.015151515151515155
+    },
+    "jellyfish x crab": {
+     "condition": 0.7558823529411762,
+     "reference": 0.7558823529411762,
+     "difference": 0.0
+    }
+   },
+   "p_holm": 0.0002999850007499625
+  },
+  {
+   "condition": "site_off",
+   "measure": "buried",
+   "in_family": true,
+   "reference_mean": 0.10718954248366014,
+   "condition_mean": 0.3888888888888889,
+   "delta": 0.28169934640522876,
+   "p_sign_flip": 4.999750012499375e-05,
+   "ci95": [
+    0.25882352941176473,
+    0.3052287581699346
+   ],
+   "pairs_better": 7,
+   "pairs_worse": 0,
+   "pairs_same": 8,
+   "observations_different": 217,
+   "observations": 765,
+   "per_pair": {
+    "quadruped x biped": {
+     "condition": 0.23529411764705882,
+     "reference": 0.13725490196078433,
+     "difference": 0.09803921568627451
+    },
+    "quadruped x spider": {
+     "condition": 0.47058823529411764,
+     "reference": 0.0,
+     "difference": 0.47058823529411764
+    },
+    "quadruped x serpent": {
+     "condition": 0.0,
+     "reference": 0.0,
+     "difference": 0.0
+    },
+    "quadruped x jellyfish": {
+     "condition": 0.0,
+     "reference": 0.0,
+     "difference": 0.0
+    },
+    "quadruped x crab": {
+     "condition": 0.0,
+     "reference": 0.0,
+     "difference": 0.0
+    },
+    "biped x spider": {
+     "condition": 0.7156862745098039,
+     "reference": 0.17647058823529413,
+     "difference": 0.5392156862745098
+    },
+    "biped x serpent": {
+     "condition": 0.0,
+     "reference": 0.0,
+     "difference": 0.0
+    },
+    "biped x jellyfish": {
+     "condition": 1.5588235294117647,
+     "reference": 0.0,
+     "difference": 1.5588235294117647
+    },
+    "biped x crab": {
+     "condition": 0.0,
+     "reference": 0.0,
+     "difference": 0.0
+    },
+    "spider x serpent": {
+     "condition": 0.9117647058823529,
+     "reference": 0.35294117647058826,
+     "difference": 0.5588235294117647
+    },
+    "spider x jellyfish": {
+     "condition": 0.8823529411764706,
+     "reference": 0.8823529411764706,
+     "difference": 0.0
+    },
+    "spider x crab": {
+     "condition": 0.0392156862745098,
+     "reference": 0.0392156862745098,
+     "difference": 0.0
+    },
+    "serpent x jellyfish": {
+     "condition": 0.9803921568627451,
+     "reference": 0.0,
+     "difference": 0.9803921568627451
+    },
+    "serpent x crab": {
+     "condition": 0.0392156862745098,
+     "reference": 0.0196078431372549,
+     "difference": 0.0196078431372549
+    },
+    "jellyfish x crab": {
+     "condition": 0.0,
+     "reference": 0.0,
+     "difference": 0.0
+    }
+   },
+   "p_holm": 0.0002999850007499625
+  },
+  {
+   "condition": "strict",
+   "measure": "pass",
+   "in_family": true,
+   "reference_mean": 0.7843137254901962,
+   "condition_mean": 0.7836601307189544,
+   "delta": -0.00065359477124183,
+   "p_sign_flip": 1.0,
+   "ci95": [
+    -0.005882352941176471,
+    0.004575163398692811
+   ],
+   "pairs_better": 2,
+   "pairs_worse": 1,
+   "pairs_same": 12,
+   "observations_different": 17,
+   "observations": 765,
+   "per_pair": {
+    "quadruped x biped": {
+     "condition": 0.9411764705882353,
+     "reference": 0.9313725490196079,
+     "difference": 0.00980392156862745
+    },
+    "quadruped x spider": {
+     "condition": 1.0,
+     "reference": 1.0,
+     "difference": 0.0
+    },
+    "quadruped x serpent": {
+     "condition": 0.9607843137254902,
+     "reference": 0.9607843137254902,
+     "difference": 0.0
+    },
+    "quadruped x jellyfish": {
+     "condition": 0.6862745098039216,
+     "reference": 0.6862745098039216,
+     "difference": 0.0
+    },
+    "quadruped x crab": {
+     "condition": 1.0,
+     "reference": 1.0,
+     "difference": 0.0
+    },
+    "biped x spider": {
+     "condition": 0.8333333333333334,
+     "reference": 0.8333333333333334,
+     "difference": 0.0
+    },
+    "biped x serpent": {
+     "condition": 1.0,
+     "reference": 1.0,
+     "difference": 0.0
+    },
+    "biped x jellyfish": {
+     "condition": 0.5490196078431373,
+     "reference": 0.5490196078431373,
+     "difference": 0.0
+    },
+    "biped x crab": {
+     "condition": 0.8529411764705882,
+     "reference": 0.8529411764705882,
+     "difference": 0.0
+    },
+    "spider x serpent": {
+     "condition": 0.7549019607843137,
+     "reference": 0.7549019607843137,
+     "difference": 0.0
+    },
+    "spider x jellyfish": {
+     "condition": 0.3627450980392157,
+     "reference": 0.3627450980392157,
+     "difference": 0.0
+    },
+    "spider x crab": {
+     "condition": 0.9901960784313726,
+     "reference": 0.9705882352941176,
+     "difference": 0.0196078431372549
+    },
+    "serpent x jellyfish": {
+     "condition": 0.3627450980392157,
+     "reference": 0.3627450980392157,
+     "difference": 0.0
+    },
+    "serpent x crab": {
+     "condition": 0.8627450980392157,
+     "reference": 0.9019607843137255,
+     "difference": -0.0392156862745098
+    },
+    "jellyfish x crab": {
+     "condition": 0.5980392156862745,
+     "reference": 0.5980392156862745,
+     "difference": 0.0
+    }
+   },
+   "p_holm": 1.0
+  },
+  {
+   "condition": "attr",
+   "measure": "hidden",
+   "in_family": true,
+   "reference_mean": 0.3836601307189543,
+   "condition_mean": 0.1483660130718954,
+   "delta": -0.23529411764705882,
+   "p_sign_flip": 4.999750012499375e-05,
+   "ci95": [
+    -0.2673202614379085,
+    -0.20326797385620915
+   ],
+   "pairs_better": 1,
+   "pairs_worse": 10,
+   "pairs_same": 4,
+   "observations_different": 192,
+   "observations": 765,
+   "per_pair": {
+    "quadruped x biped": {
+     "condition": 0.0,
+     "reference": 0.0,
+     "difference": 0.0
+    },
+    "quadruped x spider": {
+     "condition": 0.0,
+     "reference": 0.0,
+     "difference": 0.0
+    },
+    "quadruped x serpent": {
+     "condition": 0.0,
+     "reference": 0.049019607843137254,
+     "difference": -0.049019607843137254
+    },
+    "quadruped x jellyfish": {
+     "condition": 0.0,
+     "reference": 0.6274509803921569,
+     "difference": -0.6274509803921569
+    },
+    "quadruped x crab": {
+     "condition": 0.0,
+     "reference": 0.0,
+     "difference": 0.0
+    },
+    "biped x spider": {
+     "condition": 0.06862745098039216,
+     "reference": 0.16666666666666666,
+     "difference": -0.09803921568627451
+    },
+    "biped x serpent": {
+     "condition": 0.0,
+     "reference": 0.0,
+     "difference": 0.0
+    },
+    "biped x jellyfish": {
+     "condition": 0.5294117647058824,
+     "reference": 1.0196078431372548,
+     "difference": -0.49019607843137253
+    },
+    "biped x crab": {
+     "condition": 0.10784313725490197,
+     "reference": 0.3235294117647059,
+     "difference": -0.21568627450980393
+    },
+    "spider x serpent": {
+     "condition": 0.09803921568627451,
+     "reference": 0.29411764705882354,
+     "difference": -0.19607843137254902
+    },
+    "spider x jellyfish": {
+     "condition": 0.0,
+     "reference": 1.0392156862745099,
+     "difference": -1.0392156862745099
+    },
+    "spider x crab": {
+     "condition": 0.0,
+     "reference": 0.00980392156862745,
+     "difference": -0.00980392156862745
+    },
+    "serpent x jellyfish": {
+     "condition": 1.3725490196078431,
+     "reference": 1.2941176470588236,
+     "difference": 0.0784313725490196
+    },
+    "serpent x crab": {
+     "condition": 0.049019607843137254,
+     "reference": 0.16666666666666666,
+     "difference": -0.11764705882352941
+    },
+    "jellyfish x crab": {
+     "condition": 0.0,
+     "reference": 0.7647058823529411,
+     "difference": -0.7647058823529411
+    }
+   },
+   "p_holm": 0.0002999850007499625
+  },
+  {
+   "condition": "site_off",
+   "measure": "kept",
+   "in_family": false,
+   "reference_mean": 0.7959068781617802,
+   "condition_mean": 0.8191070621462778,
+   "delta": 0.023200183984497705,
+   "p_sign_flip": 4.999750012499375e-05,
+   "ci95": [
+    0.021386373702550164,
+    0.025033355805414624
+   ],
+   "pairs_better": 7,
+   "pairs_worse": 0,
+   "pairs_same": 8,
+   "observations_different": 216,
+   "observations": 765,
+   "per_pair": {
+    "quadruped x biped": {
+     "condition": 0.9233511586452764,
+     "reference": 0.9180035650623887,
+     "difference": 0.0053475935828877
+    },
+    "quadruped x spider": {
+     "condition": 0.8390522875816993,
+     "reference": 0.7998366013071895,
+     "difference": 0.03921568627450979
+    },
+    "quadruped x serpent": {
+     "condition": 0.8660130718954246,
+     "reference": 0.8660130718954246,
+     "difference": 0.0
+    },
+    "quadruped x jellyfish": {
+     "condition": 0.7622549019607843,
+     "reference": 0.7622549019607843,
+     "difference": 0.0
+    },
+    "quadruped x crab": {
+     "condition": 0.8374183006535947,
+     "reference": 0.8374183006535947,
+     "difference": 0.0
+    },
+    "biped x spider": {
+     "condition": 0.8423831070889896,
+     "reference": 0.8009049773755657,
+     "difference": 0.04147812971342382
+    },
+    "biped x serpent": {
+     "condition": 0.8970588235294118,
+     "reference": 0.8970588235294118,
+     "difference": 0.0
+    },
+    "biped x jellyfish": {
+     "condition": 0.7559912854030503,
+     "reference": 0.6492374727668846,
+     "difference": 0.10675381263616551
+    },
+    "biped x crab": {
+     "condition": 0.8318250377073906,
+     "reference": 0.8318250377073906,
+     "difference": 0.0
+    },
+    "spider x serpent": {
+     "condition": 0.7754010695187166,
+     "reference": 0.7245989304812834,
+     "difference": 0.050802139037433136
+    },
+    "spider x jellyfish": {
+     "condition": 0.7529411764705882,
+     "reference": 0.7529411764705882,
+     "difference": 0.0
+    },
+    "spider x crab": {
+     "condition": 0.915966386554622,
+     "reference": 0.915966386554622,
+     "difference": 0.0
+    },
+    "serpent x jellyfish": {
+     "condition": 0.7913165266106441,
+     "reference": 0.6904761904761904,
+     "difference": 0.10084033613445383
+    },
+    "serpent x crab": {
+     "condition": 0.7397504456327986,
+     "reference": 0.7361853832442067,
+     "difference": 0.0035650623885917993
+    },
+    "jellyfish x crab": {
+     "condition": 0.7558823529411762,
+     "reference": 0.7558823529411762,
+     "difference": 0.0
+    }
+   }
+  },
+  {
+   "condition": "strict",
+   "measure": "kept",
+   "in_family": false,
+   "reference_mean": 0.7959068781617802,
+   "condition_mean": 0.7899677192814447,
+   "delta": -0.0059391588803353506,
+   "p_sign_flip": 4.999750012499375e-05,
+   "ci95": [
+    -0.007520314652667595,
+    -0.004418367580132288
+   ],
+   "pairs_better": 0,
+   "pairs_worse": 4,
+   "pairs_same": 11,
+   "observations_different": 88,
+   "observations": 765,
+   "per_pair": {
+    "quadruped x biped": {
+     "condition": 0.8778966131907309,
+     "reference": 0.9180035650623887,
+     "difference": -0.040106951871657755
+    },
+    "quadruped x spider": {
+     "condition": 0.7998366013071895,
+     "reference": 0.7998366013071895,
+     "difference": 0.0
+    },
+    "quadruped x serpent": {
+     "condition": 0.8660130718954246,
+     "reference": 0.8660130718954246,
+     "difference": 0.0
+    },
+    "quadruped x jellyfish": {
+     "condition": 0.7622549019607843,
+     "reference": 0.7622549019607843,
+     "difference": 0.0
+    },
+    "quadruped x crab": {
+     "condition": 0.8374183006535947,
+     "reference": 0.8374183006535947,
+     "difference": 0.0
+    },
+    "biped x spider": {
+     "condition": 0.7684766214177979,
+     "reference": 0.8009049773755657,
+     "difference": -0.03242835595776772
+    },
+    "biped x serpent": {
+     "condition": 0.8970588235294118,
+     "reference": 0.8970588235294118,
+     "difference": 0.0
+    },
+    "biped x jellyfish": {
+     "condition": 0.6492374727668846,
+     "reference": 0.6492374727668846,
+     "difference": 0.0
+    },
+    "biped x crab": {
+     "condition": 0.8318250377073906,
+     "reference": 0.8318250377073906,
+     "difference": 0.0
+    },
+    "spider x serpent": {
+     "condition": 0.7245989304812834,
+     "reference": 0.7245989304812834,
+     "difference": 0.0
+    },
+    "spider x jellyfish": {
+     "condition": 0.7529411764705882,
+     "reference": 0.7529411764705882,
+     "difference": 0.0
+    },
+    "spider x crab": {
+     "condition": 0.9047619047619048,
+     "reference": 0.915966386554622,
+     "difference": -0.011204481792717097
+    },
+    "serpent x jellyfish": {
+     "condition": 0.6904761904761904,
+     "reference": 0.6904761904761904,
+     "difference": 0.0
+    },
+    "serpent x crab": {
+     "condition": 0.7308377896613191,
+     "reference": 0.7361853832442067,
+     "difference": -0.005347593582887698
+    },
+    "jellyfish x crab": {
+     "condition": 0.7558823529411762,
+     "reference": 0.7558823529411762,
+     "difference": 0.0
+    }
+   }
+  }
+ ],
+ "describe": {
+  "random_k": {
+   "pass": {
+    "all": 0.7091503267973857,
+    "jellyfish_5": 0.511764705882353,
+    "other_10": 0.807843137254902
+   },
+   "kept": {
+    "all": 0.8006736110657678,
+    "jellyfish_5": 0.7221584189231247,
+    "other_10": 0.8399312071370895
+   },
+   "buried": {
+    "all": 0.22091503267973855,
+    "jellyfish_5": 0.1764705882352941,
+    "other_10": 0.24313725490196075
+   },
+   "hidden": {
+    "all": 0.44052287581699345,
+    "jellyfish_5": 0.9490196078431372,
+    "other_10": 0.18627450980392157
+   },
+   "bend": {
+    "all": 1.1377907289638323,
+    "jellyfish_5": 2.3618882795531427e-06,
+    "other_10": 1.7066849125016088
+   },
+   "humps": {
+    "all": 0.3143790849673202,
+    "jellyfish_5": 0.027450980392156866,
+    "other_10": 0.45784313725490194
+   },
+   "minority": {
+    "all": 0.3558747035046485,
+    "jellyfish_5": 0.307389790501686,
+    "other_10": 0.38011716000612983
+   },
+   "both10": {
+    "all": 0.9732026143790851,
+    "jellyfish_5": 0.9274509803921569,
+    "other_10": 0.996078431372549
+   },
+   "g1": {
+    "all": 0.9993464052287582,
+    "jellyfish_5": 1.0,
+    "other_10": 0.9990196078431373
+   },
+   "bubbles": {
+    "all": 0.0,
+    "jellyfish_5": 0.0,
+    "other_10": 0.0
+   },
+   "parts": {
+    "all": 6.138562091503268,
+    "jellyfish_5": 5.372549019607843,
+    "other_10": 6.52156862745098
+   },
+   "m3": {
+    "all": 0.035947712418300644,
+    "jellyfish_5": 0.0,
+    "other_10": 0.053921568627450976
+   }
+  },
+  "pce": {
+   "pass": {
+    "all": 0.7843137254901962,
+    "jellyfish_5": 0.511764705882353,
+    "other_10": 0.9205882352941177
+   },
+   "kept": {
+    "all": 0.7959068781617802,
+    "jellyfish_5": 0.7221584189231247,
+    "other_10": 0.8327811077811077
+   },
+   "buried": {
+    "all": 0.10718954248366014,
+    "jellyfish_5": 0.1764705882352941,
+    "other_10": 0.07254901960784314
+   },
+   "hidden": {
+    "all": 0.3836601307189543,
+    "jellyfish_5": 0.9490196078431372,
+    "other_10": 0.10098039215686275
+   },
+   "bend": {
+    "all": 1.6010574633361911,
+    "jellyfish_5": 2.3618882795531427e-06,
+    "other_10": 2.401585014060147
+   },
+   "humps": {
+    "all": 0.2627450980392157,
+    "jellyfish_5": 0.027450980392156866,
+    "other_10": 0.3803921568627451
+   },
+   "minority": {
+    "all": 0.3556027261498753,
+    "jellyfish_5": 0.307389790501686,
+    "other_10": 0.37970919397397
+   },
+   "both10": {
+    "all": 0.9712418300653595,
+    "jellyfish_5": 0.9274509803921569,
+    "other_10": 0.9931372549019608
+   },
+   "g1": {
+    "all": 0.9993464052287582,
+    "jellyfish_5": 1.0,
+    "other_10": 0.9990196078431373
+   },
+   "bubbles": {
+    "all": 0.0,
+    "jellyfish_5": 0.0,
+    "other_10": 0.0
+   },
+   "parts": {
+    "all": 6.103921568627451,
+    "jellyfish_5": 5.372549019607843,
+    "other_10": 6.469607843137256
+   },
+   "m3": {
+    "all": 0.013071895424836603,
+    "jellyfish_5": 0.0,
+    "other_10": 0.019607843137254905
+   }
+  },
+  "order": {
+   "pass": {
+    "all": 0.6424836601307189,
+    "jellyfish_5": 0.5313725490196078,
+    "other_10": 0.6980392156862745
+   },
+   "kept": {
+    "all": 0.9211433410453017,
+    "jellyfish_5": 0.870538437597261,
+    "other_10": 0.9464457927693222
+   },
+   "buried": {
+    "all": 0.46470588235294125,
+    "jellyfish_5": 0.5647058823529412,
+    "other_10": 0.4147058823529412
+   },
+   "hidden": {
+    "all": 0.6816993464052287,
+    "jellyfish_5": 1.3627450980392157,
+    "other_10": 0.3411764705882353
+   },
+   "bend": {
+    "all": 2.538182470835587,
+    "jellyfish_5": 0.9131043663640697,
+    "other_10": 3.3507215230713454
+   },
+   "humps": {
+    "all": 0.5581699346405229,
+    "jellyfish_5": 0.32352941176470584,
+    "other_10": 0.6754901960784313
+   },
+   "minority": {
+    "all": 0.370631033941091,
+    "jellyfish_5": 0.31979888662742784,
+    "other_10": 0.3960471075979226
+   },
+   "both10": {
+    "all": 0.9980392156862745,
+    "jellyfish_5": 0.9941176470588236,
+    "other_10": 1.0
+   },
+   "g1": {
+    "all": 1.0,
+    "jellyfish_5": 1.0,
+    "other_10": 1.0
+   },
+   "bubbles": {
+    "all": 0.00130718954248366,
+    "jellyfish_5": 0.00196078431372549,
+    "other_10": 0.000980392156862745
+   },
+   "parts": {
+    "all": 5.615032679738562,
+    "jellyfish_5": 4.747058823529412,
+    "other_10": 6.049019607843137
+   },
+   "m3": {
+    "all": 0.10130718954248366,
+    "jellyfish_5": 0.0392156862745098,
+    "other_10": 0.13235294117647062
+   }
+  },
+  "root_only": {
+   "pass": {
+    "all": 0.800653594771242,
+    "jellyfish_5": 0.511764705882353,
+    "other_10": 0.9450980392156862
+   },
+   "kept": {
+    "all": 0.7080305642070347,
+    "jellyfish_5": 0.7221584189231247,
+    "other_10": 0.7009666368489899
+   },
+   "buried": {
+    "all": 0.058823529411764705,
+    "jellyfish_5": 0.1764705882352941,
+    "other_10": 0.0
+   },
+   "hidden": {
+    "all": 0.38496732026143793,
+    "jellyfish_5": 0.9490196078431372,
+    "other_10": 0.10294117647058823
+   },
+   "bend": {
+    "all": 0.04356145617274162,
+    "jellyfish_5": 2.3618882795531427e-06,
+    "other_10": 0.06534100331497265
+   },
+   "humps": {
+    "all": 0.1300653594771242,
+    "jellyfish_5": 0.027450980392156866,
+    "other_10": 0.18137254901960784
+   },
+   "minority": {
+    "all": 0.33670719554959744,
+    "jellyfish_5": 0.307389790501686,
+    "other_10": 0.3513658980735531
+   },
+   "both10": {
+    "all": 0.9705882352941176,
+    "jellyfish_5": 0.9274509803921569,
+    "other_10": 0.9921568627450981
+   },
+   "g1": {
+    "all": 0.9993464052287582,
+    "jellyfish_5": 1.0,
+    "other_10": 0.9990196078431373
+   },
+   "bubbles": {
+    "all": 0.0,
+    "jellyfish_5": 0.0,
+    "other_10": 0.0
+   },
+   "parts": {
+    "all": 6.551633986928105,
+    "jellyfish_5": 5.372549019607843,
+    "other_10": 7.141176470588235
+   },
+   "m3": {
+    "all": 0.0,
+    "jellyfish_5": 0.0,
+    "other_10": 0.0
+   }
+  },
+  "shuffled_tags": {
+   "pass": {
+    "all": 0.7169934640522875,
+    "jellyfish_5": 0.511764705882353,
+    "other_10": 0.8196078431372549
+   },
+   "kept": {
+    "all": 0.7994109521560501,
+    "jellyfish_5": 0.7221584189231247,
+    "other_10": 0.8380372187725129
+   },
+   "buried": {
+    "all": 0.20261437908496732,
+    "jellyfish_5": 0.1764705882352941,
+    "other_10": 0.2156862745098039
+   },
+   "hidden": {
+    "all": 0.42745098039215684,
+    "jellyfish_5": 0.9490196078431372,
+    "other_10": 0.16666666666666666
+   },
+   "bend": {
+    "all": 0.9042181310334515,
+    "jellyfish_5": 2.3618882795531427e-06,
+    "other_10": 1.3563260156060375
+   },
+   "humps": {
+    "all": 0.29607843137254897,
+    "jellyfish_5": 0.027450980392156866,
+    "other_10": 0.43039215686274507
+   },
+   "minority": {
+    "all": 0.3537384091267134,
+    "jellyfish_5": 0.307389790501686,
+    "other_10": 0.37691271843922713
+   },
+   "both10": {
+    "all": 0.9725490196078432,
+    "jellyfish_5": 0.9274509803921569,
+    "other_10": 0.9950980392156863
+   },
+   "g1": {
+    "all": 0.9993464052287582,
+    "jellyfish_5": 1.0,
+    "other_10": 0.9990196078431373
+   },
+   "bubbles": {
+    "all": 0.00065359477124183,
+    "jellyfish_5": 0.0,
+    "other_10": 0.000980392156862745
+   },
+   "parts": {
+    "all": 6.128104575163399,
+    "jellyfish_5": 5.372549019607843,
+    "other_10": 6.5058823529411764
+   },
+   "m3": {
+    "all": 0.034640522875816995,
+    "jellyfish_5": 0.0,
+    "other_10": 0.05196078431372549
+   }
+  },
+  "linkage_off": {
+   "pass": {
+    "all": 0.7522875816993465,
+    "jellyfish_5": 0.4431372549019608,
+    "other_10": 0.9068627450980392
+   },
+   "kept": {
+    "all": 0.8015524907191571,
+    "jellyfish_5": 0.7230042016806724,
+    "other_10": 0.8408266352384001
+   },
+   "buried": {
+    "all": 0.11111111111111112,
+    "jellyfish_5": 0.20784313725490197,
+    "other_10": 0.0627450980392157
+   },
+   "hidden": {
+    "all": 0.48104575163398694,
+    "jellyfish_5": 1.176470588235294,
+    "other_10": 0.13333333333333336
+   },
+   "bend": {
+    "all": 2.7044884446480144,
+    "jellyfish_5": 1.2829104861320755e-06,
+    "other_10": 4.056732025516778
+   },
+   "humps": {
+    "all": 1.1228758169934638,
+    "jellyfish_5": 0.10784313725490195,
+    "other_10": 1.630392156862745
+   },
+   "minority": {
+    "all": 0.37450724357441,
+    "jellyfish_5": 0.32423815642500237,
+    "other_10": 0.3996417871491139
+   },
+   "both10": {
+    "all": 0.9901960784313726,
+    "jellyfish_5": 0.9705882352941175,
+    "other_10": 1.0
+   },
+   "g1": {
+    "all": 1.0,
+    "jellyfish_5": 1.0,
+    "other_10": 1.0
+   },
+   "bubbles": {
+    "all": 0.0,
+    "jellyfish_5": 0.0,
+    "other_10": 0.0
+   },
+   "parts": {
+    "all": 6.1607843137254905,
+    "jellyfish_5": 5.372549019607843,
+    "other_10": 6.5549019607843135
+   },
+   "m3": {
+    "all": 0.00588235294117647,
+    "jellyfish_5": 0.0,
+    "other_10": 0.008823529411764706
+   }
+  },
+  "relative_off": {
+   "pass": {
+    "all": 0.7542483660130721,
+    "jellyfish_5": 0.5,
+    "other_10": 0.8813725490196079
+   },
+   "kept": {
+    "all": 0.8016514295435865,
+    "jellyfish_5": 0.7329295051353875,
+    "other_10": 0.8360123917476858
+   },
+   "buried": {
+    "all": 0.05882352941176471,
+    "jellyfish_5": 0.023529411764705882,
+    "other_10": 0.07647058823529412
+   },
+   "hidden": {
+    "all": 0.4745098039215686,
+    "jellyfish_5": 1.0901960784313727,
+    "other_10": 0.16666666666666669
+   },
+   "bend": {
+    "all": 159.45830795346748,
+    "jellyfish_5": 328.5160753199564,
+    "other_10": 74.92942427022301
+   },
+   "humps": {
+    "all": 1.4019607843137256,
+    "jellyfish_5": 0.3274509803921569,
+    "other_10": 1.9392156862745096
+   },
+   "minority": {
+    "all": 0.38035839454669446,
+    "jellyfish_5": 0.33579149848623524,
+    "other_10": 0.4026418425769241
+   },
+   "both10": {
+    "all": 0.9901960784313726,
+    "jellyfish_5": 0.9705882352941178,
+    "other_10": 1.0
+   },
+   "g1": {
+    "all": 1.0,
+    "jellyfish_5": 1.0,
+    "other_10": 1.0
+   },
+   "bubbles": {
+    "all": 0.0,
+    "jellyfish_5": 0.0,
+    "other_10": 0.0
+   },
+   "parts": {
+    "all": 6.16078431372549,
+    "jellyfish_5": 5.443137254901961,
+    "other_10": 6.519607843137256
+   },
+   "m3": {
+    "all": 0.02026143790849673,
+    "jellyfish_5": 0.0,
+    "other_10": 0.030392156862745094
+   }
+  },
+  "graft_off": {
+   "pass": {
+    "all": 0.8045751633986928,
+    "jellyfish_5": 0.5352941176470588,
+    "other_10": 0.9392156862745098
+   },
+   "kept": {
+    "all": 0.7921922195451606,
+    "jellyfish_5": 0.718267973856209,
+    "other_10": 0.8291543423896366
+   },
+   "buried": {
+    "all": 0.10718954248366014,
+    "jellyfish_5": 0.1764705882352941,
+    "other_10": 0.07254901960784314
+   },
+   "hidden": {
+    "all": 0.3313725490196078,
+    "jellyfish_5": 0.8745098039215687,
+    "other_10": 0.05980392156862746
+   },
+   "bend": {
+    "all": 1.6010574633361911,
+    "jellyfish_5": 2.3618882795531427e-06,
+    "other_10": 2.401585014060147
+   },
+   "humps": {
+    "all": 0.2627450980392157,
+    "jellyfish_5": 0.027450980392156866,
+    "other_10": 0.3803921568627451
+   },
+   "minority": {
+    "all": 0.354361682203253,
+    "jellyfish_5": 0.307959144711563,
+    "other_10": 0.3775629509490981
+   },
+   "both10": {
+    "all": 0.9712418300653595,
+    "jellyfish_5": 0.9274509803921569,
+    "other_10": 0.9931372549019608
+   },
+   "g1": {
+    "all": 0.9993464052287582,
+    "jellyfish_5": 1.0,
+    "other_10": 0.9990196078431373
+   },
+   "bubbles": {
+    "all": 0.0,
+    "jellyfish_5": 0.0,
+    "other_10": 0.0
+   },
+   "parts": {
+    "all": 6.063398692810456,
+    "jellyfish_5": 5.33921568627451,
+    "other_10": 6.425490196078431
+   },
+   "m3": {
+    "all": 0.013071895424836603,
+    "jellyfish_5": 0.0,
+    "other_10": 0.019607843137254905
+   }
+  },
+  "site_off": {
+   "pass": {
+    "all": 0.6522875816993463,
+    "jellyfish_5": 0.38235294117647056,
+    "other_10": 0.7872549019607844
+   },
+   "kept": {
+    "all": 0.8191070621462778,
+    "jellyfish_5": 0.7636772486772486,
+    "other_10": 0.8468219688807924
+   },
+   "buried": {
+    "all": 0.3888888888888889,
+    "jellyfish_5": 0.6843137254901961,
+    "other_10": 0.24117647058823524
+   },
+   "hidden": {
+    "all": 0.550326797385621,
+    "jellyfish_5": 1.1372549019607843,
+    "other_10": 0.2568627450980392
+   },
+   "bend": {
+    "all": 1.6010574633361911,
+    "jellyfish_5": 2.3618882795531427e-06,
+    "other_10": 2.401585014060147
+   },
+   "humps": {
+    "all": 0.26405228758169935,
+    "jellyfish_5": 0.027450980392156866,
+    "other_10": 0.38235294117647056
+   },
+   "minority": {
+    "all": 0.36747338762063997,
+    "jellyfish_5": 0.32566847077759464,
+    "other_10": 0.38837584604216263
+   },
+   "both10": {
+    "all": 0.9843137254901961,
+    "jellyfish_5": 0.9647058823529413,
+    "other_10": 0.9941176470588236
+   },
+   "g1": {
+    "all": 0.9993464052287582,
+    "jellyfish_5": 1.0,
+    "other_10": 0.9990196078431373
+   },
+   "bubbles": {
+    "all": 0.0,
+    "jellyfish_5": 0.0,
+    "other_10": 0.0
+   },
+   "parts": {
+    "all": 6.320261437908497,
+    "jellyfish_5": 5.705882352941176,
+    "other_10": 6.627450980392157
+   },
+   "m3": {
+    "all": 0.234640522875817,
+    "jellyfish_5": 0.3509803921568627,
+    "other_10": 0.1764705882352941
+   }
+  },
+  "strict": {
+   "pass": {
+    "all": 0.7836601307189544,
+    "jellyfish_5": 0.511764705882353,
+    "other_10": 0.919607843137255
+   },
+   "kept": {
+    "all": 0.7899677192814447,
+    "jellyfish_5": 0.7221584189231247,
+    "other_10": 0.8238723694606047
+   },
+   "buried": {
+    "all": 0.09934640522875818,
+    "jellyfish_5": 0.1764705882352941,
+    "other_10": 0.0607843137254902
+   },
+   "hidden": {
+    "all": 0.3888888888888889,
+    "jellyfish_5": 0.9490196078431372,
+    "other_10": 0.1088235294117647
+   },
+   "bend": {
+    "all": 1.219943505311346,
+    "jellyfish_5": 2.3618882795531427e-06,
+    "other_10": 1.8299140770228792
+   },
+   "humps": {
+    "all": 0.24901960784313726,
+    "jellyfish_5": 0.027450980392156866,
+    "other_10": 0.35980392156862745
+   },
+   "minority": {
+    "all": 0.3536256705136264,
+    "jellyfish_5": 0.307389790501686,
+    "other_10": 0.3767436105195968
+   },
+   "both10": {
+    "all": 0.9718954248366013,
+    "jellyfish_5": 0.9274509803921569,
+    "other_10": 0.9941176470588236
+   },
+   "g1": {
+    "all": 0.9993464052287582,
+    "jellyfish_5": 1.0,
+    "other_10": 0.9990196078431373
+   },
+   "bubbles": {
+    "all": 0.0,
+    "jellyfish_5": 0.0,
+    "other_10": 0.0
+   },
+   "parts": {
+    "all": 6.137254901960785,
+    "jellyfish_5": 5.372549019607843,
+    "other_10": 6.519607843137254
+   },
+   "m3": {
+    "all": 0.011764705882352943,
+    "jellyfish_5": 0.0,
+    "other_10": 0.01764705882352941
+   }
+  },
+  "attr": {
+   "pass": {
+    "all": 0.915686274509804,
+    "jellyfish_5": 0.8235294117647058,
+    "other_10": 0.9617647058823529
+   },
+   "kept": {
+    "all": 0.7851678024227043,
+    "jellyfish_5": 0.741364768129474,
+    "other_10": 0.8070693195693195
+   },
+   "buried": {
+    "all": 0.03529411764705882,
+    "jellyfish_5": 0.00392156862745098,
+    "other_10": 0.050980392156862744
+   },
+   "hidden": {
+    "all": 0.1483660130718954,
+    "jellyfish_5": 0.3803921568627451,
+    "other_10": 0.03235294117647059
+   },
+   "bend": {
+    "all": 0.10544001876740516,
+    "jellyfish_5": 2.3618882795531427e-06,
+    "other_10": 0.15815884720696796
+   },
+   "humps": {
+    "all": 0.20784313725490197,
+    "jellyfish_5": 0.027450980392156866,
+    "other_10": 0.2980392156862745
+   },
+   "minority": {
+    "all": 0.3591756206703168,
+    "jellyfish_5": 0.3169217879381119,
+    "other_10": 0.38030253703641936
+   },
+   "both10": {
+    "all": 0.9758169934640524,
+    "jellyfish_5": 0.9392156862745098,
+    "other_10": 0.9941176470588236
+   },
+   "g1": {
+    "all": 0.9993464052287582,
+    "jellyfish_5": 1.0,
+    "other_10": 0.9990196078431373
+   },
+   "bubbles": {
+    "all": 0.00784313725490196,
+    "jellyfish_5": 0.021568627450980392,
+    "other_10": 0.000980392156862745
+   },
+   "parts": {
+    "all": 6.052287581699346,
+    "jellyfish_5": 5.53529411764706,
+    "other_10": 6.31078431372549
+   },
+   "m3": {
+    "all": 0.01111111111111111,
+    "jellyfish_5": 0.0,
+    "other_10": 0.016666666666666666
+   }
+  }
+ }
+}

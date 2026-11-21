@@ -1,0 +1,163 @@
+{
+ "run_version": "run_v1.0",
+ "metrics_version": "metrics_v1.0",
+ "experiment": "X2",
+ "conditions": [
+  "relative_off",
+  "linkage_off",
+  "graft_off",
+  "site_off",
+  "strict",
+  "attr"
+ ],
+ "seeds": [
+  1,
+  51,
+  51
+ ],
+ "voxel": 0.03,
+ "pairs": {
+  "0": [
+   "quadruped",
+   "biped"
+  ],
+  "1": [
+   "quadruped",
+   "spider"
+  ],
+  "2": [
+   "quadruped",
+   "serpent"
+  ],
+  "3": [
+   "quadruped",
+   "jellyfish"
+  ],
+  "4": [
+   "quadruped",
+   "crab"
+  ],
+  "5": [
+   "biped",
+   "spider"
+  ],
+  "6": [
+   "biped",
+   "serpent"
+  ],
+  "7": [
+   "biped",
+   "jellyfish"
+  ],
+  "8": [
+   "biped",
+   "crab"
+  ],
+  "9": [
+   "spider",
+   "serpent"
+  ],
+  "10": [
+   "spider",
+   "jellyfish"
+  ],
+  "11": [
+   "spider",
+   "crab"
+  ],
+  "12": [
+   "serpent",
+   "jellyfish"
+  ],
+  "13": [
+   "serpent",
+   "crab"
+  ],
+  "14": [
+   "jellyfish",
+   "crab"
+  ]
+ },
+ "rng_key": "SeedSequence([20261116, pair, direction, seed, purpose]); purpose 0 matching, 1 inheritance, 2 baseline",
+ "inheritance_config": {
+  "inheritance_factor": 0.7,
+  "core_lock": 0.9,
+  "alpha": 0.5,
+  "parent_a_dominance": 0.5,
+  "match_threshold": 0.25,
+  "micro_budget": 0,
+  "micro_rate": 0.5,
+  "micro_sigma": 0.15,
+  "detail_sigma": 0.05
+ },
+ "fuse_options": {
+  "adopted": {
+   "relative": true,
+   "wide": false,
+   "graft": true,
+   "linkage": 1,
+   "thickness": "joint",
+   "site_rule": true
+  },
+  "relative_off": {
+   "relative": false,
+   "wide": false,
+   "graft": true,
+   "linkage": 1,
+   "thickness": "joint",
+   "site_rule": true
+  },
+  "linkage_off": {
+   "relative": true,
+   "wide": false,
+   "graft": true,
+   "linkage": 0,
+   "thickness": "joint",
+   "site_rule": true
+  },
+  "graft_off": {
+   "relative": true,
+   "wide": false,
+   "graft": false,
+   "linkage": 1,
+   "thickness": "joint",
+   "site_rule": true
+  },
+  "site_off": {
+   "relative": true,
+   "wide": false,
+   "graft": true,
+   "linkage": 1,
+   "thickness": "joint",
+   "site_rule": false
+  }
+ },
+ "parent_genome_sha256": {
+  "quadruped": "f66fbcd5f56ef32cbb55bd5d9ddaed9db00f43f9337467abd8e8ec564a9be156",
+  "biped": "446c9cde17415caea272fb4f0db1e28687f3b8853bad4e42bcd60ac06c81f75c",
+  "spider": "60da14d4e5c55d7786bb87c8970e71aca38f305285b9ad5e4c6e571240c30bc3",
+  "serpent": "71022a0d34dd93181e94fc296f6e89e8257858167044d5bf5d66703799481aac",
+  "jellyfish": "8e758faf256be3cb44983a255d95fbd63d999c3e690fc11f607c13a9bc8e6507",
+  "crab": "5e11db13c3296d9bc77baa709766ab5076512bd1d0b85b6b5ad39b7885832c4a"
+ },
+ "file_sha256": {
+  "skeleton_sdf_demo.py": "24c8c282bcdc4cf6a0a3b5218c0ef9acb52640227296fb246c654d2aaf3001b4",
+  "form_fusion_lab.py": "87aaeffac492f3a0894ed92e3fd17238ed9bf4117577d7e489c0ba7be5facd93",
+  "soft_match_lab.py": "23c969b95247ac6dba770a8e66c49ba03ffe61d501a3991858b54d42a297454d",
+  "fourier3d_demo.py": "597bfc01ff6286df79a76bb202924012083a05e759dc982df53b81260ff6b100",
+  "fourier_genetics.py": "fcb577071b633038146fcdede9e8a827f7bb12b25826d9eeacc4ccf44498f5e2",
+  "attribute_layer.py": "4ee2a363866b3f2cb2cf7eb628de07d526eb17cab59d6461f7d0d7518d5bc3a1",
+  "pce_match_test.py": "98176e7f210f00a5b342eb5e63bf9dfbd514be9ce202b96dd31df333eebb4ac6",
+  "rtis/pce.py": "97910845f568bf3e6f77edf2a88eaf3f1dafce64da0658b4debb983a418f6574",
+  "rtis/ontology.py": "7438080f39d763f9244b082b3bd6dc7c53d245aa57c21bf4ba9903d607883235",
+  "rtis/trait.py": "e6a19538b1889ed17ffdc229d6355358a43254674d8ed8fec95a510573d17d15",
+  "metrics_v1.py": "9884729b8a0ed8d0d5763a2c0b1994678fdac858dbb1e4392ee918cec337c7e8",
+  "run_v1.py": "0318e4415cf7412742471d6d0160d4a5789f8707d5d7aaab348d57749254e2f9"
+ },
+ "code_hash": "bb54458008ff10be",
+ "python": "3.10.12",
+ "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+ "numpy": "2.2.6",
+ "scipy": "1.15.3",
+ "scikit_image": "0.25.2"
+}

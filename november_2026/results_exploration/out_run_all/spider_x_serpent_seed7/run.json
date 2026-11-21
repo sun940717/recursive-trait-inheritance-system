@@ -1,0 +1,215 @@
+{
+ "parents": [
+  "spider",
+  "serpent"
+ ],
+ "seed": 7,
+ "voxel": 0.02,
+ "rules": [
+  "tags: RTIS ontology.py (cell / organ / part layers)",
+  "matching: PCE layered similarity; >= 0.40 always, 0.25-0.40 chance (score - 0.25) / 0.15, < 0.25 never",
+  "each gene copied whole from one parent (alpha 0.5)",
+  "relative genes (size gene; lengths and radii as fractions; lean and bends relative to the parent)",
+  "linkage: 1 switch point per crossed part",
+  "grafting: a part whose parent is missing attaches where that parent would have been",
+  "site rule: two unmatched limbs in one place compete; only one stays",
+  "geometry: skeleton + implicit surface + Fourier cross-section detail"
+ ],
+ "environment": {
+  "python": "3.10.12",
+  "numpy": "2.2.6",
+  "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39",
+  "pce.py": "/home/claude/rtis_real/pce.py",
+  "ontology.py": "/home/claude/rtis_real/ontology.py"
+ },
+ "unknown_tags": [],
+ "matching": {
+  "pairs": [
+   {
+    "a": "cephalothorax",
+    "b": "torso",
+    "score": 1.0,
+    "how": "root"
+   },
+   {
+    "a": "fang",
+    "b": "fang",
+    "score": 1.0,
+    "how": "clear"
+   }
+  ],
+  "borderline_decisions": [],
+  "unmatched_a": [
+   "abdomen",
+   "leg_1",
+   "leg_2",
+   "leg_3",
+   "leg_4"
+  ],
+  "unmatched_b": [
+   "head",
+   "tail_tip"
+  ]
+ },
+ "inheritance": {
+  "parts": [
+   "torso",
+   "abdomen",
+   "fang",
+   "leg_1",
+   "leg_2",
+   "leg_4"
+  ],
+  "origin": {
+   "torso": [
+    "A.cephalothorax",
+    "B.torso"
+   ],
+   "abdomen": [
+    "A.abdomen"
+   ],
+   "fang": [
+    "A.fang",
+    "B.fang"
+   ],
+   "leg_1": [
+    "A.leg_1"
+   ],
+   "leg_2": [
+    "A.leg_2"
+   ],
+   "leg_4": [
+    "A.leg_4"
+   ]
+  },
+  "ancestry_a_per_part": {
+   "torso": 0.1956521739130435,
+   "abdomen": 1.0,
+   "fang": 0.46153846153846156,
+   "leg_1": 1.0,
+   "leg_2": 1.0,
+   "leg_4": 1.0
+  },
+  "ancestry_a_overall": 0.6593326068167299,
+  "grafted": 0,
+  "not_inherited": 3,
+  "lost_to_site_rule": 0,
+  "orphans_dropped": 0,
+  "new_humps": [
+   1,
+   0
+  ],
+  "new_bend_deg": [
+   0.0,
+   0.0
+  ]
+ },
+ "body": {
+  "closed": true,
+  "outer_shells": 1,
+  "bubbles": 0,
+  "triangles": 68840,
+  "volume": 0.9264559923166545,
+  "swallowed_limbs": [],
+  "seconds": 8.055612542000006,
+  "ok": true
+ },
+ "handoff": {
+  "counts": {
+   "parts": 6,
+   "nodes": 58,
+   "bones": 48,
+   "edges": 76,
+   "vertices": 34422,
+   "faces": 68840
+  },
+  "groups": {
+   "root": [
+    "torso"
+   ],
+   "attached": [
+    "abdomen",
+    "fang",
+    "leg_1",
+    "leg_2",
+    "leg_4"
+   ],
+   "tag:torso": [
+    "torso"
+   ],
+   "tag:structural": [
+    "torso",
+    "abdomen"
+   ],
+   "tag:central": [
+    "torso"
+   ],
+   "arrangement:single": [
+    "torso",
+    "abdomen"
+   ],
+   "tag:secretion_organ": [
+    "abdomen"
+   ],
+   "tag:weapon_part": [
+    "fang"
+   ],
+   "tag:cutting": [
+    "fang"
+   ],
+   "tag:grasping": [
+    "fang"
+   ],
+   "arrangement:mirror": [
+    "fang",
+    "leg_1",
+    "leg_2",
+    "leg_4"
+   ],
+   "tag:limb": [
+    "leg_1",
+    "leg_2",
+    "leg_4"
+   ],
+   "tag:locomotion": [
+    "leg_1",
+    "leg_2",
+    "leg_4"
+   ],
+   "tag:motor_organ": [
+    "leg_1",
+    "leg_2",
+    "leg_4"
+   ]
+  },
+  "access": {
+   "motion_system": "read_only"
+  },
+  "files": [
+   "child.genome.json",
+   "child.morph.json",
+   "child.obj",
+   "child.skin.npz",
+   "child.state.json"
+  ]
+ },
+ "motion_test": {
+  "weights_sum_error": 4.440892098500626e-16,
+  "rest_pose_error": 8.881784197001252e-16,
+  "parts_with_vertices": 6,
+  "bones_with_vertices": 48,
+  "bones_without_vertices": [],
+  "vertex_part_agrees_with_face_part": 0.9937681580476467,
+  "one_part_moved": {
+   "bone": "abdomen.b0",
+   "moved_vertices": 14492,
+   "share_in_that_part": 1.0
+  },
+  "demo_pose_volume_change": -0.0029785594264823967,
+  "demo_pose_flipped_faces": 0.003747821034282394,
+  "bones_in_tag_limb": 24,
+  "ok": true
+ },
+ "seconds": 39.16955448699997,
+ "ok": true
+}

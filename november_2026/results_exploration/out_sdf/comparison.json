@@ -1,0 +1,130 @@
+{
+ "voxel": 0.015,
+ "preview_voxel": 0.03,
+ "seed": 7,
+ "body_bones": 9,
+ "comparison": {
+  "quadruped": {
+   "fourier": {
+    "closed": true,
+    "components": 7,
+    "triangles": 28672,
+    "vertices": 14350,
+    "volume": 0.4192204867993213,
+    "genes": 109,
+    "build_seconds": 0.009
+   },
+   "skeleton_round": {
+    "closed": true,
+    "components": 1,
+    "triangles": 62720,
+    "vertices": 31362,
+    "volume": 0.41791038188368973,
+    "genes": 72,
+    "build_seconds": 1.724
+   },
+   "skeleton_detail": {
+    "closed": true,
+    "components": 1,
+    "triangles": 62688,
+    "vertices": 31346,
+    "volume": 0.4151058668407977,
+    "genes": 77,
+    "build_seconds": 4.538
+   }
+  },
+  "biped": {
+   "fourier": {
+    "closed": true,
+    "components": 9,
+    "triangles": 36864,
+    "vertices": 18450,
+    "volume": 0.300487064849161,
+    "genes": 167,
+    "build_seconds": 0.01
+   },
+   "skeleton_round": {
+    "closed": true,
+    "components": 1,
+    "triangles": 54476,
+    "vertices": 27240,
+    "volume": 0.30226254374868544,
+    "genes": 79,
+    "build_seconds": 2.05
+   },
+   "skeleton_detail": {
+    "closed": true,
+    "components": 1,
+    "triangles": 53540,
+    "vertices": 26772,
+    "volume": 0.2987027728105423,
+    "genes": 85,
+    "build_seconds": 5.37
+   }
+  }
+ },
+ "outline": {
+  "quadruped": {
+   "x": 0.0,
+   "tube_parts_cut": 1,
+   "tube": {
+    "width": 0.5187841958694225,
+    "height": 0.5053403602126677,
+    "relative_rms_error": 0.0,
+    "shape_only_error": 0.0
+   },
+   "round": {
+    "width": 0.5019191129979088,
+    "height": 0.5020351249333792,
+    "relative_rms_error": 0.02014348387482609,
+    "shape_only_error": 0.009772776155353206
+   },
+   "detail": {
+    "width": 0.5083797198743729,
+    "height": 0.49438273539856215,
+    "relative_rms_error": 0.022556462526103525,
+    "shape_only_error": 0.0040719123041620085
+   }
+  },
+  "biped": {
+   "x": 0.1,
+   "tube_parts_cut": 1,
+   "tube": {
+    "width": 0.39184457912086,
+    "height": 0.4545297989461034,
+    "relative_rms_error": 0.0,
+    "shape_only_error": 0.0
+   },
+   "round": {
+    "width": 0.4443655305501606,
+    "height": 0.4607105311559518,
+    "relative_rms_error": 0.06247830125157009,
+    "shape_only_error": 0.05609839535039903
+   },
+   "detail": {
+    "width": 0.3986438988441654,
+    "height": 0.45839432643967065,
+    "relative_rms_error": 0.015498349207828707,
+    "shape_only_error": 0.006164918681061192
+   }
+  }
+ },
+ "locality": {
+  "thickness_fourier": 0.968789013732834,
+  "thickness_skeleton": 0.3807740324594257,
+  "position_fourier": 0.9675405742821473,
+  "position_skeleton": 0.5905118601747815
+ },
+ "robustness": {
+  "children": 24,
+  "closed": 24,
+  "single_piece": 24,
+  "part_counts": {
+   "6": 14,
+   "4": 2,
+   "5": 8
+  },
+  "worst_components": 1,
+  "detail_mutations": 12
+ }
+}

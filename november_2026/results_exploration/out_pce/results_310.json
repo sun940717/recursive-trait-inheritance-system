@@ -1,0 +1,312 @@
+{
+ "prototype|plain overlap|0.25|same": {
+  "coverage": 0.34834054834054834,
+  "pairs": 26,
+  "agree": 18,
+  "disagree_examples": [
+   "quadruped.leg_front~biped.arm_front",
+   "quadruped.tail~spider.abdomen",
+   "biped.arm_front~spider.leg_1",
+   "biped.tail~spider.abdomen",
+   "biped.arm_front~crab.leg_1",
+   "biped.horn~crab.claw",
+   "spider.fang~crab.claw",
+   "serpent.fang~crab.claw"
+  ]
+ },
+ "prototype|plain overlap|0.4|same": {
+  "coverage": 0.281976911976912,
+  "pairs": 21,
+  "agree": 16,
+  "disagree_examples": [
+   "quadruped.leg_front~biped.arm_front",
+   "biped.arm_front~spider.leg_1",
+   "biped.arm_front~crab.leg_1",
+   "spider.fang~crab.claw",
+   "serpent.fang~crab.claw"
+  ]
+ },
+ "prototype|PCE|0.25|same": {
+  "coverage": 0.34834054834054834,
+  "pairs": 26,
+  "agree": 18,
+  "disagree_examples": [
+   "quadruped.leg_front~biped.arm_front",
+   "quadruped.tail~spider.abdomen",
+   "biped.arm_front~spider.leg_1",
+   "biped.tail~spider.abdomen",
+   "biped.arm_front~crab.leg_1",
+   "biped.horn~crab.claw",
+   "spider.fang~crab.claw",
+   "serpent.fang~crab.claw"
+  ]
+ },
+ "prototype|PCE|0.4|same": {
+  "coverage": 0.281976911976912,
+  "pairs": 21,
+  "agree": 16,
+  "disagree_examples": [
+   "quadruped.leg_front~biped.arm_front",
+   "biped.arm_front~spider.leg_1",
+   "biped.arm_front~crab.leg_1",
+   "spider.fang~crab.claw",
+   "serpent.fang~crab.claw"
+  ]
+ },
+ "ontology|plain overlap|0.25|same": {
+  "coverage": 0.3449975949975949,
+  "pairs": 25,
+  "agree": 21,
+  "disagree_examples": [
+   "quadruped.tail~spider.abdomen",
+   "biped.tail~spider.abdomen",
+   "spider.fang~crab.claw",
+   "serpent.fang~crab.claw"
+  ]
+ },
+ "ontology|plain overlap|0.4|same": {
+  "coverage": 0.2838287638287638,
+  "pairs": 21,
+  "agree": 19,
+  "disagree_examples": [
+   "spider.fang~crab.claw",
+   "serpent.fang~crab.claw"
+  ]
+ },
+ "ontology|PCE|0.25|same": {
+  "coverage": 0.37193362193362195,
+  "pairs": 27,
+  "agree": 21,
+  "disagree_examples": [
+   "quadruped.leg_front~biped.arm_front",
+   "quadruped.tail~spider.abdomen",
+   "biped.arm_front~spider.leg_1",
+   "biped.tail~spider.abdomen",
+   "spider.fang~crab.claw",
+   "serpent.fang~crab.claw"
+  ]
+ },
+ "ontology|PCE|0.4|same": {
+  "coverage": 0.29361712361712367,
+  "pairs": 21,
+  "agree": 21,
+  "disagree_examples": []
+ },
+ "+ position|plain overlap|0.25|same": {
+  "coverage": 0.37193362193362195,
+  "pairs": 27,
+  "agree": 21,
+  "disagree_examples": [
+   "quadruped.leg_front~biped.arm_front",
+   "quadruped.tail~spider.abdomen",
+   "biped.arm_front~spider.leg_1",
+   "biped.tail~spider.abdomen",
+   "spider.fang~crab.claw",
+   "serpent.fang~crab.claw"
+  ]
+ },
+ "+ position|plain overlap|0.4|same": {
+  "coverage": 0.2579028379028379,
+  "pairs": 19,
+  "agree": 19,
+  "disagree_examples": []
+ },
+ "+ position|PCE|0.25|same": {
+  "coverage": 0.37193362193362195,
+  "pairs": 27,
+  "agree": 21,
+  "disagree_examples": [
+   "quadruped.leg_front~biped.arm_front",
+   "quadruped.tail~spider.abdomen",
+   "biped.arm_front~spider.leg_1",
+   "biped.tail~spider.abdomen",
+   "spider.fang~crab.claw",
+   "serpent.fang~crab.claw"
+  ]
+ },
+ "+ position|PCE|0.4|same": {
+  "coverage": 0.32055315055315053,
+  "pairs": 23,
+  "agree": 21,
+  "disagree_examples": [
+   "quadruped.leg_front~biped.arm_front",
+   "biped.arm_front~spider.leg_1"
+  ]
+ },
+ "prototype|plain overlap|0.25|any": {
+  "coverage": 0.5718903318903319,
+  "pairs": 39,
+  "agree": 20,
+  "disagree_examples": [
+   "quadruped.leg_front~biped.arm_front",
+   "quadruped.tail~spider.abdomen",
+   "quadruped.leg_rear~serpent.tail_tip",
+   "quadruped.leg_front~jellyfish.tentacle",
+   "quadruped.neck_head~crab.eye_stalk",
+   "biped.arm_front~spider.leg_1",
+   "biped.tail~spider.abdomen",
+   "biped.leg_rear~serpent.tail_tip",
+   "biped.neck_head~crab.eye_stalk",
+   "biped.arm_front~crab.leg_1",
+   "biped.horn~crab.claw",
+   "spider.leg_3~serpent.tail_tip",
+   "spider.fang~jellyfish.oral_arm",
+   "spider.leg_2~jellyfish.tentacle",
+   "spider.fang~crab.claw",
+   "serpent.fang~jellyfish.tentacle",
+   "serpent.fang~crab.claw",
+   "serpent.head~crab.eye_stalk",
+   "serpent.tail_tip~crab.leg_3"
+  ]
+ },
+ "prototype|plain overlap|0.4|any": {
+  "coverage": 0.3412938912938913,
+  "pairs": 25,
+  "agree": 17,
+  "disagree_examples": [
+   "quadruped.leg_front~biped.arm_front",
+   "quadruped.neck_head~crab.eye_stalk",
+   "biped.arm_front~spider.leg_1",
+   "biped.neck_head~crab.eye_stalk",
+   "biped.arm_front~crab.leg_1",
+   "spider.fang~crab.claw",
+   "serpent.fang~crab.claw",
+   "serpent.head~crab.eye_stalk"
+  ]
+ },
+ "prototype|PCE|0.25|any": {
+  "coverage": 0.5718903318903319,
+  "pairs": 39,
+  "agree": 20,
+  "disagree_examples": [
+   "quadruped.leg_front~biped.arm_front",
+   "quadruped.tail~spider.abdomen",
+   "quadruped.leg_rear~serpent.tail_tip",
+   "quadruped.leg_front~jellyfish.tentacle",
+   "quadruped.neck_head~crab.eye_stalk",
+   "biped.arm_front~spider.leg_1",
+   "biped.tail~spider.abdomen",
+   "biped.leg_rear~serpent.tail_tip",
+   "biped.neck_head~crab.eye_stalk",
+   "biped.arm_front~crab.leg_1",
+   "biped.horn~crab.claw",
+   "spider.leg_3~serpent.tail_tip",
+   "spider.fang~jellyfish.oral_arm",
+   "spider.leg_2~jellyfish.tentacle",
+   "spider.fang~crab.claw",
+   "serpent.fang~jellyfish.tentacle",
+   "serpent.fang~crab.claw",
+   "serpent.head~crab.eye_stalk",
+   "serpent.tail_tip~crab.leg_3"
+  ]
+ },
+ "prototype|PCE|0.4|any": {
+  "coverage": 0.3412938912938913,
+  "pairs": 25,
+  "agree": 17,
+  "disagree_examples": [
+   "quadruped.leg_front~biped.arm_front",
+   "quadruped.neck_head~crab.eye_stalk",
+   "biped.arm_front~spider.leg_1",
+   "biped.neck_head~crab.eye_stalk",
+   "biped.arm_front~crab.leg_1",
+   "spider.fang~crab.claw",
+   "serpent.fang~crab.claw",
+   "serpent.head~crab.eye_stalk"
+  ]
+ },
+ "ontology|plain overlap|0.25|any": {
+  "coverage": 0.4582299182299182,
+  "pairs": 32,
+  "agree": 21,
+  "disagree_examples": [
+   "quadruped.tail~spider.abdomen",
+   "quadruped.neck_head~crab.eye_stalk",
+   "biped.tail~spider.abdomen",
+   "biped.neck_head~crab.eye_stalk",
+   "spider.leg_4~serpent.tail_tip",
+   "spider.abdomen~jellyfish.oral_arm",
+   "spider.fang~crab.claw",
+   "serpent.tail_tip~jellyfish.tentacle",
+   "serpent.fang~crab.claw",
+   "serpent.head~crab.eye_stalk",
+   "serpent.tail_tip~crab.leg_4"
+  ]
+ },
+ "ontology|plain overlap|0.4|any": {
+  "coverage": 0.2838287638287638,
+  "pairs": 21,
+  "agree": 19,
+  "disagree_examples": [
+   "spider.fang~crab.claw",
+   "serpent.fang~crab.claw"
+  ]
+ },
+ "ontology|PCE|0.25|any": {
+  "coverage": 0.37193362193362195,
+  "pairs": 27,
+  "agree": 21,
+  "disagree_examples": [
+   "quadruped.leg_front~biped.arm_front",
+   "quadruped.tail~spider.abdomen",
+   "biped.arm_front~spider.leg_1",
+   "biped.tail~spider.abdomen",
+   "spider.fang~crab.claw",
+   "serpent.fang~crab.claw"
+  ]
+ },
+ "ontology|PCE|0.4|any": {
+  "coverage": 0.29361712361712367,
+  "pairs": 21,
+  "agree": 21,
+  "disagree_examples": []
+ },
+ "+ position|plain overlap|0.25|any": {
+  "coverage": 0.4851659451659452,
+  "pairs": 34,
+  "agree": 21,
+  "disagree_examples": [
+   "quadruped.leg_front~biped.arm_front",
+   "quadruped.tail~spider.abdomen",
+   "quadruped.neck_head~crab.eye_stalk",
+   "biped.arm_front~spider.leg_1",
+   "biped.tail~spider.abdomen",
+   "biped.neck_head~crab.eye_stalk",
+   "spider.leg_3~serpent.tail_tip",
+   "spider.abdomen~jellyfish.oral_arm",
+   "spider.fang~crab.claw",
+   "serpent.tail_tip~jellyfish.tentacle",
+   "serpent.head~crab.eye_stalk",
+   "serpent.fang~crab.claw",
+   "serpent.tail_tip~crab.leg_3"
+  ]
+ },
+ "+ position|plain overlap|0.4|any": {
+  "coverage": 0.2579028379028379,
+  "pairs": 19,
+  "agree": 19,
+  "disagree_examples": []
+ },
+ "+ position|PCE|0.25|any": {
+  "coverage": 0.37193362193362195,
+  "pairs": 27,
+  "agree": 21,
+  "disagree_examples": [
+   "quadruped.leg_front~biped.arm_front",
+   "quadruped.tail~spider.abdomen",
+   "biped.arm_front~spider.leg_1",
+   "biped.tail~spider.abdomen",
+   "spider.fang~crab.claw",
+   "serpent.fang~crab.claw"
+  ]
+ },
+ "+ position|PCE|0.4|any": {
+  "coverage": 0.32055315055315053,
+  "pairs": 23,
+  "agree": 21,
+  "disagree_examples": [
+   "quadruped.leg_front~biped.arm_front",
+   "biped.arm_front~spider.leg_1"
+  ]
+ }
+}

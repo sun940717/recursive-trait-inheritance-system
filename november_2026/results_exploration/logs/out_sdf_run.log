@@ -1,0 +1,47 @@
+Comparison on the same creatures / 同樣的生物，三種做法
+           method                 genes  pieces  closed  triangles  build s
+quadruped  Fourier tubes            109       7    True      28672     0.01
+           skeleton, round           72       1    True      62720     1.72
+           skeleton + detail         77       1    True      62688     4.54
+biped      Fourier tubes            167       9    True      36864     0.01
+           skeleton, round           79       1    True      54476     2.05
+           skeleton + detail         85       1    True      53540     5.37
+
+Body outline, compared with the Fourier tube / 身體輪廓，與傅立葉管對照
+           method                   width  height   w / h  outline err  shape-only
+quadruped  Fourier tubes            0.519   0.505   1.027  (reference)            
+           skeleton, round          0.502   0.502   1.000         2.0%        1.0%
+           skeleton + detail        0.508   0.494   1.028         2.3%        0.4%
+biped      Fourier tubes            0.392   0.455   0.862  (reference)            
+           skeleton, round          0.444   0.461   0.965         6.2%        5.6%
+           skeleton + detail        0.399   0.458   0.870         1.5%        0.6%
+
+Locality: share of the front leg that changes when ONE gene changes / 改一個基因，前腿有多少比例跟著變
+  thickness gene   Fourier 97%   skeleton 38%
+  position gene    Fourier 97%   skeleton 59%
+
+Part matching A <-> B / 部位配對:
+  body       <-> body       score 1.00
+  neck_head  <-> neck_head  score 1.25
+  tail       <-> tail       score 1.25
+  leg_rear   <-> leg_rear   score 1.25
+  leg_front  <-> arm_front  score 0.74
+  F1-1: body(45%A), neck_head(64%A), tail(36%A), arm_front(57%A), leg_rear(36%A)
+        detail pack from: body:A, neck_head:A, tail:A, arm_front:A, leg_rear:B
+        mutations: tail: bone 2; tail: thickness at joint 2
+  F1-2: body(41%A), neck_head(50%A), tail(36%A), leg_front(43%A), leg_rear(43%A), horn(0%A)
+        detail pack from: body:B, neck_head:B, tail:A, leg_front:B, leg_rear:B
+        mutations: leg_rear: detail harmonic 5; neck_head: bone 0; horn: bone 1
+  F1-3: body(41%A), neck_head(21%A), tail(57%A), leg_front(71%A), leg_rear(43%A), horn(0%A)
+        detail pack from: body:A, neck_head:B, tail:A, leg_front:A, leg_rear:B
+        mutations: neck_head: thickness at joint 3
+  F1-4: body(36%A), neck_head(36%A), leg_front(64%A), leg_rear(64%A), horn(0%A)
+        detail pack from: body:A, neck_head:B, leg_front:A, leg_rear:B
+        mutations: leg_rear: bone 2; horn: thickness at joint 2; horn: thickness at joint 1
+
+Robustness over 3 generations (grid 0.03, detail on): 24 children, closed 24, single piece 24, worst piece count 1, detail mutations 12, parts per creature {'6': 14, '4': 2, '5': 8}
+Done -> /home/claude/out_sdf
+
+real	0m59.089s
+user	0m56.876s
+sys	0m1.290s

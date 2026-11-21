@@ -1,0 +1,1907 @@
+{
+ "seeds": 6,
+ "matings": 300,
+ "preview_voxel": 0.03,
+ "leg_outcomes": {
+  "2 legs, biped look": 35,
+  "8 legs, spider look": 28,
+  "8 legs, mixed look": 70,
+  "2 legs, mixed look": 90,
+  "2 legs, spider look": 39,
+  "8 legs, biped look": 38
+ },
+ "modes": {
+  "off": {
+   "children": 90,
+   "valid": 90,
+   "with_hidden": 16,
+   "hidden": 19,
+   "with_swallowed": 0,
+   "humps": 0.0998148148148148,
+   "parts": 5.944444444444445,
+   "minority": 0.3596007740244458,
+   "hidden_kinds": {
+    "biped x spider: fang": 2,
+    "biped x jellyfish: arm_front": 5,
+    "spider x jellyfish: fang": 3,
+    "serpent x jellyfish: head": 4,
+    "serpent x jellyfish: fang": 2,
+    "serpent x jellyfish: tail_tip": 1,
+    "jellyfish x crab: eye_stalk": 2
+   }
+  },
+  "on": {
+   "children": 90,
+   "valid": 90,
+   "with_hidden": 4,
+   "hidden": 6,
+   "with_swallowed": 0,
+   "humps": 0.0837037037037037,
+   "parts": 6.2,
+   "minority": 0.3633554593080763,
+   "hidden_kinds": {
+    "serpent x jellyfish: head": 4,
+    "serpent x jellyfish: fang": 2
+   }
+  }
+ },
+ "rows": {
+  "off": [
+   {
+    "pair": "quadruped x biped",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.4260679507444919
+   },
+   {
+    "pair": "quadruped x biped",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.34326284920512423
+   },
+   {
+    "pair": "quadruped x biped",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.2,
+    "parts": 6,
+    "minority": 0.44669515836309337
+   },
+   {
+    "pair": "quadruped x biped",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.4485260070998611
+   },
+   {
+    "pair": "quadruped x biped",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.26727787209960385
+   },
+   {
+    "pair": "quadruped x biped",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.47805660860060006
+   },
+   {
+    "pair": "quadruped x spider",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.49455707580145813
+   },
+   {
+    "pair": "quadruped x spider",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.42980866446653054
+   },
+   {
+    "pair": "quadruped x spider",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.3333333333333333,
+    "parts": 7,
+    "minority": 0.3618356742295622
+   },
+   {
+    "pair": "quadruped x spider",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.444547340981976
+   },
+   {
+    "pair": "quadruped x spider",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.46150693753293126
+   },
+   {
+    "pair": "quadruped x spider",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.3702386897033856
+   },
+   {
+    "pair": "quadruped x serpent",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.3736480790075877
+   },
+   {
+    "pair": "quadruped x serpent",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.45678670360110796
+   },
+   {
+    "pair": "quadruped x serpent",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.6666666666666666,
+    "parts": 5,
+    "minority": 0.49463426181646014
+   },
+   {
+    "pair": "quadruped x serpent",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.3333333333333333,
+    "parts": 5,
+    "minority": 0.4728425261053684
+   },
+   {
+    "pair": "quadruped x serpent",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.3333333333333333,
+    "parts": 6,
+    "minority": 0.4696495242683367
+   },
+   {
+    "pair": "quadruped x serpent",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.3333333333333333,
+    "parts": 6,
+    "minority": 0.3528363242201613
+   },
+   {
+    "pair": "quadruped x jellyfish",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.1538746755654431
+   },
+   {
+    "pair": "quadruped x jellyfish",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.35164484190354517
+   },
+   {
+    "pair": "quadruped x jellyfish",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.3596995139195758
+   },
+   {
+    "pair": "quadruped x jellyfish",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 4,
+    "minority": 0.49753963914707494
+   },
+   {
+    "pair": "quadruped x jellyfish",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.4160177975528365
+   },
+   {
+    "pair": "quadruped x jellyfish",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.2161661104931406
+   },
+   {
+    "pair": "quadruped x crab",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.3333333333333333,
+    "parts": 6,
+    "minority": 0.3219129738082067
+   },
+   {
+    "pair": "quadruped x crab",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.42980866446653054
+   },
+   {
+    "pair": "quadruped x crab",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.31362702171387724
+   },
+   {
+    "pair": "quadruped x crab",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.4931490470838614
+   },
+   {
+    "pair": "quadruped x crab",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.4154516654122836
+   },
+   {
+    "pair": "quadruped x crab",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 8,
+    "minority": 0.4825314247441629
+   },
+   {
+    "pair": "biped x spider",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.25,
+    "parts": 6,
+    "minority": 0.32898080502760685
+   },
+   {
+    "pair": "biped x spider",
+    "seed": 2,
+    "valid": true,
+    "hidden": [
+     "fang"
+    ],
+    "swallowed": 0,
+    "humps": 0.25,
+    "parts": 8,
+    "minority": 0.37808876856922813
+   },
+   {
+    "pair": "biped x spider",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.35917529883216603
+   },
+   {
+    "pair": "biped x spider",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 4,
+    "minority": 0.46383144535055254
+   },
+   {
+    "pair": "biped x spider",
+    "seed": 5,
+    "valid": true,
+    "hidden": [
+     "fang"
+    ],
+    "swallowed": 0,
+    "humps": 0.3333333333333333,
+    "parts": 6,
+    "minority": 0.4335948993833503
+   },
+   {
+    "pair": "biped x spider",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.25,
+    "parts": 7,
+    "minority": 0.4925135582851605
+   },
+   {
+    "pair": "biped x serpent",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.3623120466189237
+   },
+   {
+    "pair": "biped x serpent",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.4292563392286384
+   },
+   {
+    "pair": "biped x serpent",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.6666666666666666,
+    "parts": 5,
+    "minority": 0.4827433032709651
+   },
+   {
+    "pair": "biped x serpent",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.3333333333333333,
+    "parts": 5,
+    "minority": 0.4604388208372594
+   },
+   {
+    "pair": "biped x serpent",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.25,
+    "parts": 6,
+    "minority": 0.4097304959282557
+   },
+   {
+    "pair": "biped x serpent",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.25,
+    "parts": 6,
+    "minority": 0.2929172958800804
+   },
+   {
+    "pair": "biped x jellyfish",
+    "seed": 1,
+    "valid": true,
+    "hidden": [
+     "arm_front"
+    ],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.03984819734345357
+   },
+   {
+    "pair": "biped x jellyfish",
+    "seed": 2,
+    "valid": true,
+    "hidden": [
+     "arm_front"
+    ],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.13548387096774195
+   },
+   {
+    "pair": "biped x jellyfish",
+    "seed": 3,
+    "valid": true,
+    "hidden": [
+     "arm_front"
+    ],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.22898682417083138
+   },
+   {
+    "pair": "biped x jellyfish",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.4608926204153777
+   },
+   {
+    "pair": "biped x jellyfish",
+    "seed": 5,
+    "valid": true,
+    "hidden": [
+     "arm_front"
+    ],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.17174011812812362
+   },
+   {
+    "pair": "biped x jellyfish",
+    "seed": 6,
+    "valid": true,
+    "hidden": [
+     "arm_front"
+    ],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.1174193548387098
+   },
+   {
+    "pair": "biped x crab",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.3333333333333333,
+    "parts": 6,
+    "minority": 0.3294645122260602
+   },
+   {
+    "pair": "biped x crab",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.3463816930463516
+   },
+   {
+    "pair": "biped x crab",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.3958984898579216
+   },
+   {
+    "pair": "biped x crab",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.4186107443040097
+   },
+   {
+    "pair": "biped x crab",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.3333333333333333,
+    "parts": 9,
+    "minority": 0.44744823182853743
+   },
+   {
+    "pair": "biped x crab",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 8,
+    "minority": 0.40961978785377173
+   },
+   {
+    "pair": "spider x serpent",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.5,
+    "parts": 7,
+    "minority": 0.1523891519586742
+   },
+   {
+    "pair": "spider x serpent",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.2865168539325843
+   },
+   {
+    "pair": "spider x serpent",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.5,
+    "parts": 6,
+    "minority": 0.34716846416895264
+   },
+   {
+    "pair": "spider x serpent",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.5,
+    "parts": 4,
+    "minority": 0.3899665551839465
+   },
+   {
+    "pair": "spider x serpent",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.2106195569389715
+   },
+   {
+    "pair": "spider x serpent",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.15245537931719588
+   },
+   {
+    "pair": "spider x jellyfish",
+    "seed": 1,
+    "valid": true,
+    "hidden": [
+     "fang"
+    ],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 8,
+    "minority": 0.125
+   },
+   {
+    "pair": "spider x jellyfish",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 8,
+    "minority": 0.17032967032967028
+   },
+   {
+    "pair": "spider x jellyfish",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.1161971830985915
+   },
+   {
+    "pair": "spider x jellyfish",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.163135593220339
+   },
+   {
+    "pair": "spider x jellyfish",
+    "seed": 5,
+    "valid": true,
+    "hidden": [
+     "fang"
+    ],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.08967391304347827
+   },
+   {
+    "pair": "spider x jellyfish",
+    "seed": 6,
+    "valid": true,
+    "hidden": [
+     "fang"
+    ],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.05941358024691357
+   },
+   {
+    "pair": "spider x crab",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.32098765432098764
+   },
+   {
+    "pair": "spider x crab",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.41975308641975306
+   },
+   {
+    "pair": "spider x crab",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 8,
+    "minority": 0.4114010989010989
+   },
+   {
+    "pair": "spider x crab",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 8,
+    "minority": 0.4859550561797753
+   },
+   {
+    "pair": "spider x crab",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.2,
+    "parts": 7,
+    "minority": 0.4802215189873418
+   },
+   {
+    "pair": "spider x crab",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 8,
+    "minority": 0.4899193548387097
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "seed": 1,
+    "valid": true,
+    "hidden": [
+     "head",
+     "fang"
+    ],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 4,
+    "minority": 0.09137803979366244
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 4,
+    "minority": 0.2627118644067796
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "seed": 3,
+    "valid": true,
+    "hidden": [
+     "head"
+    ],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 4,
+    "minority": 0.38026755852842814
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "seed": 4,
+    "valid": true,
+    "hidden": [
+     "head",
+     "tail_tip"
+    ],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 3,
+    "minority": 0.4185848252344416
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 3,
+    "minority": 0.3713398402839396
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "seed": 6,
+    "valid": true,
+    "hidden": [
+     "head",
+     "fang"
+    ],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.33948779035139964
+   },
+   {
+    "pair": "serpent x crab",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.4967793880837359
+   },
+   {
+    "pair": "serpent x crab",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.4153318077803204
+   },
+   {
+    "pair": "serpent x crab",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.5,
+    "parts": 5,
+    "minority": 0.4249553305539011
+   },
+   {
+    "pair": "serpent x crab",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.4589041095890411
+   },
+   {
+    "pair": "serpent x crab",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 1.0,
+    "parts": 6,
+    "minority": 0.3936616029334731
+   },
+   {
+    "pair": "serpent x crab",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.45789763346175005
+   },
+   {
+    "pair": "jellyfish x crab",
+    "seed": 1,
+    "valid": true,
+    "hidden": [
+     "eye_stalk"
+    ],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.4981343283582089
+   },
+   {
+    "pair": "jellyfish x crab",
+    "seed": 2,
+    "valid": true,
+    "hidden": [
+     "eye_stalk"
+    ],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.44029850746268656
+   },
+   {
+    "pair": "jellyfish x crab",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.27459016393442626
+   },
+   {
+    "pair": "jellyfish x crab",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 3,
+    "minority": 0.4155405405405405
+   },
+   {
+    "pair": "jellyfish x crab",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.4883474576271186
+   },
+   {
+    "pair": "jellyfish x crab",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.4251760563380282
+   }
+  ],
+  "on": [
+   {
+    "pair": "quadruped x biped",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.48140145084117913
+   },
+   {
+    "pair": "quadruped x biped",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.2409470428169407
+   },
+   {
+    "pair": "quadruped x biped",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.39255029068271846
+   },
+   {
+    "pair": "quadruped x biped",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.3798171965485964
+   },
+   {
+    "pair": "quadruped x biped",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 4,
+    "minority": 0.28088400333803343
+   },
+   {
+    "pair": "quadruped x biped",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 4,
+    "minority": 0.4166498805789761
+   },
+   {
+    "pair": "quadruped x spider",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.49455707580145813
+   },
+   {
+    "pair": "quadruped x spider",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.43950198075834757
+   },
+   {
+    "pair": "quadruped x spider",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.3333333333333333,
+    "parts": 6,
+    "minority": 0.2738130086060535
+   },
+   {
+    "pair": "quadruped x spider",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 8,
+    "minority": 0.4833837750055363
+   },
+   {
+    "pair": "quadruped x spider",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.4558994099749534
+   },
+   {
+    "pair": "quadruped x spider",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.44145911286201717
+   },
+   {
+    "pair": "quadruped x serpent",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.3736480790075877
+   },
+   {
+    "pair": "quadruped x serpent",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.45678670360110796
+   },
+   {
+    "pair": "quadruped x serpent",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.6666666666666666,
+    "parts": 5,
+    "minority": 0.49463426181646014
+   },
+   {
+    "pair": "quadruped x serpent",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.3333333333333333,
+    "parts": 5,
+    "minority": 0.4728425261053684
+   },
+   {
+    "pair": "quadruped x serpent",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.3333333333333333,
+    "parts": 6,
+    "minority": 0.4696495242683367
+   },
+   {
+    "pair": "quadruped x serpent",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.3333333333333333,
+    "parts": 6,
+    "minority": 0.3528363242201613
+   },
+   {
+    "pair": "quadruped x jellyfish",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.1538746755654431
+   },
+   {
+    "pair": "quadruped x jellyfish",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.35164484190354517
+   },
+   {
+    "pair": "quadruped x jellyfish",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.3596995139195758
+   },
+   {
+    "pair": "quadruped x jellyfish",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 4,
+    "minority": 0.49753963914707494
+   },
+   {
+    "pair": "quadruped x jellyfish",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.4160177975528365
+   },
+   {
+    "pair": "quadruped x jellyfish",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.2161661104931406
+   },
+   {
+    "pair": "quadruped x crab",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.3333333333333333,
+    "parts": 6,
+    "minority": 0.2900029961050634
+   },
+   {
+    "pair": "quadruped x crab",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 8,
+    "minority": 0.45962107667112395
+   },
+   {
+    "pair": "quadruped x crab",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.39726089417091115
+   },
+   {
+    "pair": "quadruped x crab",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.48308737103304167
+   },
+   {
+    "pair": "quadruped x crab",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 9,
+    "minority": 0.44617996604414256
+   },
+   {
+    "pair": "quadruped x crab",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 9,
+    "minority": 0.4544516129032259
+   },
+   {
+    "pair": "biped x spider",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.3333333333333333,
+    "parts": 5,
+    "minority": 0.22694505809836163
+   },
+   {
+    "pair": "biped x spider",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 9,
+    "minority": 0.3265562158654681
+   },
+   {
+    "pair": "biped x spider",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.3333333333333333,
+    "parts": 6,
+    "minority": 0.2641796433866743
+   },
+   {
+    "pair": "biped x spider",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 8,
+    "minority": 0.45295934889816825
+   },
+   {
+    "pair": "biped x spider",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 8,
+    "minority": 0.4642057494349515
+   },
+   {
+    "pair": "biped x spider",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 9,
+    "minority": 0.30032649862870575
+   },
+   {
+    "pair": "biped x serpent",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.3623120466189237
+   },
+   {
+    "pair": "biped x serpent",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.4292563392286384
+   },
+   {
+    "pair": "biped x serpent",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.6666666666666666,
+    "parts": 5,
+    "minority": 0.4827433032709651
+   },
+   {
+    "pair": "biped x serpent",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.3333333333333333,
+    "parts": 5,
+    "minority": 0.4604388208372594
+   },
+   {
+    "pair": "biped x serpent",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.25,
+    "parts": 6,
+    "minority": 0.4097304959282557
+   },
+   {
+    "pair": "biped x serpent",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.25,
+    "parts": 6,
+    "minority": 0.2929172958800804
+   },
+   {
+    "pair": "biped x jellyfish",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.17562724014336917
+   },
+   {
+    "pair": "biped x jellyfish",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.25773867709351583
+   },
+   {
+    "pair": "biped x jellyfish",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.4237691001697793
+   },
+   {
+    "pair": "biped x jellyfish",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.4608926204153777
+   },
+   {
+    "pair": "biped x jellyfish",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.3081593927893739
+   },
+   {
+    "pair": "biped x jellyfish",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.2562522653135194
+   },
+   {
+    "pair": "biped x crab",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.3333333333333333,
+    "parts": 6,
+    "minority": 0.29714954895984624
+   },
+   {
+    "pair": "biped x crab",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 10,
+    "minority": 0.44583097528768156
+   },
+   {
+    "pair": "biped x crab",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.4702766684999641
+   },
+   {
+    "pair": "biped x crab",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 9,
+    "minority": 0.4837937953387868
+   },
+   {
+    "pair": "biped x crab",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 9,
+    "minority": 0.42217996604414254
+   },
+   {
+    "pair": "biped x crab",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 9,
+    "minority": 0.3764516129032258
+   },
+   {
+    "pair": "spider x serpent",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.1523891519586742
+   },
+   {
+    "pair": "spider x serpent",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.2865168539325843
+   },
+   {
+    "pair": "spider x serpent",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.5,
+    "parts": 6,
+    "minority": 0.34716846416895264
+   },
+   {
+    "pair": "spider x serpent",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.5,
+    "parts": 4,
+    "minority": 0.3899665551839465
+   },
+   {
+    "pair": "spider x serpent",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.2106195569389715
+   },
+   {
+    "pair": "spider x serpent",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.15245537931719588
+   },
+   {
+    "pair": "spider x jellyfish",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 8,
+    "minority": 0.125
+   },
+   {
+    "pair": "spider x jellyfish",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 8,
+    "minority": 0.17032967032967028
+   },
+   {
+    "pair": "spider x jellyfish",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.1161971830985915
+   },
+   {
+    "pair": "spider x jellyfish",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.163135593220339
+   },
+   {
+    "pair": "spider x jellyfish",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.08967391304347827
+   },
+   {
+    "pair": "spider x jellyfish",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.05941358024691357
+   },
+   {
+    "pair": "spider x crab",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.32098765432098764
+   },
+   {
+    "pair": "spider x crab",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.41975308641975306
+   },
+   {
+    "pair": "spider x crab",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 8,
+    "minority": 0.4114010989010989
+   },
+   {
+    "pair": "spider x crab",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 8,
+    "minority": 0.4859550561797753
+   },
+   {
+    "pair": "spider x crab",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.2,
+    "parts": 7,
+    "minority": 0.4802215189873418
+   },
+   {
+    "pair": "spider x crab",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 8,
+    "minority": 0.4899193548387097
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "seed": 1,
+    "valid": true,
+    "hidden": [
+     "head",
+     "fang"
+    ],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 4,
+    "minority": 0.09137803979366244
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 4,
+    "minority": 0.2627118644067796
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "seed": 3,
+    "valid": true,
+    "hidden": [
+     "head"
+    ],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 4,
+    "minority": 0.38026755852842814
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "seed": 4,
+    "valid": true,
+    "hidden": [
+     "head"
+    ],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 3,
+    "minority": 0.4185848252344416
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 3,
+    "minority": 0.3713398402839396
+   },
+   {
+    "pair": "serpent x jellyfish",
+    "seed": 6,
+    "valid": true,
+    "hidden": [
+     "head",
+     "fang"
+    ],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.33948779035139964
+   },
+   {
+    "pair": "serpent x crab",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.4967793880837359
+   },
+   {
+    "pair": "serpent x crab",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 7,
+    "minority": 0.4153318077803204
+   },
+   {
+    "pair": "serpent x crab",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.5,
+    "parts": 5,
+    "minority": 0.4249553305539011
+   },
+   {
+    "pair": "serpent x crab",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.4589041095890411
+   },
+   {
+    "pair": "serpent x crab",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 1.0,
+    "parts": 6,
+    "minority": 0.3936616029334731
+   },
+   {
+    "pair": "serpent x crab",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.45789763346175005
+   },
+   {
+    "pair": "jellyfish x crab",
+    "seed": 1,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.4981343283582089
+   },
+   {
+    "pair": "jellyfish x crab",
+    "seed": 2,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.44029850746268656
+   },
+   {
+    "pair": "jellyfish x crab",
+    "seed": 3,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.27459016393442626
+   },
+   {
+    "pair": "jellyfish x crab",
+    "seed": 4,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 3,
+    "minority": 0.4155405405405405
+   },
+   {
+    "pair": "jellyfish x crab",
+    "seed": 5,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 5,
+    "minority": 0.4883474576271186
+   },
+   {
+    "pair": "jellyfish x crab",
+    "seed": 6,
+    "valid": true,
+    "hidden": [],
+    "swallowed": 0,
+    "humps": 0.0,
+    "parts": 6,
+    "minority": 0.4251760563380282
+   }
+  ]
+ },
+ "example_seeds": {
+  "2 legs, biped look": 1000,
+  "8 legs, spider look": 1001,
+  "8 legs, mixed look": 1002,
+  "2 legs, mixed look": 1003,
+  "2 legs, spider look": 1005,
+  "8 legs, biped look": 1008
+ }
+}

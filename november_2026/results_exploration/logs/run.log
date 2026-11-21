@@ -1,0 +1,17 @@
+Part A: RMS error vs number of terms / 誤差 vs 項數
+  N =   1   RMS = 0.4455
+  N =   2   RMS = 0.1849
+  N =   4   RMS = 0.0807
+  N =   8   RMS = 0.0271
+  N =  16   RMS = 0.0101
+  N =  32   RMS = 0.0037
+  N =  64   RMS = 0.0013
+Part B/C: genome length = 280 floats / 基因組長度
+  creature_00_original.obj   7 parts, 28672 triangles
+  creature_01_low.obj   7 parts, 28672 triangles
+  creature_02_low.obj   7 parts, 28672 triangles
+  creature_03_high.obj   7 parts, 28672 triangles
+  creature_04_high.obj   7 parts, 28672 triangles
+  creature_05_all.obj   7 parts, 28672 triangles
+  creature_06_all.obj   7 parts, 28672 triangles
+Done -> /home/claude/out

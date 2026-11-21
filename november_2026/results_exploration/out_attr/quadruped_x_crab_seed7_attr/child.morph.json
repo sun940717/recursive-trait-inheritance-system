@@ -1,0 +1,2599 @@
+{
+ "format": "rtis-morphology-package",
+ "version": "0.2",
+ "name": "child",
+ "about": {
+  "what": "Morphology package: the body of one creature as a topological entity (nodes, edges, parameters).",
+  "frame": "x forward, y to the creature's left, z up; lengths in the generator's units (see 'size')",
+  "nodes": "one per joint of each placed copy of a part; id = <part>[.<copy>].j<index>; index 0 is where the part starts",
+  "bones": "one per stretch between neighbouring nodes; id = <part>[.<copy>].b<index>; 'parent' is the bone it moves with",
+  "edges": "bone: two nodes of one chain. attach: first node of a part to a bone of its parent part, at 't' along that bone (0 = start, 1 = end). mirror: the same node on the left and right copy. radial: the same node on neighbouring copies around the parent.",
+  "parts": "one per gene of the genome; 'copies' lists the placed copies ('' = single, L/R = mirrored, 0..N-1 = radial)",
+  "groups": "named sets of part names, for addressing several parts at once",
+  "skin": "per mesh vertex: up to 4 bones (indices into 'bones') and their weights (sum 1). A default binding; a motion system may ignore it and bind the mesh its own way.",
+  "access": "read_only: a motion system may move nodes (pose) but not add, remove or rewire them. The body is grown from the genome; a change to its structure has to go back to RTIS as a gene change, and RTIS grows a new body and a new package.",
+  "lineage": "how this body came to be. Inheritance is done by RTIS on genes; a motion system receives the result here and does not redo it. ancestry_a per part = share of the part's genes from parent A."
+ },
+ "genome_digest": "cdc295771968",
+ "voxel": 0.02,
+ "access": {
+  "motion_system": "read_only"
+ },
+ "lineage": {
+  "generation": 1,
+  "parents": [
+   "quadruped",
+   "crab"
+  ],
+  "seed": 7,
+  "rules": [
+   "tags: RTIS ontology.py (cell / organ / part layers)",
+   "matching: PCE layered similarity; >= 0.40 always, 0.25-0.40 chance (score - 0.25) / 0.15, < 0.25 never",
+   "each gene copied whole from one parent (alpha 0.5)",
+   "relative genes (size gene; lengths and radii as fractions; lean and bends relative to the parent)",
+   "linkage: 1 switch point per crossed part",
+   "grafting: a part whose parent is missing attaches where that parent would have been",
+   "site rule: two unmatched limbs in one place compete; only one stays",
+   "geometry: skeleton + implicit surface + Fourier cross-section detail"
+  ],
+  "matched_pairs": [
+   [
+    "body",
+    "carapace"
+   ],
+   [
+    "leg_front",
+    "leg_1"
+   ],
+   [
+    "leg_front",
+    "leg_2"
+   ],
+   [
+    "leg_rear",
+    "leg_3"
+   ],
+   [
+    "leg_rear",
+    "leg_4"
+   ]
+  ],
+  "ancestry_a": {
+   "carapace": 0.1935483870967742,
+   "neck_head": 1.0,
+   "leg_1": 0.47368421052631576,
+   "leg_2": 0.3684210526315789,
+   "leg_3": 0.8947368421052632,
+   "leg_4": 0.8421052631578947,
+   "claw": 0.0,
+   "eye_stalk": 0.0
+  }
+ },
+ "size": {
+  "bounds_min": [
+   -0.47998,
+   -0.80909,
+   -0.27834
+  ],
+  "bounds_max": [
+   0.95097,
+   0.8091,
+   0.67278
+  ],
+  "diagonal": 2.36025
+ },
+ "files": {
+  "skin": "child.skin.npz",
+  "mesh_for_viewing": "child.obj"
+ },
+ "counts": {
+  "parts": 8,
+  "nodes": 80,
+  "bones": 66,
+  "edges": 111,
+  "vertices": 12960,
+  "faces": 25924
+ },
+ "parts": [
+  {
+   "name": "carapace",
+   "tags": [
+    "torso",
+    "shell",
+    "defense_organ",
+    "central"
+   ],
+   "arrangement": "single",
+   "copies": [
+    ""
+   ],
+   "parent": null,
+   "attach": 0.0,
+   "is_core": true,
+   "bones_per_copy": 9,
+   "ancestry_a": 0.1935483870967742,
+   "vertices": 5080
+  },
+  {
+   "name": "neck_head",
+   "tags": [
+    "head",
+    "sensor"
+   ],
+   "arrangement": "single",
+   "copies": [
+    ""
+   ],
+   "parent": "carapace",
+   "attach": 0.96,
+   "is_core": true,
+   "bones_per_copy": 5,
+   "ancestry_a": 1.0,
+   "vertices": 644
+  },
+  {
+   "name": "leg_1",
+   "tags": [
+    "limb",
+    "locomotion",
+    "motor_organ"
+   ],
+   "arrangement": "mirror",
+   "copies": [
+    "L",
+    "R"
+   ],
+   "parent": "carapace",
+   "attach": 0.72,
+   "is_core": true,
+   "bones_per_copy": 5,
+   "ancestry_a": 0.47368421052631576,
+   "vertices": 980
+  },
+  {
+   "name": "leg_2",
+   "tags": [
+    "limb",
+    "locomotion",
+    "motor_organ"
+   ],
+   "arrangement": "mirror",
+   "copies": [
+    "L",
+    "R"
+   ],
+   "parent": "carapace",
+   "attach": 0.54,
+   "is_core": true,
+   "bones_per_copy": 5,
+   "ancestry_a": 0.3684210526315789,
+   "vertices": 940
+  },
+  {
+   "name": "leg_3",
+   "tags": [
+    "limb",
+    "locomotion",
+    "motor_organ"
+   ],
+   "arrangement": "mirror",
+   "copies": [
+    "L",
+    "R"
+   ],
+   "parent": "carapace",
+   "attach": 0.36,
+   "is_core": true,
+   "bones_per_copy": 5,
+   "ancestry_a": 0.8947368421052632,
+   "vertices": 1060
+  },
+  {
+   "name": "leg_4",
+   "tags": [
+    "limb",
+    "locomotion",
+    "motor_organ"
+   ],
+   "arrangement": "mirror",
+   "copies": [
+    "L",
+    "R"
+   ],
+   "parent": "carapace",
+   "attach": 0.18,
+   "is_core": true,
+   "bones_per_copy": 5,
+   "ancestry_a": 0.8421052631578947,
+   "vertices": 1144
+  },
+  {
+   "name": "claw",
+   "tags": [
+    "limb",
+    "grasping",
+    "cutting",
+    "end_effector"
+   ],
+   "arrangement": "mirror",
+   "copies": [
+    "L",
+    "R"
+   ],
+   "parent": "carapace",
+   "attach": 0.92,
+   "is_core": true,
+   "bones_per_copy": 4,
+   "ancestry_a": 0.0,
+   "vertices": 2832
+  },
+  {
+   "name": "eye_stalk",
+   "tags": [
+    "sensory_cluster",
+    "sensor"
+   ],
+   "arrangement": "mirror",
+   "copies": [
+    "L",
+    "R"
+   ],
+   "parent": "carapace",
+   "attach": 0.97,
+   "is_core": false,
+   "bones_per_copy": 2,
+   "ancestry_a": 0.0,
+   "vertices": 280
+  }
+ ],
+ "groups": {
+  "root": [
+   "carapace"
+  ],
+  "attached": [
+   "neck_head",
+   "leg_1",
+   "leg_2",
+   "leg_3",
+   "leg_4",
+   "claw",
+   "eye_stalk"
+  ],
+  "tag:torso": [
+   "carapace"
+  ],
+  "tag:shell": [
+   "carapace"
+  ],
+  "tag:defense_organ": [
+   "carapace"
+  ],
+  "tag:central": [
+   "carapace"
+  ],
+  "arrangement:single": [
+   "carapace",
+   "neck_head"
+  ],
+  "tag:head": [
+   "neck_head"
+  ],
+  "tag:sensor": [
+   "neck_head",
+   "eye_stalk"
+  ],
+  "tag:limb": [
+   "leg_1",
+   "leg_2",
+   "leg_3",
+   "leg_4",
+   "claw"
+  ],
+  "tag:locomotion": [
+   "leg_1",
+   "leg_2",
+   "leg_3",
+   "leg_4"
+  ],
+  "tag:motor_organ": [
+   "leg_1",
+   "leg_2",
+   "leg_3",
+   "leg_4"
+  ],
+  "arrangement:mirror": [
+   "leg_1",
+   "leg_2",
+   "leg_3",
+   "leg_4",
+   "claw",
+   "eye_stalk"
+  ],
+  "tag:grasping": [
+   "claw"
+  ],
+  "tag:cutting": [
+   "claw"
+  ],
+  "tag:end_effector": [
+   "claw"
+  ],
+  "tag:sensory_cluster": [
+   "eye_stalk"
+  ]
+ },
+ "nodes": [
+  {
+   "id": "carapace.j0",
+   "part": "carapace",
+   "copy": "",
+   "index": 0,
+   "position": [
+    -0.3,
+    0.0,
+    0.3
+   ],
+   "radius": 0.18,
+   "tip": false
+  },
+  {
+   "id": "carapace.j1",
+   "part": "carapace",
+   "copy": "",
+   "index": 1,
+   "position": [
+    -0.233333,
+    0.0,
+    0.304444
+   ],
+   "radius": 0.22,
+   "tip": false
+  },
+  {
+   "id": "carapace.j2",
+   "part": "carapace",
+   "copy": "",
+   "index": 2,
+   "position": [
+    -0.166667,
+    0.0,
+    0.308889
+   ],
+   "radius": 0.26,
+   "tip": false
+  },
+  {
+   "id": "carapace.j3",
+   "part": "carapace",
+   "copy": "",
+   "index": 3,
+   "position": [
+    -0.1,
+    0.0,
+    0.313333
+   ],
+   "radius": 0.28,
+   "tip": false
+  },
+  {
+   "id": "carapace.j4",
+   "part": "carapace",
+   "copy": "",
+   "index": 4,
+   "position": [
+    -0.033333,
+    0.0,
+    0.317778
+   ],
+   "radius": 0.293333,
+   "tip": false
+  },
+  {
+   "id": "carapace.j5",
+   "part": "carapace",
+   "copy": "",
+   "index": 5,
+   "position": [
+    0.033333,
+    0.0,
+    0.317778
+   ],
+   "radius": 0.293333,
+   "tip": false
+  },
+  {
+   "id": "carapace.j6",
+   "part": "carapace",
+   "copy": "",
+   "index": 6,
+   "position": [
+    0.1,
+    0.0,
+    0.313333
+   ],
+   "radius": 0.28,
+   "tip": false
+  },
+  {
+   "id": "carapace.j7",
+   "part": "carapace",
+   "copy": "",
+   "index": 7,
+   "position": [
+    0.164444,
+    0.0,
+    0.308889
+   ],
+   "radius": 0.258889,
+   "tip": false
+  },
+  {
+   "id": "carapace.j8",
+   "part": "carapace",
+   "copy": "",
+   "index": 8,
+   "position": [
+    0.222222,
+    0.0,
+    0.304444
+   ],
+   "radius": 0.109044,
+   "tip": false
+  },
+  {
+   "id": "carapace.j9",
+   "part": "carapace",
+   "copy": "",
+   "index": 9,
+   "position": [
+    0.274792,
+    0.0,
+    0.299676
+   ],
+   "radius": 0.084349,
+   "tip": true
+  },
+  {
+   "id": "neck_head.j0",
+   "part": "neck_head",
+   "copy": "",
+   "index": 0,
+   "position": [
+    0.255867,
+    0.0,
+    0.301393
+   ],
+   "radius": 0.071225,
+   "tip": false
+  },
+  {
+   "id": "neck_head.j1",
+   "part": "neck_head",
+   "copy": "",
+   "index": 1,
+   "position": [
+    0.320016,
+    0.0,
+    0.370666
+   ],
+   "radius": 0.055848,
+   "tip": false
+  },
+  {
+   "id": "neck_head.j2",
+   "part": "neck_head",
+   "copy": "",
+   "index": 2,
+   "position": [
+    0.423258,
+    0.0,
+    0.472103
+   ],
+   "radius": 0.04902,
+   "tip": false
+  },
+  {
+   "id": "neck_head.j3",
+   "part": "neck_head",
+   "copy": "",
+   "index": 3,
+   "position": [
+    0.516106,
+    0.0,
+    0.542846
+   ],
+   "radius": 0.060501,
+   "tip": false
+  },
+  {
+   "id": "neck_head.j4",
+   "part": "neck_head",
+   "copy": "",
+   "index": 4,
+   "position": [
+    0.659127,
+    0.0,
+    0.555821
+   ],
+   "radius": 0.085673,
+   "tip": false
+  },
+  {
+   "id": "neck_head.j5",
+   "part": "neck_head",
+   "copy": "",
+   "index": 5,
+   "position": [
+    0.748393,
+    0.0,
+    0.530219
+   ],
+   "radius": 0.037271,
+   "tip": true
+  },
+  {
+   "id": "leg_1.L.j0",
+   "part": "leg_1",
+   "copy": "L",
+   "index": 0,
+   "position": [
+    0.130933,
+    0.0,
+    0.3112
+   ],
+   "radius": 0.056193,
+   "tip": false
+  },
+  {
+   "id": "leg_1.L.j1",
+   "part": "leg_1",
+   "copy": "L",
+   "index": 1,
+   "position": [
+    0.135894,
+    0.094916,
+    0.330688
+   ],
+   "radius": 0.049858,
+   "tip": false
+  },
+  {
+   "id": "leg_1.L.j2",
+   "part": "leg_1",
+   "copy": "L",
+   "index": 2,
+   "position": [
+    0.16381,
+    0.239398,
+    0.290138
+   ],
+   "radius": 0.044876,
+   "tip": false
+  },
+  {
+   "id": "leg_1.L.j3",
+   "part": "leg_1",
+   "copy": "L",
+   "index": 3,
+   "position": [
+    0.194514,
+    0.400226,
+    0.149375
+   ],
+   "radius": 0.039119,
+   "tip": false
+  },
+  {
+   "id": "leg_1.L.j4",
+   "part": "leg_1",
+   "copy": "L",
+   "index": 4,
+   "position": [
+    0.212757,
+    0.506696,
+    -0.073772
+   ],
+   "radius": 0.029837,
+   "tip": false
+  },
+  {
+   "id": "leg_1.L.j5",
+   "part": "leg_1",
+   "copy": "L",
+   "index": 5,
+   "position": [
+    0.222953,
+    0.554322,
+    -0.263432
+   ],
+   "radius": 0.016858,
+   "tip": true
+  },
+  {
+   "id": "leg_1.R.j0",
+   "part": "leg_1",
+   "copy": "R",
+   "index": 0,
+   "position": [
+    0.130933,
+    0.0,
+    0.3112
+   ],
+   "radius": 0.056193,
+   "tip": false
+  },
+  {
+   "id": "leg_1.R.j1",
+   "part": "leg_1",
+   "copy": "R",
+   "index": 1,
+   "position": [
+    0.135894,
+    -0.094916,
+    0.330688
+   ],
+   "radius": 0.049858,
+   "tip": false
+  },
+  {
+   "id": "leg_1.R.j2",
+   "part": "leg_1",
+   "copy": "R",
+   "index": 2,
+   "position": [
+    0.16381,
+    -0.239398,
+    0.290138
+   ],
+   "radius": 0.044876,
+   "tip": false
+  },
+  {
+   "id": "leg_1.R.j3",
+   "part": "leg_1",
+   "copy": "R",
+   "index": 3,
+   "position": [
+    0.194514,
+    -0.400226,
+    0.149375
+   ],
+   "radius": 0.039119,
+   "tip": false
+  },
+  {
+   "id": "leg_1.R.j4",
+   "part": "leg_1",
+   "copy": "R",
+   "index": 4,
+   "position": [
+    0.212757,
+    -0.506696,
+    -0.073772
+   ],
+   "radius": 0.029837,
+   "tip": false
+  },
+  {
+   "id": "leg_1.R.j5",
+   "part": "leg_1",
+   "copy": "R",
+   "index": 5,
+   "position": [
+    0.222953,
+    -0.554322,
+    -0.263432
+   ],
+   "radius": 0.016858,
+   "tip": true
+  },
+  {
+   "id": "leg_2.L.j0",
+   "part": "leg_2",
+   "copy": "L",
+   "index": 0,
+   "position": [
+    0.024,
+    0.0,
+    0.317778
+   ],
+   "radius": 0.071866,
+   "tip": false
+  },
+  {
+   "id": "leg_2.L.j1",
+   "part": "leg_2",
+   "copy": "L",
+   "index": 1,
+   "position": [
+    0.03096,
+    0.261573,
+    0.370672
+   ],
+   "radius": 0.055203,
+   "tip": false
+  },
+  {
+   "id": "leg_2.L.j2",
+   "part": "leg_2",
+   "copy": "L",
+   "index": 2,
+   "position": [
+    0.039786,
+    0.470989,
+    0.409465
+   ],
+   "radius": 0.042083,
+   "tip": false
+  },
+  {
+   "id": "leg_2.L.j3",
+   "part": "leg_2",
+   "copy": "L",
+   "index": 3,
+   "position": [
+    0.054112,
+    0.622327,
+    0.298887
+   ],
+   "radius": 0.026597,
+   "tip": false
+  },
+  {
+   "id": "leg_2.L.j4",
+   "part": "leg_2",
+   "copy": "L",
+   "index": 4,
+   "position": [
+    0.067642,
+    0.739152,
+    0.235004
+   ],
+   "radius": 0.019432,
+   "tip": false
+  },
+  {
+   "id": "leg_2.L.j5",
+   "part": "leg_2",
+   "copy": "L",
+   "index": 5,
+   "position": [
+    0.118107,
+    0.790191,
+    0.181643
+   ],
+   "radius": 0.02156,
+   "tip": true
+  },
+  {
+   "id": "leg_2.R.j0",
+   "part": "leg_2",
+   "copy": "R",
+   "index": 0,
+   "position": [
+    0.024,
+    0.0,
+    0.317778
+   ],
+   "radius": 0.071866,
+   "tip": false
+  },
+  {
+   "id": "leg_2.R.j1",
+   "part": "leg_2",
+   "copy": "R",
+   "index": 1,
+   "position": [
+    0.03096,
+    -0.261573,
+    0.370672
+   ],
+   "radius": 0.055203,
+   "tip": false
+  },
+  {
+   "id": "leg_2.R.j2",
+   "part": "leg_2",
+   "copy": "R",
+   "index": 2,
+   "position": [
+    0.039786,
+    -0.470989,
+    0.409465
+   ],
+   "radius": 0.042083,
+   "tip": false
+  },
+  {
+   "id": "leg_2.R.j3",
+   "part": "leg_2",
+   "copy": "R",
+   "index": 3,
+   "position": [
+    0.054112,
+    -0.622327,
+    0.298887
+   ],
+   "radius": 0.026597,
+   "tip": false
+  },
+  {
+   "id": "leg_2.R.j4",
+   "part": "leg_2",
+   "copy": "R",
+   "index": 4,
+   "position": [
+    0.067642,
+    -0.739152,
+    0.235004
+   ],
+   "radius": 0.019432,
+   "tip": false
+  },
+  {
+   "id": "leg_2.R.j5",
+   "part": "leg_2",
+   "copy": "R",
+   "index": 5,
+   "position": [
+    0.118107,
+    -0.790191,
+    0.181643
+   ],
+   "radius": 0.02156,
+   "tip": true
+  },
+  {
+   "id": "leg_3.L.j0",
+   "part": "leg_3",
+   "copy": "L",
+   "index": 0,
+   "position": [
+    -0.084,
+    0.0,
+    0.3144
+   ],
+   "radius": 0.064481,
+   "tip": false
+  },
+  {
+   "id": "leg_3.L.j1",
+   "part": "leg_3",
+   "copy": "L",
+   "index": 1,
+   "position": [
+    -0.115062,
+    0.128993,
+    0.338701
+   ],
+   "radius": 0.06011,
+   "tip": false
+  },
+  {
+   "id": "leg_3.L.j2",
+   "part": "leg_3",
+   "copy": "L",
+   "index": 2,
+   "position": [
+    -0.062173,
+    0.324205,
+    0.249399
+   ],
+   "radius": 0.049878,
+   "tip": false
+  },
+  {
+   "id": "leg_3.L.j3",
+   "part": "leg_3",
+   "copy": "L",
+   "index": 3,
+   "position": [
+    -0.088375,
+    0.448816,
+    0.111222
+   ],
+   "radius": 0.041382,
+   "tip": false
+  },
+  {
+   "id": "leg_3.L.j4",
+   "part": "leg_3",
+   "copy": "L",
+   "index": 4,
+   "position": [
+    -0.166258,
+    0.588974,
+    -0.028105
+   ],
+   "radius": 0.034887,
+   "tip": false
+  },
+  {
+   "id": "leg_3.L.j5",
+   "part": "leg_3",
+   "copy": "L",
+   "index": 5,
+   "position": [
+    -0.133989,
+    0.67074,
+    -0.142857
+   ],
+   "radius": 0.019344,
+   "tip": true
+  },
+  {
+   "id": "leg_3.R.j0",
+   "part": "leg_3",
+   "copy": "R",
+   "index": 0,
+   "position": [
+    -0.084,
+    0.0,
+    0.3144
+   ],
+   "radius": 0.064481,
+   "tip": false
+  },
+  {
+   "id": "leg_3.R.j1",
+   "part": "leg_3",
+   "copy": "R",
+   "index": 1,
+   "position": [
+    -0.115062,
+    -0.128993,
+    0.338701
+   ],
+   "radius": 0.06011,
+   "tip": false
+  },
+  {
+   "id": "leg_3.R.j2",
+   "part": "leg_3",
+   "copy": "R",
+   "index": 2,
+   "position": [
+    -0.062173,
+    -0.324205,
+    0.249399
+   ],
+   "radius": 0.049878,
+   "tip": false
+  },
+  {
+   "id": "leg_3.R.j3",
+   "part": "leg_3",
+   "copy": "R",
+   "index": 3,
+   "position": [
+    -0.088375,
+    -0.448816,
+    0.111222
+   ],
+   "radius": 0.041382,
+   "tip": false
+  },
+  {
+   "id": "leg_3.R.j4",
+   "part": "leg_3",
+   "copy": "R",
+   "index": 4,
+   "position": [
+    -0.166258,
+    -0.588974,
+    -0.028105
+   ],
+   "radius": 0.034887,
+   "tip": false
+  },
+  {
+   "id": "leg_3.R.j5",
+   "part": "leg_3",
+   "copy": "R",
+   "index": 5,
+   "position": [
+    -0.133989,
+    -0.67074,
+    -0.142857
+   ],
+   "radius": 0.019344,
+   "tip": true
+  },
+  {
+   "id": "leg_4.L.j0",
+   "part": "leg_4",
+   "copy": "L",
+   "index": 0,
+   "position": [
+    -0.192,
+    0.0,
+    0.3072
+   ],
+   "radius": 0.064481,
+   "tip": false
+  },
+  {
+   "id": "leg_4.L.j1",
+   "part": "leg_4",
+   "copy": "L",
+   "index": 1,
+   "position": [
+    -0.22404,
+    0.132561,
+    0.333226
+   ],
+   "radius": 0.06011,
+   "tip": false
+  },
+  {
+   "id": "leg_4.L.j2",
+   "part": "leg_4",
+   "copy": "L",
+   "index": 2,
+   "position": [
+    -0.169703,
+    0.334217,
+    0.242844
+   ],
+   "radius": 0.049878,
+   "tip": false
+  },
+  {
+   "id": "leg_4.L.j3",
+   "part": "leg_4",
+   "copy": "L",
+   "index": 3,
+   "position": [
+    -0.196738,
+    0.463547,
+    0.101602
+   ],
+   "radius": 0.041382,
+   "tip": false
+  },
+  {
+   "id": "leg_4.L.j4",
+   "part": "leg_4",
+   "copy": "L",
+   "index": 4,
+   "position": [
+    -0.276978,
+    0.608861,
+    -0.040702
+   ],
+   "radius": 0.034887,
+   "tip": false
+  },
+  {
+   "id": "leg_4.L.j5",
+   "part": "leg_4",
+   "copy": "L",
+   "index": 5,
+   "position": [
+    -0.243806,
+    0.69394,
+    -0.158171
+   ],
+   "radius": 0.019344,
+   "tip": true
+  },
+  {
+   "id": "leg_4.R.j0",
+   "part": "leg_4",
+   "copy": "R",
+   "index": 0,
+   "position": [
+    -0.192,
+    0.0,
+    0.3072
+   ],
+   "radius": 0.064481,
+   "tip": false
+  },
+  {
+   "id": "leg_4.R.j1",
+   "part": "leg_4",
+   "copy": "R",
+   "index": 1,
+   "position": [
+    -0.22404,
+    -0.132561,
+    0.333226
+   ],
+   "radius": 0.06011,
+   "tip": false
+  },
+  {
+   "id": "leg_4.R.j2",
+   "part": "leg_4",
+   "copy": "R",
+   "index": 2,
+   "position": [
+    -0.169703,
+    -0.334217,
+    0.242844
+   ],
+   "radius": 0.049878,
+   "tip": false
+  },
+  {
+   "id": "leg_4.R.j3",
+   "part": "leg_4",
+   "copy": "R",
+   "index": 3,
+   "position": [
+    -0.196738,
+    -0.463547,
+    0.101602
+   ],
+   "radius": 0.041382,
+   "tip": false
+  },
+  {
+   "id": "leg_4.R.j4",
+   "part": "leg_4",
+   "copy": "R",
+   "index": 4,
+   "position": [
+    -0.276978,
+    -0.608861,
+    -0.040702
+   ],
+   "radius": 0.034887,
+   "tip": false
+  },
+  {
+   "id": "leg_4.R.j5",
+   "part": "leg_4",
+   "copy": "R",
+   "index": 5,
+   "position": [
+    -0.243806,
+    -0.69394,
+    -0.158171
+   ],
+   "radius": 0.019344,
+   "tip": true
+  },
+  {
+   "id": "claw.L.j0",
+   "part": "claw",
+   "copy": "L",
+   "index": 0,
+   "position": [
+    0.236942,
+    0.0,
+    0.303109
+   ],
+   "radius": 0.07,
+   "tip": false
+  },
+  {
+   "id": "claw.L.j1",
+   "part": "claw",
+   "copy": "L",
+   "index": 1,
+   "position": [
+    0.346249,
+    0.255075,
+    0.301614
+   ],
+   "radius": 0.06,
+   "tip": false
+  },
+  {
+   "id": "claw.L.j2",
+   "part": "claw",
+   "copy": "L",
+   "index": 2,
+   "position": [
+    0.565113,
+    0.382612,
+    0.316841
+   ],
+   "radius": 0.07,
+   "tip": false
+  },
+  {
+   "id": "claw.L.j3",
+   "part": "claw",
+   "copy": "L",
+   "index": 3,
+   "position": [
+    0.765635,
+    0.309734,
+    0.323208
+   ],
+   "radius": 0.12,
+   "tip": false
+  },
+  {
+   "id": "claw.L.j4",
+   "part": "claw",
+   "copy": "L",
+   "index": 4,
+   "position": [
+    0.911378,
+    0.200416,
+    0.321214
+   ],
+   "radius": 0.04,
+   "tip": true
+  },
+  {
+   "id": "claw.R.j0",
+   "part": "claw",
+   "copy": "R",
+   "index": 0,
+   "position": [
+    0.236942,
+    0.0,
+    0.303109
+   ],
+   "radius": 0.07,
+   "tip": false
+  },
+  {
+   "id": "claw.R.j1",
+   "part": "claw",
+   "copy": "R",
+   "index": 1,
+   "position": [
+    0.346249,
+    -0.255075,
+    0.301614
+   ],
+   "radius": 0.06,
+   "tip": false
+  },
+  {
+   "id": "claw.R.j2",
+   "part": "claw",
+   "copy": "R",
+   "index": 2,
+   "position": [
+    0.565113,
+    -0.382612,
+    0.316841
+   ],
+   "radius": 0.07,
+   "tip": false
+  },
+  {
+   "id": "claw.R.j3",
+   "part": "claw",
+   "copy": "R",
+   "index": 3,
+   "position": [
+    0.765635,
+    -0.309734,
+    0.323208
+   ],
+   "radius": 0.12,
+   "tip": false
+  },
+  {
+   "id": "claw.R.j4",
+   "part": "claw",
+   "copy": "R",
+   "index": 4,
+   "position": [
+    0.911378,
+    -0.200416,
+    0.321214
+   ],
+   "radius": 0.04,
+   "tip": true
+  },
+  {
+   "id": "eye_stalk.L.j0",
+   "part": "eye_stalk",
+   "copy": "L",
+   "index": 0,
+   "position": [
+    0.260598,
+    0.0,
+    0.300964
+   ],
+   "radius": 0.03,
+   "tip": false
+  },
+  {
+   "id": "eye_stalk.L.j1",
+   "part": "eye_stalk",
+   "copy": "L",
+   "index": 1,
+   "position": [
+    0.314234,
+    0.127974,
+    0.47941
+   ],
+   "radius": 0.025,
+   "tip": false
+  },
+  {
+   "id": "eye_stalk.L.j2",
+   "part": "eye_stalk",
+   "copy": "L",
+   "index": 2,
+   "position": [
+    0.329131,
+    0.140772,
+    0.63279
+   ],
+   "radius": 0.04,
+   "tip": true
+  },
+  {
+   "id": "eye_stalk.R.j0",
+   "part": "eye_stalk",
+   "copy": "R",
+   "index": 0,
+   "position": [
+    0.260598,
+    0.0,
+    0.300964
+   ],
+   "radius": 0.03,
+   "tip": false
+  },
+  {
+   "id": "eye_stalk.R.j1",
+   "part": "eye_stalk",
+   "copy": "R",
+   "index": 1,
+   "position": [
+    0.314234,
+    -0.127974,
+    0.47941
+   ],
+   "radius": 0.025,
+   "tip": false
+  },
+  {
+   "id": "eye_stalk.R.j2",
+   "part": "eye_stalk",
+   "copy": "R",
+   "index": 2,
+   "position": [
+    0.329131,
+    -0.140772,
+    0.63279
+   ],
+   "radius": 0.04,
+   "tip": true
+  }
+ ],
+ "bones": [
+  {
+   "id": "carapace.b0",
+   "part": "carapace",
+   "copy": "",
+   "index": 0,
+   "from": "carapace.j0",
+   "to": "carapace.j1",
+   "length": 0.066815,
+   "parent": null
+  },
+  {
+   "id": "carapace.b1",
+   "part": "carapace",
+   "copy": "",
+   "index": 1,
+   "from": "carapace.j1",
+   "to": "carapace.j2",
+   "length": 0.066815,
+   "parent": "carapace.b0"
+  },
+  {
+   "id": "carapace.b2",
+   "part": "carapace",
+   "copy": "",
+   "index": 2,
+   "from": "carapace.j2",
+   "to": "carapace.j3",
+   "length": 0.066815,
+   "parent": "carapace.b1"
+  },
+  {
+   "id": "carapace.b3",
+   "part": "carapace",
+   "copy": "",
+   "index": 3,
+   "from": "carapace.j3",
+   "to": "carapace.j4",
+   "length": 0.066815,
+   "parent": "carapace.b2"
+  },
+  {
+   "id": "carapace.b4",
+   "part": "carapace",
+   "copy": "",
+   "index": 4,
+   "from": "carapace.j4",
+   "to": "carapace.j5",
+   "length": 0.066667,
+   "parent": "carapace.b3"
+  },
+  {
+   "id": "carapace.b5",
+   "part": "carapace",
+   "copy": "",
+   "index": 5,
+   "from": "carapace.j5",
+   "to": "carapace.j6",
+   "length": 0.066815,
+   "parent": "carapace.b4"
+  },
+  {
+   "id": "carapace.b6",
+   "part": "carapace",
+   "copy": "",
+   "index": 6,
+   "from": "carapace.j6",
+   "to": "carapace.j7",
+   "length": 0.064598,
+   "parent": "carapace.b5"
+  },
+  {
+   "id": "carapace.b7",
+   "part": "carapace",
+   "copy": "",
+   "index": 7,
+   "from": "carapace.j7",
+   "to": "carapace.j8",
+   "length": 0.057948,
+   "parent": "carapace.b6"
+  },
+  {
+   "id": "carapace.b8",
+   "part": "carapace",
+   "copy": "",
+   "index": 8,
+   "from": "carapace.j8",
+   "to": "carapace.j9",
+   "length": 0.052785,
+   "parent": "carapace.b7"
+  },
+  {
+   "id": "neck_head.b0",
+   "part": "neck_head",
+   "copy": "",
+   "index": 0,
+   "from": "neck_head.j0",
+   "to": "neck_head.j1",
+   "length": 0.094413,
+   "parent": "carapace.b8"
+  },
+  {
+   "id": "neck_head.b1",
+   "part": "neck_head",
+   "copy": "",
+   "index": 1,
+   "from": "neck_head.j1",
+   "to": "neck_head.j2",
+   "length": 0.144736,
+   "parent": "neck_head.b0"
+  },
+  {
+   "id": "neck_head.b2",
+   "part": "neck_head",
+   "copy": "",
+   "index": 2,
+   "from": "neck_head.j2",
+   "to": "neck_head.j3",
+   "length": 0.116727,
+   "parent": "neck_head.b1"
+  },
+  {
+   "id": "neck_head.b3",
+   "part": "neck_head",
+   "copy": "",
+   "index": 3,
+   "from": "neck_head.j3",
+   "to": "neck_head.j4",
+   "length": 0.143609,
+   "parent": "neck_head.b2"
+  },
+  {
+   "id": "neck_head.b4",
+   "part": "neck_head",
+   "copy": "",
+   "index": 4,
+   "from": "neck_head.j4",
+   "to": "neck_head.j5",
+   "length": 0.092865,
+   "parent": "neck_head.b3"
+  },
+  {
+   "id": "leg_1.L.b0",
+   "part": "leg_1",
+   "copy": "L",
+   "index": 0,
+   "from": "leg_1.L.j0",
+   "to": "leg_1.L.j1",
+   "length": 0.097023,
+   "parent": "carapace.b6"
+  },
+  {
+   "id": "leg_1.L.b1",
+   "part": "leg_1",
+   "copy": "L",
+   "index": 1,
+   "from": "leg_1.L.j1",
+   "to": "leg_1.L.j2",
+   "length": 0.152639,
+   "parent": "leg_1.L.b0"
+  },
+  {
+   "id": "leg_1.L.b2",
+   "part": "leg_1",
+   "copy": "L",
+   "index": 2,
+   "from": "leg_1.L.j2",
+   "to": "leg_1.L.j3",
+   "length": 0.215923,
+   "parent": "leg_1.L.b1"
+  },
+  {
+   "id": "leg_1.L.b3",
+   "part": "leg_1",
+   "copy": "L",
+   "index": 3,
+   "from": "leg_1.L.j3",
+   "to": "leg_1.L.j4",
+   "length": 0.247918,
+   "parent": "leg_1.L.b2"
+  },
+  {
+   "id": "leg_1.L.b4",
+   "part": "leg_1",
+   "copy": "L",
+   "index": 4,
+   "from": "leg_1.L.j4",
+   "to": "leg_1.L.j5",
+   "length": 0.195814,
+   "parent": "leg_1.L.b3"
+  },
+  {
+   "id": "leg_1.R.b0",
+   "part": "leg_1",
+   "copy": "R",
+   "index": 0,
+   "from": "leg_1.R.j0",
+   "to": "leg_1.R.j1",
+   "length": 0.097023,
+   "parent": "carapace.b6"
+  },
+  {
+   "id": "leg_1.R.b1",
+   "part": "leg_1",
+   "copy": "R",
+   "index": 1,
+   "from": "leg_1.R.j1",
+   "to": "leg_1.R.j2",
+   "length": 0.152639,
+   "parent": "leg_1.R.b0"
+  },
+  {
+   "id": "leg_1.R.b2",
+   "part": "leg_1",
+   "copy": "R",
+   "index": 2,
+   "from": "leg_1.R.j2",
+   "to": "leg_1.R.j3",
+   "length": 0.215923,
+   "parent": "leg_1.R.b1"
+  },
+  {
+   "id": "leg_1.R.b3",
+   "part": "leg_1",
+   "copy": "R",
+   "index": 3,
+   "from": "leg_1.R.j3",
+   "to": "leg_1.R.j4",
+   "length": 0.247918,
+   "parent": "leg_1.R.b2"
+  },
+  {
+   "id": "leg_1.R.b4",
+   "part": "leg_1",
+   "copy": "R",
+   "index": 4,
+   "from": "leg_1.R.j4",
+   "to": "leg_1.R.j5",
+   "length": 0.195814,
+   "parent": "leg_1.R.b3"
+  },
+  {
+   "id": "leg_2.L.b0",
+   "part": "leg_2",
+   "copy": "L",
+   "index": 0,
+   "from": "leg_2.L.j0",
+   "to": "leg_2.L.j1",
+   "length": 0.266958,
+   "parent": "carapace.b4"
+  },
+  {
+   "id": "leg_2.L.b1",
+   "part": "leg_2",
+   "copy": "L",
+   "index": 1,
+   "from": "leg_2.L.j1",
+   "to": "leg_2.L.j2",
+   "length": 0.213162,
+   "parent": "leg_2.L.b0"
+  },
+  {
+   "id": "leg_2.L.b2",
+   "part": "leg_2",
+   "copy": "L",
+   "index": 2,
+   "from": "leg_2.L.j2",
+   "to": "leg_2.L.j3",
+   "length": 0.187979,
+   "parent": "leg_2.L.b1"
+  },
+  {
+   "id": "leg_2.L.b3",
+   "part": "leg_2",
+   "copy": "L",
+   "index": 3,
+   "from": "leg_2.L.j3",
+   "to": "leg_2.L.j4",
+   "length": 0.133836,
+   "parent": "leg_2.L.b2"
+  },
+  {
+   "id": "leg_2.L.b4",
+   "part": "leg_2",
+   "copy": "L",
+   "index": 4,
+   "from": "leg_2.L.j4",
+   "to": "leg_2.L.j5",
+   "length": 0.089437,
+   "parent": "leg_2.L.b3"
+  },
+  {
+   "id": "leg_2.R.b0",
+   "part": "leg_2",
+   "copy": "R",
+   "index": 0,
+   "from": "leg_2.R.j0",
+   "to": "leg_2.R.j1",
+   "length": 0.266958,
+   "parent": "carapace.b4"
+  },
+  {
+   "id": "leg_2.R.b1",
+   "part": "leg_2",
+   "copy": "R",
+   "index": 1,
+   "from": "leg_2.R.j1",
+   "to": "leg_2.R.j2",
+   "length": 0.213162,
+   "parent": "leg_2.R.b0"
+  },
+  {
+   "id": "leg_2.R.b2",
+   "part": "leg_2",
+   "copy": "R",
+   "index": 2,
+   "from": "leg_2.R.j2",
+   "to": "leg_2.R.j3",
+   "length": 0.187979,
+   "parent": "leg_2.R.b1"
+  },
+  {
+   "id": "leg_2.R.b3",
+   "part": "leg_2",
+   "copy": "R",
+   "index": 3,
+   "from": "leg_2.R.j3",
+   "to": "leg_2.R.j4",
+   "length": 0.133836,
+   "parent": "leg_2.R.b2"
+  },
+  {
+   "id": "leg_2.R.b4",
+   "part": "leg_2",
+   "copy": "R",
+   "index": 4,
+   "from": "leg_2.R.j4",
+   "to": "leg_2.R.j5",
+   "length": 0.089437,
+   "parent": "leg_2.R.b3"
+  },
+  {
+   "id": "leg_3.L.b0",
+   "part": "leg_3",
+   "copy": "L",
+   "index": 0,
+   "from": "leg_3.L.j0",
+   "to": "leg_3.L.j1",
+   "length": 0.134887,
+   "parent": "carapace.b3"
+  },
+  {
+   "id": "leg_3.L.b1",
+   "part": "leg_3",
+   "copy": "L",
+   "index": 1,
+   "from": "leg_3.L.j1",
+   "to": "leg_3.L.j2",
+   "length": 0.221088,
+   "parent": "leg_3.L.b0"
+  },
+  {
+   "id": "leg_3.L.b2",
+   "part": "leg_3",
+   "copy": "L",
+   "index": 2,
+   "from": "leg_3.L.j2",
+   "to": "leg_3.L.j3",
+   "length": 0.187902,
+   "parent": "leg_3.L.b1"
+  },
+  {
+   "id": "leg_3.L.b3",
+   "part": "leg_3",
+   "copy": "L",
+   "index": 3,
+   "from": "leg_3.L.j3",
+   "to": "leg_3.L.j4",
+   "length": 0.212419,
+   "parent": "leg_3.L.b2"
+  },
+  {
+   "id": "leg_3.L.b4",
+   "part": "leg_3",
+   "copy": "L",
+   "index": 4,
+   "from": "leg_3.L.j4",
+   "to": "leg_3.L.j5",
+   "length": 0.144552,
+   "parent": "leg_3.L.b3"
+  },
+  {
+   "id": "leg_3.R.b0",
+   "part": "leg_3",
+   "copy": "R",
+   "index": 0,
+   "from": "leg_3.R.j0",
+   "to": "leg_3.R.j1",
+   "length": 0.134887,
+   "parent": "carapace.b3"
+  },
+  {
+   "id": "leg_3.R.b1",
+   "part": "leg_3",
+   "copy": "R",
+   "index": 1,
+   "from": "leg_3.R.j1",
+   "to": "leg_3.R.j2",
+   "length": 0.221088,
+   "parent": "leg_3.R.b0"
+  },
+  {
+   "id": "leg_3.R.b2",
+   "part": "leg_3",
+   "copy": "R",
+   "index": 2,
+   "from": "leg_3.R.j2",
+   "to": "leg_3.R.j3",
+   "length": 0.187902,
+   "parent": "leg_3.R.b1"
+  },
+  {
+   "id": "leg_3.R.b3",
+   "part": "leg_3",
+   "copy": "R",
+   "index": 3,
+   "from": "leg_3.R.j3",
+   "to": "leg_3.R.j4",
+   "length": 0.212419,
+   "parent": "leg_3.R.b2"
+  },
+  {
+   "id": "leg_3.R.b4",
+   "part": "leg_3",
+   "copy": "R",
+   "index": 4,
+   "from": "leg_3.R.j4",
+   "to": "leg_3.R.j5",
+   "length": 0.144552,
+   "parent": "leg_3.R.b3"
+  },
+  {
+   "id": "leg_4.L.b0",
+   "part": "leg_4",
+   "copy": "L",
+   "index": 0,
+   "from": "leg_4.L.j0",
+   "to": "leg_4.L.j1",
+   "length": 0.138839,
+   "parent": "carapace.b1"
+  },
+  {
+   "id": "leg_4.L.b1",
+   "part": "leg_4",
+   "copy": "L",
+   "index": 1,
+   "from": "leg_4.L.j1",
+   "to": "leg_4.L.j2",
+   "length": 0.227566,
+   "parent": "leg_4.L.b0"
+  },
+  {
+   "id": "leg_4.L.b2",
+   "part": "leg_4",
+   "copy": "L",
+   "index": 2,
+   "from": "leg_4.L.j2",
+   "to": "leg_4.L.j3",
+   "length": 0.193408,
+   "parent": "leg_4.L.b1"
+  },
+  {
+   "id": "leg_4.L.b3",
+   "part": "leg_4",
+   "copy": "L",
+   "index": 3,
+   "from": "leg_4.L.j3",
+   "to": "leg_4.L.j4",
+   "length": 0.218643,
+   "parent": "leg_4.L.b2"
+  },
+  {
+   "id": "leg_4.L.b4",
+   "part": "leg_4",
+   "copy": "L",
+   "index": 4,
+   "from": "leg_4.L.j4",
+   "to": "leg_4.L.j5",
+   "length": 0.148787,
+   "parent": "leg_4.L.b3"
+  },
+  {
+   "id": "leg_4.R.b0",
+   "part": "leg_4",
+   "copy": "R",
+   "index": 0,
+   "from": "leg_4.R.j0",
+   "to": "leg_4.R.j1",
+   "length": 0.138839,
+   "parent": "carapace.b1"
+  },
+  {
+   "id": "leg_4.R.b1",
+   "part": "leg_4",
+   "copy": "R",
+   "index": 1,
+   "from": "leg_4.R.j1",
+   "to": "leg_4.R.j2",
+   "length": 0.227566,
+   "parent": "leg_4.R.b0"
+  },
+  {
+   "id": "leg_4.R.b2",
+   "part": "leg_4",
+   "copy": "R",
+   "index": 2,
+   "from": "leg_4.R.j2",
+   "to": "leg_4.R.j3",
+   "length": 0.193408,
+   "parent": "leg_4.R.b1"
+  },
+  {
+   "id": "leg_4.R.b3",
+   "part": "leg_4",
+   "copy": "R",
+   "index": 3,
+   "from": "leg_4.R.j3",
+   "to": "leg_4.R.j4",
+   "length": 0.218643,
+   "parent": "leg_4.R.b2"
+  },
+  {
+   "id": "leg_4.R.b4",
+   "part": "leg_4",
+   "copy": "R",
+   "index": 4,
+   "from": "leg_4.R.j4",
+   "to": "leg_4.R.j5",
+   "length": 0.148787,
+   "parent": "leg_4.R.b3"
+  },
+  {
+   "id": "claw.L.b0",
+   "part": "claw",
+   "copy": "L",
+   "index": 0,
+   "from": "claw.L.j0",
+   "to": "claw.L.j1",
+   "length": 0.277513,
+   "parent": "carapace.b8"
+  },
+  {
+   "id": "claw.L.b1",
+   "part": "claw",
+   "copy": "L",
+   "index": 1,
+   "from": "claw.L.j1",
+   "to": "claw.L.j2",
+   "length": 0.25377,
+   "parent": "claw.L.b0"
+  },
+  {
+   "id": "claw.L.b2",
+   "part": "claw",
+   "copy": "L",
+   "index": 2,
+   "from": "claw.L.j2",
+   "to": "claw.L.j3",
+   "length": 0.21345,
+   "parent": "claw.L.b1"
+  },
+  {
+   "id": "claw.L.b3",
+   "part": "claw",
+   "copy": "L",
+   "index": 3,
+   "from": "claw.L.j3",
+   "to": "claw.L.j4",
+   "length": 0.182196,
+   "parent": "claw.L.b2"
+  },
+  {
+   "id": "claw.R.b0",
+   "part": "claw",
+   "copy": "R",
+   "index": 0,
+   "from": "claw.R.j0",
+   "to": "claw.R.j1",
+   "length": 0.277513,
+   "parent": "carapace.b8"
+  },
+  {
+   "id": "claw.R.b1",
+   "part": "claw",
+   "copy": "R",
+   "index": 1,
+   "from": "claw.R.j1",
+   "to": "claw.R.j2",
+   "length": 0.25377,
+   "parent": "claw.R.b0"
+  },
+  {
+   "id": "claw.R.b2",
+   "part": "claw",
+   "copy": "R",
+   "index": 2,
+   "from": "claw.R.j2",
+   "to": "claw.R.j3",
+   "length": 0.21345,
+   "parent": "claw.R.b1"
+  },
+  {
+   "id": "claw.R.b3",
+   "part": "claw",
+   "copy": "R",
+   "index": 3,
+   "from": "claw.R.j3",
+   "to": "claw.R.j4",
+   "length": 0.182196,
+   "parent": "claw.R.b2"
+  },
+  {
+   "id": "eye_stalk.L.b0",
+   "part": "eye_stalk",
+   "copy": "L",
+   "index": 0,
+   "from": "eye_stalk.L.j0",
+   "to": "eye_stalk.L.j1",
+   "length": 0.226047,
+   "parent": "carapace.b8"
+  },
+  {
+   "id": "eye_stalk.L.b1",
+   "part": "eye_stalk",
+   "copy": "L",
+   "index": 1,
+   "from": "eye_stalk.L.j1",
+   "to": "eye_stalk.L.j2",
+   "length": 0.154632,
+   "parent": "eye_stalk.L.b0"
+  },
+  {
+   "id": "eye_stalk.R.b0",
+   "part": "eye_stalk",
+   "copy": "R",
+   "index": 0,
+   "from": "eye_stalk.R.j0",
+   "to": "eye_stalk.R.j1",
+   "length": 0.226047,
+   "parent": "carapace.b8"
+  },
+  {
+   "id": "eye_stalk.R.b1",
+   "part": "eye_stalk",
+   "copy": "R",
+   "index": 1,
+   "from": "eye_stalk.R.j1",
+   "to": "eye_stalk.R.j2",
+   "length": 0.154632,
+   "parent": "eye_stalk.R.b0"
+  }
+ ],
+ "edges": [
+  {
+   "type": "bone",
+   "a": "carapace.j0",
+   "b": "carapace.j1"
+  },
+  {
+   "type": "bone",
+   "a": "carapace.j1",
+   "b": "carapace.j2"
+  },
+  {
+   "type": "bone",
+   "a": "carapace.j2",
+   "b": "carapace.j3"
+  },
+  {
+   "type": "bone",
+   "a": "carapace.j3",
+   "b": "carapace.j4"
+  },
+  {
+   "type": "bone",
+   "a": "carapace.j4",
+   "b": "carapace.j5"
+  },
+  {
+   "type": "bone",
+   "a": "carapace.j5",
+   "b": "carapace.j6"
+  },
+  {
+   "type": "bone",
+   "a": "carapace.j6",
+   "b": "carapace.j7"
+  },
+  {
+   "type": "bone",
+   "a": "carapace.j7",
+   "b": "carapace.j8"
+  },
+  {
+   "type": "bone",
+   "a": "carapace.j8",
+   "b": "carapace.j9"
+  },
+  {
+   "type": "attach",
+   "node": "neck_head.j0",
+   "bone": "carapace.b8",
+   "t": 0.64
+  },
+  {
+   "type": "bone",
+   "a": "neck_head.j0",
+   "b": "neck_head.j1"
+  },
+  {
+   "type": "bone",
+   "a": "neck_head.j1",
+   "b": "neck_head.j2"
+  },
+  {
+   "type": "bone",
+   "a": "neck_head.j2",
+   "b": "neck_head.j3"
+  },
+  {
+   "type": "bone",
+   "a": "neck_head.j3",
+   "b": "neck_head.j4"
+  },
+  {
+   "type": "bone",
+   "a": "neck_head.j4",
+   "b": "neck_head.j5"
+  },
+  {
+   "type": "attach",
+   "node": "leg_1.L.j0",
+   "bone": "carapace.b6",
+   "t": 0.48
+  },
+  {
+   "type": "bone",
+   "a": "leg_1.L.j0",
+   "b": "leg_1.L.j1"
+  },
+  {
+   "type": "bone",
+   "a": "leg_1.L.j1",
+   "b": "leg_1.L.j2"
+  },
+  {
+   "type": "bone",
+   "a": "leg_1.L.j2",
+   "b": "leg_1.L.j3"
+  },
+  {
+   "type": "bone",
+   "a": "leg_1.L.j3",
+   "b": "leg_1.L.j4"
+  },
+  {
+   "type": "bone",
+   "a": "leg_1.L.j4",
+   "b": "leg_1.L.j5"
+  },
+  {
+   "type": "attach",
+   "node": "leg_1.R.j0",
+   "bone": "carapace.b6",
+   "t": 0.48
+  },
+  {
+   "type": "bone",
+   "a": "leg_1.R.j0",
+   "b": "leg_1.R.j1"
+  },
+  {
+   "type": "bone",
+   "a": "leg_1.R.j1",
+   "b": "leg_1.R.j2"
+  },
+  {
+   "type": "bone",
+   "a": "leg_1.R.j2",
+   "b": "leg_1.R.j3"
+  },
+  {
+   "type": "bone",
+   "a": "leg_1.R.j3",
+   "b": "leg_1.R.j4"
+  },
+  {
+   "type": "bone",
+   "a": "leg_1.R.j4",
+   "b": "leg_1.R.j5"
+  },
+  {
+   "type": "attach",
+   "node": "leg_2.L.j0",
+   "bone": "carapace.b4",
+   "t": 0.86
+  },
+  {
+   "type": "bone",
+   "a": "leg_2.L.j0",
+   "b": "leg_2.L.j1"
+  },
+  {
+   "type": "bone",
+   "a": "leg_2.L.j1",
+   "b": "leg_2.L.j2"
+  },
+  {
+   "type": "bone",
+   "a": "leg_2.L.j2",
+   "b": "leg_2.L.j3"
+  },
+  {
+   "type": "bone",
+   "a": "leg_2.L.j3",
+   "b": "leg_2.L.j4"
+  },
+  {
+   "type": "bone",
+   "a": "leg_2.L.j4",
+   "b": "leg_2.L.j5"
+  },
+  {
+   "type": "attach",
+   "node": "leg_2.R.j0",
+   "bone": "carapace.b4",
+   "t": 0.86
+  },
+  {
+   "type": "bone",
+   "a": "leg_2.R.j0",
+   "b": "leg_2.R.j1"
+  },
+  {
+   "type": "bone",
+   "a": "leg_2.R.j1",
+   "b": "leg_2.R.j2"
+  },
+  {
+   "type": "bone",
+   "a": "leg_2.R.j2",
+   "b": "leg_2.R.j3"
+  },
+  {
+   "type": "bone",
+   "a": "leg_2.R.j3",
+   "b": "leg_2.R.j4"
+  },
+  {
+   "type": "bone",
+   "a": "leg_2.R.j4",
+   "b": "leg_2.R.j5"
+  },
+  {
+   "type": "attach",
+   "node": "leg_3.L.j0",
+   "bone": "carapace.b3",
+   "t": 0.24
+  },
+  {
+   "type": "bone",
+   "a": "leg_3.L.j0",
+   "b": "leg_3.L.j1"
+  },
+  {
+   "type": "bone",
+   "a": "leg_3.L.j1",
+   "b": "leg_3.L.j2"
+  },
+  {
+   "type": "bone",
+   "a": "leg_3.L.j2",
+   "b": "leg_3.L.j3"
+  },
+  {
+   "type": "bone",
+   "a": "leg_3.L.j3",
+   "b": "leg_3.L.j4"
+  },
+  {
+   "type": "bone",
+   "a": "leg_3.L.j4",
+   "b": "leg_3.L.j5"
+  },
+  {
+   "type": "attach",
+   "node": "leg_3.R.j0",
+   "bone": "carapace.b3",
+   "t": 0.24
+  },
+  {
+   "type": "bone",
+   "a": "leg_3.R.j0",
+   "b": "leg_3.R.j1"
+  },
+  {
+   "type": "bone",
+   "a": "leg_3.R.j1",
+   "b": "leg_3.R.j2"
+  },
+  {
+   "type": "bone",
+   "a": "leg_3.R.j2",
+   "b": "leg_3.R.j3"
+  },
+  {
+   "type": "bone",
+   "a": "leg_3.R.j3",
+   "b": "leg_3.R.j4"
+  },
+  {
+   "type": "bone",
+   "a": "leg_3.R.j4",
+   "b": "leg_3.R.j5"
+  },
+  {
+   "type": "attach",
+   "node": "leg_4.L.j0",
+   "bone": "carapace.b1",
+   "t": 0.62
+  },
+  {
+   "type": "bone",
+   "a": "leg_4.L.j0",
+   "b": "leg_4.L.j1"
+  },
+  {
+   "type": "bone",
+   "a": "leg_4.L.j1",
+   "b": "leg_4.L.j2"
+  },
+  {
+   "type": "bone",
+   "a": "leg_4.L.j2",
+   "b": "leg_4.L.j3"
+  },
+  {
+   "type": "bone",
+   "a": "leg_4.L.j3",
+   "b": "leg_4.L.j4"
+  },
+  {
+   "type": "bone",
+   "a": "leg_4.L.j4",
+   "b": "leg_4.L.j5"
+  },
+  {
+   "type": "attach",
+   "node": "leg_4.R.j0",
+   "bone": "carapace.b1",
+   "t": 0.62
+  },
+  {
+   "type": "bone",
+   "a": "leg_4.R.j0",
+   "b": "leg_4.R.j1"
+  },
+  {
+   "type": "bone",
+   "a": "leg_4.R.j1",
+   "b": "leg_4.R.j2"
+  },
+  {
+   "type": "bone",
+   "a": "leg_4.R.j2",
+   "b": "leg_4.R.j3"
+  },
+  {
+   "type": "bone",
+   "a": "leg_4.R.j3",
+   "b": "leg_4.R.j4"
+  },
+  {
+   "type": "bone",
+   "a": "leg_4.R.j4",
+   "b": "leg_4.R.j5"
+  },
+  {
+   "type": "attach",
+   "node": "claw.L.j0",
+   "bone": "carapace.b8",
+   "t": 0.28
+  },
+  {
+   "type": "bone",
+   "a": "claw.L.j0",
+   "b": "claw.L.j1"
+  },
+  {
+   "type": "bone",
+   "a": "claw.L.j1",
+   "b": "claw.L.j2"
+  },
+  {
+   "type": "bone",
+   "a": "claw.L.j2",
+   "b": "claw.L.j3"
+  },
+  {
+   "type": "bone",
+   "a": "claw.L.j3",
+   "b": "claw.L.j4"
+  },
+  {
+   "type": "attach",
+   "node": "claw.R.j0",
+   "bone": "carapace.b8",
+   "t": 0.28
+  },
+  {
+   "type": "bone",
+   "a": "claw.R.j0",
+   "b": "claw.R.j1"
+  },
+  {
+   "type": "bone",
+   "a": "claw.R.j1",
+   "b": "claw.R.j2"
+  },
+  {
+   "type": "bone",
+   "a": "claw.R.j2",
+   "b": "claw.R.j3"
+  },
+  {
+   "type": "bone",
+   "a": "claw.R.j3",
+   "b": "claw.R.j4"
+  },
+  {
+   "type": "attach",
+   "node": "eye_stalk.L.j0",
+   "bone": "carapace.b8",
+   "t": 0.73
+  },
+  {
+   "type": "bone",
+   "a": "eye_stalk.L.j0",
+   "b": "eye_stalk.L.j1"
+  },
+  {
+   "type": "bone",
+   "a": "eye_stalk.L.j1",
+   "b": "eye_stalk.L.j2"
+  },
+  {
+   "type": "attach",
+   "node": "eye_stalk.R.j0",
+   "bone": "carapace.b8",
+   "t": 0.73
+  },
+  {
+   "type": "bone",
+   "a": "eye_stalk.R.j0",
+   "b": "eye_stalk.R.j1"
+  },
+  {
+   "type": "bone",
+   "a": "eye_stalk.R.j1",
+   "b": "eye_stalk.R.j2"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_1.L.j0",
+   "b": "leg_1.R.j0"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_1.L.j1",
+   "b": "leg_1.R.j1"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_1.L.j2",
+   "b": "leg_1.R.j2"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_1.L.j3",
+   "b": "leg_1.R.j3"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_1.L.j4",
+   "b": "leg_1.R.j4"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_1.L.j5",
+   "b": "leg_1.R.j5"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_2.L.j0",
+   "b": "leg_2.R.j0"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_2.L.j1",
+   "b": "leg_2.R.j1"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_2.L.j2",
+   "b": "leg_2.R.j2"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_2.L.j3",
+   "b": "leg_2.R.j3"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_2.L.j4",
+   "b": "leg_2.R.j4"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_2.L.j5",
+   "b": "leg_2.R.j5"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_3.L.j0",
+   "b": "leg_3.R.j0"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_3.L.j1",
+   "b": "leg_3.R.j1"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_3.L.j2",
+   "b": "leg_3.R.j2"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_3.L.j3",
+   "b": "leg_3.R.j3"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_3.L.j4",
+   "b": "leg_3.R.j4"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_3.L.j5",
+   "b": "leg_3.R.j5"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_4.L.j0",
+   "b": "leg_4.R.j0"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_4.L.j1",
+   "b": "leg_4.R.j1"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_4.L.j2",
+   "b": "leg_4.R.j2"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_4.L.j3",
+   "b": "leg_4.R.j3"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_4.L.j4",
+   "b": "leg_4.R.j4"
+  },
+  {
+   "type": "mirror",
+   "a": "leg_4.L.j5",
+   "b": "leg_4.R.j5"
+  },
+  {
+   "type": "mirror",
+   "a": "claw.L.j0",
+   "b": "claw.R.j0"
+  },
+  {
+   "type": "mirror",
+   "a": "claw.L.j1",
+   "b": "claw.R.j1"
+  },
+  {
+   "type": "mirror",
+   "a": "claw.L.j2",
+   "b": "claw.R.j2"
+  },
+  {
+   "type": "mirror",
+   "a": "claw.L.j3",
+   "b": "claw.R.j3"
+  },
+  {
+   "type": "mirror",
+   "a": "claw.L.j4",
+   "b": "claw.R.j4"
+  },
+  {
+   "type": "mirror",
+   "a": "eye_stalk.L.j0",
+   "b": "eye_stalk.R.j0"
+  },
+  {
+   "type": "mirror",
+   "a": "eye_stalk.L.j1",
+   "b": "eye_stalk.R.j1"
+  },
+  {
+   "type": "mirror",
+   "a": "eye_stalk.L.j2",
+   "b": "eye_stalk.R.j2"
+  }
+ ]
+}

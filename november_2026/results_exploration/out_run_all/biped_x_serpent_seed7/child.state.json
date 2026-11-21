@@ -1,0 +1,13 @@
+{
+ "state_id": "default",
+ "state_phase": 0.0,
+ "intent_vector": [
+  0.5,
+  0.5,
+  0.5,
+  0.5
+ ],
+ "constraint_profile_id": "balanced",
+ "morphology_package": "child.morph.json",
+ "note": "RTIS state logic is not connected yet; these are the defaults from ATMS rtis_interface.md v0.1"
+}
